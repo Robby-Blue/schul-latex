@@ -1,0 +1,134 @@
+\documentclass{article}
+\usepackage{darkmode}
+\enabledarkmode
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Magnetfelder}
+\rhead{November 2024} 
+\usepackage{amsmath}
+\begin{document}
+ 
+\section{Insgesamt}
+Eine Messreihe mit einem definierten Wert bei $x=0$ kann nich antiproportional sein, weil dies eine division durch 0 benötigen würde 
+ 
+\subsection{Einheiten}
+\noindent Kapazität $C$ für Capacity
+\[C=\frac{Q}{U}=\varepsilon_0 \cdot \frac{A}{d}\]
+ 
+\subsection{Mathe} 
+$I=\frac{U}{R}$ \\
+$E_{kondensator}=\frac{1}{2}CU^2$ 
+ 
+\section{Kondensatoren}  
+\subsection{Auf/Entladeprozess}
+Der Auf/Entladeprozess kann mit einer Stromschaltung gemessen werden, bei der ein Kondensator parrallel zu einem Voltmeter und hintereinander mit einem Widerstand und einen Amperemeter geschalten ist. Mit einem Schalter kann gewechstelt werden, ob der Strom auf den Kondensator oder von dem Kondensator durch den Widerstand ab fließt. 
+ 
+Beim Aufladen fängt $U(t)$ bei $0$V an, steigt zuerst schnell, bis es sich langsang zu $u_0$ annähert. Die Ableitung davon, wie schnell der Strom fließt, auch bekannt als die Stromstärke oder $I(t)$, fängt groß bei $I_0$ an, bis es zu $0$A, keinem Stromfluss, sinkt. Das Entladen entspricht dem gegenteil, mit einer hohen Spannung, die zu $0$V sinkt. $I(t)$ ist ähnelt dem Aufladeprozess, nur dass der Strom abfließt, es also negativ ist. 
+% Hier Graphiken einfügen 
+ 
+Der Aufladeprozess kann mit der e-Funktion \[I(t)=I_0 \cdot e^{-k \cdot t}\] dargestellt werden, welche mithilfe von zwei gegebenen Punkten errechnet werden kann. 
+Das $k$ ist equivalent zu $\frac{1}{R \cdot C}$.
+Beim Entladen wird das negative genommen. $U(t)$ beim Entladen ist $I(t)$ beim Aufladen, nur mit $I$ anstelle von $U$. Bei Aufladen von $U(t)$ ist es dem Entladen von $I(t)$ gleich, nur dass es $U(t)=0$ startet, also um $U_0$ nach oben verschoben werden muss.
+ 
+\subsection{Osziloskop} 
+Es gilt $I=\frac{U}{R}$, womit $I_0$ bestimmt werden kann. Da $\frac{t}{\text{Kästchen}}$ gegeben ist und mithilfe von $I_0$ auch $\frac{I}{\text{Kästchen}}$ bestimmt werden kann, können auch andere Punkte auf der Funktion bestimmt werden. 
+ 
+\subsection{Ladungsmenge}
+Die Ladungsmenge ist die Fläche under der Kurve der Stromstärke, also
+\[Q=\int^\infty_0 I(t) dx\]
+Wenn $I(t)$ in Ampere ist, ist Q in Coloum. Prefixe selber übernehmen.
+Aus $\frac{Q}{U_0}$ kann dann die Kapazität des Kondensators bestimmt werden.
+ 
+\subsection{Abgetrennte Kondensatoren} 
+Da $U=\frac{W}{Q}$ und Arbeit $W$ beim Auseinander ziehen hinzugefügt wird während $Q$ konstant bleibt, steigt $U$  
+  
+\begin{center}
+\begin{tabular}{ |c|c|c|c| }
+\hline
+ Größe & Formel & Getrennt & Nicht getrennt \\
+\hline
+ Spannung & $U=\frac{W}{Q}$ & W+, U+ & alles = \\
+\hline
+ Feldstärke & $E=\frac{U}{d}$ & U+, d+, E= & d+, E-\\
+\hline
+ Flächenladungsdichte & $\sigma=\varepsilon_0 \cdot E$ & alles = & E-, $\sigma$-\\
+\hline
+ Kraft & $F=E \cdot Q$ & alles = & E-, F-\\
+\hline
+ Kapazität & $C=\varepsilon_0 \cdot \frac{A}{d}$ & d+, C- & d+, C-\\
+\hline
+\end{tabular}
+\end{center}
+  
+\section{Das Magnetfeld}
+Das Magnetfeld hat einen Nord- und einen Südpol, jeweils in rot und grün. Die Feldlinien gehen von Nord nach Süd.
+Gleichnamige Pole stoßen sich ab, ungleichnamige ziehen sich an.
+Fe, Ni und Co lassen sich magnetisieren.
+Magnetische Feldlinien sind geschlossene Linien.
+Um stromdurchflossene Leiter existiert ein Magnetfeld. 
+ 
+Die richtung des Magnetfelds lässt sich mit der linken Hand bestimmen: wenn der Daumen in Richtung des Stromflusses zeigt, zeigen die anderen Finger, wenn zusammen gezogen, wie die Feldlinien. 
+ 
+\subsection{Lorentzkraft}
+Die Lorentzkraft ist eine Kraft, die auf in einem Magnetfeld fließende Elektronen wirkt. Zum bestimmen der Richtung der Lorentzkraft kann die UVW-Regel angewendet werden
+\begin{center}
+\begin{tabular}{ |c|c|c|c| }
+\hline
+ Ursache & Was verändert sich? & Stromfluss/Elektronen & Daumen \\
+\hline
+ Vermittlung & Was bleibt? & Magnetfeld & Zeigefinger \\
+\hline
+ Wirkung & Welche Wirkung? & Lorentzkraft & Mittelfinger \\
+\hline
+\end{tabular}
+\end{center}
+Beispiele:
+\begin{center}
+\begin{tabular}{ |c|c|c| }
+\hline
+ Stromfluss & Magnetfeld & Kraft \\
+\hline
+ Süden & Unten & Westen \\
+ Oben & Süden & Westen \\
+ Oben & Westen & Norden \\
+ Osten & Süden & Oben \\
+ Südosten & Unten & Südwesten \\
+\hline
+\end{tabular}
+\end{center}
+ 
+Quantitativ gilt
+\[F=B \cdot I \cdot L\]
+oder wenn es einen Winkel zwischen dem Leiter und dem Feld gibt
+\[F=B \cdot I \cdot L \cdot \text{sin}(\alpha)\]
+ 
+\subsection{Magnetische Flussdichte B} 
+\[B=\frac{F_l}{I \cdot l}\]
+von 
+\[F=B \cdot I \cdot L\]
+mit $B$ in $T$ Tesla 
+ 
+\subsection{Der Hall-Effekt} 
+Bei Leitern in einem B-Feld befinden sich nach der Ablenkung der Elektronen durch die Lorentzkraft auf einer Seite des Leiters mehr Elektronen als auf der anderen, sodass eine Spannung, die Hall-Spannung, entsteht. Dies wird beschrieben durch
+\[B=\frac{U_{Hall}}{v \cdot d}\] 
+und
+\[U_H=\frac{1}{n \cdot e} \cdot \frac{B \cdot I}{d}\] 
+ 
+\noindent $\frac{1}{n \cdot e}$ ist die Hall-Konstante $R_H$, angegeben in $\frac{m^3}{c}$. Jedes Element hat eine eigene Hall-Konstante
+ 
+\subsection{Flussdichte einer Spule}
+Gemessen durch eine Hallsonde. Je näher die Hallsonde ist, desto höher ist die Spannung, geformt wie eine Normalverteilung.
+ 
+\subsection{Flussdichte in einer lange Spule}
+Eine Spule mit $l>3d$ besitzt ein homogenes Feld, mit einer mangetischen Flussdichte
+\[B=\mu_0 \cdot \frac{N \cdot I}{l}\]
+wobei
+\[\mu_0 = 4\pi \cdot 10^{-7} \frac{T \cdot m}{A}\]
+ 
+\subsection{Unbekannte Flussdichten bestimmen} 
+Um unbekannten Flussdichten, z.B. der Erde, zu bestimmen, muss deren Flussrichting mit einem Kompass bestimmt werden, ein weiteres Magnetfeld mit einer berechenbaren Flussdichte Senkrecht angelegt werden und die Flussdichte so angelegt werden, dass sich die Kompassnadel um 45° dreht. Dadurch wird offensichtlich, dass nun beide Flussdichten gleich groß sind.
+ 
+\end{document}
+ 
+ 
+ 
