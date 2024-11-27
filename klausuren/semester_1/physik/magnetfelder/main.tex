@@ -2,22 +2,44 @@
 \usepackage{darkmode}
 \enabledarkmode
 \usepackage{fancyhdr}
-\pagestyle{fancy}
+\pagestyle{fancy} 
 \lhead{Magnetfelder}
-\rhead{November 2024} 
+\rhead{November 2024}
 \usepackage{amsmath}
 \begin{document}
  
 \section{Insgesamt}
-Eine Messreihe mit einem definierten Wert bei $x=0$ kann nich antiproportional sein, weil dies eine division durch 0 benötigen würde 
+Eine Messreihe mit einem definierten Wert bei $x=0$ kann nich antiproportional sein, weil dies eine division durch 0 Zoeötigen würde 
  
 \subsection{Einheiten}
 \noindent Kapazität $C$ für Capacity
 \[C=\frac{Q}{U}=\varepsilon_0 \cdot \frac{A}{d}\]
  
 \subsection{Mathe} 
-$I=\frac{U}{R}$ \\
-$E_{kondensator}=\frac{1}{2}CU^2$ 
+\[I=\frac{U}{R}\]
+\[E_{kondensator}=\frac{1}{2}CU^2\]
+Lorentzkraft 
+\[F=B \cdot I \cdot L\] 
+\[U_H=\frac{1}{n \cdot e} \cdot \frac{B \cdot I}{d}\]
+in langen Spulen 
+\[B=\mu_0 \cdot \frac{N \cdot I}{l}\]
+\[I = \frac{n \cdot e}{t}\] 
+ 
+\subsection{Herleitungen}
+von der Lorentzkraft, gegeben $F_L=B \cdot I \cdot l$ und $F_{el} = E \cdot q$ 
+\begin{align}
+F_{el} = q \cdot E &= e \cdot \frac{U_{Hall}}{d} \\
+B \cdot I \cdot l &= e \cdot \frac{U_{Hall}}{d} \\
+\intertext{Stromstärke $I = \frac{n \cdot e}{t}$ einsetzen, mit Wirkung auf $n=1$ Elektronen}
+B \cdot \frac{e}{t} \cdot l &= F_L \\
+\intertext{Mit $\frac{l}{t} = v$ dann}
+F_L &= e \cdot v \cdot B \\
+\intertext{$F_L$ mit obigen ersetzen, $e$ wegstreichen}
+\frac{U_{Hall}}{d} &= v \cdot B \\
+B &= \frac{U_{Hall}}{v \cdot d} \\
+\intertext{und}
+U_H &= \frac{1}{n \cdot e} \cdot \frac{B \cdot I}{d} 
+\end{align} 
  
 \section{Kondensatoren}  
 \subsection{Auf/Entladeprozess}
@@ -100,7 +122,7 @@ Beispiele:
 Quantitativ gilt
 \[F=B \cdot I \cdot L\]
 oder wenn es einen Winkel zwischen dem Leiter und dem Feld gibt
-\[F=B \cdot I \cdot L \cdot \text{sin}(\alpha)\]
+\[F=B \cdot I \cdot L \cdot \sin{\alpha}\]
  
 \subsection{Magnetische Flussdichte B} 
 \[B=\frac{F_l}{I \cdot l}\]
