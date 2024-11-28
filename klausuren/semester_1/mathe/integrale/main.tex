@@ -1,0 +1,60 @@
+\documentclass{article} 
+\usepackage[a4paper]{geometry}
+\usepackage{darkmode} 
+\enabledarkmode 
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Integrale}
+\rhead{November 2024}
+\usepackage{amsmath}
+ 
+\begin{document}
+ 
+\section{Einleitung}
+Ein Integral stellt die Fläche unter der Kurve dar, welches aber nicht mit dem Flächeninhalt verwelchselt werden sollte: beim Integral zählen Flächen dessen $y<0$ auch negativ, wobei diese beim berechnen des Flächeninhalts auch positiv zählen. \newline
+Die Fläche von einfachen, linearen, Kurven kann durch andere Formen mit bereits bekannten Flächeninhaltsformeln passend ausgerechnet werden. Bei komplexeren Kurven, ist es nicht mehr möglich diese durch andere Formen zu rekreieren, nur sie mit Fehlern anzunähern. Desto mehr kleine Kurven verwendet werden, desto kleiner werden auch die Fehler und das Ergebniss genauer, sodass die genaue Fläche unter der Kurve als die Summe der Flächen von unendlich vielen kleinen Formen angesehen werden kann. \newline
+Dies wird dann aufgeschrieben als
+\[\int_a^b f(x) \,dx\] 
+um die Fläche under der Kurve $f(x)$ von Stelle $a$ zu $b$ zu bestimmen.
+ 
+\section{Integrale Berechnen}
+Um den obigen Beispielsintegral von $f(x)$ von $a$ zu $b$ zu berechnen, muss die Stammfunktion $F(x)$ bestimmt werden, sodass $F(a)$ von $F(b)$ subtrahiert werden kann, heißt
+\[\int_a^b f(x) \,dx =
+F(x) \,\Bigr|_a^b =
+F(b) - F(a)\]
+ 
+\section{Stammfunktionen}
+Die Stammfunktion ist das gegenteil einer Ableitung, sodass für die Stammfunktion von $f(x)$, $F(x)$, gilt dass $F'(x)=f(x)$. Weil die Stammfunktion das gegenteil der Ableitung ist, welche grafisch abgelesen werden kann, ist es offensichtlich dass auch die Stammfunktion grafisch abgelesen werden, nur mit ungekehrten Regeln. \newline
+Eigentlich müsste nach jeden $F(x)$ ein $+ \, C$ folgen, weil der y-Achsenabschnitt, $F(0)$, ohne weiteres nicht bestimmt werden kann und somit durch die unbekannte $C$ dargestellt wird. Diese ist aber erstmal nicht relevant. 
+ 
+\subsection{Grafisch}
+Selbsterklärend steigt $F(x)$ an der Stelle $x$, wenn $f(x)$, also $F'(x)$, positiv ist und somit eine positive Steigung wiederspiegelt.
+ 
+\subsection{Rechnerisch}
+Weil $f(x)=x^n \implies f'(x)=n \cdot x^{n-1}$, so gilt auch umgekehrt $f(x)=x^n \implies F(x)=\frac{1}{n+1}x^{n+1}$. Nicht vergessen, dass $n=n \cdot x^0$ und $x=x^1$. Eine gefundene Stammfunktion kann auf ihre Richtigkeit überprüft werden, indem $F'(x)=f(x)$.
+ 
+\section{Zwischen zwei Graphen} 
+Gegeben $f(x)$ und $g(x)$, ist die Fläche zwischen den beiden Kurven
+\[\int_a^b f(x)-g(x) \,dx\]  
+bzw. beim berechnen des Flächeninhaltes immer der kleine Funktionswert subtrahiert vom größeren. Falls sich im Verlauf der Kurve die beiden Funktionen darin abwechseln, welche größer ist, muss $x$ für $f(x)=g(x)$ gefunden werden, sodass das Integral in mehrere aufgeteilt werden kann, wovon bei jedem eine Funktion klar größer als die andere ist. \newline
+Falls es sich nicht um einen Flächeninhalt handeln sollte, sollte ein vorgegeber Sachkontext erklären können welche Funktion von welcher subtrahiert wird.
+ 
+\section{Integralfunktionen}
+Gegeben $f(x)$, ist 
+\[I_a(x)=\int_a^x f(t) \,dt\]
+also zum Beispiel
+\[I_3(x)=\int_3^x f(t) \,dt\]
+welches dann selbst ausgerechnet werden kann. \newline
+Da $x$ bereits von $I(x)$ genutzt wird, kann es nicht auch noch im Integral selbst genutzt werden, weshalb stattdessen ein $t$ verwendet wurde, siehe $f(t)$ und $dt$.
+ 
+\section{Uneigentliche Integrale} 
+ 
+\section{Rotationsvolumina berechnen} 
+ 
+\section{Bogenlängen} 
+ 
+\end{document}
+ 
+ 
+ 
+ 
