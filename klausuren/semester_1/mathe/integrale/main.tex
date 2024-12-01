@@ -11,11 +11,18 @@
 \begin{document}
  
 \section{Einleitung}
-Ein Integral stellt die Fläche unter der Kurve dar, welches aber nicht mit dem Flächeninhalt verwelchselt werden sollte: beim Integral zählen Flächen dessen $y<0$ auch negativ, wobei diese beim berechnen des Flächeninhalts auch positiv zählen. \newline
-Die Fläche von einfachen, linearen, Kurven kann durch andere Formen mit bereits bekannten Flächeninhaltsformeln passend ausgerechnet werden. Bei komplexeren Kurven, ist es nicht mehr möglich diese durch andere Formen zu rekreieren, nur sie mit Fehlern anzunähern. Desto mehr kleine Kurven verwendet werden, desto kleiner werden auch die Fehler und das Ergebniss genauer, sodass die genaue Fläche unter der Kurve als die Summe der Flächen von unendlich vielen kleinen Formen angesehen werden kann. \newline
+Ein Integral stellt die Fläche unter der Kurve dar, welches aber nicht mit dem Flächeninhalt verwelchselt werden sollte: beim Integral zählen Flächen dessen $y<0$ auch negativ, wobei diese beim berechnen des Flächeninhalts auch positiv zählen.
+ 
+Die Fläche von einfachen, z.B. linearen, Kurven kann durch andere Formen mit bereits bekannten Flächeninhaltsformeln, von Rechtecken, Dreiecken und Trapezen, passend ausgerechnet werden. Bei komplexeren Kurven, kann die Fläche nur noch mit Fehlern angenähert werden. Desto mehr kleinere Formen verwendet werden, desto kleiner werden auch die Fehler und das Ergebniss genauer, sodass die genaue Fläche unter der Kurve als der Grenzwert der Summe der Flächen von unendlich vielen kleinen Formen angesehen werden kann. \newline
 Dies wird dann aufgeschrieben als
 \[\int_a^b f(x) \,dx\] 
 um die Fläche under der Kurve $f(x)$ von Stelle $a$ zu $b$ zu bestimmen.
+ 
+\section{Bestände} 
+Die Fläche unter der Kurve stellt auch noch den Bestandsänderung einer Änderungsratenfunktion im gegebenen Intervall dar. \newline
+Wenn $f(x)$ beispielshaft zu den Zufluss an Wasser in $\frac{l}{h}$ angibt, gibt das Integral an, wie viel Wasser insgesamt innerhalb des gegebenen Zeitraums eingeflossen ist, bzw. um wie viel sich der Bestand an Wasser geändert hat. Somit kann der Wasserbestand zu einem Zeitpunkt $b$ als
+\[C + \int_0^b f(x) \, dx\]
+bestimmt werden, wobei $C$ der in der Aufgabe gebene Anfangsbestand ist.
  
 \section{Integrale Berechnen}
 Um den obigen Beispielsintegral von $f(x)$ von $a$ zu $b$ zu berechnen, muss die Stammfunktion $F(x)$ bestimmt werden, sodass $F(a)$ von $F(b)$ subtrahiert werden kann, heißt
@@ -24,11 +31,11 @@ F(x) \,\Bigr|_a^b =
 F(b) - F(a)\]
  
 \section{Stammfunktionen}
-Die Stammfunktion ist das gegenteil einer Ableitung, sodass für die Stammfunktion von $f(x)$, $F(x)$, gilt dass $F'(x)=f(x)$. Weil die Stammfunktion das gegenteil der Ableitung ist, welche grafisch abgelesen werden kann, ist es offensichtlich dass auch die Stammfunktion grafisch abgelesen werden, nur mit ungekehrten Regeln. \newline
+Die Stammfunktion ist das gegenteil einer Ableitung, sodass für die Stammfunktion von $f(x)$, $F(x)$, gilt dass $F'(x)=f(x)$. \newline
 Eigentlich müsste nach jeden $F(x)$ ein $+ \, C$ folgen, weil der y-Achsenabschnitt, $F(0)$, ohne weiteres nicht bestimmt werden kann und somit durch die unbekannte $C$ dargestellt wird. Diese ist aber erstmal nicht relevant. 
  
 \subsection{Grafisch}
-Selbsterklärend steigt $F(x)$ an der Stelle $x$, wenn $f(x)$, also $F'(x)$, positiv ist und somit eine positive Steigung wiederspiegelt.
+Selbsterklärend steigt $F(x)$ an der Stelle $x$, wenn $f(x)$, also $F'(x)$, positiv ist und somit eine positive Steigung wiederspiegelt. An Stellen bei denen $f(x)=0$, gibt es keine Steigung, also einen Höhe-, Tief- oder Sattelpunkt.
  
 \subsection{Rechnerisch}
 Weil $f(x)=x^n \implies f'(x)=n \cdot x^{n-1}$, so gilt auch umgekehrt $f(x)=x^n \implies F(x)=\frac{1}{n+1}x^{n+1}$. Nicht vergessen, dass $n=n \cdot x^0$ und $x=x^1$. Eine gefundene Stammfunktion kann auf ihre Richtigkeit überprüft werden, indem $F'(x)=f(x)$.
@@ -40,18 +47,33 @@ bzw. beim berechnen des Flächeninhaltes immer der kleine Funktionswert subtrahi
 Falls es sich nicht um einen Flächeninhalt handeln sollte, sollte ein vorgegeber Sachkontext erklären können welche Funktion von welcher subtrahiert wird.
  
 \section{Integralfunktionen}
-Gegeben $f(x)$, ist 
+Eine Integralfunktion, $I_a(x)$ ist eine Funktion, welche als Wert das Integral einer anderen gegeben Funktion $f(x)$ mit der unteren Grenze $a$ und der oberen Grenze $x$ findet. Es gilt 
 \[I_a(x)=\int_a^x f(t) \,dt\]
 also zum Beispiel
 \[I_3(x)=\int_3^x f(t) \,dt\]
 welches dann selbst ausgerechnet werden kann. \newline
 Da $x$ bereits von $I(x)$ genutzt wird, kann es nicht auch noch im Integral selbst genutzt werden, weshalb stattdessen ein $t$ verwendet wurde, siehe $f(t)$ und $dt$.
  
-\section{Uneigentliche Integrale} 
+\section{Uneigentliche Integrale}
+Ein uneigentliches Integral ist ein Integral, welches als Integrationsgrenzen $-\infty$, $\infty$ \textbf{(uneigentliches Integral 1. Art)} oder eine Definitionslücke \textbf{(uneigentliches Integral 2. Art)} hat.
+Der Wert eines uneigentlichen Integrals ist der Grenzwert. \newline
+Beispiel eines uneigentlichen Integrals 1. Art mit der oberen Grenze $\infty$ 
+\[\int_a^\infty f(x)\,dx = \lim_{u \to \infty} \int_a^u f(x)\,dx\] 
+Beim berechnen wird dann auch anstelle von der einfachen Integrationsgrenz der Grenzwert der Integrationsgrenze verwendet, in diesem Beispiel also anstelle von $F(\infty)$ dann
+\[\lim_{u \to \infty} F(u)\] 
+Integrale dessen Grenzwert zu $\infty$ gehen existieren nicht.
  
-\section{Rotationsvolumina berechnen} 
+\section{Rotationsvolumina berechnen}
+Weil ein Volumen $V$ eigentlich nur das Integral aller Flächen $A$ ist und für die Fläche $A=\pi r^2$ ist, gilt für einen Rotationskörper, dessen $r=f(x)$ ist,
+\[V = \pi \cdot \int_a^b (f(x))^2 \, dx\]
+wobei $(f(x))^2$ einfach nur $f(x)$ zum Quadrat ist. Dabei muss $f(x)$ als eines gesehen werden, wie in Klammern geschrieben, damit es korrekt ausmultipliziert werden kann. \newline
+Solange nichts anderes im Kontext der Aufgabe angegeben ist, ist die Einheit \textbf{VE (Volumen-Einheiten)} 
  
-\section{Bogenlängen} 
+\section{Bogenlängen}
+Ist die Bogenlänge einer Funktion gesucht, kann diese als Summe bzw das Integral der Längen mehrer Hypothenusen von Dreiecken, dessen Kathethen $\Delta x$ und $\Delta y$ sind bestimmt werden, wobei aus dem Satz von Pythagoras folgt, dass diese Kathetenlängen $l = \sqrt{\Delta x^2 + \Delta y^2}$
+weshalb für die gesamte Bogenlänge
+\[l = \int_a^b \sqrt{1+(f'(x))^2} \, dx\] 
+gilt.
  
 \end{document}
  
