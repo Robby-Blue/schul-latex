@@ -74,6 +74,24 @@ Eine 2D Toleranzkurve ist ein Ökogramm.
 \end{tabular}
 \end{center}
  
+\begin{center}
+\begin{tabular}{ |c|c|c| }
+\hline
+ & \textbf{Thermokonformer} & \textbf{Thermoregulierer} \\
+\hline
+ \textbf{Funktionsweise} & abhängig von Umwelt & reguliert eigene Temperatur \\ 
+ & Sonne und Schatten & Hecheln, Schwitzen, Zittern, etc \\
+\hline
+ \textbf{Temperatur} & Außentemperatur (\textbf{poikilotherm}) & konstant (\textbf{homoiotherm}) \\ 
+\hline 
+ \textbf{Vorteile} & weniger Energie verbrauch & vulnerabler \\
+ &  & beschränkter Lebensraum \\
+\hline
+ \textbf{Nachteile} & lebt überall gut & mehr Energie nutzung \\
+\hline
+\end{tabular}
+\end{center}
+ 
  
 \section{Ökosystem}  
 \begin{description} 
@@ -98,19 +116,19 @@ Die Toleranzkurve ist eine kurve, der Normalverteilung ähnlich, welche die Pote
     \draw[thick, domain=-5:5, samples=75] 
             plot (\x, {4.5*exp(-0.5*\x*\x*0.5)});
      
-    \draw[->] (-5,0) -- (5,0) node[right] {Umweltfaktor};
-    \draw[->] (-5,0) -- (-5,5) node[left] {Potenz}; 
+    \draw[->] (-5,0) -- (5,0) node[below left] {Umweltfaktor};
+    \draw[->] (-5,0) -- (-5,5) node[right] {Potenz}; 
     
-    \draw[dashed] (-4.4,0) -- (-4.4, 5) node[right] {Minimum};    
-    \draw[dashed] (4.4,0) -- (4.4, 5) node[right] {Maximum};
+    \draw[dashed, red] (-4.4,0) -- (-4.4, 4.5) node[right] {Minimum};    
+    \draw[dashed, red] (4.4,0) -- (4.4, 4.5) node[left] {Maximum};
  
     \fill[blue!30, opacity=0.5] (-1,0) -- plot[domain=-1:1, smooth, samples=10] (\x, {4.5*exp(-0.5*\x*\x*0.5)}) -- (1,0) -- cycle;
   
-    \draw[] (0,4.5) node {$\times$} node[above] {Optimum};
+    \draw[blue] (0,4.5) node {$\times$} node[above] {Optimum};
     \node[] at (0,2.5) {Präferenzbereich};
  
-    \fill[blue!30, opacity=0.5] (-4.4,0) -- plot[domain=-4.4:-3, smooth, samples=10] (\x, {4.5*exp(-0.5*\x*\x*0.5)}) -- (-3,0) -- cycle;  
-    \fill[blue!30, opacity=0.5] (3,0) -- plot[domain=3:4.4, smooth, samples=10] (\x, {4.5*exp(-0.5*\x*\x*0.5)}) -- (4.4,0) -- cycle;
+    \fill[red!30, opacity=0.5] (-4.4,0) -- plot[domain=-4.4:-3, smooth, samples=10] (\x, {4.5*exp(-0.5*\x*\x*0.5)}) -- (-3,0) -- cycle;  
+    \fill[red!30, opacity=0.5] (3,0) -- plot[domain=3:4.4, smooth, samples=10] (\x, {4.5*exp(-0.5*\x*\x*0.5)}) -- (4.4,0) -- cycle;
  
     \node[] at (3.5, 1) {Pessimum};
   \end{tikzpicture}
@@ -118,6 +136,49 @@ Die Toleranzkurve ist eine kurve, der Normalverteilung ähnlich, welche die Pote
  
 \subsection{Ökogramm}
 Ein Ökogramm ist unterm Strich eine zweidimensionale Toleranzkurve, welche die Potenz nach zwei Umweltfaktoren zeigt.
+  
+\section{Körpertemperatur}
+Es gibt zwei Möglichkeiten, wie Tiere ihre bevorzugte Körpertemperatur erreichen können. Tiere werden dabei in die \textbf{Thermokonformer} und \textbf{Thermoregulierer} eingeteilt.
+ 
+\subsection{Thermokonformer}
+Thermokonformer sind von sich aus an ihre Umwelt angepasst, sodass sie sich nicht selbst erwärmen müssen, sondern ihre Temperatur aus der Natur beziehen, wie Wärmeenergie aus der Sonne und eine Abkülung durch den Schatten. Somit ist ihre Körpertemperatur von der Außentemperatur abhängig. Weil diese nicht konstant ist, sind Thermokonformer \textbf{Poikilotherm} \newline
+So müssen sie keine Energie ausgeben, um sich selbst zu erwärmen, können aber auch in zu kalten oder zu warmen Klimazonen nicht leben.
+ 
+\begin{figure}[h] 
+  \centering
+  \begin{tikzpicture}     
+    \draw[thick] plot[smooth, tension=1] coordinates {(-2.5,0) (-1, 2) (1, 4.5) (2, 2) (3, 0)};
+     
+    \draw[->] (-5,0) -- (5,0) node[below left] {Umgebungstemperatur};
+    \draw[->] (-5,0) -- (-5,5) node[right] {Körpertemperatur}; 
+    
+    \fill[red!30, opacity=0.5] (-4.3, 0) rectangle (-2.5, 4.5);    
+    \fill[red!30, opacity=0.5] (3, 0) rectangle (4.3, 4.5);
+ 
+    \node[] at (-3.4, 3) {Kältestarre}; 
+    \node[] at (3.65, 3) {Hitzestarre};
+ 
+    \draw[red] (-4.3, 0) node {$\times$} node[above] {Kältetod};    
+    \draw[red] (4.3, 0) node {$\times$} node[above] {Hitzetod}; 
+  \end{tikzpicture}
+\end{figure} 
+ 
+\subsection{Thermoregulierer}
+Thermoregulierer regulieren ihre eigene Körpertemperatur durch Aktionen wie Zittern, Schwitzen, Hecheln, etc. Dies benötigt viel Energie, erlaubt ihnen aber auch eine konstante Körpertemperatur haben können (sie sind \textbf{Homoiotherm}). Somit können sie überall gut leben, auch in kalten Regionen. \newline
+Homoiotherme Tiere, welche aktiv Energie verwenden müssen um sich warm zu halten, sind von der \textbf{Bergmannschen Regel} und der \textbf{Allenschen Regel} betroffen, welche sich mit der Produktion, Speicherung und Abgabe von Wärme in bezug auf (Körper-)größen bezieht. Poikilotheme Tiere sind davon einfach nicht betroffen.
+ 
+\begin{figure}[h] 
+  \centering
+  \begin{tikzpicture}     
+    \draw[thick] plot[smooth, tension=0.2] coordinates {(-4.3,0) (-3.5, 4.5) (3.5, 4.5) (4.3, 0)};
+     
+    \draw[->] (-5,0) -- (5,0) node[below left] {Umgebungstemperatur};
+    \draw[->] (-5,0) -- (-5,5) node[right] {Körpertemperatur}; 
+    
+    \draw[red] (-4.3, 0) node {$\times$} node[above] {Kältetod};    
+    \draw[red] (4.3, 0) node {$\times$} node[above] {Hitzetod}; 
+  \end{tikzpicture}
+\end{figure}  
  
 \subsection{Die Bergmannsche Regel}
 Die Bergmannsche Regel besagt, dass nah verwandte Tierarten in der Regel in kälteren Klimazonen größer sind. Dies liegt daran, dass das energieproduzierende und speichernde Volumen als kubische Funktion schneller anwächst als die wärmeabgebende Oberflächen. Größere Tiere geben zwar etwas mehr Wärmeenergie als kleinere Tiere ab, können aber auch um ein Vielfaches mehr Wärmeenergie produzieren und speichern, welches für das Überleben in kalten Regionen lebensnotwendig ist.
@@ -126,8 +187,10 @@ Die Bergmannsche Regel besagt, dass nah verwandte Tierarten in der Regel in käl
 Tiere wie beispielsweise der sehr Adelie-Pinguine können auch in kalten Regionen überleben, obwohl sie klein sind, weil sie stattdessen auf andere Art und Weise sich wärmen, wie durch proteinreiche Ernährung und eine erhöhte Körperaktivität.
  
 \subsection{Die Allensche Regel}
-Je wärmer die Klimazone ist, in der ein nah verwandtes Tier lebt, desto größer sind dessen Körperanhänge wie Ohren. Dadurch dass die größer sind haben sie eine größere Oberfläche und können besser Wärmeenergie abgeben und somit die Temperatur des Tiers regulieren.
+Je wärmer die Klimazone ist, in der ein nah verwandtes Tier lebt, desto größer sind dessen Körperanhänge wie Ohren. Dadurch dass die größer sind haben sie eine größere Oberfläche und können besser Wärmeenergie abgeben und somit die Temperatur des Tiers regulieren bzw. umgekehrt verlieren Tiere mit kleineren Körperanhängen weniger Wärmeenergie.
+ 
 \end{document}
+ 
  
  
  
