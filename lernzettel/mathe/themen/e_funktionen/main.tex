@@ -33,23 +33,23 @@ Eine Exponentialfunktion kann abgeleitet werden, indem
    
  \end{tikzpicture}
 \end{wrapfigure}  
-Eine e-Funktion ist eine Exponentialfunktion, welche die Eulersche Zahl $e \approx 2,718$ als Basis nimmt.
+Eine e-Funktion ist eine Exponentialfunktion, welche die Eulersche Zahl $\mathrm{e} \approx 2,718$ als Basis nimmt.
 \[
- f(x)=e^x
+ f(x)=\mathrm{e}^x
 \]
-Somit ist sie in der Standardform streng monoton steigend und geht durch ${(0 \mid 1)}$, weil jegliche Zahl hoch null immer eins ist, und $(1 \mid e)$, weil $e^1=e$. \newline
+Somit ist sie in der Standardform streng monoton steigend und geht durch ${(0 \mid 1)}$, weil jegliche Zahl hoch null immer eins ist, und $(1 \mid \mathrm{e})$, weil $\mathrm{e}^1=\mathrm{e}$. \newline
 Sie schmiegt bei im negativen an die x-Ache an, geht im positiven ins unendliche.
 \[
- \lim_{x \to -\infty} e^x = 0
+ \lim_{x \to -\infty} \mathrm{e}^x = 0
  \quad \text{und} \quad
- \lim_{x \to \infty} e^x = \infty
+ \lim_{x \to \infty} \mathrm{e}^x = \infty
 \]
-Exponentialfunktionen anderer Basen können mit $a^x = e^{\ln{(a)} \cdot x}$ in eine e-Funktion umgewandelt werden. Dies folgt aus $a^x$ mit $a=e^{\ln{a}}$ und $(a^m)^n = a^{m \cdot n}$ 
+Exponentialfunktionen anderer Basen können mit $a^x = \mathrm{e}^{\ln{(a)} \cdot x}$ in eine e-Funktion umgewandelt werden. Dies folgt aus $a^x$ mit $a=\mathrm{e}^{\ln{a}}$ und $(a^m)^n = a^{m \cdot n}$ 
 \subsection{Ableitungen} 
-Die Basis $e$ wird genutzt, um das Ableiten zu vereinfachen, es gilt $f(x)=e^x \implies f'(x)=e^x$. \newline
-Beim Ableiten wird die Ableitung des Exponenten als Faktor vor das $e$ gesetzt, sodass 
+Die Basis $\mathrm{e}$ wird genutzt, um das Ableiten zu vereinfachen, es gilt $f(x)=\mathrm{e}^x \implies f'(x)=\mathrm{e}^x$. \newline
+Beim Ableiten wird die Ableitung des Exponenten als Faktor vor das $\mathrm{e}$ gesetzt, sodass 
 \[
- \frac{\mathrm{d}}{\mathrm{d}x} e^{g(x)} = g'(x) \cdot e^{g(x)} 
+ \frac{\mathrm{d}}{\mathrm{d}x} \mathrm{e}^{g(x)} = g'(x) \cdot \mathrm{e}^{g(x)} 
 \]  
 \begin{wrapfigure}{r}{4.5cm}
  \centering
@@ -68,21 +68,21 @@ Beim Ableiten wird die Ableitung des Exponenten als Faktor vor das $e$ gesetzt, 
 \end{wrapfigure} 
 Ist $g(x)$ eine lineare Funktion, kann das Gegenteil für das Bilden einer Stammfunktion genutzt werden. 
 \[
- \int e^{mx+b} = \frac{1}{m} \cdot e^{mx+b}
+ \int \mathrm{e}^{mx+b} = \frac{1}{m} \cdot \mathrm{e}^{mx+b}
 \] 
 \section{Natürliche Logarithmen}  
-Der natürliche Logarithmus $\ln$ ist ein Logarithmus zur Basis $e$.
+Der natürliche Logarithmus $\ln$ ist ein Logarithmus zur Basis $\mathrm{e}$.
 \[
  f(x) = \log_e{x} = \ln{x}
 \] 
-Somit ist die für $x>0$ definierte Standardform streng monoton steigend und geht durch ${(1 \mid 0)}$, weil jegliche Zahl hoch 1 gerechnet werden muss, um 0 zu bekommen, und $(e \mid 1)$, weil $e^1=e$. \newline
+Somit ist die für $x>0$ definierte Standardform streng monoton steigend und geht durch ${(1 \mid 0)}$, weil jegliche Zahl hoch 1 gerechnet werden muss, um 0 zu bekommen, und $(\mathrm{e} \mid 1)$, weil $\mathrm{e}^1=\mathrm{e}$. \newline
 Sie schmiegt bei $x=0$ an die y-Ache an, geht im positiven ins unendliche.
 \[
  \lim_{x \to 0^+} \ln x = -\infty
  \quad \text{und} \quad
  \lim_{x \to \infty} \ln x= \infty
 \] 
-Die Gegenfunktion zur e-Funktion, sodass $e^{\ln(m)}=\ln{(e^m)}=m$. Unteranderem daraus folgt auch dass $\ln(e)=1$.
+Die Gegenfunktion zur e-Funktion, sodass $\mathrm{e}^{\ln(m)}=\ln{(\mathrm{e}^m)}=m$. Unteranderem daraus folgt auch dass $\ln(\mathrm{e})=1$.
 \subsection{Ableitungen} 
 \[
  \frac{\mathrm{d}}{\mathrm{d}x} \ln{(g(x))} = \frac{1}{g(x)} \cdot g'(x) 
