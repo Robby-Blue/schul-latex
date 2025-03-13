@@ -6,18 +6,33 @@
 \lhead{Ableitungsregeln}
 \rhead{März 2025}
 \begin{document} 
-\noindent
-\begin{center}
-\begin{tabular}{ |c|c|c| }
-\hline
- Regel & Normalform & Ableitungsform \\
-\hline
- Quotientenregel & $\dfrac{u}{v}$? & $\dfrac{u'v-uv'}{v^2}$ \\
-\hline
-\end{tabular}
-\end{center}
-etc, probsn icht able table 
  
+\newcommand{\derive}{\frac{\mathrm{d}}{\mathrm{d}x}} 
+ 
+\subsection*{Summenregel} 
+\[ \derive (u + v) = u' + v' \]
+  
+\subsection*{Faktorregel}
+$\mathrm{c}$ als Konstante 
+\[ \derive (\mathrm{c} \cdot u) = \mathrm{c} \cdot u' \]
+ 
+\subsection*{Produktregel} 
+\[ \derive (u \cdot v) = u' \cdot v + v' \cdot u \] 
+ 
+\subsection*{Quotientenregel} 
+\[ \derive \left( \frac{u}{v} \right) = \frac{u' \cdot v - v' \cdot u}{v^2} \] 
+ 
+\subsection*{Kettenregel}
+\[ \derive f(g(x)) = f'(g(x)) \cdot g'(x) \]
+ 
+\subsection*{Weitere Funktionen}
+\[ \derive \mathrm{e}^x = \mathrm{e}^x \]
+\[ \derive \ln x = \frac{1}{x} \]
+\[ \derive \sin x = \cos x \] 
+\[ \derive \cos x = -\sin x \] 
 \end{document}
+ 
+ 
+ 
  
  
