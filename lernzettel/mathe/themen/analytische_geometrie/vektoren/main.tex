@@ -1,0 +1,87 @@
+\documentclass{article}
+\usepackage{amsmath} 
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Vektoren}
+\rhead{März 2025}
+\begin{document}
+ 
+\newcommand{\norm}[1]{\left| {#1} \right|}  
+\newcommand{\vect}[1]{\overrightarrow{#1}} 
+ 
+% TODO überall tikz sachen einfügen 
+\section{Definition}
+Ein Vektor beschreibt die Verschiebung, sei diese zweidimensionalen Koordinatensystem oder einem dreidimensionalen Raum. Somit beschreiben sie sowohl eine Länge als auch eine Richtung. In Skizzen werden sie ale Pfeile dargestellt. Vektoren werden aufgeschrieben, indem die Koordinaten, welche $x$, $y$ und $z$ bzw. $x_1$, $x_2$ und $x_3$ genannt werden, untereinander aufgelistet werden, in der Form 
+\[
+ \vect{x} = \begin{pmatrix} x \\ y \end{pmatrix}
+ \quad \text{oder} \quad
+ \begin{pmatrix} x_1 \\ x_2 \end{pmatrix}
+\]
+bzw. 
+\[
+ \vect{x} = \begin{pmatrix} x \\ y \\ z \end{pmatrix}
+ \quad \text{oder} \quad
+ \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}
+\]
+ 
+\subsection{Nullvektor}
+Ein Nullvektor ist ein Vektor, bestehen aus nur Nullen.
+\[
+ \vect{0} = \begin{pmatrix} 0 \\ 0 \end{pmatrix}
+\]
+ 
+\subsection{Gegenvektoren}
+Das Gegenteil eines Vektors $\vect{v}$, welcher die gegenteiligen Koordinaten hat, ist der Gegenvektor, -$\vect{v}$
+ 
+\subsection{Verbindungsvektoren} 
+Ein Verbindungsvektor beschreibt einen Vektor, welcher zwei Punkte verbindet. Der Wert eines Verbindungsvektors ist die differenz zwischen den zwei Punkten; wie weit der erste Punkt verschoben werden müsste, um den zweiten zu erreichen. So gilt für den Verbindungsvektor der Punkt $\mathrm{P}$ und $\mathrm{Q}$
+\[
+ \vect{\mathrm{PQ}} =
+ \begin{pmatrix}
+  \mathrm{q}_1 - \mathrm{p}_1 \\
+  \mathrm{q}_2 - \mathrm{p}_2
+ \end{pmatrix}
+\]
+ 
+\subsection{Ortsvektoren}
+Der Ortsvektor eines Punktes ist der Verbindungsvektor, welcher vom Koordinatenursprung $\mathrm{O}$ zu diesem Punkt geht. So ist der Ortsvektor vom Punkt $\mathrm{P}$ der Vektor $\vect{\mathrm{OP}}$. Weil $\mathrm{O}$ durch einen Nullvektor repräsentiert werden kann, sind die Koordinaten des Ortsvektors $\vect{\mathrm{OP}}$ dieselben wie die vom Punkt $\mathrm{O}$
+ 
+\section{Addition} 
+Vektoren können, genau wie normale Zahlen auch, miteinander addiert und subtrahiert werden. Die Summe zweier Vektoren kann als beide einzelnen Vektoren, wobei der Anfang des einen and das Ende des anderen gelegt wurde, angesehen werden, \newline 
+Algebraisch wird dabei die jeweilige Rechenart nur auf die einzelnen Koordinatenpaare angewand, heißt 
+\[ 
+ \begin{pmatrix} a_1 \\ a_2 \end{pmatrix} +
+ \begin{pmatrix} b_1 \\ b_2 \end{pmatrix} =
+ \begin{pmatrix} a_1 + b_1 \\ a_2 + b_2 \end{pmatrix} 
+\]
+Gleiches gilt für subtraktion, mit $\vect{a} - \vect{b} = \vect{a} + (-\vect{b})$.
+ 
+\section{Multiplikation}
+Vektoren können mit Zahlen multipliziert werden, wodurch die Länge dem Faktor nach verlängert oder verkürzt wird. Algebraisch wird dabei die Multiplikation auf die einzelnen Koordinatenpaare angewand, heißt
+\[ 
+ r \cdot
+ \begin{pmatrix} x_1 \\ x_2 \end{pmatrix} =
+ \begin{pmatrix} r \cdot x_1 \\ r \cdot x_2 \end{pmatrix} 
+\]
+ 
+\section{Beträge} 
+Der Betrag eines Vektors spiegelt die Länge wieder. Diese wird mit dem Satz des Pythagoras errechnet, wobei der Vektorenpfeil als Hypothenuse eines Dreiecks mit den Vektorenkoordinaten als Katheten gesehen wird.
+\[
+ \norm{\vect{v}} =
+ \sqrt{{x_1}^2 + {x_2}^2}
+\]
+ 
+\section{Kollinearität} 
+Zwei Vektoren sind kollinear, wenn sie in die gleiche Richtung zeigen, also einer nur ein Vielfache des anderen ist. Kollinearität zwischen $\vect{a}$ und $\vect{b}$ ist vorhanden, wenn es ein $r$ gibt, so dass 
+\[ 
+ r \cdot \vect{a} = \vect{b}
+\]
+ 
+ 
+\end{document}
+ 
+ 
+ 
+ 
+ 
