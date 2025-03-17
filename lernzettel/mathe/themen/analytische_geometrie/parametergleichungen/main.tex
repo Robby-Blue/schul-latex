@@ -1,19 +1,62 @@
 \documentclass{article}
 \usepackage{tikz}
 \usepackage{wrapfig} 
-\usepackage{amsmath} 
+\usepackage{amsmath}
+\usepackage{amssymb} 
 \usepackage[a4paper]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \lhead{Parametergleichungen}
 \rhead{März 2025}
 \begin{document}
-% TODO inhalt hinzufügen 
+ 
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+ 
+% TODO: add tikz 
 \section{Definition}
-\section{Geraden} 
+Eine Parametergleichung ist eine Gleichung, welche mithilfe eines Parameter verschiedene Punkte, wie beispielsweise alle Punkte, welche auf einer bestimmten Gerade liegen, darstellt. \newline
+Die Schreibweise der Parametergleichung lautet 
+\[
+ g: \vect{x} = ...
+\] 
+  
+\section{Geraden}
+Eine Gerade beinhaltet alle Punkte, welche in eine bestimmte Richtung zeigen, heißt zu dem Vektor, welcher die Richtung angibt, dem \textbf{Richtungsvektor}, kollinear sind. Ist $\vect{u}$ der Richtungsvektor, entsprechen diese Punkte der Gleichung $r \cdot \vect{u}$ mit $r \in \mathbb{R}$. Damit die Gerade nicht durch den Ursprung gehen muss, werden all diese Punkte um den \textbf{Stützvektor}, oft $\vect{\mathrm{OA}}$, verschoben.
+Somit gilt 
+\[
+ g: \vect{x} = \vect{\mathrm{OA}} + r \cdot \vect{u} 
+\] 
+Basiert die Gerade auf eine Verbindung von zwei Punkten, kann der Verbindungsvektor dieser als Richtungsvektor verwendet werden. Die Punkte müssen auch im Namen der Gleichung angegeben werden. Wird eine Gerade durch die Punkte $A$ und $B$ gelegt, gilt 
+\[
+ g_{\mathrm{AB}}: \vect{x} = \vect{\mathrm{OA}} + r \cdot \vect{\mathrm{AB}} 
+\]
+ 
 \subsection{Strecken}
-\section{Spurpunkte} 
+So wie Strecken nur begrenzte Geraden sind, ist die Parametergleichung einer Strecke auch nur die Parametergleichung einer Gerade auf einem Intervall. Weil für eine Strecke von Punkt $A$ zu Punkt $B$ mit der obigen Formel der Endpunkt $A$ bei $r=0$ liegt ($A = \vect{\mathrm{OA}} + 0 \cdot \vect{\mathrm{AB}}$) und bei $r < 0$ die Punkte entgegen der Richtung zu $B$ gehen würden, von der Strecke herunter, muss $r \geq 0$ sein. Mit der Gleichung Logik für Punkt $B$, bei $r=1$ ($B = \vect{\mathrm{OA}} + 1 \cdot \vect{\mathrm{AB}}$), gilt zudem noch $r \leq 1$. Somit gilt insgesamt die generelle Formel 
+\[
+ g_{\mathrm{AB}}: \vect{x} = \vect{\mathrm{OA}} + r \cdot \vect{\mathrm{AB}}
+ \quad \text{mit} \quad
+ 0 \leq r \leq 1 
+\]
+ 
+\section{Spurpunkte}
+Spurpunkte sind die Schnittpunkte einer Gerade mit den Koordinatenebenen.
+Eine dreidimensionale Gerade kann bis zu drei Spurpunkte haben, eine für jede Dimension. Die Schnittpunkt werden nach den Koordinaten, welche nicht null sind, benannt. \newline
+Ein Schnittpunkt mit der Ebene $x_2x_3$ liegt bei $x_1 = 0$, heißt der Schnittpunkt ist
+\[
+ S_{23} = \begin{pmatrix} 0 \\ x_2 \\ x_3 \end{pmatrix} 
+\]
+Dieser Vektor kann mit der Parametergleichung gleichgesetzt werden um das fehlende $r$ und die fehlenden Koordinaten, in diesem Fall $x_2$ und $x_3$, zu bestimmen. Wenn es keine Lösung gibt, gibt es keinen Spurpunkt, weil die Gerade nicht durch die Ebene geht.
+ 
 \section{Lagebeziehungen}
+Die Lagebeziehung zweier Geraden beschreibt, wie sie zueinander im Raum stehen. Dabei gibt es vier Möglichkeiten.
+\begin{description}
+ \item[Schneidung] Wenn zwei Geraden genau einen Schnittpunkt haben, schneiden sie sich. Dies impliziert, dass die Richtungsvektoren dessen Parametergleichungen nicht kollinear zueinander sind.
+ \item[identisch] Teilen zwei Geraden sich alle ihre Punkte, sind sie identisch. Dies kann ermittelt werden, indem es entweder undendlich viele Lösungen beim LGS gibt oder es mindestens einen Schnittpunkt gibt und die Richtungsvektoren kollinear sind.
+ \item[echt parallel] Zeigen zwei Geraden in die gleiche Richtung, sind also kollinear, berühren sich aber nicht, sind sie echt parallel.
+ \item[windschief] Wenn zwei Geraden nicht kollinear sind, sicher aber auch nicht schneiden, sind sie windschief.
+\end{description} 
+ 
 \end{document}
  
  
