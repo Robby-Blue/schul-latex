@@ -1,4 +1,5 @@
-\documentclass{article}
+\documentclass{article} 
+\usepackage{multicol} 
 \usepackage{amsmath} 
 \usepackage[a4paper]{geometry}
 \usepackage{fancyhdr}
@@ -7,7 +8,7 @@
 \rhead{März 2025}
 \begin{document}
 \section{Definition}
-Eine lineares Gleichungssystem (LGS) ist eine Menge an linearen Gleichungen, mithilfe welcher nach den Werten von mehreren Variable aufgelöst werden kann. Die Gleichungen werden dabei in der folgenden Form, untereinander mit Strichen links und rechts aufgeschrieben
+Ein lineares Gleichungssystem (LGS) ist eine Menge an linearen Gleichungen, mithilfe welcher nach den Werten von mehreren Variable aufgelöst werden kann. Die Gleichungen werden dabei in der folgenden Form, untereinander mit Strichen links und rechts aufgeschrieben
 \[
 \begin{vmatrix}
  r_{11} \cdot x + r_{12} \cdot y + ... = c_1 \\
@@ -16,18 +17,54 @@ Eine lineares Gleichungssystem (LGS) ist eine Menge an linearen Gleichungen, mit
 \] 
 Ein LGS kann auch als Matrix aufgeschrieben werden, welche eine Zeile pro Gleichung und eine Spalte mehr als Variablen hat. In die ersten Spalten werden die konstanten, welche als Faktoren der Gleichungen genutzt werden eingetragen. Die letzte Spalte wird mit den konstanten hinter dem Gleich eingesetzt.
 \[
-\begin{bmatrix}
+\begin{pmatrix}
  r_{11} & r_{12} & c_1 \\
  r_{21} & r_{22} & c_2 \\
-\end{bmatrix}
+\end{pmatrix}
 \] 
  
 \section{Lösen}
 \subsection{Schriftlich}
+Ein LGS kann Hilfmittelfrei mit dem Gaußschen Eliminationsverfahren gelöst werden. Dabei wird eine Gleichung bzw. eine Zeile der Matrix mit einem Faktor auf eine andere addiert, sodass mindestens eine Variable dieser Gleichung wegfällt. Dies wird wiederholt, bis das LGS mit einem dreieck an Nullen vorliegt: die erste Gleichung nutzt alle Variablen, die zweite alle außer eine, etc - bis zur letzten Gleichung, welche sich nur noch auf eine unbekannte Variable bezieht. Nach dieser kann dann sehr einfach gelöst werden. Mithilfe dieser können auch alle anderen schritt für schritt gefunden werden. 
+ 
 \subsection{CAS}
-% mit interpretation der Lösungsmatrix 
+Ein LGS als Menge an Gleichungen kann mit dem Taschenrechner mit \texttt{menu} \textrightarrow{} \texttt{3} \textrightarrow{} \texttt{7} \textrightarrow{} \texttt{(1 oder 2)} gelöst werden. Dabei können die Gleichungen eingegeben werden, wie sie sind und die Variablen werden direkt genau gelöst. \newline
+Alternativ kann es in die Matrixform verwandelt werden und mithilfe von \texttt{rref}, schreibbar oder auffindbar in \texttt{menu} \textrightarrow{} \texttt{7} \textrightarrow{} \texttt{5}, gefolgt von \texttt{menu} \textrightarrow{} \texttt{7} \textrightarrow{} \texttt{1} \textrightarrow{} \texttt{1}, um die Matrix zu erstellen. Dies gibt die Lösungen als reduzierte Diagonalform aus. Diese steht in der gleichen Form, wie die selbst angegebene Matrix, sodass die Variablen einfacher abgelesen werden können. Gibt es nicht nur eine Lösung, so gibt es mindestens eine Nullzeile. Alle anderen Variablen können in abhängigkeit zu dieser angegeben werden. % TODO die schreibweise aufscheiben, irgendwo
+\begin{multicols}{3}
+ \noindent
+ \[
+ \begin{pmatrix}
+  1 & * & * & x \\
+  * & 1 & * & y \\
+  * & * & 1 & z \\
+ \end{pmatrix}
+ \]
+ \centering Eine Lösung
+ \columnbreak
+ \noindent
+ \[
+ \begin{pmatrix}
+  1 & * & * & x \\
+  * & 1 & * & y \\
+  0 & 0 & 0 & 0 \\
+ \end{pmatrix}
+ \]
+ \centering Unendlich viele Lösungen  
+ \columnbreak
+ \noindent
+ \[
+ \begin{pmatrix}
+  * & * & * & * \\
+  * & * & * & * \\
+  0 & 0 & 0 & 1 \\
+ \end{pmatrix}
+ \]
+ \centering Keine Lösung  
+\end{multicols} 
+\noindent Dabei sind aber nur so viele Zeilen zu beachten, wie es auch unbekannte Variablen gibt. Gibt es mehr Eingangsgleichungen als Variablen, werden die restlichen Zeilen des Ergebnis' mit Nullen aufgefüllt. Dies heißt aber nicht, dass es kein Ergebnis gibt 
  
 \end{document}
+ 
  
  
  
