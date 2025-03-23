@@ -1,12 +1,13 @@
 \documentclass{article} 
 \usepackage{multicol} 
-\usepackage{amsmath} 
+\usepackage{amsmath}
+\usepackage{amssymb} 
 \usepackage[a4paper]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \lhead{Lineare Gleichungssysteme}
 \rhead{März 2025}
-\begin{document}
+\begin{document}  
 \section{Definition}
 Ein lineares Gleichungssystem (LGS) ist eine Menge an linearen Gleichungen, mithilfe welcher nach den Werten von mehreren Variable aufgelöst werden kann. Die Gleichungen werden dabei in der folgenden Form, untereinander mit Strichen links und rechts aufgeschrieben
 \[
@@ -29,7 +30,7 @@ Ein LGS kann Hilfmittelfrei mit dem Gaußschen Eliminationsverfahren gelöst wer
  
 \subsection{CAS}
 Ein LGS als Menge an Gleichungen kann mit dem Taschenrechner mit \texttt{menu} \textrightarrow{} \texttt{3} \textrightarrow{} \texttt{7} \textrightarrow{} \texttt{(1 oder 2)} gelöst werden. Dabei können die Gleichungen eingegeben werden, wie sie sind und die Variablen werden direkt genau gelöst. \newline
-Alternativ kann es in die Matrixform verwandelt werden und mithilfe von \texttt{rref}, schreibbar oder auffindbar in \texttt{menu} \textrightarrow{} \texttt{7} \textrightarrow{} \texttt{5}, gefolgt von \texttt{menu} \textrightarrow{} \texttt{7} \textrightarrow{} \texttt{1} \textrightarrow{} \texttt{1}, um die Matrix zu erstellen. Dies gibt die Lösungen als reduzierte Diagonalform aus. Diese steht in der gleichen Form, wie die selbst angegebene Matrix, sodass die Variablen einfacher abgelesen werden können. Gibt es nicht nur eine Lösung, so gibt es mindestens eine Nullzeile. Alle anderen Variablen können in abhängigkeit zu dieser angegeben werden. % TODO die schreibweise aufscheiben, irgendwo
+Alternativ kann es in die Matrixform verwandelt werden und mithilfe von \texttt{rref}, schreibbar oder auffindbar in \texttt{menu} \textrightarrow{} \texttt{7} \textrightarrow{} \texttt{5}, gefolgt von \texttt{menu} \textrightarrow{} \texttt{7} \textrightarrow{} \texttt{1} \textrightarrow{} \texttt{1}, um die Matrix zu erstellen. Dies gibt die Lösungen als reduzierte Zeilenstufenform aus. Diese steht in der gleichen Form, wie die selbst angegebene Matrix, sodass die Variablen einfacher abgelesen werden können.
 \begin{multicols}{3}
  \noindent
  \[
@@ -61,9 +62,23 @@ Alternativ kann es in die Matrixform verwandelt werden und mithilfe von \texttt{
  \]
  \centering Keine Lösung  
 \end{multicols} 
-\noindent Dabei sind aber nur so viele Zeilen zu beachten, wie es auch unbekannte Variablen gibt. Gibt es mehr Eingangsgleichungen als Variablen, werden die restlichen Zeilen des Ergebnis' mit Nullen aufgefüllt. Dies heißt aber nicht, dass es kein Ergebnis gibt 
+\noindent Dabei sind aber nur so viele Zeilen zu beachten, wie es auch unbekannte Variablen gibt. Gibt es mehr Eingangsgleichungen als Variablen, werden die restlichen Zeilen des Ergebnis' mit Nullen aufgefüllt. Dies heißt aber nicht, dass es kein Ergebnis gibt.
+ 
+\section{Lösungsmengen}
+Die Lösungsmenge wird als $\mathbb{L} = \{...\}$ aufgeschrieben.
+ 
+\subsection{Eine Lösung}
+Gibt es genau eine Lösung, einen Wert für alle Variablen, werden diese, getrennt von vertikalen Strichen, in Klammern als Lösungsmenge aufgeschrieben. Somit ist die Form $\mathbb{L} = \{x \vert y \vert z\}$
+ 
+\subsection{Unendlich Viele}  
+Wenn es unendliche viele Lösungen gibt, wird ein Parameter $t$, welcher jede reelle Zahl sein kann, definiert. Alle anderen Variablen können dann in relation zu dieser bestimmt werden (bsp. $x = t + ...$).
+Somit gilt dann $\mathbb{L} = \{(... \,\vert\, ... \,\vert\, ...); t \in \mathbb{R}\}$.
+ 
+\subsection{Keine Lösung}
+Die Lösungsmenge ist Leer, heißt $\mathbb{L} = \{\}$ 
  
 \end{document}
+ 
  
  
  
