@@ -7,14 +7,15 @@
 \pagestyle{fancy}
 \lhead{Wachstum}
 \rhead{März 2025}
-\begin{document}
-\noindent Wachstumsfunktionen beschreiben zeitlich einen kontextuellen Bestand und dessen Wachstum.
-\section{Exponentielles Wachstum}
+\begin{document} 
+\section{Wachstumsfunktionen}
+Wachstumsfunktionen beschreiben zeitlich einen kontextuellen Bestand und dessen Wachstum.
+\subsection{Exponentielles Wachstum}
 Exponentielles Wachstums beschreibt ein Wachstum, welches durch eine Exponentialfunktion modelliert werden kann. Dabei ist die momentane Wachstumsgeschwindigkeit zum Bestang proportional, sodass der Funktionswert mit der Zeit, desto höher der Bestand bereits ist, schneller ansteigt.
 \begin{wrapfigure}{l}{5cm}
   \centering
   \begin{tikzpicture}     
-    \draw[->, thick, domain=-2:1.3, samples=50] 
+    \draw[->, blue, thick, domain=-2:1.3, samples=50] 
               plot (\x, {e^(\x)});
        
     \draw[->] (-2, 0) -- (2, 0); 
@@ -36,7 +37,7 @@ Liegt beispielsweise eine Steigung um $15\%$ pro Zeiteinheit vor, ist ${b=1 + 0,
 \begin{wrapfigure}{r}{5cm}
   \centering
   \begin{tikzpicture}     
-    \draw[->, thick, domain=-ln(3):2, samples=50] 
+    \draw[->, blue, thick, domain=-ln(3):2, samples=50] 
               plot (\x, {e^(-\x)});
        
     \draw[->] (-2, 0) -- (2, 0); 
@@ -48,11 +49,11 @@ Liegt beispielsweise eine Steigung um $15\%$ pro Zeiteinheit vor, ist ${b=1 + 0,
 Ist hingegen das ${b < 1 \implies k < 0}$, fällt die Funktion streng monoton und es liegt ein exponentieller Zerfall vor. $b$ und $k$ ist nun jeweils der Abnahmefaktor und die Zerfallskonstante. Bei gegebener prozentualer Zerfallsrate pro Zeiteinheit ist ähnlich wie oben vorzugehen, nur mit einer Subtraktion anstelle von einer Addition zu $1$, also gilt ${b=1-s}$. \newline
 Liegt beispielsweise eine Verlust von $15\%$ pro Zeiteinheit vor, ist ${b=1-0,15=0,85 \implies k=\ln {0,85} \approx -0,16}$. \newline
  
-\section{Begrenztes Wachstum} 
+\subsection{Begrenztes Wachstum} 
 \begin{wrapfigure}{l}{5cm}
   \centering
   \begin{tikzpicture}     
-    \draw[->, thick, domain=0:3, samples=50] 
+    \draw[->, blue, thick, domain=0:3, samples=50] 
               plot (\x, {(0-2) * e^-\x + 2});
        
     \draw[->] (-0.5, 0) -- (3, 0); 
@@ -77,11 +78,11 @@ mit der DGL
  \end{description} 
 }
  
-\section{Logistisches Wachstum} 
+\subsection{Logistisches Wachstum} 
 \begin{wrapfigure}{l}{6cm}
   \centering
   \begin{tikzpicture}     
-    \draw[->, thick, domain=-2:3, samples=50] 
+    \draw[->, blue, thick, domain=-2:3, samples=50] 
               plot (\x, {(0.5*2)/(0.5+(2-0.5)*e^(-2*\x))});
        
     \draw[->] (-2, 0) -- (3, 0); 
@@ -101,7 +102,7 @@ mit der DGL
 \]
 Die DGL zeigt, dass die Wachstumsgeschwindigkeit eines logistischen Wachstums sowohl von dem momentanen Bestand als auch von der Differenz zur grenze abhängig ist. 
  
-\section{Wachstumsgeschwindigkeiten}
+\subsection{Wachstumsgeschwindigkeiten}
 Für jede Funktion, die ein exponentielles Wachstum beschreibt, $f(x)$, beschreibt die erste Ableitung $f'(x)$ die Wachstumsgeschwindigkeit. \newline
 Gegenteilig ist die Stammfunktion von der Ableitung der Bestandsfunktion die Bestandsfunktion selbst, sodass die Änderung des Bestandes als bestimmtes Integral der Wachstumsgeschwindigkeit angesehen werden kann. Beschreibt $f(x)$ die Wachstumsgeschwindigkeit, so stellt
 \[

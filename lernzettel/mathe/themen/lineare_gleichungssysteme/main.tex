@@ -7,8 +7,9 @@
 \pagestyle{fancy}
 \lhead{Lineare Gleichungssysteme}
 \rhead{März 2025}
-\begin{document}  
-\section{Definition}
+\begin{document}
+ 
+\section{Lineare Gleichungssysteme}
 Ein lineares Gleichungssystem (LGS) ist eine Menge an linearen Gleichungen, mithilfe welcher nach den Werten von mehreren Variable aufgelöst werden kann. Die Gleichungen werden dabei in der folgenden Form, untereinander mit Strichen links und rechts aufgeschrieben
 \[
 \begin{vmatrix}
@@ -24,13 +25,13 @@ Ein LGS kann auch als Matrix aufgeschrieben werden, welche eine Zeile pro Gleich
 \end{pmatrix}
 \] 
  
-\section{Lösen}
-\subsection{Schriftlich}
-Ein LGS kann Hilfmittelfrei mit dem Gaußschen Eliminationsverfahren gelöst werden. Dabei wird eine Gleichung bzw. eine Zeile der Matrix mit einem Faktor auf eine andere addiert, sodass mindestens eine Variable dieser Gleichung wegfällt. Dies wird wiederholt, bis das LGS mit einem dreieck an Nullen vorliegt: die erste Gleichung nutzt alle Variablen, die zweite alle außer eine, etc - bis zur letzten Gleichung, welche sich nur noch auf eine unbekannte Variable bezieht. Nach dieser kann dann sehr einfach gelöst werden. Mithilfe dieser können auch alle anderen schritt für schritt gefunden werden. 
+\subsection{Lösen}
+\begin{description}
+ \item[Schriftlich] Ein LGS kann Hilfmittelfrei mit dem Gaußschen Eliminationsverfahren gelöst werden. Dabei wird eine Gleichung bzw. eine Zeile der Matrix mit einem Faktor auf eine andere addiert, sodass mindestens eine Variable dieser Gleichung wegfällt. Dies wird wiederholt, bis das LGS mit einem dreieck an Nullen vorliegt: die erste Gleichung nutzt alle Variablen, die zweite alle außer eine, etc - bis zur letzten Gleichung, welche sich nur noch auf eine unbekannte Variable bezieht. Nach dieser kann dann sehr einfach gelöst werden. Mithilfe dieser können auch alle anderen schritt für schritt gefunden werden. 
  
-\subsection{CAS}
-Ein LGS als Menge an Gleichungen kann mit dem Taschenrechner mit \texttt{menu} \textrightarrow{} \texttt{3} \textrightarrow{} \texttt{7} \textrightarrow{} \texttt{(1 oder 2)} gelöst werden. Dabei können die Gleichungen eingegeben werden, wie sie sind und die Variablen werden direkt genau gelöst. \newline
+ \item[CAS] Ein LGS als Menge an Gleichungen kann mit dem Taschenrechner mit \texttt{menu} \textrightarrow{} \texttt{3} \textrightarrow{} \texttt{7} \textrightarrow{} \texttt{(1 oder 2)} gelöst werden. Dabei können die Gleichungen eingegeben werden, wie sie sind und die Variablen werden direkt genau gelöst. \newline
 Alternativ kann es in die Matrixform verwandelt werden und mithilfe von \texttt{rref}, schreibbar oder auffindbar in \texttt{menu} \textrightarrow{} \texttt{7} \textrightarrow{} \texttt{5}, gefolgt von \texttt{menu} \textrightarrow{} \texttt{7} \textrightarrow{} \texttt{1} \textrightarrow{} \texttt{1}, um die Matrix zu erstellen. Dies gibt die Lösungen als reduzierte Zeilenstufenform aus. Diese steht in der gleichen Form, wie die selbst angegebene Matrix, sodass die Variablen einfacher abgelesen werden können.
+\end{description} 
 \begin{multicols}{3}
  \noindent
  \[
@@ -64,19 +65,17 @@ Alternativ kann es in die Matrixform verwandelt werden und mithilfe von \texttt{
 \end{multicols} 
 \noindent Dabei sind aber nur so viele Zeilen zu beachten, wie es auch unbekannte Variablen gibt. Gibt es mehr Eingangsgleichungen als Variablen, werden die restlichen Zeilen des Ergebnis' mit Nullen aufgefüllt. Dies heißt aber nicht, dass es kein Ergebnis gibt.
  
-\section{Lösungsmengen}
+\subsection{Lösungsmengen}
 Die Lösungsmenge wird als $\mathbb{L} = \{...\}$ aufgeschrieben.
  
-\subsection{Eine Lösung}
-Gibt es genau eine Lösung, einen Wert für alle Variablen, werden diese, getrennt von vertikalen Strichen, in Klammern als Lösungsmenge aufgeschrieben. Somit ist die Form $\mathbb{L} = \{x \vert y \vert z\}$
- 
-\subsection{Unendlich Viele}  
-Wenn es unendliche viele Lösungen gibt, wird ein Parameter $t$, welcher jede reelle Zahl sein kann, definiert. Alle anderen Variablen können dann in relation zu dieser bestimmt werden (bsp. $x = t + ...$).
+\begin{description}
+ \item[Eine Lösung] Gibt es genau eine Lösung, einen Wert für alle Variablen, werden diese, getrennt von vertikalen Strichen, in Klammern als Lösungsmenge aufgeschrieben. Somit ist die Form $\mathbb{L} = \{x \vert y \vert z\}$
+  
+ \item[Unendlich Viele] Wenn es unendliche viele Lösungen gibt, wird ein Parameter $t$, welcher jede reelle Zahl sein kann, definiert. Alle anderen Variablen können dann in relation zu dieser bestimmt werden (bsp. $x = t + ...$).
 Somit gilt dann $\mathbb{L} = \{(... \,\vert\, ... \,\vert\, ...); t \in \mathbb{R}\}$.
  
-\subsection{Keine Lösung}
-Die Lösungsmenge ist Leer, heißt $\mathbb{L} = \{\}$ 
- 
+ \item[Keine Lösung] Die Lösungsmenge ist Leer, heißt $\mathbb{L} = \{\}$
+\end{description}
 \end{document}
  
  
