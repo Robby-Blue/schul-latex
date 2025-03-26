@@ -27,19 +27,12 @@ bzw.
 \]
   
 \section{Spezielle Vektoren}
-Es gibt verschiedene spezielle Arten von Vektoren, mit verschiedenen Eigenschaften.
-\begin{description}
- \item[Nullvektor] Ein Nullvektor ist ein Vektor, bestehend aus nur Nullen.
-\[
- \vect{0} = \begin{pmatrix} 0 \\ 0 \end{pmatrix}
-\]
+Es gibt verschiedene spezielle Arten von Vektoren, mit verschiedenen Eigenschaften. 
  
- \item[Gegenvektoren] Das Gegenteil eines Vektors $\vect{v}$, welcher die gegenteiligen Koordinaten hat, ist der Gegenvektor, $-\vect{v}$. \end{description} 
- 
-\noindent
-\begin{minipage}{\dimexpr\textwidth-5cm}  % Adjust width as needed
+\vspace{1em} 
+\noindent \begin{minipage}{\dimexpr\textwidth-5cm}
  \begin{description}
-  \item[Verbindungsvektoren] Ein Verbindungsvektor beschreibt einen Vektor, welcher zwei Punkte verbindet. Der Wert eines Verbindungsvektors ist die differenz zwischen den zwei Punkten; wie weit der erste Punkt verschoben werden müsste, um den zweiten zu erreichen. So gilt für den Verbindungsvektor der Punkt $\mathrm{P}$ und $\mathrm{Q}$
+  \item[Verbindungsvektoren] Ein Verbindungsvektor beschreibt einen Vektor, welcher zwei Punkte verbindet. Der Wert eines Verbindungsvektors ist die differenz zwischen den zwei Punkten; wie weit der erste Punkt verschoben werden müsste, um den zweiten zu erreichen. So gilt für den Verbindungsvektor der Punkte $\mathrm{P}$ und $\mathrm{Q}$
 \[
  \vect{\mathrm{PQ}} =
  \begin{pmatrix}
@@ -48,9 +41,9 @@ Es gibt verschiedene spezielle Arten von Vektoren, mit verschiedenen Eigenschaft
  \end{pmatrix}
 \] 
  \end{description} 
-\end{minipage}%
+\end{minipage}
 \hfill
-\begin{minipage}{5cm}  % Adjust width as needed
+\begin{minipage}{5cm}
   \centering
   \begin{tikzpicture}
   \draw[->] (0,0) -- (3.5,0) node[right] {$x$};
@@ -62,9 +55,18 @@ Es gibt verschiedene spezielle Arten von Vektoren, mit verschiedenen Eigenschaft
   \draw (3,0.5) node {$\times$} node[above] {Q}; 
   \end{tikzpicture}
 \end{minipage} 
- 
 \begin{description} 
  \item[Ortsvektoren] Der Ortsvektor eines Punktes ist der Verbindungsvektor, welcher vom Koordinatenursprung $\mathrm{O}$ zu diesem Punkt geht. So ist der Ortsvektor vom Punkt $\mathrm{P}$ der Vektor $\vect{\mathrm{OP}}$. Weil $\mathrm{O}$ durch einen Nullvektor repräsentiert werden kann, sind die Koordinaten des Ortsvektors $\vect{\mathrm{OP}}$ dieselben wie die vom Punkt $\mathrm{P}$
+  \item[Nullvektor] Ein Nullvektor ist ein Vektor, bestehend aus nur Nullen.
+\[
+ \vect{0} = \begin{pmatrix} 0 \\ 0 \end{pmatrix}
+\] 
+ \item[Gegenvektoren] Das Gegenteil eines Vektors $\vect{v}$, welcher die gegenteiligen Koordinaten hat, ist der Gegenvektor, $-\vect{v}$.
+ \item[Einheitsvektoren] Ein Vektor $\vect{v}$ ist ein Einheitsvektor, wenn er eine Länge von 1 hat, also $\norm{\vect{v}} = 1$. Für jeden $\vect{a}$ Vektor ist
+\[
+ \pm \frac{\vect{a}}{\norm{\vect{a}}} 
+\]
+ein Einheitsvektor, solange $\vect{a} \neq \vect{0}$
 \end{description} 
  
 \subsection{Addition} 
@@ -144,21 +146,6 @@ Ein Vektor, welcher als Summe von den Vielfachen zweier Vektoren dargestellt wer
 \]
 erfüllt sein kann. Dies kann überprüft werden, indem die obige Gleichung als lineares Gleichungssystem aufgeschrieben wird  und nach $r$ und $s$ aufgelöst wird.
  
-\end{document}
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+\end{document} 
  
  
