@@ -1,17 +1,68 @@
-\documentclass{article}
+\documentclass{article} 
+\usepackage{amsmath}
 \usepackage[a4paper]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \lhead{Steckbriefaufgaben}
-\rhead{März 2025}
+\rhead{April 2025}
 \begin{document}
-% TODO: add content 
-\section{Definition}
-% eine funktion anhang von bedingungen finden
-\section{Bestimmen} 
-% bedingungen, gleichungen, lgs 
-\section{Textaufgaben}
-% texte zu bedingungen
+\section{Steckbriefaufgaben}
+Eine Steckbriefaufgabe ist eine Aufgabe, bei welcher eine (ganzrationale) Funktion mithilfe von bestimmten gegebenen Informationen bestimmt werden soll. Die Informationen können in Form von direkten gegebenen mathematischen Gleichungen (z.B. $f(16)=1$) oder als Textaufgabe mit schriftlich gegebenen Informationen (z.B. \texttt{Der Graph hat eine Nullstelle bei x=2}), welche erst selbst in eine Gleichung umgewandelt werden muss. 
+ 
+\subsection{Bestimmen der Funktion}
+Das Bestimmen einer Funktion kann in wenige, theoretisch einfache, Schritte aufgeteilt werden. 
+\begin{enumerate}
+ \item Sammeln aller gegebenen Informationen und das Aufschreiben dieser als Bedingungen
+ \item Aufstellen der allgemeinen Form der Funktion. Gibt es $n$ Bedingungen, gibt es auch $n$ Unbekannte. Somit hat eine Funktion ohne weiteres einen Grad von $n-1$. Funktionen mit Symmetrien haben einen anderen Grad, siehe unten. 
+ \item Einsetzen der Bedingungen in die allgemeine Form und deren Ableitungen und das Aufstellen eines LGS mit diesen Gleichungen.
+ \item LGS lösen, Lösungen als Parameter der Funktion verwenden um die Funktion aufzustellen.
+ \item \texttt{(optional)} Überprüfen, ob die Funktion die Bedingungen erfüllt.
+\end{enumerate} 
+ 
+\subsection{Bedingungen in Textaufgaben}
+Ist eine Bedingung in Form einer Textaufgabe gegeben, muss aus dieser selbst eine Gleichung aufgestellt werden. Hier ist eine unvollständige Liste häufiger Formulierungen und deren zugehörige Gleichung.
+\begin{center}
+\begin{tabular}{ |l|c| }
+\hline
+ \multicolumn{1}{|c|}{\textbf{Bedingung}} & \textbf{Gleichung} \\
+\hline
+ \texttt{geht durch den Punkt (x|y)} & $f(x)=y$ \\
+\hline
+ \texttt{hat bei x eine Nullstelle} & $f(x)=0$ \\
+\hline
+ \texttt{hat den y-Achsenabschnitt $\texttt{y}_\texttt{abs}$} & $f(0)=y_\mathrm{abs}$ \\
+\hline
+ \texttt{schneidet bei x die Funktion t} & $f(x)=t(x)$ \\
+\hline 
+ \texttt{hat bei x die Steigung m} & $f'(x)=m$ \\
+\hline
+ \texttt{hat bei x eine Extremstelle} & $f'(x)=0$ \\
+\hline 
+ \texttt{hat bei x eine Wendestelle} & $f''(x)=0$ \\
+\hline
+\end{tabular}
+\end{center}
+ 
+Nicht selten sind mehrere Bedingungen in einer zusammen gebunden.
+\begin{center}
+\begin{tabular}{ |l|l| }
+\hline
+ \texttt{hat bei x die Tangentenfunktion t} &
+  \begin{tabular}{@{}l@{}}geht bei $x$ durch $t$ und hat \\ bei $x$ die gleiche Steigung wie $t$ \end{tabular} \\
+\hline
+ \texttt{hat einen Extrempunkt im Urspung} &
+  \begin{tabular}{@{}l@{}}geht bei $x=0$ durch $0$ und hat \\ bei $x=0$ eine Extremstelle \end{tabular} \\
+\hline
+ \begin{tabular}{@{}l@{}}\texttt{hat im Punkt (x|y) eine} \\ \texttt{waagerechte Tangente} \end{tabular} &
+  \begin{tabular}{@{}l@{}}geht bei $x$ durch $y$ und hat \\ bei $x$ die Steigung $0$ \end{tabular} \\  
+\hline
+\end{tabular}
+\end{center} 
+ 
+\subsection{Grad bei Symmetrien} 
+Ist die Funktion Achsensymmetrisch, kann sie keine ungeraden Exponenten mehr haben, weshalb sie einen höheren Grad braucht, um die gleiche Anzahl an Unbekannten zu haben. Somit hat sie den Grad $2(n-1)$. \newline
+Ähnliches gilt für eine Punktsymmetrische Fukntion, welche den Grad $2n-1$ hat.
 \end{document}
+ 
  
  
