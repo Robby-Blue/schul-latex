@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage{amsmath} 
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Skalarprodukte}
+\rhead{April 2025}
+\begin{document}
+  
+\newcommand{\norm}[1]{\big| {#1} \big|}  
+\newcommand{\vect}[1]{\overrightarrow{#1}} 
+ 
+\section{Skalarprodukte}
+Das Skalarprodukt von zwei Vektoren beschreibt die Summe aller Produkte der jeweiligen Koordinatenpaare der Vektoren. Es gilt
+\[
+ \vect{a} \cdot \vect{b} =
+ a_1 \cdot b_1 + a_2 \cdot b_2 \qquad
+ \text{mit} \quad
+ \vect{a} = 
+ \begin{pmatrix}
+  a_1 \\
+  a_2 \\
+ \end{pmatrix}
+ \, \text{und} \, 
+ \vect{b} = 
+ \begin{pmatrix}
+  b_1 \\
+  b_2 \\
+ \end{pmatrix}
+\]
+ 
+\subsection{Orthogonalität}
+\begin{description} 
+ \item[Vektoren] Zwei Vektoren sind zueinander orthogonal, heißt senkrecht, wenn sie ein Skalarprodut von $0$ haben. \newline
+ Dies kommt daher, dass die Enden von zwei orthogonalen Vektoren $\vect{a}$ und $\vect{b}$ miteinander Verbunden werden können, um mit dem $\vect{ab} = \vect{b} - \vect{a}$ ein rechtes Dreieck zu bilden. Somit gilt dem Satz von Pythagoras nach  
+ \[  
+  \norm{\vect{a}}^2 + \norm{\vect{b}}^2 = \norm{\vect{b} - \vect{a}}^2
+ \]
+ Dies kann nach $a_1 \cdot b_1 + a_2 \cdot b_2 = 0$ aufgelöst werden. % TODO hier tikz einfügen
+ \item[Geraden] Zwei Geraden verlaufen zueinander, wenn ihre jeweiligen Richtungsvektoren zueinander orthogonal sind. % TODO müssen sie sich scheiden?
+ \item[Gerade und Ebene] Eine Gerade verläuft zu einer Ebene orthogonal, wenn der Richtungsvektor der Gerade zu beiden Richtungsvektoren der Ebene orthogonal ist.  
+\end{description}
+ 
+\end{document} 
+ 
