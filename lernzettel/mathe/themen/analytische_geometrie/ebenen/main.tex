@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Ebenen}
+\rhead{April 2025}
+\begin{document}
+ 
+\newcommand{\vect}[1]{\overrightarrow{#1}} 
+\newcommand{\vectp}[1]{\vect{\mathrm{#1}}}
+ 
+\noindent \begin{minipage}[t]{\dimexpr\textwidth-6cm}
+ \vspace{0pt}  
+ \section{Ebenen}
+ Wird zu einer Parametergleichung einer Gerade ein vielfaches des Vektores $\vectp{AC}$, welcher in eine andere Richtung zeigt, also nicht kollinear ist, hinzugefügt, geht von jedem Punkt der ursprünglichen Gerade je eine weitere, in die Richtung von $\vectp{AC}$ gerichtete zeigend, Gerade aus.
+ Diese neue Parametergleichung kann somit alle Punkte, welche einer auf einer unendlichen zwei dimensionalen Ebene liegen, darstellen. \newline
+ Sie folgt der Form  
+ \[
+  E: \vect{x} = \vectp{OA} + r \cdot \vectp{AB} + s \cdot \vectp{AC} 
+ \]
+\end{minipage}
+\hfill
+\begin{minipage}[t]{6cm}
+  \centering
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+ 
+    \begin{scope} 
+      \clip(-1,0) rectangle (4,4);
+      \fill[blue!20] (1.2-0.5*1.2-1.4,1-0.5*0.7+0.3) -- (1.2+2*1.2-1.4,1+2*0.7+0.3) -- (1.2+2*1.2+1.4,1+2*0.7-0.3) -- (1.2-0.5*1.2+1.4,1-0.5*0.7-0.3) -- cycle;
+      \draw (3.5, 1.5) node[black, opacity=1,] {E}; 
+    \end{scope} 
+ 
+    \draw[->,thick,black,opacity=0.5] (1.2-1.2*1.5,1-0.7*1.5) -- (1.2+1.2*2,1+0.7*2) node[pos=0.3, above left] {g};
+    \draw[->,thick,green!50!black] (0,0) -- (1.2,1) node[above left] {$\mathrm{A}$};
+    \draw[->,thick,blue] (1.2,1) -- ++(1.2,0.7) node[above] {$\mathrm{B}$};
+    \draw[->,thick,red] (1.2,1) -- ++(1.4,-0.3) node[below left] {$\mathrm{C}$};
+ 
+    \draw[->] (0,0) -- (4,0);
+    \draw[->] (0,0) -- (0,4);
+    \draw[->] (0,0) -- (-1, -1);
+  \end{tikzpicture}
+\end{minipage}
+ 
+\vspace{1em}  
+\noindent Ein Punkt liegt auf der Ebene, wenn es möglich ist diesen mit der Parametergleichung der Ebene gleich zu setzen und jeweils einen Wert für $r$ und $s$ zu finden.
+ 
+\subsection{Parametergleichungen bestimmen}
+Um die Parametergleichung einer Ebene zu finden, müssen der Stützvektor und zwei Richtungsvektoren, welche nicht zueinander kollinear sind, bestimmt werden. Sind drei Punkte gegeben, welche nicht auf einer Gerade liegen, kann einer davon, normalerweise $\mathrm{A}$, als Stützvektor genutzt werden, wobei die jeweiligen Verbindungsvektoren zu den zwei anderen Punkten als Richtungsvektoren verwendet werden können, wie oben gezeigt. \newline
+Sind hingegen nicht drei Punkte gegeben, sondern ein Punkt und eine Gerade oder garkeine Punkte und zwei Geraden, so können selbst Punkte auf der Gerade bestimmt werden, welche genutzt werden können, um auf einen Stützvektor und zwei Richtungsvektoren zu kommen.
+ 
+\end{document} 
+ 
+ 
