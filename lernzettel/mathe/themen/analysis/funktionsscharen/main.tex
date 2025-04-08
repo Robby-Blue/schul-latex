@@ -3,15 +3,29 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \lhead{Funktionsscharen}
-\rhead{März 2025}
+\rhead{April 2025}
 \begin{document}
-% TODO: add content 
-\section{Definition}
-% mit parameter
-% probably weitere section für mit rechnen, dass man das auch lösen kann und so? 
-\section{Ortskurven}
-% funktion der punkte
-\end{document}
  
+% TODO tikz für eine funktionsschar
+\section{Funktionsscharen}
+Eine Funktionsschar ist eine Funktion, welche von einem oder mehreren weiteren Parametern abhängig ist. Eine Funktion namens $f$ welche zudem vom Parameter $a$ abhängig ist folgt der Form
+\[
+ f_a(x) = \textellipsis
+\] 
+ 
+\section{Berechnen}
+Funktionsscharen können, genau so wie normale Funktionen auch, mit anderen Werten gleichgesetzt werden um den Wert bestimmter Variablen oder Parameter zu bestimmen. Wird nach einer Stelle, wie der Nullstelle, Extremstelle, etc, einer Funktionsschar aufgelöst, ist davon auszugehen, dass das $x$ in Abhängigkeit von dem Parameter liegt.   
+Beim Ableiten wird der Parameter wie eine Konstante behandelt. 
+ 
+% TODO tikz mit beispiel einfügen 
+\section{Ortskurven}
+Die Kurve, welche durch alle besondere Punkte, wie z.B. alle Nullstellen, Extremstellen oder Wendepunkte, einer Funktionsschar geht, ist eine Ortskurve dieser.
+ 
+\begin{enumerate}
+ \item Bestimmen der $x$-Koordinate einer besonderen Stelle in Abhängigkeit vom Parameter. Dies geschieht so wie bei normalen Funktionen, nur das als Ergebnis keine Zahl sondern eine Gleichung für die $x$-Koordinate des Punktes, $p_x$, in abhängig von $a$ ist.
+ \item Bestimmen der dazugehörigen $y$-Koordinate. Dafür muss der $y$-Wert der Funktionsschar bei der besonderen Stelle gefunden werden, heißt dass das bestimmte $p_x$ als $x$ in die Funktionsschar einsetzen werden muss. Somit ist jeder Punkt von $(p_x \,|\, f_a(p_x))$ auf der Ortskurve. Weil das $x$ durch das $p_x$ ersetzt wurde, welches in Abhängigkeit von $a$ steht, ist $f_a(p_x)$ nun ausschließlich von $a$ abhängig. 
+ \item Finden der Ortskurvenfunktion $t(x)$. Es gilt bereits $t(p_x) = f_a(p_x)$ mit $p_x \sim a$, die Ortskurvenfunktion $t(x)$ soll aber nur von $x$ abhängen. Dies kann erreicht werden, indem ein $a \sim x$ gefunden und eingesetzt wird. Gefunden werden kann dieses, indem $x = p_x$ nach $a$ aufgelöst wird. Dieses $a$ kann in das bereits bestimmte $t(p_x) = f_a(p_x)$ eingesetzt werden, sodass eine von $x$ abhängige Funktion, welche die Ortskurve beschreibt raus. Diese kann als $t(x)$ genutzt werden.
+\end{enumerate}  
+\end{document} 
  
  
