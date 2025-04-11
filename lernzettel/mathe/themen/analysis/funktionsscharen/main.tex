@@ -1,4 +1,5 @@
-\documentclass{article}
+\documentclass{article} 
+\usepackage{tikz}
 \usepackage[a4paper]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -6,26 +7,80 @@
 \rhead{April 2025}
 \begin{document}
  
-% TODO tikz für eine funktionsschar
 \section{Funktionsscharen}
-Eine Funktionsschar ist eine Funktion, welche von einem oder mehreren weiteren Parametern abhängig ist. Eine Funktion namens $f$ welche zudem vom Parameter $a$ abhängig ist folgt der Form
-\[
- f_a(x) = \textellipsis
-\] 
  
-\section{Berechnen}
-Funktionsscharen können, genau so wie normale Funktionen auch, mit anderen Werten gleichgesetzt werden um den Wert bestimmter Variablen oder Parameter zu bestimmen. Wird nach einer Stelle, wie der Nullstelle, Extremstelle, etc, einer Funktionsschar aufgelöst, ist davon auszugehen, dass das $x$ in Abhängigkeit von dem Parameter liegt.   
+\begin{minipage}[t]{\dimexpr\textwidth-5cm}
+ Eine Funktionsschar ist eine Funktion, welche von einem oder mehreren weiteren Parametern abhängig ist. Eine Funktion namens $f$ welche zudem vom Parameter $a$ abhängig ist folgt der Form
+ \[
+  f_a(x) = \textellipsis
+ \]
+ 
+ \section{Berechnen}
+ Funktionsscharen können, genau so wie normale Funktionen auch, mit anderen Werten gleichgesetzt werden um den Wert bestimmter Variablen oder Parameter zu bestimmen.
+\vspace{0.4em}
+ 
+\end{minipage}
+\hfill
+\begin{minipage}[t]{5cm}
+  \centering
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \draw[->] (-2,0) -- (2,0) node[above left] {$x$};
+  \draw[->] (0,-2) -- (0,2) node[below left] {$y$};
+   
+  \draw[->, blue, thick] (-1.8,-1.8) -- (1.8,1.8);   
+  \draw[->, blue, thick] (-1.8,-0.9) -- (1.8,0.9);   
+  \draw[->, blue, thick] (-1.8,0) -- (1.8,0);   
+  \draw[->, blue, thick] (-1.8,0.9) -- (1.8,-0.9);   
+  \draw[->, blue, thick] (-1.8,1.8) -- (1.8,-1.8); 
+\end{tikzpicture}
+\end{minipage}
+Wird nach einer Stelle, wie der Nullstelle, Extremstelle, etc, einer Funktionsschar aufgelöst, ist davon auszugehen, dass das $x$ in Abhängigkeit von dem Parameter liegt.   
 Beim Ableiten wird der Parameter wie eine Konstante behandelt. 
  
-% TODO tikz mit beispiel einfügen 
 \section{Ortskurven}
 Die Kurve, welche durch alle besondere Punkte, wie z.B. alle Nullstellen, Extremstellen oder Wendepunkte, einer Funktionsschar geht, ist eine Ortskurve dieser.
  
 \begin{enumerate}
  \item Bestimmen der $x$-Koordinate einer besonderen Stelle in Abhängigkeit vom Parameter. Dies geschieht so wie bei normalen Funktionen, nur das als Ergebnis keine Zahl sondern eine Gleichung für die $x$-Koordinate des Punktes, $p_x$, in abhängig von $a$ ist.
- \item Bestimmen der dazugehörigen $y$-Koordinate. Dafür muss der $y$-Wert der Funktionsschar bei der besonderen Stelle gefunden werden, heißt dass das bestimmte $p_x$ als $x$ in die Funktionsschar einsetzen werden muss. Somit ist jeder Punkt von $(p_x \,|\, f_a(p_x))$ auf der Ortskurve. Weil das $x$ durch das $p_x$ ersetzt wurde, welches in Abhängigkeit von $a$ steht, ist $f_a(p_x)$ nun ausschließlich von $a$ abhängig. 
- \item Finden der Ortskurvenfunktion $t(x)$. Es gilt bereits $t(p_x) = f_a(p_x)$ mit $p_x \sim a$, die Ortskurvenfunktion $t(x)$ soll aber nur von $x$ abhängen. Dies kann erreicht werden, indem ein $a \sim x$ gefunden und eingesetzt wird. Gefunden werden kann dieses, indem $x = p_x$ nach $a$ aufgelöst wird. Dieses $a$ kann in das bereits bestimmte $t(p_x) = f_a(p_x)$ eingesetzt werden, sodass eine von $x$ abhängige Funktion, welche die Ortskurve beschreibt raus. Diese kann als $t(x)$ genutzt werden.
-\end{enumerate}  
+\end{enumerate}   
+\begin{minipage}[t]{\dimexpr\textwidth-5cm}
+ \begin{enumerate} 
+ \item[2.] Bestimmen der dazugehörigen $y$-Koordinate. Dafür muss der $y$-Wert der Funktionsschar bei der besonderen Stelle gefunden werden, heißt dass das bestimmte $p_x$ als $x$ in die Funktionsschar einsetzen werden muss. Somit ist jeder Punkt von $(p_x \,|\, f_a(p_x))$ auf der Ortskurve. Weil das $x$ durch das $p_x$ ersetzt wurde, welches in Abhängigkeit von $a$ steht, ist $f_a(p_x)$ nun ausschließlich von $a$ abhängig.
+ \item[3.] Finden der Ortskurvenfunktion $t(x)$. Es gilt bereits $t(p_x) = f_a(p_x)$ mit $p_x \sim a$, die Ortskurvenfunktion $t(x)$ soll aber nur von $x$ abhängen. Dies kann erreicht werden,
+ \end{enumerate}
+ \end{minipage}
+\hfill
+\begin{minipage}[t]{5cm}
+  \centering
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \draw[->] (-2,0) -- (2,0) node[above left] {$x$};
+  \draw[->] (0,-2) -- (0,2) node[below left] {$y$};
+  
+  \draw[->, blue, thick, domain=-2:-2+sqrt(2*(2+2))/2, samples=100] plot (\x, {2*(\x+(2))^2+(-2)});
+  \draw[->, blue, thick, domain=-2:-1+sqrt(2*(2+1))/2, samples=100] plot (\x, {2*(\x+(1))^2+(-1)});
+  \draw[->, blue, thick, domain=0-sqrt(2*(2+0))/2:0+sqrt(2*(2+0))/2, samples=100] plot (\x, {2*(\x+(0))^2+(0)});
+  \draw[->, blue, thick, domain=1-sqrt(2*(2+-1))/2:1+sqrt(2*(2+-1))/2, samples=100] plot (\x, {2*(\x+(-1))^2+(1)});
+ 
+  \draw[red, thick] (-2,-2) -- (1.8,1.8);
+ 
+  \node[] at (-2,-2) {$\times$};
+  \node[] at (-1,-1) {$\times$};
+  \node[] at (0,0) {$\times$};
+  \node[] at (1,1) {$\times$};
+  
+  \node[red] at (1.5,0.8) {$t(x)$};
+  \node[blue] at (-1.4,1.2) {$f_a(x)$}; 
+\end{tikzpicture}
+\end{minipage}
+\begin{enumerate}
+ \vspace{-0.5em} 
+ \item[] indem ein $a \sim x$ gefunden und eingesetzt wird. Gefunden werden kann dieses, indem $x = p_x$ nach $a$ aufgelöst wird. Dieses $a$ kann in das bereits bestimmte $t(p_x) = f_a(p_x)$ eingesetzt werden, sodass eine von $x$ abhängige Funktion, welche die Ortskurve beschreibt raus. Diese kann als $t(x)$ genutzt werden.
+\end{enumerate}
+ 
+% TODO: überlegen, mit layout, ein beispiel einzufügen. das müsste dann in sich konsistent sein 
+ 
 \end{document} 
+ 
+ 
  
  
