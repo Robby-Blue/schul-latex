@@ -1,23 +1,64 @@
 \documentclass{article}
 \usepackage[a4paper]{geometry}
-\usepackage{fancyhdr}
+\usepackage{fancyhdr} 
+\usepackage{amsmath} 
+\usepackage{amssymb}
 \pagestyle{fancy}
 \lhead{Integrale}
-\rhead{März 2025}
-\begin{document}
-% TODO: add content
-% wenn es zu lang wird aufteilen 
-\section{Definition}
-% gegenteil einer ableitung etc
-% irgendwo schreibweise
-\section{Stammfunktionen}
-\section{Bestimmte Integrale}
-% regeln und so, bestimmte integrale 
-\section{Flächen}
-% obere und untere grenze, subtraktion 
-\section{Uneigentliche Integrale} 
-\section{Rotationskörper}
-\section{Bogenlängen} 
+\rhead{April 2025}
+\begin{document} 
+\section{Integrale}
+% TODO: tikz, zeigt eine kurve in blau, die fläche in rot gefärbt oder so
+Ein Integral stellt die Fläche unterhalb einer Kurve dar, wobei Flächen bei $y<0$ auch negativ Zählen. Bestimmte Integrale haben im Gegensatz zur unbestimmten Integralen dabei eine untere und eine obere Grenze. Das bestimmte Integral der Funktion $f(x)$ mit der unteren Grenze $a$ und der oberen Grenze $b$ folgt der Form 
+\[
+ \int_a^b f(x) \,\mathrm{d}x
+\]
+Beim berechnen des Wertes eines Integrals gilt mit $F(x)$ als Stammfunktion der Funktion $f(x)$
+\[
+ \int_a^b f(x) \,dx =
+ F(x) \,\Bigr|_a^b =
+ F(b) - F(a)
+\] 
+ 
+\subsection{Stammfunktionen}
+Die Stammfunktion ist das Gegenteil einer Ableitung. Die Funktion $F(x)$ ist eine Stammfunktion von $f(x)$, wenn $F'(x) = f(x)$.
+Dementsprechend gilt $f(x)=x^n \implies F(x)=\frac{1}{n+1}x^{n+1}$, weil dies das Gegenteil des bereits bekannten $f(x)=x^n \implies f'(x)=n \cdot x^{n-1}$ ist. Bei $n=-1$ gibt es eine Ausnahme, sodass $F(x)=\ln|x|$ \newline
+Nach jeder Stammfunktion wird eigentlich ein $+C$ hinzugefügt, um die unbekannte konstante, welche beim Ableiten wegfällt, zu repräsentieren. Dieses $+C$ ist bei bestimmten Integralen jedoch irrelevant, weil es im Verlauf der Rechnung zu $+C-(+C) = 0$ gekürzt wird.
+ 
+\subsection{Flächeninhalte}
+Weil der Flächeninhalt, im Gegensatz zur Fläche, immer positiv ist, auch wenn $y<0$, muss der Betrag genommen oder die Grenzen getauscht werden, sodass der Wert des Integrals genauso immer positiv ist. 
+ 
+\subsection{Mehrere Funktionen}
+% TODO: tikz 
+Die Fläche zwischen mehrere Funktionen stellt das Integral der Differenz beider Funktionen dar. Dabei muss darauf geachtet werden, dass zu jedem Zeitpunkt die Funktion mit dem kleineren Wert von der Funktion mit dem größeren Wert subtrahiert wird. Wechselt sich dies, muss es in ein neues Integral geteilt werden. Die Schnittpunkte beider Funktionen werden dabei generell als Grenzen verwendet, solange keine anderen vorgegeben sind. 
+ 
+\subsection{Uneigentliche Integrale}
+Uneigentliche Integrale sind bestimmte Integrale, welche an mindestens einer ihrer Grenzen nicht definiert sind. Dies kann daran liegen, dass die obere oder untere Grenze bei $\infty$ oder $-\infty$ liegt, dann ist es ein uneigentliches Integral erster Art. Bei der zweiten Art eines uneigentlichen Integrals sind alle Grenzen gegeben, nur die Funktion ist bei mindestens einer der Grenzen nicht definiert. \newline
+Gelöst werden uneigentliche Integrale, indem die undefinierte Stelle durch eine Variable $u$ ersetzt wird, welche in einem zum Limit der eigentlichen Grenze geht. Beispielsweise
+\[
+ \int_a^\infty f(x)\,\mathrm{d}x =
+ \lim_{u \to \infty} \int_a^u f(x)\,\mathrm{d}x
+\]
+Wenn das Limit unendlich ist oder nicht existiert, existiert das gesamte Integral nicht. \newline 
+Sind beide Grenzen undefiniert, wird das Integral in zwei uneigentliche Integrale, welche jeweils nur eine undefinierte Grenze haben, aufgeteilt. Dabei muss die Hilfsvariable $c$ zwischen $a$ und $b$ sein.
+\[
+ \int_{-\infty}^\infty f(x)\,\mathrm{d}x =
+ \lim_{u \to -\infty} \int_u^c f(x)\,\mathrm{d}x + 
+ \lim_{u \to \infty} \int_c^u f(x)\,\mathrm{d}x
+\]
+Diese beiden uneigentlichen Integrale können nun problemlos berechnet werden.  
+ 
+\subsection{Rotationskörper}
+Weil ein Volumen $V$ das Integral der Flächen $A$ ist und die Fläche einer Rotation eines Stabs mit der Länge $f(x)$ einen Kreis mit der Radius $r=f(x)$ darstellt, für welchen $A=\pi r^2$, gilt, ist
+\[V = \pi \cdot \int_a^b (f(x))^2 \, dx\]
+Die Einheit ist, solange keine andere im Kontext der Aufgabe angegeben ist, VE (Volumeneinheiten). 
+  
+\subsection{Bogenlängen}
+% TODO: tikz um das konzept zu erkären 
+Die Bogenlänge einer Funktion, die Länge der Kurve der Funktion innerhalb eines gegebenen Bereiches, kann als Summe der Längen mehrer Hypothenusen von Dreiecken, dessen Kathethen $\Delta x$ und $\Delta y = f'(x) \Delta x$ sind bestimmt werden, wobei aus dem Satz von Pythagoras folgt, dass für Kathetenlängen $l = \sqrt{\Delta x^2 + \Delta y^2}$ gilt.
+Geht $\Delta x \to 0$, ist die Bogenlänge die Summe unendlich vieler unendlick kleiner Hypothenusen, sodass sie als Integral berechnet wird
+\[l = \int_a^b \sqrt{1+(f'(x))^2} \, dx\]   
+ 
 \end{document}
  
  
