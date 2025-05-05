@@ -1,0 +1,104 @@
+\documentclass{article}
+\usepackage{xcolor} 
+\usepackage{amsmath}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Koordinatengleichungen bestimmen}
+\rhead{Mai 2025}
+\begin{document}
+ 
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\vectp}[1]{\vect{\mathrm{#1}}}
+ 
+\section*{Anleitung}
+Um eine gegebene Parametergleichung in eine Koordinatengleichung umzuwandeln muss sie nur in die Form diese umgeformt werden.
+\[
+ \vect{x} \cdot \vect{n} = \vectp{OA} \cdot \vect{n} 
+\]
+Dies kann in drei einfachen Schritten passieren 
+\begin{description}
+ \item[1. Normalvektor bestimmen] Zuerst muss der Normalvektor $\vect{n} = \vect{u} \times \vect{v}$ ausgerechnet werden.
+ \item[2. Linke Seite] Nun muss die linke Seite der gleichung bestimmt werden. Dafür muss einfach nur das Skalarprodukt des eben bestimmten $\vect{n}$ und einem $\vect{x}$ gefunden werden. Weil $\vect{x} = \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}$ bereits bekannt ist, müssen nur die jeweiligen $x$-Variablen mit ihren Faktoren des $\vect{n}$ multipliziert und dann addiert werden.
+ \item[3. Rechte Seite] Zuletzt muss nur noch die rechte Seite bestimmt werden, indem $\vectp{OA} \cdot \vect{n}$ ausgerechnet wird.
+\end{description} 
+  
+\section*{Beispiel}
+Gegeben ist die Parametergleichung
+\begin{equation}
+ E: \vect{x} =
+ \colorbox{blue!50}{$\begin{pmatrix} -2 \\ 4 \\ 1 \end{pmatrix}$}
+ + r \cdot \colorbox{red!50}{$\begin{pmatrix} 3 \\ 0 \\ 1 \end{pmatrix}$}
+ + s \cdot \colorbox{green!50!black!50}{$\begin{pmatrix} 3 \\ -2 \\ 2 \end{pmatrix}$}
+\end{equation}
+ 
+\begin{description}
+ \item[1. Normalvektor bestimmen] Um $\vect{n}$ zu bestimmen, muss das Vektorenprodukt der beiden Richtungsvektoren, hier \colorbox{red!50}{$\begin{pmatrix} 3 \\ 0 \\ 1 \end{pmatrix}$} und \colorbox{green!50!black!50}{$\begin{pmatrix} 3 \\ -2 \\ 2 \end{pmatrix}$}, gefunden werden, sodass
+ \begin{equation}
+  \vect{n} =
+   \colorbox{red!50}{$\begin{pmatrix} 3 \\ 0 \\ 1 \end{pmatrix}$}
+   \times \colorbox{green!50!black!50}{$\begin{pmatrix} 3 \\ -2 \\ 2 \end{pmatrix}$}
+   = \colorbox{yellow}{$\begin{pmatrix} 2 \\ -3 \\ -6 \end{pmatrix}$}
+ \end{equation}
+ 
+ \item[2. Linke Seite bestimmen] Die linke Seite ist einfach $\vect{x} \cdot \vect{n}$, also
+ \begin{equation}
+  \colorbox{purple!50}{$\begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}$}
+  \cdot \colorbox{yellow}{$\begin{pmatrix} 2 \\ -3 \\ -6 \end{pmatrix}$}
+  = \colorbox{yellow}{$2$} \colorbox{purple!50}{$x_1$} +
+  \colorbox{yellow}{$(-3)$} \colorbox{purple!50}{$x_2$} +
+  \colorbox{yellow}{$(-6)$} \colorbox{purple!50}{$x_3$}
+ \end{equation}
+ 
+ \item[3. Rechte Seite bestimmen] Die rechte Seite der Gleichung ist nur $\vectp{OA} \cdot \vect{n}$, also
+ \begin{equation}
+  \colorbox{blue!50}{$\begin{pmatrix} -2 \\ 4 \\ 1 \end{pmatrix}$}
+  \cdot \colorbox{yellow}{$\begin{pmatrix} 2 \\ -3 \\ -6 \end{pmatrix}$}
+  = \colorbox{cyan!50}{$-22$}
+ \end{equation} 
+\end{description} 
+Somit ist die gesamte Koordinatengleichung
+\begin{equation} 
+ \colorbox{yellow}{$2$} \colorbox{purple!50}{$x_1$} +
+ \colorbox{yellow}{$(-3)$} \colorbox{purple!50}{$x_2$} +
+ \colorbox{yellow}{$(-6)$} \colorbox{purple!50}{$x_3$}
+ = \colorbox{cyan!50}{$-22$}
+\end{equation} 
+ 
+\setcounter{equation}{0}
+\section*{Herleitung}
+Dieser Teil ist nicht direkt relevant, um eine Parametergleichung in eine Koordinatengleichung umzuwandeln, kann aber dabei hilfreich sein, den Prozess besser nachvollziehen zu können. \newline
+Ist eine Ebene in der Parametergleichung
+\begin{equation}
+ E: \vect{x} = \vectp{OA} + r \cdot \vect{u} + s \cdot \vectp{v} 
+\end{equation}
+gegeben, kann diese zuerst durch bereits bekannte Wege in die Normalengleichung
+\begin{equation}
+ (\vect{x} - \vect{p}) \cdot \vect{n} = 0
+ \quad \text{mit} \quad
+ \vect{x} = \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} 
+\end{equation}
+umgewandelt werden. Dabei ist $\vect{n}$ der Normalenvektor der Ebene, ein Vektor, welcher zu beiden Richtungsvektoren ortoghonal ist, also $\vect{n} = \vect{u} \times \vect{v}$ und der Stützvektor $\vect{p}$ ist einfach nur der Stützvektor $\vectp{OA}$.
+Somit gilt 
+\begin{equation}
+ (\vect{x} - \vectp{OA}) \cdot \vect{n} = 0 
+ \quad \text{mit} \quad
+ \vect{n} = \vect{u} \times \vect{v}
+\end{equation}
+Wird in der Gleichung die Klammer ausmultipliziert, um die Gleichung zu vereinfachen folgt  
+\begin{equation}
+ \vect{x} \cdot \vect{n} - \vectp{OA} \cdot \vect{n} = 0 
+ \quad \text{mit} \quad
+ \vect{n} = \vect{u} \times \vect{v}
+\end{equation}
+Wird auf beiden Seiten $\vectp{OA} \cdot \vect{n}$ addiert, folgt das Ergebnis 
+\begin{equation}
+ \vect{x} \cdot \vect{n} = \vectp{OA} \cdot \vect{n} 
+ \quad \text{mit} \quad
+ \vect{n} = \vect{u} \times \vect{v}
+\end{equation}
+ 
+ 
+\end{document}
+ 
+ 
