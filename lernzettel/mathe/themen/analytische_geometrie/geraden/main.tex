@@ -1,6 +1,5 @@
 \documentclass{article}
 \usepackage{tikz}
-\usepackage{wrapfig} 
 \usepackage{amsmath}
 \usepackage{amssymb} 
 \usepackage[a4paper]{geometry}
@@ -12,8 +11,17 @@
  
 \newcommand{\vect}[1]{\overrightarrow{#1}} 
   
-\section{Geraden} 
-\begin{wrapfigure}{r}{6cm}
+\section{Geraden}
+\begin{minipage}{\dimexpr\textwidth-6cm}
+Eine Gerade beinhaltet alle Punkte, welche in eine bestimmte Richtung zeigen, heißt zu dem Vektor, welcher die Richtung angibt, dem \textbf{Richtungsvektor}, kollinear sind. Ist $\vect{u}$ der Richtungsvektor, entsprechen diese Punkte der Gleichung $r \cdot \vect{u}$ mit $r \in \mathbb{R}$. Damit die Gerade nicht durch den Ursprung gehen muss, werden all diese Punkte um den \textbf{Stützvektor}, oft $\vect{\mathrm{OA}}$, verschoben.
+Somit gilt 
+\[
+ g: \vect{x} = \vect{\mathrm{OA}} + r \cdot \vect{u} 
+\] 
+Basiert die Gerade auf eine Verbindung von zwei Punkten, kann der Verbindungsvektor dieser als Richtungsvektor verwendet werden. Die Punkte müssen auch im Namen der Gleichung angegeben werden. Wird eine Gerade durch die Punkte $\mathrm{A}$ und $\mathrm{B}$ gelegt, gilt
+\end{minipage} 
+\hfill
+\begin{minipage}{6cm}
   \centering
   \begin{tikzpicture}
     \draw[thick, blue] (0, 1) -- ++(5, 3) node[above left] {g};
@@ -25,19 +33,15 @@
     \draw[->] (0, 0) -- (5, 0); 
     \draw[->] (0, 0) -- (0, 5);
   \end{tikzpicture}
-\end{wrapfigure} 
-Eine Gerade beinhaltet alle Punkte, welche in eine bestimmte Richtung zeigen, heißt zu dem Vektor, welcher die Richtung angibt, dem \textbf{Richtungsvektor}, kollinear sind. Ist $\vect{u}$ der Richtungsvektor, entsprechen diese Punkte der Gleichung $r \cdot \vect{u}$ mit $r \in \mathbb{R}$. Damit die Gerade nicht durch den Ursprung gehen muss, werden all diese Punkte um den \textbf{Stützvektor}, oft $\vect{\mathrm{OA}}$, verschoben.
-Somit gilt 
-\[
- g: \vect{x} = \vect{\mathrm{OA}} + r \cdot \vect{u} 
-\] 
-Basiert die Gerade auf eine Verbindung von zwei Punkten, kann der Verbindungsvektor dieser als Richtungsvektor verwendet werden. Die Punkte müssen auch im Namen der Gleichung angegeben werden. Wird eine Gerade durch die Punkte $\mathrm{A}$ und $\mathrm{B}$ gelegt, gilt 
+\end{minipage}
+ 
+\vspace{1em} 
 \[
  g_{\mathrm{AB}}: \vect{x} = \vect{\mathrm{OA}} + r \cdot \vect{\mathrm{AB}} 
 \]
  
 \subsection{Strecken} 
-\begin{wrapfigure}{l}{6cm}
+\begin{minipage}{6cm}
   \centering
   \begin{tikzpicture}
     \draw[dotted, thick, red] (0, 1) -- ++(5, 3);
@@ -51,13 +55,16 @@ Basiert die Gerade auf eine Verbindung von zwei Punkten, kann der Verbindungsvek
     \draw[->] (0, 0) -- (5, 0); 
     \draw[->] (0, 0) -- (0, 4.2);
   \end{tikzpicture}
-\end{wrapfigure}  
+\end{minipage}
+\hfill 
+\begin{minipage}{\dimexpr\textwidth-6cm} 
 So wie Strecken nur begrenzte Geraden sind, ist die Parametergleichung einer Strecke auch nur die Parametergleichung einer Gerade auf einem Intervall. Weil für eine Strecke von Punkt $\mathrm{A}$ zu Punkt $\mathrm{B}$ mit der obigen Formel der Endpunkt $\mathrm{A}$ bei $r=0$ liegt (${\vect{\mathrm{OA}} + 0 \cdot \vect{\mathrm{AB}} = \mathrm{A}}$) und bei $r < 0$ die Punkte entgegen der Richtung zu $\mathrm{B}$ gehen würden, von der Strecke herunter, muss $r \geq 0$ sein. Mit der Gleichung Logik für Punkt $\mathrm{B}$, bei $r=1$ ($\vect{\mathrm{OA}} + 1 \cdot \vect{\mathrm{AB}} = \mathrm{B}$), gilt zudem noch $r \leq 1$. Somit gilt insgesamt die generelle Formel 
 \[
  g_{\mathrm{AB}}: \vect{x} = \vect{\mathrm{OA}} + r \cdot \vect{\mathrm{AB}}
  \quad \text{mit} \quad
  0 \leq r \leq 1 
 \]
+\end{minipage} 
  
 \subsection{Spurpunkte}
 Spurpunkte sind die Schnittpunkte einer Gerade mit den Koordinatenebenen.
@@ -118,6 +125,8 @@ Die Lagebeziehung zweier Geraden beschreibt, wie sie zueinander im Raum stehen. 
  \end{tabular} 
 \end{center} 
 \end{document}
+ 
+ 
  
  
  

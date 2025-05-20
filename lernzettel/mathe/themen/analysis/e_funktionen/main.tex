@@ -1,6 +1,5 @@
 \documentclass{article}
-\usepackage{tikz} 
-\usepackage{wrapfig}
+\usepackage{tikz}
 \usepackage{amsmath} 
 \usepackage[a4paper]{geometry}
 \usepackage{fancyhdr}
@@ -18,7 +17,8 @@ Eine Exponentialfunktion kann abgeleitet werden, indem
 \end{enumerate} 
  
 \section{e-Funktion}
-\begin{wrapfigure}{l}{5cm}
+ 
+\begin{minipage}{5cm} 
  \centering
  \begin{tikzpicture}     
   \draw[->, blue, thick, domain=-2:1.3, samples=100] 
@@ -32,7 +32,9 @@ Eine Exponentialfunktion kann abgeleitet werden, indem
   \draw (1, e) node {$\times$} node[right] {(1 $\vert$ e)};
    
  \end{tikzpicture}
-\end{wrapfigure}  
+\end{minipage}
+\hfill
+\begin{minipage}{\dimexpr\textwidth-5cm} 
 Eine e-Funktion ist eine Exponentialfunktion, welche die Eulersche Zahl $\mathrm{e} \approx 2,718$ als Basis nimmt.
 \[
  f(x)=\mathrm{e}^x
@@ -44,33 +46,22 @@ Sie schmiegt bei im negativen an die x-Ache an, geht im positiven ins unendliche
  \quad \text{und} \quad
  \lim_{x \to \infty} \mathrm{e}^x = \infty
 \]
-Exponentialfunktionen anderer Basen können mit $a^x = \mathrm{e}^{\ln{(a)} \cdot x}$ in eine e-Funktion umgewandelt werden. Dies folgt aus $a^x$ mit $a=\mathrm{e}^{\ln{a}}$ und $(a^m)^n = a^{m \cdot n}$ 
+\end{minipage}
+ 
+\vspace{1em} 
+\noindent Exponentialfunktionen anderer Basen können mit $a^x = \mathrm{e}^{\ln{(a)} \cdot x}$ in eine e-Funktion umgewandelt werden. Dies folgt aus $a^x$ mit $a=\mathrm{e}^{\ln{a}}$ und $(a^m)^n = a^{m \cdot n}$ 
 \subsection{Ableitungen} 
 Die Basis $\mathrm{e}$ wird genutzt, um das Ableiten zu vereinfachen, es gilt $f(x)=\mathrm{e}^x \implies f'(x)=\mathrm{e}^x$. \newline
 Beim Ableiten wird die Ableitung des Exponenten als Faktor vor das $\mathrm{e}$ gesetzt, sodass 
 \[
  \frac{\mathrm{d}}{\mathrm{d}x} \mathrm{e}^{g(x)} = g'(x) \cdot \mathrm{e}^{g(x)} 
-\]  
-\begin{wrapfigure}{r}{4.5cm}
- \centering
- \begin{tikzpicture}     
-  \draw[->, blue, thick, domain=e^(-3):3, samples=100] 
-            plot (\x, {ln(\x)});
-     
-  \draw[->] (-0.5, 0) -- (3, 0); 
-  \draw[->] (0, -3) -- (0, 1.5);
- 
-  \draw (0, 0) node[below left] {0}; 
-  \draw (e, 1) node {$\times$} node[above left] {(e $\vert$ 1)};
-  \draw (1, 0) node {$\times$} node[below right] {(1 $\vert$ 0)};
-   
- \end{tikzpicture}
-\end{wrapfigure} 
+\] 
 Ist $g(x)$ eine lineare Funktion, kann das Gegenteil für das Bilden einer Stammfunktion genutzt werden. 
 \[
  \int \mathrm{e}^{mx+b} = \frac{1}{m} \cdot \mathrm{e}^{mx+b}
 \] 
-\section{Natürliche Logarithmen}  
+\section{Natürliche Logarithmen} 
+\begin{minipage}{\dimexpr\textwidth-5cm}  
 Der natürliche Logarithmus $\ln$ ist ein Logarithmus zur Basis $\mathrm{e}$.
 \[
  f(x) = \log_e{x} = \ln{x}
@@ -83,6 +74,25 @@ Sie schmiegt bei $x=0$ an die y-Ache an, geht im positiven ins unendliche.
  \lim_{x \to \infty} \ln x= \infty
 \] 
 Die Gegenfunktion zur e-Funktion, sodass $\mathrm{e}^{\ln(m)}=\ln{(\mathrm{e}^m)}=m$. Unteranderem daraus folgt auch dass $\ln(\mathrm{e})=1$.
+ 
+\end{minipage}
+\hfill
+\begin{minipage}{5cm}  
+\centering
+ \begin{tikzpicture}     
+  \draw[->, blue, thick, domain=e^(-3):3, samples=100] 
+            plot (\x, {ln(\x)});
+     
+  \draw[->] (-0.5, 0) -- (3, 0); 
+  \draw[->] (0, -3) -- (0, 1.5);
+ 
+  \draw (0, 0) node[below left] {0}; 
+  \draw (e, 1) node {$\times$} node[above left] {(e $\vert$ 1)};
+  \draw (1, 0) node {$\times$} node[below right] {(1 $\vert$ 0)};
+   
+ \end{tikzpicture}
+\end{minipage}
+ 
 \subsection{Ableitungen} 
 \[
  \frac{\mathrm{d}}{\mathrm{d}x} \ln{(g(x))} = \frac{1}{g(x)} \cdot g'(x) 
@@ -96,6 +106,8 @@ $\ln{x}$ ist eine Stammfunktion zu $\dfrac{1}{x}$. Ist der Bruch nicht direkt in
 \] 
  
 \end{document}
+ 
+ 
  
  
  

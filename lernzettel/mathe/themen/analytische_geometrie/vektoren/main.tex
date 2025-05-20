@@ -1,6 +1,5 @@
 \documentclass{article}
 \usepackage{tikz}
-\usepackage{wrapfig} 
 \usepackage{amsmath} 
 \usepackage[a4paper]{geometry}
 \usepackage{fancyhdr}
@@ -70,18 +69,21 @@ ein Einheitsvektor, solange $\vect{a} \neq \vect{0}$
 \end{description} 
  
 \subsection{Addition} 
-Vektoren können, genau wie normale Zahlen auch, miteinander addiert und subtrahiert werden. Die Summe zweier Vektoren kann als beide einzelnen Vektoren, wobei der Anfang des einen and das Ende des anderen gelegt wurde, angesehen werden. \newline 
-\begin{wrapfigure}[6]{l}{5cm}
+Vektoren können, genau wie normale Zahlen auch, miteinander addiert und subtrahiert werden. Die Summe zweier Vektoren kann als beide einzelnen Vektoren, wobei der Anfang des einen and das Ende des anderen gelegt wurde, angesehen werden. \newline
+ 
+\noindent \begin{minipage}{4cm}
   \centering
   \begin{tikzpicture}
-    \draw[->] (0,0) -- (3.1,0) node[right] {$x$};
+    \draw[->] (0,0) -- (3.1,0) node[above] {$x$};
     \draw[->] (0,0) -- (0,2) node[above] {$y$};
  
     \draw[->, thick, red] (0.3,0.3) -- ++(1,1.5) node[midway, above left] {$\vect{a}$};
     \draw[->, thick, green!50!black] (1.3,1.8) -- ++(1.5,-0.5) node[midway, above right] {$\vect{b}$};
     \draw[->, thick, blue] (0.3,0.3) -- ++(2.5,1) node[midway, below right] {$\vect{a} + \vect{b}$};  
   \end{tikzpicture}
-\end{wrapfigure}
+\end{minipage}
+\hfill
+\begin{minipage}{\dimexpr\textwidth-4cm}
 Algebraisch wird dabei die jeweilige Rechenart nur auf die einzelnen Koordinatenpaare angewand, heißt 
 \[ 
  \begin{pmatrix} a_1 \\ a_2 \end{pmatrix} +
@@ -89,9 +91,19 @@ Algebraisch wird dabei die jeweilige Rechenart nur auf die einzelnen Koordinaten
  \begin{pmatrix} a_1 + b_1 \\ a_2 + b_2 \end{pmatrix} 
 \]
 Gleiches gilt für subtraktion, mit $\vect{a} - \vect{b} = \vect{a} + (-\vect{b})$.
+\end{minipage} 
  
 \subsection{Multiplikation}
-\begin{wrapfigure}{r}{5cm}
+\begin{minipage}{\dimexpr\textwidth-4cm} 
+Vektoren können mit Zahlen multipliziert werden, wodurch die Länge dem Faktor nach verlängert oder verkürzt wird. Algebraisch wird dabei die Multiplikation auf die einzelnen Koordinatenpaare angewand, heißt
+\[ 
+ r \cdot
+ \begin{pmatrix} x_1 \\ x_2 \end{pmatrix} =
+ \begin{pmatrix} r \cdot x_1 \\ r \cdot x_2 \end{pmatrix} 
+\]
+\end{minipage}
+\hfill
+\begin{minipage}{4cm}
   \centering
   \raisebox{-2cm}[0pt]{
   \begin{tikzpicture}
@@ -104,16 +116,11 @@ Gleiches gilt für subtraktion, mit $\vect{a} - \vect{b} = \vect{a} + (-\vect{b}
  
     \draw[->, thick, green!50!black] (0.2,0) -- ++(1,0.5) node[right] {$0.5 \cdot \vect{v}$};
   \end{tikzpicture}} 
-\end{wrapfigure}
-Vektoren können mit Zahlen multipliziert werden, wodurch die Länge dem Faktor nach verlängert oder verkürzt wird. Algebraisch wird dabei die Multiplikation auf die einzelnen Koordinatenpaare angewand, heißt
-\[ 
- r \cdot
- \begin{pmatrix} x_1 \\ x_2 \end{pmatrix} =
- \begin{pmatrix} r \cdot x_1 \\ r \cdot x_2 \end{pmatrix} 
-\]
+ 
+\end{minipage} 
  
 \subsection{Beträge}
-\begin{wrapfigure}{l}{5cm}
+\begin{minipage}{4cm}
   \centering
   \raisebox{-1.7cm}[0pt]{
   \begin{tikzpicture}
@@ -126,12 +133,15 @@ Vektoren können mit Zahlen multipliziert werden, wodurch die Länge dem Faktor 
  
     \draw[dotted, thick, green!50!black] (2.5,0.5) -- ++(0,1) node[midway, right] {$x_2$};
   \end{tikzpicture}}
-\end{wrapfigure}
+\end{minipage}
+\hfill
+\begin{minipage}{\dimexpr\textwidth-4cm}  
 Der Betrag eines Vektors spiegelt die Länge wieder. Diese wird mit einer Formel, hergeleitet vom Satz des Pythagoras, berechnet, wobei der Vektorenpfeil als Hypothenuse eines Dreiecks mit den Vektorenkoordinaten als Katheten gesehen wird. Somit gilt
 \[
  \norm{\vect{v}} =
  \sqrt{{x_1}^2 + {x_2}^2}
 \]
+\end{minipage} 
  
 \subsection{Kollinearität} 
 Zwei Vektoren sind kollinear, wenn sie in die gleiche Richtung zeigen, also einer nur ein Vielfache des anderen ist. Kollinearität zwischen $\vect{a}$ und $\vect{b}$ ist vorhanden, wenn es ein $r$ gibt, so dass 
@@ -147,5 +157,7 @@ Ein Vektor, welcher als Summe von den Vielfachen zweier Vektoren dargestellt wer
 erfüllt sein kann. Dies kann überprüft werden, indem die obige Gleichung als lineares Gleichungssystem aufgeschrieben wird  und nach $r$ und $s$ aufgelöst wird.
  
 \end{document} 
+ 
+ 
  
  
