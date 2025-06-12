@@ -4,6 +4,15 @@
 \usepackage[a4paper]{geometry}
 \begin{document}
  
+\newcommand{\relline}[4]{  
+ \rellinep{#1}{#2}{#3}{#4}{0}{0}
+}
+ 
+\newcommand{\rellinep}[6]{  
+ (#1) edge [#4] node[fill=none, draw=none, xshift=#5ex, yshift=#6ex] {#3} (#2)
+} 
+ 
+ 
 % Project A: Lifelines
 % Visualise the relationships within the Edwardses and the Jonga family.
 % Use a digital pinboard such as TaskCards or Canva to create a visual lifeline.
@@ -14,7 +23,7 @@
 \begin{center} 
 \begin{tikzpicture}[
     node distance=2cm and 3cm,
-    every node/.style={draw, rectangle, rounded corners, align=center, minimum width=0.5cm},
+    every node/.style={draw, rectangle, align=center, minimum width=0.5cm},
     every edge/.style={draw, thick, ->, shorten >=5pt, shorten <=5pt}
 ]
 \node (jende) {Jende Jonga};
@@ -22,16 +31,24 @@
 \node (liomi) [below=of jende] {Liomi}; 
 \node (winston) [left=of jende] {Winston}; 
 \node (bubakar) [above=of winston] {Bubakar}; 
-\node (edwards) [above=of jende] {Mr. Edwards};
+\node (edwards) [above=of jende] {Clark \\ Edwards}; 
+\node (cindy) [right=of edwards] {Cindy \\ Edwards};
+\node (vince) [above=of edwards] {Vince};
+\node (jrother) [below left=of jende] {Brother}; 
  
 \path
- (jende) edge [above] node[fill=none, draw=none] {wife} (neni)
- (jende) edge [left] node[fill=none, draw=none] {son} (liomi)
- (neni) edge [below right] node[fill=none, draw=none] {son, puts \\ under high \\ pressure} (liomi)
- (jende) edge [above] node[fill=none, draw=none] {cousin} (winston)
- (winston) edge [left] node[fill=none, draw=none] {recommends} (bubakar)
- (bubakar) edge [below left] node[fill=none, draw=none] {helps} (jende)
- (edwards) edge [right] node[fill=none, draw=none] {employees} (jende);
+ \relline{jende}{neni}{wife}{above}
+ \relline{jende}{liomi}{son}{left}
+ \relline{neni}{liomi}{son, puts \\ under high \\ pressure}{below right} 
+ \relline{jende}{winston}{cousin}{above} 
+ \relline{winston}{bubakar}{recommends}{left} 
+ \rellinep{bubakar}{jende}{helps, \\ immigration \\ lawyer}{below left}{-1}{4}
+ \relline{edwards}{jende}{employs, \\ helps}{right}
+ \relline{edwards}{cindy}{wife}{above}
+ \relline{cindy}{neni}{employs, \\ helps}{left}
+ \relline{edwards}{vince}{son}{left}
+ \relline{jende}{jrother}{helps}{left}
+ ; 
 \end{tikzpicture}
 \end{center} 
  
@@ -76,6 +93,7 @@
  \item[Chapter 20] Jende is angry at Neni because Liomi overheard Neni say that they might be deported
 \end{description}   
 \end{document}
+ 
  
  
  
