@@ -50,6 +50,27 @@
 Um die Parametergleichung einer Ebene zu finden, müssen der Stützvektor und zwei Richtungsvektoren, welche nicht zueinander kollinear sind, bestimmt werden. Sind drei Punkte gegeben, welche nicht auf einer Gerade liegen, kann einer davon, normalerweise $\mathrm{A}$, als Stützvektor genutzt werden, wobei die jeweiligen Verbindungsvektoren zu den zwei anderen Punkten als Richtungsvektoren verwendet werden können, wie oben gezeigt. \newline
 Sind hingegen nicht drei Punkte gegeben, sondern ein Punkt und eine Gerade oder garkeine Punkte und zwei Geraden, so können selbst Punkte auf der Gerade bestimmt werden, welche genutzt werden können, um auf einen Stützvektor und zwei Richtungsvektoren zu kommen.
  
+\subsection{Normalform}
+Offensichtlich ist jeder Verbindungsvektor zwischen zwei Punkten einer Ebene $\mathrm{E}$ zu dem Normalvektor $\vect{n}$ dieser Ebene orthogonal, heißt hat ein Skalarprodukt von null. Somit gilt für jeden Punkt $\vect{x}$ auf der Ebene $\mathrm{E}$ mit einem Stützvektor $\vect{p}$
+\[
+ (\vect{x} - \vect{p}) \cdot \vect{n} = 0 
+\]
+In dieser Form ist auch zugleich der Normalvektor $\vect{n}$ sehr einfach abzulesen. 
+ 
+\subsection{Koordinatenform}
+Eine Ebenengleichung kann auch als
+\[
+ n_1 \, x_1 + n_2 \, x_2 + n_3 \, x_3 = e 
+\]
+aufgeschrieben werden, wobei mit einem beliebigen Stützvektor $\vect{p}$ der Ebene $e = \vect{p} \cdot \vect{n}$ gilt. Manchmal wird $n_1 \, x_1 + n_2 \, x_2 + n_3 \, x_3$ auch zu $\vect{x} \cdot \vect{n}$ gekürzt.
+ 
+\subsection{Hesse'sche Normalform}
+Hierzu mehr im Kapital \texttt{Abstände} \newline % TODO: create this
+Die Hesse'sche Normalform besagt dass mit einem Punkt $\mathrm{P}$ als Stützvektor der Ebene
+\[
+ \frac{1}{|\vect{n}|} (\vect{n} \cdot \vect{x} - \vect{n} \cdot \vectp{OP}) = 0 
+\]  
+ 
 \end{document} 
  
  
