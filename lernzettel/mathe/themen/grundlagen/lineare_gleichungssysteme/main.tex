@@ -32,37 +32,40 @@ Ein LGS kann auch als Matrix aufgeschrieben werden, welche eine Zeile pro Gleich
  \item[CAS] Ein LGS als Menge an Gleichungen kann mit dem Taschenrechner mit \texttt{menu} \textrightarrow{} \texttt{3} \textrightarrow{} \texttt{7} \textrightarrow{} \texttt{(1 oder 2)} gelöst werden. Dabei können die Gleichungen eingegeben werden, wie sie sind und die Variablen werden direkt genau gelöst. \newline
 Alternativ kann es in die Matrixform verwandelt werden und mithilfe von \texttt{rref}, schreibbar oder auffindbar in \texttt{menu} \textrightarrow{} \texttt{7} \textrightarrow{} \texttt{5}, gefolgt von \texttt{menu} \textrightarrow{} \texttt{7} \textrightarrow{} \texttt{1} \textrightarrow{} \texttt{1}, um die Matrix zu erstellen. Dies gibt die Lösungen als reduzierte Zeilenstufenform aus. Diese steht in der gleichen Form, wie die selbst angegebene Matrix, sodass die Variablen einfacher abgelesen werden können.
 \end{description} 
-\begin{multicols}{3}
- \noindent
- \[
+\begin{center}
+ \begin{tabular}{p{4cm} p{4cm} p{4cm}} 
+ \centering \(
  \begin{pmatrix}
   1 & * & * & x \\
   * & 1 & * & y \\
   * & * & 1 & z \\
  \end{pmatrix}
- \]
- \centering Eine Lösung
- \columnbreak
- \noindent
- \[
- \begin{pmatrix}
+ \)
+ &
+ \centering \(
+  \begin{pmatrix}
   1 & * & * & x \\
   * & 1 & * & y \\
   0 & 0 & 0 & 0 \\
  \end{pmatrix}
- \]
- \centering Unendlich viele Lösungen  
- \columnbreak
- \noindent
- \[
- \begin{pmatrix}
-  * & * & * & * \\
-  * & * & * & * \\
-  0 & 0 & 0 & 1 \\
- \end{pmatrix}
- \]
+ \)
+ &
+ \makebox[4cm][c]{
+  \(
+  \begin{pmatrix}
+   * & * & * & * \\
+   * & * & * & * \\
+   0 & 0 & 0 & 1 \\
+  \end{pmatrix}
+  \)
+ } 
+ \par
+ \\
+ \centering Eine Lösung &
+ \centering Unendlich viele Lösungen & 
  \centering Keine Lösung  
-\end{multicols} 
+ \end{tabular} 
+\end{center} 
 \noindent Dabei sind aber nur so viele Zeilen zu beachten, wie es auch unbekannte Variablen gibt. Gibt es mehr Eingangsgleichungen als Variablen, werden die restlichen Zeilen des Ergebnis' mit Nullen aufgefüllt. Dies heißt aber nicht, dass es kein Ergebnis gibt.
  
 \subsection{Lösungsmengen}
