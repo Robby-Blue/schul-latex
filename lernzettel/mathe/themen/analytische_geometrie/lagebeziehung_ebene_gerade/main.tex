@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr} 
+\usepackage{tikz} 
+\pagestyle{fancy}
+\lhead{Lagebeziehungen Ebenen und Geraden}
+\rhead{Juli 2025}
+\begin{document}
+ 
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\drawplane}[0]{ 
+ \begin{scope} 
+  \clip(-0.7,0) rectangle (3.7,3);
+  \fill[blue!20] (1.2-0*1.2-1.4,1-0*0.7+0.3) -- (1.2+1*1.2-1.4,1+1*0.7+0.3) -- (1.2+1*1.2+1.4,1+1*0.7-0.3) -- (1.2-0*1.2+1.4,1-0*0.7-0.3) -- cycle;
+  \draw (1.5, 1.6) node[black] {$\mathrm{E}$}; 
+ \end{scope}
+} 
+ 
+\newcommand{\drawuv}[0]{ 
+ \draw[->,thick,blue] (0.3,1.35) -- ++(1.2*0.5,0.7*0.5) node[above left] {$\vect{u}$};
+ \draw[->,thick,red] (0.3,1.35) -- ++(1.4*0.5,-0.3*0.5) node[below left] {$\vect{v}$}; 
+} 
+  
+\section{Lagebeziehungen Ebenen und Geraden}
+Die Langebeziehung zwischen einer Ebene und einer Gerade beschreibt wie diese zueinander im Raum stehen. Dabei gibt es drei Möglichkeiten.
+\begin{description}
+ \item[Schneidung] Wenn eine Ebene und eine Gerade genau einen Schnittpunkt haben, so schneiden sie sich. Dies passiert zwangsweise, solange der Normalvektor $\vect{n}$ von $\mathrm{E}$ zu der Gerade $\mathrm{g}$ nicht orthogonal ist.
+ \item[ineinander] Sind alle Punkte der Gerade $\mathrm{g}$ auch in der Ebene $\mathrm{E}$, so liegt $\mathrm{g}$ in $\mathrm{E}$. Dies passiert, wenn es unendlich viele Schnittpunkte oder mindestens ein Schnittpunkt und eine orthogonalität zwischen $\mathrm{n}$ und $\mathrm{g}$ vorliegt. 
+ \item[echt parallel] Eine Gerade $\mathrm{g}$ ist zu der Ebene $\mathrm{E}$ echt parallel, wenn es keinen einzigen gemeinsamen Schnittpunkt gibt. Dabei sind zwangsweise, aber nicht hinreichend, $\vect{n}$ und $\mathrm{g}$ orthogonal.
+\end{description}
+ 
+\begin{center}
+ \begin{tabular}{c c c}
+  \begin{tikzpicture}
+   \drawplane
+   \drawuv 
+     
+   \draw (2, 1.5) node {$\times$};
+   \draw[thick,blue] (1.6,0.1) -- ++(0.4, 1.4);
+   \draw[->,thick,black] (2,1.5) -- ++(0.4, 1.4) node[right] {$g$}; 
+   \draw[->] (0, 0) -- (3, 0); 
+   \draw[->] (0, 0) -- (0, 3);
+  \end{tikzpicture}
+  &
+  \begin{tikzpicture}
+   \drawplane 
+ 
+   \draw[->,thick,black] (0.5,1.5) -- ++(1.4*1.5, -0.3*1.5) node[above] {$g$}; 
+   \draw[->] (0, 0) -- (3, 0); 
+   \draw[->] (0, 0) -- (0, 3);
+  \end{tikzpicture} 
+  &
+  \begin{tikzpicture}
+   \drawplane 
+     
+   \draw[->,thick,black] (0.3,2.3) -- (2.7, 2.3) node[below left] {$g$}; 
+   \draw[->] (0, 0) -- (3, 0); 
+   \draw[->] (0, 0) -- (0, 3);
+  \end{tikzpicture} 
+  \\
+  Schneidung & ineinander & echt parallel \\
+  $\vect{n}$ und $\mathrm{g}$ nicht orthogonal &
+  $\vect{n}$ und $\mathrm{g}$ orthogonal, &
+  $\vect{n}$ und $\mathrm{g}$ orthogonal, \\
+  & alle Punkte von $\mathrm{g}$ in $\mathrm{E}$ & kein gemeinsamer Punkt
+ \end{tabular} 
+\end{center} 
+ 
+\end{document} 
+ 
+ 
