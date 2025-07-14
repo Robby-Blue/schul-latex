@@ -16,7 +16,7 @@
  \section{Ebenen}
  Wird zu einer Parametergleichung einer Gerade ein vielfaches des Vektores $\vectp{AC}$, welcher in eine andere Richtung zeigt, also nicht kollinear ist, hinzugefügt, geht von jedem Punkt der ursprünglichen Gerade je eine weitere, in die Richtung von $\vectp{AC}$ gerichtete zeigend, Gerade aus.
  Diese neue Parametergleichung kann somit alle Punkte, welche einer auf einer unendlichen zwei dimensionalen Ebene liegen, darstellen. \newline
- Sie folgt der Form  
+ Sie folgt oftmals der Parameterform  
  \[
   E: \vect{x} = \vectp{OA} + r \cdot \vectp{AB} + s \cdot \vectp{AC} 
  \]
@@ -46,7 +46,7 @@
 \vspace{1em}  
 \noindent Ein Punkt liegt auf der Ebene, wenn es möglich ist diesen mit der Parametergleichung der Ebene gleich zu setzen und jeweils einen Wert für $r$ und $s$ zu finden.
  
-\subsection{Parametergleichungen bestimmen}
+\subsection{Parametergleichung}
 Um die Parametergleichung einer Ebene zu finden, müssen der Stützvektor und zwei Richtungsvektoren, welche nicht zueinander kollinear sind, bestimmt werden. Sind drei Punkte gegeben, welche nicht auf einer Gerade liegen, kann einer davon, normalerweise $\mathrm{A}$, als Stützvektor genutzt werden, wobei die jeweiligen Verbindungsvektoren zu den zwei anderen Punkten als Richtungsvektoren verwendet werden können, wie oben gezeigt. \newline
 Sind hingegen nicht drei Punkte gegeben, sondern ein Punkt und eine Gerade oder garkeine Punkte und zwei Geraden, so können selbst Punkte auf der Gerade bestimmt werden, welche genutzt werden können, um auf einen Stützvektor und zwei Richtungsvektoren zu kommen.
  
@@ -69,8 +69,33 @@ Hierzu mehr im Kapital \texttt{Abstände} \newline % TODO: create this
 Die Hesse'sche Normalform besagt dass mit einem Punkt $\mathrm{P}$ als Stützvektor der Ebene
 \[
  \frac{1}{|\vect{n}|} (\vect{n} \cdot \vect{x} - \vect{n} \cdot \vectp{OP}) = 0 
-\]  
+\]
  
+\subsection{Umformung}
+Weil sowohl die Normalform, die Koordinatenform und die Hesse'sche Normalform sich direkt oder indirekt  auf $\vect{x}$, $\vect{n}$ und $\vect{p}$ beziehen, können diese immer identifiziert und in die Formel der jeweils anderen Form eingesetzt werden. 
+ 
+Im Falle der Koordinatengleichung kann ein $\vect{p}$ bestimmt werden, indem nach einem $\vect{x}$ gesucht wird, für welches die Gleichung eine Identität darstellt, am einfachsten indem zwei der Koordinaten zu null gesetzt werden und die eine überbleibende aufgelöst wird.
+ 
+Die Richtungsvektoren der Parameterform können mithilfe von $\vect{n}$ gefunden werden; sie sind immer zwei zu $\vect{n}$ orthogonale, aber nicht zueinander kollineare, Vektoren. In anbetracht der Funktionsweise eines Skalarproduktes, kann offensichtlich ein orthogonaler Vektor gefunden werden, indem eine Koordinate gleich null gesetzt wird und die anderen beiden vertauscht werden, wobei eine der beiden negativ gesetzt wird.
+ 
+Somit können die Richtungsvektoren einer Ebene mit dem Normalvektor $\vect{n}$ 
+\[
+ \begin{pmatrix} 0 \\ -n_3 \\ n_2 \end{pmatrix}
+ \quad \text{und} \quad
+ \begin{pmatrix} -n_3 \\ 0 \\ n_1 \end{pmatrix} 
+ \quad \text{und} \quad
+ \begin{pmatrix} n_2 \\ -n_1 \\ 0 \end{pmatrix}  
+\]
+und alle dazugehörigen Gegenvektoren sein, weil, per definition,
+\begin{align*} 
+ \begin{pmatrix} n_1 \\ n_2 \\ n_3 \end{pmatrix}
+ \cdot
+ \begin{pmatrix} -n_3 \\ 0 \\ n_1 \end{pmatrix}
+ &= (n_1 \cdot -n_3) + (n_2 \cdot 0) + (n_3 \cdot n_1) \\
+ &= -(n_1 \cdot n_3) + 0 + (n_3 \cdot n_1) \\
+ &= (n_1 \cdot n_3) - (n_1 \cdot n_3) \\
+ &= 0 
+\end{align*}  
 \end{document} 
  
  
