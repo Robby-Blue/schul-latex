@@ -27,25 +27,25 @@ Ein LGS kann auch als Matrix aufgeschrieben werden, welche eine Zeile pro Gleich
  
 \subsection{Lösen}
 \begin{description}
- \item[Schriftlich] Ein LGS kann Hilfmittelfrei mit dem Gaußschen Eliminationsverfahren gelöst werden. Dabei wird eine Gleichung bzw. eine Zeile der Matrix mit einem Faktor auf eine andere addiert, sodass mindestens eine Variable dieser Gleichung wegfällt. Dies wird wiederholt, bis das LGS mit einem dreieck an Nullen vorliegt: die erste Gleichung nutzt alle Variablen, die zweite alle außer eine, etc - bis zur letzten Gleichung, welche sich nur noch auf eine unbekannte Variable bezieht. Nach dieser kann dann sehr einfach gelöst werden. Mithilfe dieser können auch alle anderen schritt für schritt gefunden werden. 
+ \item[Schriftlich] Ein LGS kann Hilfsmittelfrei mit dem Gaußschen Eliminationsverfahren gelöst werden. Dabei wird eine Gleichung bzw. eine Zeile der Matrix mit einem Faktor auf eine andere addiert, sodass mindestens eine Variable dieser Gleichung wegfällt. Dies wird wiederholt, bis das LGS mit einem dreieck an Nullen vorliegt: die erste Gleichung nutzt alle Variablen, die zweite alle außer eine, etc - bis zur letzten Gleichung, welche sich nur noch auf eine unbekannte Variable bezieht. Nach dieser kann dann sehr einfach gelöst werden. Mithilfe dieser können auch alle anderen schritt für schritt gefunden werden. 
  
  \item[CAS] Ein LGS als Menge an Gleichungen kann mit dem Taschenrechner mit \texttt{menu} \textrightarrow{} \texttt{3} \textrightarrow{} \texttt{7} \textrightarrow{} \texttt{(1 oder 2)} gelöst werden. Dabei können die Gleichungen eingegeben werden, wie sie sind und die Variablen werden direkt genau gelöst. \newline
-Alternativ kann es in die Matrixform verwandelt werden und mithilfe von \texttt{rref}, schreibbar oder auffindbar in \texttt{menu} \textrightarrow{} \texttt{7} \textrightarrow{} \texttt{5}, gefolgt von \texttt{menu} \textrightarrow{} \texttt{7} \textrightarrow{} \texttt{1} \textrightarrow{} \texttt{1}, um die Matrix zu erstellen. Dies gibt die Lösungen als reduzierte Zeilenstufenform aus. Diese steht in der gleichen Form, wie die selbst angegebene Matrix, sodass die Variablen einfacher abgelesen werden können.
+Alternativ kann es in die Matrixform verwandelt werden und mithilfe von \texttt{rref}, schreibbar oder auffindbar in \texttt{menu} \textrightarrow{} \texttt{7} \textrightarrow{} \texttt{5}, gefolgt von \texttt{menu} \textrightarrow{} \texttt{7} \textrightarrow{} \texttt{1} \textrightarrow{} \texttt{1}, um die Matrix zu erstellen gelöst werden. Dies gibt die Lösungen als reduzierte Zeilenstufenform aus. Diese steht in der gleichen Form, wie die selbst angegebene Matrix, sodass die Variablen einfacher abgelesen werden können.
 \end{description} 
 \begin{center}
  \begin{tabular}{p{4cm} p{4cm} p{4cm}} 
  \centering \(
  \begin{pmatrix}
-  1 & * & * & x \\
-  * & 1 & * & y \\
-  * & * & 1 & z \\
+  1 & 0 & 0 & x \\
+  0 & 1 & 0 & y \\
+  0 & 0 & 1 & z \\
  \end{pmatrix}
  \)
  &
  \centering \(
   \begin{pmatrix}
-  1 & * & * & x \\
-  * & 1 & * & y \\
+  1 & 0 & * & * \\
+  0 & 1 & * & * \\
   0 & 0 & 0 & 0 \\
  \end{pmatrix}
  \)
@@ -53,8 +53,8 @@ Alternativ kann es in die Matrixform verwandelt werden und mithilfe von \texttt{
  \makebox[4cm][c]{
   \(
   \begin{pmatrix}
-   * & * & * & * \\
-   * & * & * & * \\
+   1 & 0 & * & * \\
+   0 & 1 & * & * \\
    0 & 0 & 0 & 1 \\
   \end{pmatrix}
   \)
