@@ -1,7 +1,8 @@
 \documentclass{article}
 \usepackage[a4paper]{geometry}
 \usepackage{fancyhdr} 
-\usepackage{tikz} 
+\usepackage{tikz}
+\usepackage{hyperref} 
 \pagestyle{fancy}
 \lhead{Lagebeziehungen Ebenen}
 \rhead{Juli 2025}
@@ -54,15 +55,19 @@ Die Langebeziehung zwischen zwei Ebenen, $\mathrm{E}_1$ und $\mathrm{E}_2$, besc
    \draw[->] (0, 0) -- (0, 3);
   \end{tikzpicture} 
   \\
-  Schneidung & ineinander & echt parallel \\
-  $\vect{n_1}$ und $\mathrm{n_2}$ nicht orthogonal &
-  $\vect{n_1}$ und $\mathrm{n_2}$ orthogonal, &
-  $\vect{n_1}$ und $\mathrm{n_2}$ orthogonal, \\
-  & alle Punkte von $\mathrm{E}_1$ in $\mathrm{E}_2$ & kein gemeinsamer Punkt
+  Schneidung & identisch & echt parallel \\
+  $\vect{n_1}$ und $\vect{n_2}$ nicht orthogonal &
+  $\vect{n_1}$ und $\vect{n_2}$ orthogonal, &
+  $\vect{n_1}$ und $\vect{n_2}$ orthogonal, \\
+  eine Schnittgerade & alle Punkte von $\mathrm{E}_1$ in $\mathrm{E}_2$ & kein gemeinsamer Punkt
  \end{tabular} 
 \end{center}
 \subsection{Bestimmen}
-% TODO: gleichsetzen, entweder identität, widerspruch oder schnittgerade 
+Weil alle drei Lagebeziehungen unterschiedliche gleiche Punkte haben, kann die Lagebeziehung zwischen zwei Ebenen basierend auf einzig und allein ihrer gleichen Punkte bestimmt werden.
+ 
+Stellt sich beim Gleichsetzen der Ebenengleichungen heraus, dass es keinen gemeinsamen Punkt gibt, unter anderem dadurch, dass es beim auflösen zu einem Widerspruch kommt, so ist sind die Ebenen echt parallel zueinander. Sind die Gleichungen aber gleich, kommt es zu einer Identität, sind die beiden Ebenen auch identisch. Kommt es beim Auflösen der Gleichung oder des \hyperref[Lineare Gleichungssysteme]{Linearen Gleichungssystems} dazu, dass die Koordinaten aller gleichen Punkte in Abhängigkeit von nur einem Parameter gesetzt werden können, so liegen all diese auf der Schnittgerade. Desweiteren kann die Schnittgerade gefunden werden, indem alle Koordinaten in Abhängigkeit von nur einem Parameter aufgestellt werden. 
+ 
 \end{document} 
+ 
  
  
