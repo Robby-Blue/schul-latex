@@ -15,9 +15,9 @@
 \section{Abstände zwischen Punkten und Ebenen}
  
 \begin{minipage}[t]{\dimexpr\textwidth-5cm}
- Die einfachste Methode den Abstand zwischen einem Punkt und einer Ebene zu finden, ist das \emph{Lotfußpunktverfahren}. Dabei wird ein \emph{Lotfußpunkt} $\mathrm{F}$ bestimmt, welcher der zu $\mathrm{P}$ näheste, auf $\mathrm{E}$ liegende, Punkt ist. Die Länge des Verbindungsvektors $\vectp{PF}$ stellt nun den Abstand von $\mathrm{P}$ zu $\mathrm{E}$ dar. Somit ist der Abstand
+ Die einfachste Methode den Abstand zwischen einem Punkt und einer Ebene zu finden, ist das \emph{Lotfußpunktverfahren}. Dabei wird ein \emph{Lotfußpunkt} $\mathrm{F}$ bestimmt, welcher der zu $\mathrm{A}$ näheste, auf $\mathrm{E}$ liegende, Punkt ist. Die Länge des Verbindungsvektors $\vectp{PF}$ stellt nun den Abstand von $\mathrm{A}$ zu $\mathrm{E}$ dar. Somit ist der Abstand
  \[
-  d(\mathrm{P}, \mathrm{E}) = \norm{\vectp{PF}}
+  d(\mathrm{A}, \mathrm{E}) = \norm{\vectp{PF}}
  \] 
  Weil $\mathrm{F}$ in der Regel nicht in der Aufgabe gegeben ist, muss dieser Punkt erstmal gefunden werden. Dies wird getan, indem \\[-0.7em]
 \end{minipage} 
@@ -28,15 +28,15 @@
   \fill[blue!20] (-0.1, 0.7) -- (0.6, 1.5) -- (4.1,1.1) -- (3.4, 0.3) -- cycle;
   \draw (0.6, 0.9) node[black] {$\mathrm{E}$};
  
-  \draw[thick,red] (1.5, 1) -- (1.5,3);
-  \draw (1.5, 2) node[red, right] {$\vectp{PF}$}; 
-  \draw (1.5, 3) node[black] {$\times$} node[right] {$\mathrm{P}$};  
-  \draw (1.5, 1) node[black] {$\times$} node[right] {$\mathrm{F}$};
+  \draw[thick,red] (2, 1) -- (2,3);
+  \draw (2, 2) node[red, right] {$\vectp{PF}$}; 
+  \draw (2, 3) node[black] {$\times$} node[right] {$\mathrm{A}$};  
+  \draw (2, 1) node[black] {$\times$} node[right] {$\mathrm{F}$};
   \draw[->] (0, 0) -- (4, 0); 
   \draw[->] (0, 0) -- (0, 3.5);
  \end{tikzpicture}
 \end{minipage}
-eine Gerade, genannt die \emph{Lotgerade}, bestimmt wird, welche vom Punkt $\mathrm{P}$ aus auf direktestem Wege zur Ebene $\mathrm{E}$ geht. Offensichtlich muss die Lotgerade dafür Senkrecht zur Ebene sein, heißt kollinear zum Normalvektor $\vect{n}$. Daraus folgt die Lotgerade
+eine Gerade, genannt die \emph{Lotgerade}, bestimmt wird, welche vom Punkt $\mathrm{A}$ aus auf direktestem Wege zur Ebene $\mathrm{E}$ geht. Offensichtlich muss die Lotgerade dafür Senkrecht zur Ebene sein, heißt kollinear zum Normalvektor $\vect{n}$. Daraus folgt die Lotgerade
 \[
  g: \vect{x} = \vectp{OP} + t \cdot \vect{n} 
 \]
@@ -44,18 +44,72 @@ Zusammen mit der Gleichung der Lotgerade und der Ebene kann nur deren Schnittpun
  
 Muss der Aufgabe nach $\mathrm{F}$ aber nicht angegeben werden, können die letzten wenigen Schritte aber auch übersprungen werden und 
 \(
- d(\mathrm{P}, \mathrm{E}) = \norm{t} \cdot \norm{\vect{n}}
+ d(\mathrm{A}, \mathrm{E}) = \norm{t} \cdot \norm{\vect{n}}
 \)
 genutzt werden. Dies folgt aus 
 \begin{align*}
- d(\mathrm{P}, \mathrm{E}) &= \norm{\vectp{PF}} \\
-  &= \norm{\vectp{OP} - \vectp{OF}} \\ 
-  &= \norm{\vectp{OP} - (\vectp{OP} + t \cdot \vect{n})} \\
+ d(\mathrm{A}, \mathrm{E}) &= \norm{\vectp{AF}} \\
+  &= \norm{\vectp{OA} - \vectp{OF}} \\ 
+  &= \norm{\vectp{OA} - (\vectp{OA} + t \cdot \vect{n})} \\
   &= \norm{t \cdot \vect{n}} \\
   &= \norm{t} \cdot \norm{\vect{n}}
 \end{align*}
  
-\subsection{Hesse'sche Normalform} 
+\subsection{Hesse'sche Normalform}
  
-\end{document}
+\begin{minipage}[t]{\dimexpr\textwidth-8cm}
+ Hat die ebene einen Stützpunkt $\mathrm{P}$, so gilt
+\begin{align*}
+ \cos(\alpha) &= \frac{d(\mathrm{A}, \mathrm{E})}{\norm{\vectp{PA}}}
+ \intertext{Aus Umstellen folgt}
+ d(\mathrm{A}, \mathrm{E}) &= \cos(\alpha) \cdot \norm{\vectp{PA}}
+ %\intertext{Dabei lässt sich $\cos{\alpha}$ durch das Skalarprodukt ausdrücken} % TODO: quelle angeben
+\end{align*}  
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{8cm} 
+ \centering 
+ \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \coordinate (start) at (0.5,1.5);
+  \path (start) ++({sin(105)*3}, {cos(105)*3}) coordinate (end);
+  \path (start) ++({sin(105)*1.5}, {cos(105)*1.5}) coordinate (mid);
+  \path (mid) ++({sin(15)*1.75}, {cos(15)*1.75}) coordinate (middist);
+  \path (middist) ++({sin(-75)*1.25}, {cos(-75)*1.25}) coordinate (pointa);
+  
+  \draw (pointa) node[black] {$\times$};
+  \draw (mid) ++({sin(15)*0.6}, {cos(15)*0.6}) arc[start angle=75, end angle=110, radius=0.6];
+  \draw (middist) ++({sin(-75)*0.3}, {cos(-75)*0.3}) arc[start angle=165, end angle=255, radius=0.3];
+  
+  \draw[thick, black] (start) -- (end) node[below left, black] {$\mathrm{E}$};
+  \draw[blue] (mid) -- (middist) node[midway, right, black] {$d(\mathrm{A},\mathrm{E})$};  
+  \draw[dashed, blue] (middist) -- (pointa) node[left, black] {$\mathrm{A}$};  
+  \draw[blue] (mid) -- (pointa) node[midway, left, black] {$\vectp{PA}$};
+ 
+  \draw (mid) ++ (-0.03, 0.4) node[black] {$\alpha$};
+ 
+  \draw[red] (mid) node[below, black] {$\mathrm{P}$};
+ 
+  \draw[->] (0, 0) -- (4, 0); 
+  \draw[->] (0, 0) -- (0, 3.5);
+ \end{tikzpicture}   
+\end{minipage} 
+ 
+\vspace{\baselineskip} 
+\noindent Dabei lässt sich $\cos{\alpha}$ durch das Skalarprodukt ausdrücken 
+\begin{align*} 
+ &= \frac{\vect{n} \cdot \vectp{PA}}{\norm{\vect{n}} \cdot \norm{\vectp{PA}}} \cdot \norm{\vectp{PA}} \\
+ &= \frac{1}{\norm{\vect{n}}} \cdot \vect{n} \cdot \vectp{PA}
+ \intertext{Nun wird $\vectp{PA}$ in $\vectp{OA}-\vectp{OP}$ aufspalten}
+ &= \frac{1}{\norm{\vect{n}}} \cdot \vect{n} \cdot \vectp{OA} - \vect{n} \cdot \vectp{OP}  
+ \intertext{Weil das Ergebniss bei bestimmten Winkeln negativ sein kann, welches im Kontext von Abständen aber keinen Sinn ergibt, wird die Formel in den Betrag gesetzt. Somit gilt}
+ d(\mathrm{A}, \mathrm{E}) &= \frac{1}{\norm{\vect{n}}} \cdot \norm{\vect{n} \cdot \vectp{OA} - \vect{n} \cdot \vectp{OP}}
+\end{align*} 
+Offensichtlich ist ein jeder Punkt $\vect{x}$, welcher keinen Abstand zur Ebene hat, also für welchen $d(\mathrm{A}, \mathrm{E})=0$ gilt, ein Punkt auf der Ebene  
+\[
+ \frac{1}{|\vect{n}|} (\vect{n} \cdot \vect{x} - \vect{n} \cdot \vectp{OP}) = 0 
+\] 
+\end{document} 
+ 
+ 
+ 
  
