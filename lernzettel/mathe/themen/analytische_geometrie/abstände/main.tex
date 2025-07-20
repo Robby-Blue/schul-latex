@@ -55,60 +55,61 @@ genutzt werden. Dies folgt aus
   &= \norm{t} \cdot \norm{\vect{n}}
 \end{align*}
  
-\subsection{Hesse'sche Normalform}
- 
-\begin{minipage}[t]{\dimexpr\textwidth-8cm}
- Hat die ebene einen Stützpunkt $\mathrm{P}$, so gilt
-\begin{align*}
- \cos(\alpha) &= \frac{d(\mathrm{A}, \mathrm{E})}{\norm{\vectp{PA}}}
- \intertext{Aus Umstellen folgt}
- d(\mathrm{A}, \mathrm{E}) &= \cos(\alpha) \cdot \norm{\vectp{PA}}
- %\intertext{Dabei lässt sich $\cos{\alpha}$ durch das Skalarprodukt ausdrücken} % TODO: quelle angeben
-\end{align*}  
+\noindent \begin{minipage}[t]{\dimexpr\textwidth-8cm} 
+ \subsection{Hesse'sche Normalform}
+ Hat die Ebene einen Stützpunkt $\mathrm{P}$, so kann ein rechtwinkliges Dreieck zwischen $\mathrm{P}$, $\mathrm{A}$ und einem Punkt der gleichen Distanz zwischen $\mathrm{A}$ und $\mathrm{E}$ von $\mathrm{P}$ entfernt gebildet werden. Wird in diesem Dreicken der Winkel $\alpha$ am Punkt $\mathrm{P}$ eingefügt, hat dieses die Ankathete $d(\mathrm{A}, \mathrm{E})$ und die Hypothenuse $\vectp{PA}$.
+ Demnach gilt für $\alpha$
 \end{minipage} 
 \hfill
 \begin{minipage}[t]{8cm} 
  \centering 
  \begin{tikzpicture}[baseline=(current bounding box.north)]
-  \coordinate (start) at (0.5,1.5);
-  \path (start) ++({sin(105)*3}, {cos(105)*3}) coordinate (end);
-  \path (start) ++({sin(105)*1.5}, {cos(105)*1.5}) coordinate (mid);
-  \path (mid) ++({sin(15)*1.75}, {cos(15)*1.75}) coordinate (middist);
-  \path (middist) ++({sin(-75)*1.25}, {cos(-75)*1.25}) coordinate (pointa);
+  \coordinate (start) at (0.5,1.75);
+  \path (start) ++({sin(100)*6}, {cos(100)*6}) coordinate (end);
+  \path (start) ++({sin(100)*3.5}, {cos(100)*3.5}) coordinate (mid);
+  \path (mid) ++({sin(10)*1.5}, {cos(10)*1.5}) coordinate (middist);
+  \path (middist) ++({sin(-80)*2}, {cos(-80)*2}) coordinate (pointa);
   
-  \draw (pointa) node[black] {$\times$};
-  \draw (mid) ++({sin(15)*0.6}, {cos(15)*0.6}) arc[start angle=75, end angle=110, radius=0.6];
-  \draw (middist) ++({sin(-75)*0.3}, {cos(-75)*0.3}) arc[start angle=165, end angle=255, radius=0.3];
+  \draw (mid) ++({sin(10)*0.6}, {cos(10)*0.6}) arc[start angle=80, end angle=132, radius=0.6];
+  \draw (middist) ++({sin(-80)*0.3}, {cos(-80)*0.3}) arc[start angle=170, end angle=260, radius=0.3];
   
-  \draw[thick, black] (start) -- (end) node[below left, black] {$\mathrm{E}$};
+  \draw[thick, black] (start) -- (end) node[above, black] {$\mathrm{E}$};
   \draw[blue] (mid) -- (middist) node[midway, right, black] {$d(\mathrm{A},\mathrm{E})$};  
   \draw[dashed, blue] (middist) -- (pointa) node[left, black] {$\mathrm{A}$};  
-  \draw[blue] (mid) -- (pointa) node[midway, left, black] {$\vectp{PA}$};
+  \draw[blue] (mid) -- (pointa) node[midway, left, yshift=-4pt, black] {$\vectp{PA}$};
  
-  \draw (mid) ++ (-0.03, 0.4) node[black] {$\alpha$};
+  \draw (mid) ++ (-0.1, 0.4) node[black] {$\alpha$};
  
-  \draw[red] (mid) node[below, black] {$\mathrm{P}$};
+  \draw (mid) node[below] {$\mathrm{P}$};  
+  \draw (pointa) node {$\times$};  
+  \draw (mid) node {$\times$};
  
-  \draw[->] (0, 0) -- (4, 0); 
+  \draw[->] (0, 0) -- (7, 0); 
   \draw[->] (0, 0) -- (0, 3.5);
  \end{tikzpicture}   
 \end{minipage} 
  
-\vspace{\baselineskip} 
-\noindent Dabei lässt sich $\cos{\alpha}$ durch das Skalarprodukt ausdrücken 
+\allowdisplaybreaks 
 \begin{align*} 
+ cos(\alpha) &= \frac{d(\mathrm{A}, \mathrm{E})}{\norm{\vectp{PA}}}
+ && \vert\, \text{Nach Distanz Umformen} \\
+ d(\mathrm{A}, \mathrm{E}) &= \cos(\alpha) \cdot \norm{\vectp{PA}} 
+ && \vert\, \text{$\cos(\alpha)$ durch das Skalarprodukt ausdrücken} \\
  &= \frac{\vect{n} \cdot \vectp{PA}}{\norm{\vect{n}} \cdot \norm{\vectp{PA}}} \cdot \norm{\vectp{PA}} \\
  &= \frac{1}{\norm{\vect{n}}} \cdot \vect{n} \cdot \vectp{PA}
- \intertext{Nun wird $\vectp{PA}$ in $\vectp{OA}-\vectp{OP}$ aufspalten}
- &= \frac{1}{\norm{\vect{n}}} \cdot \vect{n} \cdot \vectp{OA} - \vect{n} \cdot \vectp{OP}  
- \intertext{Weil das Ergebniss bei bestimmten Winkeln negativ sein kann, welches im Kontext von Abständen aber keinen Sinn ergibt, wird die Formel in den Betrag gesetzt. Somit gilt}
- d(\mathrm{A}, \mathrm{E}) &= \frac{1}{\norm{\vect{n}}} \cdot \norm{\vect{n} \cdot \vectp{OA} - \vect{n} \cdot \vectp{OP}}
+ && \vert\, \text{$\vectp{PA}$ in $\vectp{OA}-\vectp{OP}$ aufspalten} \\
+ &= \frac{1}{\norm{\vect{n}}} \cdot \vect{n} \cdot \vectp{OA} - \vect{n} \cdot \vectp{OP}
 \end{align*} 
+Weil das Ergebniss bei bestimmten Winkeln negativ sein kann, welches im Kontext von Abständen aber keinen Sinn ergibt, wird die Formel in den Betrag gesetzt. Somit gilt
+\[
+ d(\mathrm{A}, \mathrm{E}) = \frac{1}{\norm{\vect{n}}} \cdot \norm{\vect{n} \cdot \vectp{OA} - \vect{n} \cdot \vectp{OP}} 
+\] 
 Offensichtlich ist ein jeder Punkt $\vect{x}$, welcher keinen Abstand zur Ebene hat, also für welchen $d(\mathrm{A}, \mathrm{E})=0$ gilt, ein Punkt auf der Ebene  
 \[
  \frac{1}{|\vect{n}|} (\vect{n} \cdot \vect{x} - \vect{n} \cdot \vectp{OP}) = 0 
 \] 
 \end{document} 
+ 
  
  
  
