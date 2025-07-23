@@ -2,7 +2,8 @@
 \usepackage[a4paper]{geometry}
 \usepackage{fancyhdr} 
 \usepackage{tikz}
-\usepackage{amsmath} 
+\usepackage{amsmath}
+\usepackage{hyperref} 
 \pagestyle{fancy}
 \lhead{Abstände zwischen Punkten und Ebenen}
 \rhead{Juli 2025}
@@ -94,7 +95,7 @@ genutzt werden. Dies folgt aus
  cos(\alpha) &= \frac{d(\mathrm{A}, \mathrm{E})}{\norm{\vectp{PA}}}
  && \vert\, \text{Nach Distanz Umformen} \\
  d(\mathrm{A}, \mathrm{E}) &= \cos(\alpha) \cdot \norm{\vectp{PA}} 
- && \vert\, \text{$\cos(\alpha)$ durch das Skalarprodukt ausdrücken} \\
+ && \vert\, \text{\hyperref[Winkel]{$\cos(\alpha)$ durch das Skalarprodukt ausdrücken}} \\
  &= \frac{\vect{n} \cdot \vectp{PA}}{\norm{\vect{n}} \cdot \norm{\vectp{PA}}} \cdot \norm{\vectp{PA}} \\
  &= \frac{1}{\norm{\vect{n}}} \cdot \vect{n} \cdot \vectp{PA}
  && \vert\, \text{$\vectp{PA}$ in $\vectp{OA}-\vectp{OP}$ aufspalten} \\
