@@ -63,7 +63,8 @@ Dies gilt, wie andersweitig ausführlicher Bewiesen werden kann, für alle zwei 
   \draw[->,blue,dashed] (startg) -- (endg) node [below left] {$\mathrm{g}$};
   \draw[->,red,dashed] (starth) -- (endh) node [above left] {$\mathrm{h}$};
   \draw[->,thick,blue] (mid) -- (endu) node [below left] {$\vect{u}$};
-  \draw[->,thick,red] (mid) -- (endv) node [above left] {$\vect{v}$};
+  \draw[->,thick,red] (mid) -- (endv) node [above left] {$\vect{v}$}; 
+  \draw (mid) node {$\times$};  
  \end{tikzpicture} 
 \end{minipage} 
 \hfill
@@ -73,12 +74,45 @@ Werden beim Schnittpunkt von zwei Geraden jeweils ihre Richtungsvektoren eingeze
  \alpha = \cos\left({\frac{\vect{u} \cdot \vect{v}}{\norm{\vect{u}} \cdot  \norm{\vect{v}}}}\right)
 \] 
 \end{minipage}
-  
-\subsection{Zwischen Ebene und Gerade}   
-\subsection{Zwischen zwei Ebenen} 
  
+\subsection{Zwischen Ebene und Gerade}
+\begin{minipage}[t]{\dimexpr\textwidth-3cm} 
+% todo: erklärung cos a' = ..., a' = 90-a, cos(a-90) = sin(a)
+ 
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{3cm} 
+ \centering 
+ \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \coordinate (mid) at (0,0); 
+  \path (mid) ++({-2*sin(80)}, {-2*cos(80)}) coordinate (starte);
+  \path (mid) ++({2*sin(80)}, {2*cos(80)}) coordinate (ende);
+  \path (mid) ++({-2*sin(50)}, {-2*cos(50)}) coordinate (startg);
+  \path (mid) ++({2*sin(50)}, {2*cos(50)}) coordinate (endg);
+  \path (mid) ++({1*sin(-10)}, {1*cos(-10)}) coordinate (endn);
+  
+  \path (mid) ++({1*sin(50)}, {1*cos(50)}) coordinate (posgangle);
+  \path (mid) ++({0.7*sin(-10)}, {0.7*cos(-10)}) coordinate (posnangle);
+ 
+  \draw (posnangle) arc[start angle=100, end angle=40, radius=0.7]; 
+  \draw (posgangle) arc[start angle=40, end angle=10, radius=1];
+ 
+  \draw[thick,black] (starte) -- (ende) node [below left] {$\mathrm{E}$};
+  \draw[->, thick,blue] (startg) -- (endg) node [above left] {$\mathrm{g}$};
+  \draw[->, thick,red] (mid) -- (endn) node [above left] {$\vect{n}$}; 
+   
+  \draw (mid) ++ (0.17, 0.43) node {$a^\prime$};  
+  \draw (mid) ++ (0.7, 0.33) node {$a$};  
+ 
+  \draw (mid) node {$\times$}; 
+ \end{tikzpicture} 
+\end{minipage}
+ 
+\subsection{Zwischen zwei Ebenen} 
+% todo: tikz, erklärung, zwischen den beiden \vect{n}s
  
 \end{document}
+ 
  
  
  
