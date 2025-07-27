@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage{hyperref}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\usepackage{tikz} 
+\pagestyle{fancy}
+\lhead{Umgang mit dem Taschenrechner}
+\rhead{Juli 2025}
+\begin{document}
+  
+\newcommand{\return}[0]{\,%
+ \begin{tikzpicture}
+  \draw (0,0) -- (0,-1ex);
+  \draw (0,-1ex) -- (-1ex,-1ex);
+  \draw[fill] (-1.3ex,-1ex) -- (-1ex,-1.3ex) -- (-1ex,-0.7ex) -- cycle; 
+ \end{tikzpicture}\,%
+} 
+ 
+\newcommand{\symbols}[0]{\,%
+ \raisebox{-1.3ex}{%
+  \begin{tikzpicture}[scale=1.2]
+   \draw (0,0ex) -- (0,1ex);
+   \draw (1ex,0ex) -- (1ex,1ex);
+   \square{0.3ex}{0.3ex};
+   \node at (1.7ex, 0.5ex) {$\{$};
+   \square{2.2ex}{0.8ex};
+   \square{2.2ex}{-0.2ex};
+  \end{tikzpicture}%
+ }
+}
+ 
+\newcommand{\square}[2]{
+ \draw (#1,#2) -- ++(0.4ex, 0);
+ \draw (#1,#2) -- ++(0, 0.4ex);
+ \draw (#1,#2) ++ (0, 0.4ex) -- ++(0.4ex, 0);
+ \draw (#1,#2) ++ (0.4ex, 0) -- ++(0, 0.4ex);
+}
+  
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\calckey}[1]{\texttt{#1}}  
+\newcommand{\arrow}[0]{\textrightarrow{ }}
+ 
+\section{Umgang mit dem Taschenrechner}
+\begin{description}
+ \item[LGS Lösen] Ein LGS kann entweder als Gleichungssystem mit \calckey{menu} \arrow \calckey{3} \arrow \calckey{7} \arrow \calckey{1 oder 2} oder als Matrix $m$ mit \calckey{rref(m)} gelöst werden. Mehr dazu im Kapitel \hyperref[Lineare Gleichungssysteme]{Lineare Gleichungssysteme}.
+ \item[Matrix erstellen] Ein Matrix mit einer bestimmten Größe kann mit \calckey{menu} \arrow \calckey{7} \arrow \calckey{1} \arrow \calckey{1} erstellt werden. Schneller kann ein $1 \times 1$ Vektor mit \calckey{ctrl} + \calckey{(} erstellt werden.
+ \item[Vektor erstellen] Ein Vektor ist im CAS eine Matrix mit nur einer Spalte oder nur einer Zeile.  
+ \item[Matrix vergrößern] Ein Zeile kann mit \calckey{\return} hinzugefügt werden. Eine Spalte kann mit \calckey{shift} + \calckey{\return} hinzugefügt werden.
+ \item[Skalarprodukt] Um das Skalarprodukt $\vect{a} \cdot \vect{b}$ auszurechnen wird \calckey{dotp(a,b)} (\calckey{menu} \arrow \calckey{7} \arrow \calckey{C} \arrow \calckey{3}) genutzt. Der Name kommt vom Englischen \emph{dot product}, weil das Mal-Zeichen ein Punkt ist.
+ \item[Vektorenprodukt] Um das Vektorenprodukt $\vect{a} \times \vect{b}$ auszurechnen wird \calckey{crossp(a,b)} (\calckey{menu} \arrow \calckey{7} \arrow \calckey{C} \arrow \calckey{2}) genutzt. Der Name kommt vom anderen Namen des Vektorenproduktes, das \emph{Kreuzprodukt}, oder auch dem englischen \emph{cross product}, weil das Mal-Zeichen ein Kreuz ist.  
+ \item[Betrag eines Vektors] Für den Betrag eines Vektors $\vect{v}$ wird \calckey{norm(v)} (\calckey{menu} \arrow \calckey{7} \arrow \calckey{7} \arrow \calckey{1}) genutzt. Der Betrag eines Vektors darf, obwohl wir beides als Beträge darstellen, nicht mit dem Betrag einer normalen Zahl verwechselt werden.
+ \item[Betrag einer Zahl] Für den Betrag einer Zahl $n$ werden die Betragstriche in \symbols oder \calckey{abs(n)} genutzt. 
+\end{description} 
+\end{document}
+ 
+ 
