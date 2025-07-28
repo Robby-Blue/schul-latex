@@ -21,15 +21,15 @@
   \begin{tikzpicture}[scale=1.2]
    \draw (0,0ex) -- (0,1ex);
    \draw (1ex,0ex) -- (1ex,1ex);
-   \square{0.3ex}{0.3ex};
+   \drawsquare{0.3ex}{0.3ex};
    \node at (1.7ex, 0.5ex) {$\{$};
-   \square{2.2ex}{0.8ex};
-   \square{2.2ex}{-0.2ex};
+   \drawsquare{2.2ex}{0.8ex};
+   \drawsquare{2.2ex}{-0.2ex};
   \end{tikzpicture}%
  }
 }
  
-\newcommand{\square}[2]{
+\newcommand{\drawsquare}[2]{
  \draw (#1,#2) -- ++(0.4ex, 0);
  \draw (#1,#2) -- ++(0, 0.4ex);
  \draw (#1,#2) ++ (0, 0.4ex) -- ++(0.4ex, 0);
