@@ -39,24 +39,26 @@ Eine e-Funktion ist eine Exponentialfunktion, welche die Eulersche Zahl $\mathrm
 \[
  f(x)=\mathrm{e}^x
 \]
-Somit ist sie in der Standardform streng monoton steigend und geht durch ${(0 \mid 1)}$, weil jegliche Zahl hoch null immer eins ist, und $(1 \mid \mathrm{e})$, weil $\mathrm{e}^1=\mathrm{e}$. \newline
-Sie schmiegt bei im negativen an die x-Ache an, geht im positiven ins unendliche.
+Ihre besonderheit besteht darin, dass sie ihre eigene Ableitung ist:
+\[
+ f(x)=\mathrm{e}^x \implies f'(x)=\mathrm{e}^x
+\] 
+Somit ist sie in der Standardform streng monoton steigend und geht durch ${(0 \mid 1)}$, weil jegliche Zahl hoch null immer eins ist, und $(1 \mid \mathrm{e})$, weil $\mathrm{e}^1=\mathrm{e}$. Sie schmiegt zu $x=-\infty$ an die x-Achse \par
+\end{minipage}
+an, geht im positiven ins Unendliche. Mathematisch ausgedrückt gilt also
 \[
  \lim_{x \to -\infty} \mathrm{e}^x = 0
  \quad \text{und} \quad
  \lim_{x \to \infty} \mathrm{e}^x = \infty
-\]
-\end{minipage}
- 
-\vspace{1em} 
-\noindent Exponentialfunktionen anderer Basen können mit $a^x = \mathrm{e}^{\ln{(a)} \cdot x}$ in eine e-Funktion umgewandelt werden. Dies folgt aus $a^x$ mit $a=\mathrm{e}^{\ln{a}}$ und $(a^m)^n = a^{m \cdot n}$ 
+\] 
+Exponentialfunktionen anderer Basen können mit $a^x = \mathrm{e}^{\ln{(a)} \cdot x}$ in eine e-Funktion umgewandelt werden. Dies folgt aus $a^x$ mit $a=\mathrm{e}^{\ln{a}}$ und $(a^m)^n = a^{m \cdot n}$ 
 \subsection{Ableitungen} 
 Die Basis $\mathrm{e}$ wird genutzt, um das Ableiten zu vereinfachen, es gilt $f(x)=\mathrm{e}^x \implies f'(x)=\mathrm{e}^x$. \newline
 Beim Ableiten wird die Ableitung des Exponenten als Faktor vor das $\mathrm{e}$ gesetzt, sodass 
 \[
- \frac{\mathrm{d}}{\mathrm{d}x} \mathrm{e}^{g(x)} = g'(x) \cdot \mathrm{e}^{g(x)} 
+ \frac{\mathrm{d}}{\mathrm{d}x} \mathrm{e}^{x} = \mathrm{e}^{x} 
 \] 
-Ist $g(x)$ eine lineare Funktion, kann das Gegenteil für das Bilden einer Stammfunktion genutzt werden. 
+Kann das $x$ hier durch eine lineare Funktion beschrieben werden, so kann das Gegenteil für das Bilden einer Stammfunktion genutzt werden. 
 \[
  \int \mathrm{e}^{mx+b} = \frac{1}{m} \cdot \mathrm{e}^{mx+b}
 \] 
@@ -95,7 +97,7 @@ Die Gegenfunktion zur e-Funktion, sodass $\mathrm{e}^{\ln(m)}=\ln{(\mathrm{e}^m)
  
 \subsection{Ableitungen} 
 \[
- \frac{\mathrm{d}}{\mathrm{d}x} \ln{(g(x))} = \frac{1}{g(x)} \cdot g'(x) 
+ \frac{\mathrm{d}}{\mathrm{d}x} \ln{x} = \frac{1}{x} 
 \] 
 \subsection{Integral}
 $\ln{x}$ ist eine Stammfunktion zu $\dfrac{1}{x}$. Ist der Bruch nicht direkt in dieser Form gegeben, muss er in diese ausgeklammert werden, durch
@@ -106,6 +108,7 @@ $\ln{x}$ ist eine Stammfunktion zu $\dfrac{1}{x}$. Ist der Bruch nicht direkt in
 \] 
  
 \end{document}
+ 
  
  
  
