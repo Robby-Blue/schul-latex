@@ -24,7 +24,7 @@ Die Ableitung $f'$ einer Funktion $f$ beschreibt ist eine Funktion, welche für 
 \begin{minipage}{5cm}
  \centering
  \begin{tikzpicture}
-  \draw[domain=0:2.85, samples=75] 
+  \draw[domain=0:2.85, samples=285] 
    plot (\x, {0.5*(\x-0.5)^2+0.25});
   \draw[->] (0,0) -- (3,0) node [above right] {$x$};
   \draw[->] (0,0) -- (0,3) node [below left] {$y$};
@@ -53,16 +53,17 @@ Die Ableitung $f'$ einer Funktion $f$ beschreibt ist eine Funktion, welche für 
 \end{minipage} 
  
 \section{Ableitungsregeln}
-$\mathrm{C}$ als Konstante 
+$\mathrm{n}$ als Konstante 
 \begin{multicols}{2} 
  \noindent \begin{align*}
   &\bitem{Summenregel} &&\derive (u + v) = u' + v' \\
-  &\bitem{Faktorregel} &&\derive (\mathrm{C} \cdot u) = \mathrm{C} \cdot u' \\  
+  &\bitem{Faktorregel} &&\derive (\mathrm{n} \cdot u) = \mathrm{n} \cdot u' \\  
   &\bitem{Produktregel} &&\derive (u \cdot v) = u' \cdot v + v' \cdot u \\
   &\bitem{Quotientenregel} &&\derive \left( \frac{u}{v} \right) = \frac{u' \cdot v - v' \cdot u}{v^2} \\
  &\bitem{Kettenregel} &&\derive f(g(x)) = f'(g(x)) \cdot g'(x) \\
  \end{align*} 
  \begin{align*}
+  &\bitem{Potenzregel} &&\derive x^n = n \cdot x^{n-1} \\ 
   &\bitem{e-Funktion} &&\derive \mathrm{e}^x = \mathrm{e}^x \\
   &\bitem{ln-Funktion} &&\derive \ln x = \frac{1}{x} \\
   &\bitem{sinus-Funktion} &&\derive \sin x = \cos x \\
