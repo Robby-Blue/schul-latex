@@ -1,5 +1,5 @@
 \documentclass{article}
-\usepackage{tikz}
+\usepackage{tikz} 
 \usepackage{amsmath} 
 \usepackage[a4paper]{geometry}
 \usepackage{fancyhdr}
@@ -9,27 +9,21 @@
 \begin{document}
   
 \section{Exponentialfunktion}
-\subsection{Ableitungen}
-Eine Exponentialfunktion kann abgeleitet werden, indem
-\begin{enumerate}
- \item für $\dfrac{\mathrm{d}}{\mathrm{d}x} b^x = \ln{(b)} \cdot b^x$
- \item sie zu einer e-Funktion, welche einfach ableitbar ist, umgewandelt wird. Siehe unten 
-\end{enumerate} 
+Eine Exponentialfunktion ist eine Funktion der Form $f(x)=b^x$. Dabei sind e-Funktionen die relevanteste Art von Exponentialfunktionen. Gleichungen, welche Exponentialfunktionen oder ihre Umkehrfunktionen nutzen, die Exponentialgleichungen werden gelöst, indem jeweils die Umkehrfunktion angewand wird, um die Variablen im Exponenten oder Logarithmus freizulegen, weil $\ln{(e^x)}=x$
  
-\section{e-Funktion}
- 
+\section{e-Funktion} 
 \begin{minipage}{5cm} 
  \centering
  \begin{tikzpicture}     
-  \draw[->, blue, thick, domain=-2:1.3, samples=100] 
+  \draw[->, blue, thick, domain=-2:1.3, samples=300] 
             plot (\x, {e^(\x)});
      
   \draw[->] (-2, 0) -- (2, 0); 
   \draw[->] (0, -0.5) -- (0, e^1.3);
  
   \draw (0, 0) node[below left] {0}; 
-  \draw (0, 1) node {$\times$} node[left] {(0 $\vert$ 1)};
-  \draw (1, e) node {$\times$} node[right] {(1 $\vert$ e)};
+  \draw (0, 1) node {$\times$} node[left] {($0 \vert 1$)};
+  \draw (1, e) node {$\times$} node[right] {($1 \vert e$)};
    
  \end{tikzpicture}
 \end{minipage}
@@ -66,9 +60,9 @@ Kann das $x$ hier durch eine lineare Funktion beschrieben werden, so kann das Ge
 \begin{minipage}{\dimexpr\textwidth-5cm}  
 Der natürliche Logarithmus $\ln$ ist ein Logarithmus zur Basis $\mathrm{e}$.
 \[
- f(x) = \log_e{x} = \ln{x}
+ f(x) = \log_e{(x)} = \ln{x}
 \] 
-Somit ist die für $x>0$ definierte Standardform streng monoton steigend und geht durch ${(1 \mid 0)}$, weil jegliche Zahl hoch 1 gerechnet werden muss, um 0 zu bekommen, und $(\mathrm{e} \mid 1)$, weil $\mathrm{e}^1=\mathrm{e}$. \newline
+Somit ist die für $x>0$ definierte Standardform streng monoton steigend und geht durch ${(1 \mid 0)}$, weil jegliche Zahl hoch 0 gerechnet werden muss, um 1 zu bekommen, und $(\mathrm{e} \mid 1)$, weil $\mathrm{e}^1=\mathrm{e}$.
 Sie schmiegt bei $x=0$ an die y-Ache an, geht im positiven ins unendliche.
 \[
  \lim_{x \to 0^+} \ln x = -\infty
@@ -82,25 +76,23 @@ Die Gegenfunktion zur e-Funktion, sodass $\mathrm{e}^{\ln(m)}=\ln{(\mathrm{e}^m)
 \begin{minipage}{5cm}  
 \centering
  \begin{tikzpicture}     
-  \draw[->, blue, thick, domain=e^(-3):3, samples=100] 
+  \draw[->, blue, thick, domain=e^(-3):3, samples=300] 
             plot (\x, {ln(\x)});
      
   \draw[->] (-0.5, 0) -- (3, 0); 
   \draw[->] (0, -3) -- (0, 1.5);
  
   \draw (0, 0) node[below left] {0}; 
-  \draw (e, 1) node {$\times$} node[above left] {(e $\vert$ 1)};
-  \draw (1, 0) node {$\times$} node[below right] {(1 $\vert$ 0)};
+  \draw (e, 1) node {$\times$} node[above left] {($e \vert 1$)};
+  \draw (1, 0) node {$\times$} node[below right] {($1 \vert 0$)};
    
  \end{tikzpicture}
-\end{minipage}
- 
-\subsection{Ableitungen} 
+\end{minipage} 
+$\ln{(x)}$ abgeleitet ist 
 \[
  \frac{\mathrm{d}}{\mathrm{d}x} \ln{x} = \frac{1}{x} 
-\] 
-\subsection{Integral}
-$\ln{x}$ ist eine Stammfunktion zu $\dfrac{1}{x}$. Ist der Bruch nicht direkt in dieser Form gegeben, muss er in diese ausgeklammert werden, durch
+\]
+Somit kann auch gegenteilig $\dfrac{1}{x}$ integriert werden, wobei es, wenn es nicht direkt in der Form vorhanden ist, in diese umgeformt werden muss.
 \[
  \int \frac{a}{b \cdot x} \,\mathrm{d}x =
  \int \frac{a}{b} \cdot \frac{1}{x} \,\mathrm{d}x =
@@ -108,10 +100,6 @@ $\ln{x}$ ist eine Stammfunktion zu $\dfrac{1}{x}$. Ist der Bruch nicht direkt in
 \] 
  
 \end{document}
- 
- 
- 
- 
  
  
  
