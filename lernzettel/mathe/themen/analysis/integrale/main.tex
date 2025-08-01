@@ -1,15 +1,70 @@
 \documentclass{article}
 \usepackage[a4paper]{geometry}
-\usepackage{fancyhdr} 
+\usepackage{fancyhdr}
+\usepackage{multicol} 
 \usepackage{amsmath} 
-\usepackage{amssymb}
+\usepackage{amssymb} 
+\usepackage{tikz}
 \pagestyle{fancy}
 \lhead{Integrale}
-\rhead{April 2025}
+\rhead{April 2025 - August 2025}
 \begin{document} 
-\section{Integrale}
-% TODO: tikz, zeigt eine kurve in blau, die fläche in rot gefärbt oder so
-Ein Integral stellt die Fläche unterhalb einer Kurve dar, wobei Flächen bei $y<0$ auch negativ Zählen. Bestimmte Integrale haben im Gegensatz zur unbestimmten Integralen dabei eine untere und eine obere Grenze. Das bestimmte Integral der Funktion $f(x)$ mit der unteren Grenze $a$ und der oberen Grenze $b$ folgt der Form 
+ 
+\newcommand{\bitem}[1]{\text{\textbf{#1}}}
+\newcommand{\dx}{\,\mathrm{d}x} 
+ 
+\section{Stammfunktionen}
+\begin{minipage}{\dimexpr\linewidth-5cm} 
+Eine \emph{Stammfunktion} $F(x)$ von $f(x)$ stellt das Gegenteil der Ableitung dar, sodass $F'(x)=f(x)$. Dementsprechend kann auch überprüft werden, ob ein gegebenes oder gefundenes $F(x)$ tatsächlich die Stammfunktion einer $f(x)$ ist, indem ersteres abgeleitet wird. Die Notation zum bestimmen der Stammfunktion von $f(x)$ ist dabei ein \emph{unbestimmtes Integral}
+\[
+ \int f(x) \,\mathrm{d}x = F(x) + C
+\] 
+\end{minipage}
+\hfill
+\begin{minipage}{5cm}
+ \center
+ \begin{tikzpicture}
+  \fill[blue!30] (0,0) -- (3,3) -- (3, 0) -- cycle;
+  \draw[green!50!black, fill=green!50!black!30] (0.25,0.25) rectangle (0.5, 0);
+  \draw[green!50!black, fill=green!50!black!30] (0.75,0.75) rectangle (1, 0.5);
+  \draw[green!50!black, fill=green!50!black!30] (1.25,1.25) rectangle (1.5, 1);
+  \draw[green!50!black, fill=green!50!black!30] (1.75,1.75) rectangle (2, 1.5);
+  \draw[green!50!black, fill=green!50!black!30] (2.25,2.25) rectangle (2.5, 2);
+  \draw[green!50!black, fill=green!50!black!30] (2.75,2.75) rectangle (3, 2.5);
+  
+  \draw[red, fill=red!30] (0.5,0.5) rectangle (1, 0);
+  \draw[red, fill=red!30] (1,1) rectangle (1.5, 0);
+  \draw[red, fill=red!30] (1.5,1.5) rectangle (2, 0);  
+  \draw[red, fill=red!30] (2,2) rectangle (2.5, 0);   
+  \draw[red, fill=red!30] (2.5,2.5) rectangle (3, 0);
+  \draw[->] (0, 0) -- (3, 0) node [above left] {$x$};
+  \draw[->] (0, 0) -- (0, 3) node [below right] {$y$};
+  \draw[blue, thick, ->] (0, 0) -- (3, 3) node [left] {$f$};
+ \end{tikzpicture}   
+\end{minipage}
+ 
+\vspace{\baselineskip} \noindent 
+Dabei ist $C$ eine konstante, unbekannte Variable, welche hinzugefügt werden muss, weil die gegebene $f$, wie eine Ableitung es nunmal tut, nur die Steigung, nicht den tatsächlichen Wert, von $F$ darstellt. Das $C$ repräsentiert sozusagen jegliche, beim Ableiten verloren gegangene, Konstanten.
+ 
+Das finden der Stammfunktion kann sich durch das annähern des Flächeninhaltes mithilfe von Rechtecke unterhalb der Funktionskurve vorgestellt werden. Geht die Breite der Rechtecke zu $0$, so wird die Annäherung immer genauer.
+ 
+\subsection{Integrationsregeln} 
+$\mathrm{n}$ als Konstante 
+\begin{multicols}{2} % despite being 1 col this pushed it to the left nicely
+ \noindent \begin{align*}
+  &\bitem{Summenregel} &&\int f(x) + g(x) \dx &&= \int f(x) \dx + \int g(x) \dx \\ 
+  &\bitem{Faktorregel} &&\int n \cdot f(x) \dx &&= n \cdot \int f(x) \dx \\
+  &\bitem{Potenzregel} &&\int x^n \dx &&= \frac{1}{n+1}x^{n+1} + C \quad \text{mit} \quad n \in \mathbb{Z} \setminus \{-1; 0\} \\
+  &\bitem{Kettenregel} &&\int g(mx+b) \dx &&= \frac{1}{m} G(mx+b) + C \\     
+  &\bitem{e-Funktion} &&\int \mathrm{e}^x \dx &&= \mathrm{e}^x + C \\
+  &\bitem{$\sin$-Funktion} &&\int \sin x \dx &&= -\cos x + C \\
+  &\bitem{$\cos$-Funktion} &&\int \cos x \dx &&= \sin x + C \\
+  &\bitem{$\frac{1}{x}$-Funktion} &&\int \frac{1}{x} \dx &&= \ln \lvert x \rvert + C \\
+ \end{align*} 
+\end{multicols}
+ 
+\section{Integrale}  
+Ein \emph{Integral} stellt die Fläche unterhalb einer Kurve dar, wobei Flächen bei $y<0$ auch negativ Zählen. \emph{Bestimmte Integrale} haben, im Gegensatz zur unbestimmten Integralen, dabei eine untere und eine obere Grenze. Das bestimmte Integral der Funktion $f(x)$ mit der unteren Grenze $a$ und der oberen Grenze $b$ folgt der Form 
 \[
  \int_a^b f(x) \,\mathrm{d}x
 \]
@@ -19,16 +74,12 @@ Beim berechnen des Wertes eines Integrals gilt mit $F(x)$ als Stammfunktion der 
  F(x) \,\Bigr|_a^b =
  F(b) - F(a)
 \] 
- 
-\subsection{Stammfunktionen}
-Die Stammfunktion ist das Gegenteil einer Ableitung. Die Funktion $F(x)$ ist eine Stammfunktion von $f(x)$, wenn $F'(x) = f(x)$.
-Dementsprechend gilt $f(x)=x^n \implies F(x)=\frac{1}{n+1}x^{n+1}$, weil dies das Gegenteil des bereits bekannten $f(x)=x^n \implies f'(x)=n \cdot x^{n-1}$ ist. Bei $n=-1$ gibt es eine Ausnahme, sodass $F(x)=\ln|x|$ \newline
-Nach jeder Stammfunktion wird eigentlich ein $+C$ hinzugefügt, um die unbekannte konstante, welche beim Ableiten wegfällt, zu repräsentieren. Dieses $+C$ ist bei bestimmten Integralen jedoch irrelevant, weil es im Verlauf der Rechnung zu $+C-(+C) = 0$ gekürzt wird.
+Weil hier im endeffekt $C-C=0$ gerechnet wird, ist bei bestimmente Integralen das $C$ irrelevant.
  
 \subsection{Flächeninhalte}
 Weil der Flächeninhalt, im Gegensatz zur Fläche, immer positiv ist, auch wenn $y<0$, muss der Betrag genommen oder die Grenzen getauscht werden, sodass der Wert des Integrals genauso immer positiv ist. 
  
-\subsection{Mehrere Funktionen}
+\subsection{Fläche zwischen mehreren Funktionen}
 % TODO: tikz 
 Die Fläche zwischen mehrere Funktionen stellt das Integral der Differenz beider Funktionen dar. Dabei muss darauf geachtet werden, dass zu jedem Zeitpunkt die Funktion mit dem kleineren Wert von der Funktion mit dem größeren Wert subtrahiert wird. Wechselt sich dies, muss es in ein neues Integral geteilt werden. Die Schnittpunkte beider Funktionen werden dabei generell als Grenzen verwendet, solange keine anderen vorgegeben sind. 
  
@@ -60,5 +111,6 @@ Geht $\Delta x \to 0$, ist die Bogenlänge die Summe unendlich vieler unendlick 
 \[l = \int_a^b \sqrt{1+(f'(x))^2} \, dx\]   
  
 \end{document}
+ 
  
  
