@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage{tikz}
-\usepackage{amsmath} 
+\usepackage{amsmath}
+\usepackage{hyperref} 
 \usepackage[a4paper]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -23,9 +24,7 @@ bzw.
  \vect{x} = \begin{pmatrix} x \\ y \\ z \end{pmatrix}
  \quad \text{oder} \quad
  \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}
-\]
-  
-\section{Spezielle Vektoren}
+\] 
 Es gibt verschiedene spezielle Arten von Vektoren, mit verschiedenen Eigenschaften. 
  
 \vspace{1em} 
@@ -141,7 +140,10 @@ Der Betrag eines Vektors spiegelt die Länge wieder. Diese wird mit einer Formel
  \norm{\vect{v}} =
  \sqrt{{x_1}^2 + {x_2}^2}
 \]
-\end{minipage} 
+\end{minipage}
+ 
+\vspace{\baselineskip} \noindent
+Angesichts der Definition eines \hyperref[Skalarprodukte]{Skalarproduktes} ist offensichtlich $\norm{\vect{v}} = \sqrt{\vect{v} \cdot \vect{v}}$ 
  
 \subsection{Kollinearität} 
 Zwei Vektoren sind kollinear, wenn sie in die gleiche Richtung zeigen, also einer nur ein Vielfache des anderen ist. Kollinearität zwischen $\vect{a}$ und $\vect{b}$ ist vorhanden, wenn es ein $r$ gibt, so dass 
