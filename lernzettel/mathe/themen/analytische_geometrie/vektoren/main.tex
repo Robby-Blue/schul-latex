@@ -13,17 +13,9 @@
 \newcommand{\vect}[1]{\overrightarrow{#1}} 
  
 \section{Vektoren}
-Ein Vektor beschreibt die Verschiebung, sei diese zweidimensionalen Koordinatensystem oder einem dreidimensionalen Raum. Somit beschreiben sie sowohl eine Länge als auch eine Richtung. In Skizzen werden sie ale Pfeile dargestellt. Vektoren werden aufgeschrieben, indem die Koordinaten, welche $x$, $y$ und $z$ bzw. $x_1$, $x_2$ und $x_3$ genannt werden, untereinander aufgelistet werden, in der Form 
+Ein Vektor beschreibt die Verschiebung, sei diese zweidimensionalen Koordinatensystem oder einem dreidimensionalen Raum. Somit beschreiben sie sowohl eine Länge als auch eine Richtung. In Skizzen werden sie ale Pfeile dargestellt. Vektoren werden aufgeschrieben, indem ihre Koordinaten untereinander aufgelistet werden, in der Form 
 \[
- \vect{x} = \begin{pmatrix} x \\ y \end{pmatrix}
- \quad \text{oder} \quad
- \begin{pmatrix} x_1 \\ x_2 \end{pmatrix}
-\]
-bzw. 
-\[
- \vect{x} = \begin{pmatrix} x \\ y \\ z \end{pmatrix}
- \quad \text{oder} \quad
- \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}
+ \vect{x} = \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} = (x_1 \,\vert\, x_2 \,\vert\, x_3)
 \] 
 Es gibt verschiedene spezielle Arten von Vektoren, mit verschiedenen Eigenschaften. 
  
@@ -57,7 +49,7 @@ Es gibt verschiedene spezielle Arten von Vektoren, mit verschiedenen Eigenschaft
  \item[Ortsvektoren] Der Ortsvektor eines Punktes ist der Verbindungsvektor, welcher vom Koordinatenursprung $\mathrm{O}$ zu diesem Punkt geht. So ist der Ortsvektor vom Punkt $\mathrm{P}$ der Vektor $\vect{\mathrm{OP}}$. Weil $\mathrm{O}$ durch einen Nullvektor repräsentiert werden kann, sind die Koordinaten des Ortsvektors $\vect{\mathrm{OP}}$ dieselben wie die vom Punkt $\mathrm{P}$
   \item[Nullvektor] Ein Nullvektor ist ein Vektor, bestehend aus nur Nullen.
 \[
- \vect{0} = \begin{pmatrix} 0 \\ 0 \end{pmatrix}
+ \vect{0} = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}
 \] 
  \item[Gegenvektoren] Das Gegenteil eines Vektors $\vect{v}$, welcher die gegenteiligen Koordinaten hat, ist der Gegenvektor, $-\vect{v}$.
  \item[Einheitsvektoren] Ein Vektor $\vect{v}$ ist ein Einheitsvektor, wenn er eine Länge von 1 hat, also $\norm{\vect{v}} = 1$. Für jeden $\vect{a}$ Vektor ist
@@ -159,6 +151,8 @@ Ein Vektor, welcher als Summe von den Vielfachen zweier Vektoren dargestellt wer
 erfüllt sein kann. Dies kann überprüft werden, indem die obige Gleichung als lineares Gleichungssystem aufgeschrieben wird  und nach $r$ und $s$ aufgelöst wird.
  
 \end{document} 
+ 
+ 
  
  
  

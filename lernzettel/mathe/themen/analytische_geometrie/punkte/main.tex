@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+\pagestyle{fancy}
+\lhead{Punkte im Raum}
+\rhead{August 2025}
+\begin{document}
+   
+\newcommand{\norm}[1]{\big| {#1} \big|}  
+\newcommand{\vect}[1]{\overrightarrow{#1}} 
+ 
+\section{Punkte im Raum}
+\begin{minipage}{\dimexpr\linewidth-5cm}
+ Ein Punkt im Raum wird durch eine Koordinate in einem dreidimensionalen Koordinatensystem dargestellt. Dieses dreidimensionales Koordinatensystem ist wie das bereits bekannte zweidimensionale Koordinatensystem aufgebaut, mit einer $x$ und $y$-Achse, nur mit einer weiteren, dritten Achse, der $z$-Achse. Diese wird den anderen beiden gegenüber Diagonal gezeichnet. Oftmals werden die drei Achsen, $x$, $y$ und $z$ auch $x_1$, $x_2$ und $x_3$ genannt. Die Koordinaten eines Punktes werden als ${(x_1 \,\vert\, x_2 \,\vert\, x_3)}$ aufgeschrieben.
+\end{minipage}
+\hfill
+\begin{minipage}{5cm}
+ \center 
+ \begin{tikzpicture}
+  \draw[->] (0, 0) -- (3, 0) node [above left] {$x$}; 
+  \draw[->] (0, 0) -- (0, 3) node [below right] {$y$};
+  \draw[->] (0, 0) -- (-1, -1) node [above] {$z$};
+ \end{tikzpicture}   
+\end{minipage}
+ 
+\noindent \begin{minipage}{5cm}
+ \center 
+ \begin{tikzpicture}
+  \draw[->] (0, 0) -- (3, 0) node [above left] {$x$}; 
+  \draw[->] (0, 0) -- (0, 3) node [below right] {$y$};
+  \draw[->] (0, 0) -- (-1, -1) node [above] {$z$};
+ 
+  \draw[blue, dashed] (-0.5, 1.5) -- (2.5, 1.5); 
+  \draw (-0.5, 1.5) node {$\times$} node [above] {$\mathrm{A}$};
+  \draw (2.5, 1.5) node {$\times$} node [above] {$\mathrm{B}$};
+ \end{tikzpicture}    
+\end{minipage}
+\hfill
+\begin{minipage}{\dimexpr\linewidth-5cm}
+ Aufgrund der weiteren Dimension können die Koordinaten eines Punktes nichtmehr direkt abgelesen werden, ist aber bekannt dass zwei Punkte nur in einer Dimension unterschiedlich sind, kann die Veränderung in dieser abgelesen werden. So kann in der Abbildung beispielsweise abgelesen werden, dass Punkte $\mathrm{A}$ und $\mathrm{B}$ die gleiche $y$ und $z$-Koordinate teilen und nur einen Unterschied in der $x$-Achse von 2 cm aufweisen. Ist die Koordinate von einer der beiden Punkten bereits bekannt kann somit die Koordinate des anderen Punktes einfach errechnet werden.
+\end{minipage}   
+\end{document}
+ 
+ 
+ 
+ 
+ 
