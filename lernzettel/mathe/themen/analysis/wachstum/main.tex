@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage{tikz}
-\usepackage{amsmath} 
+\usepackage{amsmath}  
+\usepackage{amssymb} 
 \usepackage[a4paper]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -8,7 +9,7 @@
 \rhead{März 2025}
 \begin{document} 
 \section{Wachstumsfunktionen}
-Wachstumsfunktionen beschreiben zeitlich einen kontextuellen Bestand und dessen Wachstum.
+Wachstumsfunktionen beschreiben zeitlich einen kontextuellen Bestand und dessen Wachstum. Die Limits der Funktionen sind anhand der Graphen und etwas Intuition der Funktionstermen gegenüber offensichtlich.
 \subsection{Exponentielles Wachstum}
 Exponentielles Wachstums beschreibt ein Wachstum, welches durch eine Exponentialfunktion modelliert werden kann. Dabei ist die momentane Wachstumsgeschwindigkeit zum Bestang proportional, sodass der Funktionswert mit der Zeit, desto höher der Bestand bereits ist, schneller ansteigt.
  
@@ -26,7 +27,7 @@ Exponentielles Wachstums beschreibt ein Wachstum, welches durch eine Exponential
 \end{minipage}
 \hfill
 \begin{minipage}{\dimexpr\textwidth-5cm}
-Mit dem Anfangsbestand $A$, dem Wachstumsfaktor $b$ und bei Bedarf der Wachstumskonstante $k=\ln{b}$ gilt
+Mit dem Anfangsbestand $f(0)=A$, dem Wachstumsfaktor $b$ und bei Bedarf der Wachstumskonstante $k=\ln{b}$ gilt
 \[ 
  A \cdot b^x 
  \quad \text{oder} \quad 
@@ -35,8 +36,9 @@ Mit dem Anfangsbestand $A$, dem Wachstumsfaktor $b$ und bei Bedarf der Wachstums
 Solange ${b > 1 \implies k > 0}$ ist die Funktion streng monoton steigend. Bei einer prozentualen Steigung von $s$ pro Zeiteinheit ist ${b=1+s}$, wobei $s$ als Dezimalzahl ausgedrückt wird. Daraus kann dann auch $k$ bestimmt werden. \newline
 Liegt beispielsweise eine Steigung um $15\%$ pro Zeiteinheit vor, ist ${b=1 + 0,15=1,15 \implies k=\ln{1,15} \approx 0,14}$. 
 \end{minipage}
+Es gilt $f'(x) = k \cdot f(x)$, woraus offensichtlich wird, dass die Steigung, die Wachstumsgeschwindigkeit, vom zurzeitigen Bestand abhängig ist.
  
-\subsection{Exponentieller Zerfall}
+\subsubsection{Exponentieller Zerfall}
 \begin{minipage}{\dimexpr\textwidth-5cm}
 Ist hingegen das ${b < 1 \implies k < 0}$, fällt die Funktion streng monoton und es liegt ein exponentieller Zerfall vor. $b$ und $k$ ist nun jeweils der Abnahmefaktor und die Zerfallskonstante. Bei gegebener prozentualer Zerfallsrate pro Zeiteinheit ist ähnlich wie oben vorzugehen, nur mit einer Subtraktion anstelle von einer Addition zu $1$, also gilt ${b=1-s}$. \newline
 Liegt beispielsweise eine Verlust von $15\%$ pro Zeiteinheit vor, ist ${b=1-0,15=0,85 \implies k=\ln {0,85} \approx -0,16}$. 
@@ -61,7 +63,9 @@ Liegt beispielsweise eine Verlust von $15\%$ pro Zeiteinheit vor, ist ${b=1-0,15
   \begin{tikzpicture}     
     \draw[->, blue, thick, domain=0:3, samples=50] 
               plot (\x, {(0-2) * e^-\x + 2});
-       
+    
+    \draw[green!50!black] (-0.5, 2) -- (3, 2) node [midway, above] {Grenzwert $G$}; 
+ 
     \draw[->] (-0.5, 0) -- (3, 0); 
     \draw[->] (0, -0.5) -- (0, 2.5);
    
@@ -86,6 +90,14 @@ mit der DGL
  \item[Funktionsgleichung] Zu beginn wird der Graph um $A-G$, der Differenz zwischen dem Anfangsbestand und dem Grenzwert, also der Distanz, welche der Graph im verlauf der Kurve steigen muss, nach unten verschoben. Dies wird mit dem exponentiellen Zerfall $e^{-kx}$, welcher somit bei $f(0)=1$ beginnt und zu $0$ sinkt, multipliziert. Somit fängt der Graph bei $A-G$ an, bis er zu $0$ geht. Wird nun $+G$ addiert, geht der Graph von $A$ zu $G$.
  \item[Differenzialgleichung] Zu jedem Zeitpunkt ist die Steigung des Graphes zu der noch zu überquerenden Strecke, der Differenz zwischen $G$ und $f(x)$, mit dem Faktor $k$ proportional.
 \end{description} 
+\subsubsection{Schulbuchschreibweise}
+Das begrenzte Wachstum kann auch als
+\[
+ f(x) = S-c \cdot e^{-kt}
+ \quad \text{und} \quad
+ f'(x) = k \cdot (S - f(x)) 
+\]
+aufgeschrieben werden, wobei weil $f(0) = S - c \cdot 1 \implies c = S - f(0)$ und S die Grenze ist. 
  
 \subsection{Logistisches Wachstum} 
 \begin{minipage}{6cm}
@@ -93,7 +105,9 @@ mit der DGL
   \begin{tikzpicture}     
     \draw[->, blue, thick, domain=-2:3, samples=50] 
               plot (\x, {(0.5*2)/(0.5+(2-0.5)*e^(-2*\x))});
-       
+    
+    \draw[green!50!black] (-2, 2) -- (3, 2) node [midway, above right] {Grenzwert $G$};
+ 
     \draw[->] (-2, 0) -- (3, 0); 
     \draw[->] (0, -0.5) -- (0, 2.5);
    
@@ -102,17 +116,28 @@ mit der DGL
 \end{minipage}
 \hfill
 \begin{minipage}{\dimexpr\textwidth-6cm}  
-Logistisches Wachstum beschreibt Wachstum, welches zuerst bei $A$ exponentiell beginnt, bevor es auf die Grenze $G$ trifft.
+Logistisches Wachstum beschreibt Wachstum, welches zuerst bei $f(0)=A$ exponentiell beginnt, bevor es auf die Grenze $G$ trifft.
 Die generelle Formel ist
 \[
  f(x) = \frac{A \cdot G}{A+(G-A) \cdot e^{-kGx}}
 \]
 mit der DGL
 \[
- f'(x) = k \cdot f(t) \cdot (G-f(x))
+ f'(x) = k \cdot f(x) \cdot (G-f(x))
 \]
+\end{minipage}
+ 
+\vspace{\baselineskip} \noindent  
 Die DGL zeigt, dass die Wachstumsgeschwindigkeit eines logistischen Wachstums sowohl von dem momentanen Bestand als auch von der Differenz zur grenze abhängig ist.
-\end{minipage} 
+ 
+\subsubsection{Schulbuchschreibweise}
+Im Schulbuch wird das Logistische Wachstum als 
+\[
+ f(x) = \frac{S}{1 + c \cdot e^{-kSx}}
+ \quad \text{und} \quad
+ f'(x) = k \cdot f(x) \cdot (S-f(x)) 
+\]
+aufgeschrieben, wieder mit S als Grenze, diesmal aber mit $c = \dfrac{S}{f(0)}-1$.
  
 \subsection{Wachstumsgeschwindigkeiten}
 Für jede Funktion, die ein exponentielles Wachstum beschreibt, $f(x)$, beschreibt die erste Ableitung $f'(x)$ die Wachstumsgeschwindigkeit. \newline
