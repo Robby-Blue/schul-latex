@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr} 
+\usepackage{amsmath}
+\usepackage{hyperref}
+\pagestyle{fancy}
+\lhead{Zusammengesetzte Funktionen}
+\rhead{August 2025}
+\begin{document} 
+\section{Zusammengesetzte Funktionen} 
+Eine \emph{Zusammengesetzte Funktion} $f$ ist eine Funktion, welche durch zwei andere Funktionen $g$ und $h$ zusammengesetzt werden kann. Dabei wird unterschieden zwischen \emph{Verknüpfungen} und \emph{Verkettungen}.
+ 
+\subsection{Verknüpfungen}
+Eine verknüpfte Funktion $f$ ist eine Funktion $f(x)$ welche aus einer Operation zwischen $g$ und $h$ besteht. $f(x)$ ist somit, je nach Kontext,
+\begin{align*}
+ f(x) &= g(x)+h(x) = h(x)+g(x) \quad \text{oder} \\
+  &= g(x) \cdot h(x) = h(x) \cdot g(x) \quad \text{oder} \\
+  &= g(x) - h(x) \quad \text{oder} \\
+  &= h(x) - g(x) \quad \text{oder} \\
+  &= \frac{g(x)}{h(x)} \quad \text{oder} \\
+  &= \frac{h(x)}{g(x)}
+\end{align*}
+ 
+\subsubsection{Limits} 
+Um das Limit zu bestimmen kann die verknüfpte Funktion wieder aufgeteilt werden
+\[
+ \lim_{x \to x_0} g(x)+h(x) = \lim_{x \to x_0} g(x) + \lim_{x \to x_0} h(x) 
+\]
+Gleiches gilt für alle andere Operationen. Dabei ist relevant, welche Funktion schneller steigt. 
+ 
+ 
+\subsection{Verkettungen}
+Eine Verkettete Funktion $f$ ist eine Funktion der Form $f(x) = g(h(x))$. Hier kommt auch der Name der \hyperref[Ableitungen]{Kettenregel} her.
+ 
+\subsubsection{Limits} 
+Für die Limits von verketteten Funktionen gilt 
+\[  
+ \lim_{x \to x_0} g(h(x)) = \lim_{x \to x_1} g(x)
+ \quad \text{mit} \quad
+ x_1 = \lim_{x \to x_0} h(x)  
+\]
+Am beispiel vom Limit zu $x \to \infty$ von $g(x)=e^x$ und $h(x) = -2x$, also $f(x)=e^{-2x}$ gilt 
+\[  
+ \lim_{x \to \infty} -2x = -\infty
+ \quad \text{also} \quad
+ \lim_{x \to \infty} g(h(x)) = \lim_{x \to -\infty} e^x = 0
+\]
+ 
+\end{document}
+ 
+ 
