@@ -3,7 +3,7 @@
 \usepackage{fancyhdr}
 \usepackage{multicol} 
 \usepackage{amsmath} 
-\usepackage{amssymb} 
+\usepackage{amssymb}
 \usepackage{tikz}
 \pagestyle{fancy}
 \lhead{Integrale}
@@ -77,6 +77,16 @@ Beim berechnen des Wertes eines Integrals gilt mit $F(x)$ als Stammfunktion der 
  F(b) - F(a)
 \] 
 Weil hier im endeffekt $C-C=0$ gerechnet wird, ist bei bestimmente Integralen das $C$ irrelevant.
+Die obige Formel beschreibt den \emph{Hauptsatz der Differenzial-  und Integralrechnung}. Diese ist so zu begründen, dass für ein $h=\Delta x$ ist bei $x_0$ 
+\[
+ \Delta y = \lim_{h \to 0} 
+ \int_{x_0}^{x_0+h} f(x) \dx = F(x_0+h)-F(x_0) 
+\]
+Die Steigung, $\lim\limits_{h \to 0} \dfrac{\Delta y}{\Delta x}$ ist nun also
+\[
+ f(x_0) = F'(x) = \lim_{\Delta x \to 0} \frac{F(x_0+h)-F(x_0)}{h} 
+\]
+Somit ist die Ableitung vom Integral einer Funktion die Funktion selbst.
  
 \subsection{Bestände} 
 Gibt die Funktion $f(x)$ eine Veränderung eines Bestandes an und hat eine Einheit dessen Nenner auch die einheit von $x$ darstellt, wie dass Beispielsweise $f(x)$ die Flussmenge von Wasser in $\mathrm{Liter} \over \text{Minute}$ zur $\text{Minute } x$ angibt, so ist ist die Einheit der Stammfunktion der Zähler von der Einheit von $f(x)$. Im Beispiel wäre $F(x)$ dann in $\text{Liter}$ gemessen. Somit ist die Veränderung des Bestandes zwischen Zeitpunkt $a$ und $b$ dann
