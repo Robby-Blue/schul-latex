@@ -2,6 +2,7 @@
 \usepackage{amsmath}
 \usepackage{tikz} 
 \usepackage[a4paper]{geometry}
+\usepackage{hyperref} 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \lhead{Abschnittsweise definierte Funktionen}
@@ -122,6 +123,34 @@ An einem Beispiel einer stetigen und einer nicht stetigen Funktion
   &
   nicht differenzierbar 
  \end{tabular} 
-\end{center}  
+\end{center}
+ 
+\subsection{Funktionen Verbinden}
+\begin{minipage}{\dimexpr\linewidth-4cm}
+ Soll eine Funktion $f$ aufgestellt werden, welche zwei andere gegebene Funktionen $t_1$ und $t_2$ verbindet, gegebenenfalls ohne einem Knick, muss diese Funktion unbedingt an den Nahtpunkten stetig und eventuell differenzierbar sein.
+ 
+ Um dies zu erfüllen muss die neue Funktion $t$ an den Nahtpunkten einen Punkt mit den jeweiligen anderen Funktionen teilen. 
+\end{minipage}
+\hfill
+\begin{minipage}{4cm}
+ \center
+ \begin{tikzpicture}
+ \draw[blue, thick, domain=-1.5:-0.5, samples=100] plot (\x, -0.5);
+ \draw (-1, -0.5) node [blue, above] {$t_1$};
+ \draw[blue, thick, domain=0.5:1.5, samples=100] plot (\x, {\x-0.5});
+ \draw (1, 0.7) node [blue, above] {$t_2$};
+ 
+ \draw[red, thick, domain=-0.5:0.5, samples=100] plot (\x, {(\x+0.5)^2/2-0.5});
+ \draw (0, -0.5) node [red, right] {$f$};
+  
+ \draw (-0.5, -0.5) node [] {$\times$};
+ \draw (0.5, 0) node [] {$\times$}; 
+ \draw[->] (-1.5, 0) -- (1.5, 0) node [above left] {$x$}; 
+ \draw[->] (0, -1) -- (0, 1.5) node [below right] {$y$};
+ \end{tikzpicture}  
+\end{minipage} 
+Liegt beispielsweise $t_1$ bei der Nahtstelle $x_1$ so muss auch $f(x_1)=t_1(x_1)$ gelten. 
+Um differezierbar zu sein müssen die Funktionen an der gleichen Stelle auch die Gleiche Steigung haben, sodass $f'(x_1)=t_1'(x_1)$. Gleiches gilt jeweils auch für die andere Nahtstelle.
+Wie eine Funktion mit diesen Bedingungen aufgestellt wird ist im Kapital \hyperref[Steckbriefaufgaben]{Steckbriefaufgaben} beschrieben.
 \end{document}  
  
