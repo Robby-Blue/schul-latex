@@ -1,5 +1,6 @@
 \documentclass{article} 
 \usepackage{tikz} 
+\usetikzlibrary{decorations.pathreplacing}
 \usepackage{hyperref}
 \usepackage{amsmath} 
 \usepackage[a4paper]{geometry}
@@ -98,6 +99,47 @@ Das Feld einer Punktladung wird auch ein radialsymmetrisches Feld gennant.
   \end{tikzpicture} 
 \end{minipage}
  
-\noindent dieses neue Feld nun genau so stark, nur entgegengesetzt des Feldes der Plattenkondesatoren ist, kommt es zu einer Superposition und beide Felder heben sich innerhalb des Rings gegenseitig auf. 
+\noindent dieses neue Feld nun genau so stark, nur entgegengesetzt des Feldes der Plattenkondesatoren ist, kommt es zu einer Superposition und beide Felder heben sich innerhalb des Rings gegenseitig auf.
+  
+\subsection{Kraftmessung}
+\begin{minipage}{\dimexpr\linewidth-3cm} 
+ % TODO text hinzufügen, zweites tikz mit kondensatoren
+\end{minipage} 
+\hfill
+\begin{minipage}{3cm}
+ \center 
+ \begin{tikzpicture}
+  \coordinate (mid) at (0,0); 
+  \path (mid) ++({2*sin(155)}, {2*cos(155)}) coordinate (ball);
+  \path (ball) ++({-0.2*sin(155)}, {-0.2*cos(155)}) coordinate (endline);
+  \path (mid) ++(0, -2) coordinate (hypball);
+  \path (hypball) ++(0, 0.2) coordinate (hypendline);
+  \path (ball) ++({2*sin(155)}, 0) coordinate (endfel);
+  \path (ball) ++(0, {2*cos(155)}) coordinate (endfg);
+  \path (ball) ++({2*sin(155)}, {2*cos(155)}) coordinate (endf);
+ 
+  \draw (mid) -- (endline);
+  \draw (ball) circle (0.2);   
+  \draw[dashed] (mid) -- (hypendline);
+  \draw[dashed] (hypball) circle (0.2);
+  \draw (0, -1.2) arc[start angle=-90, end angle=-65, radius=1.2];
+  \draw (0.2, -0.9) node {$\varphi$}; 
+  \draw[->] (ball) -- (endfel) node[midway, above, xshift=2pt] {$F_{el}$};
+  \draw[->] (ball) -- (endfg) node[midway, left] {$F_{g}$};
+ 
+  \draw[dashed, ->] (ball) -- (endf); 
+  \draw[dotted] (endfel) -- (endf);
+  \draw[dotted] (endfg) -- (endf);
+  \draw (ball) ++ (0, -1.2) arc[start angle=-90, end angle=-65, radius=1.2];
+  \draw (ball) ++ (0.2, -0.9) node {$\varphi$}; 
+   
+  \draw [blue, decorate,decoration={brace,amplitude=5pt}]
+  (0, 0.2) -- ({2*sin(155)}, 0.2) node[midway,above, yshift=5pt]{$\Delta x$}; 
+  \draw [blue, decorate,decoration={brace,amplitude=5pt,mirror}]
+  (-0.2, 0) -- (-0.2, {2*cos(155)}) node[midway,left, xshift=-5pt]{$\Delta y$};
+  \draw[blue, dashed] ({2*sin(155)}, 0) -- (ball);
+  \draw[blue, dashed] (0, {2*cos(155)}) -- (ball);
+ \end{tikzpicture} 
+\end{minipage} 
  
 \end{document}
