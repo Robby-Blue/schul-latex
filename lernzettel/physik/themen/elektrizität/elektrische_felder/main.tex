@@ -100,13 +100,16 @@ Das Feld einer Punktladung wird auch ein radialsymmetrisches Feld gennant.
 \end{minipage}
  
 \noindent dieses neue Feld nun genau so stark, nur entgegengesetzt des Feldes der Plattenkondesatoren ist, kommt es zu einer Superposition und beide Felder heben sich innerhalb des Rings gegenseitig auf.
-  
-\subsection{Kraftmessung}
-\begin{minipage}{\dimexpr\linewidth-3cm} 
- % TODO text hinzufügen, zweites tikz mit kondensatoren
+ 
+\subsection{Kraftmessung} 
+\begin{minipage}{\dimexpr\linewidth-6cm}
+ Wird in einem homogenen elektrischen Feld, wie zwischen zwei Plattenkondensatoren, eine geladene Kugel an ein Fadenpendel befestigt, so wird es jeweils angezogen und abgestoßen, so dass es sich in eine Richtung bewegt. Dabei kann sich der Winkel $\varphi$ zwischen dem Faden und dem Faden der Ruhelage angesehen werden. Werden die Seitenlängen $\Delta x$ und $\Delta y$ genannt, so ist
+\[
+ \tan{\varphi} = \frac{\Delta x}{\Delta y} 
+\] 
 \end{minipage} 
 \hfill
-\begin{minipage}{3cm}
+\begin{minipage}{6cm}
  \center 
  \begin{tikzpicture}
   \coordinate (mid) at (0,0); 
@@ -119,9 +122,9 @@ Das Feld einer Punktladung wird auch ein radialsymmetrisches Feld gennant.
   \path (ball) ++({2*sin(155)}, {2*cos(155)}) coordinate (endf);
  
   \draw (mid) -- (endline);
-  \draw (ball) circle (0.2);   
+  % draw ball later to make it appear above the rest
   \draw[dashed] (mid) -- (hypendline);
-  \draw[dashed] (hypball) circle (0.2);
+  \draw[blue, dashed] (hypball) circle (0.2) node {$-$};
   \draw (0, -1.2) arc[start angle=-90, end angle=-65, radius=1.2];
   \draw (0.2, -0.9) node {$\varphi$}; 
   \draw[->] (ball) -- (endfel) node[midway, above, xshift=2pt] {$F_{el}$};
@@ -131,15 +134,34 @@ Das Feld einer Punktladung wird auch ein radialsymmetrisches Feld gennant.
   \draw[dotted] (endfel) -- (endf);
   \draw[dotted] (endfg) -- (endf);
   \draw (ball) ++ (0, -1.2) arc[start angle=-90, end angle=-65, radius=1.2];
-  \draw (ball) ++ (0.2, -0.9) node {$\varphi$}; 
+  \draw (ball) ++ (0.2, -0.9) node {$\varphi$};
+ 
+  \draw[blue] (ball) circle (0.2) node {$-$};   
    
-  \draw [blue, decorate,decoration={brace,amplitude=5pt}]
+  \draw [green!50!black, decorate,decoration={brace,amplitude=5pt}]
   (0, 0.2) -- ({2*sin(155)}, 0.2) node[midway,above, yshift=5pt]{$\Delta x$}; 
-  \draw [blue, decorate,decoration={brace,amplitude=5pt,mirror}]
+  \draw [green!50!black, decorate,decoration={brace,amplitude=5pt,mirror}]
   (-0.2, 0) -- (-0.2, {2*cos(155)}) node[midway,left, xshift=-5pt]{$\Delta y$};
   \draw[blue, dashed] ({2*sin(155)}, 0) -- (ball);
   \draw[blue, dashed] (0, {2*cos(155)}) -- (ball);
+  
+  \draw[blue] (-2, 0) rectangle (-1.5, -2);  
+  \draw[red] (2.5, 0) rectangle (3, -2);
  \end{tikzpicture} 
 \end{minipage} 
+\begin{minipage}{\dimexpr\linewidth-4cm}
+ Die Auslenkrichtung ist offensichtlich von den auf die Kugel wirkenden
+\end{minipage}
+\hfill 
+ 
+\noindent Kräften abhängig; je mehr wirkende elektrische Kraft $F_{el}$ nach rechts zieht, desto weiter wird die Kugel in diese Richtung ausgelenkt. Bei kleinen Winkeln von $\varphi$, als wenn $\Delta y \gg \Delta x$ kann diese Abhängigkeit als Annäherung als proportional beschrieben werden, sodass $\Delta x \sim F_{el}$. Somit gilt auch
+\[
+ \tan{\varphi} = \frac{F_{el}}{F_g} 
+\]
+Wird $\tan{\varphi}$ gleichgesetzt und $F_g$ als $m \cdot g$ aufgeschrieben, so folgt, nach $F_{el}$ umgeformt,
+\[
+ F_{el} = \frac{\Delta x}{\Delta y} \cdot m \cdot g
+\]
+Der Definition nach ist weiterhin $E = \dfrac{F_{el}}{Q}$. So kann auf jeden Fall $F_{el}$, und wenn $Q$ bekannt ist, auch $E$ bestimmt werden.
  
 \end{document}
