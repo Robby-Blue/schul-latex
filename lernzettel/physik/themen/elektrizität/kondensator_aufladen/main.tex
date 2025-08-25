@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Aufladeprozess eines Kondensators}
+\rhead{August 2025}
+\begin{document}
+\section{Aufladeprozess eines Kondensators}
+Beim Aufladen eines Kondensators wird es mit der Zeit schwerer weitere Ladungen auf den Kondensator zu übertragen, je geladener dieser bereits ist. Somit ist die Ladungsgeschwindigkeit, $I(t)$, bei $t=0$ das eigene Maximum, $I_0$, bevor sie \hyperref[Wachstumsfunktionen]{exponentiell zu $0$ zerfällt}. Genauso steigt die Spannung anfangs schnell bevor sie sich an $U_0$ annähert. Somit kann dies als begrenztes Wachstum dargestellt werden. \newline
+Beim Entladen gilt eigentlich einfach nur das Gegenteil. Die Stromstärke verhält sich eigentlich so wie beim Aufladen, nur dass der Strom in die entgegengesetzte Richtung fließt, also negativ ist. Die bereits geladene Spannung zerfällt exponentiell zu $0$.
+ 
+\subsection{Formeln}
+Beim Aufladeprozess gilt \newline 
+\begin{minipage}{0.5\linewidth}
+ \center
+ $I(t)=I_0 \cdot e^{-kt}$
+ 
+ \begin{tikzpicture}
+  \draw[->, domain=0:4, blue] plot ({\x}, {2.5*e^(-1.5*\x)}); 
+  \draw[thick, ->] (0, 0) -- (4, 0) node[right] {$t$};
+  \draw[thick, ->] (0, 0) -- (0, 2.5) node[above] {$I$};
+ \end{tikzpicture} 
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\linewidth}
+ \center
+ $U(t)=U_0 - U_0 \cdot e^{-kt}$
+ 
+ \begin{tikzpicture}
+  \draw[->, domain=0:4, blue] plot ({\x}, {2.5 - 2.5*e^(-1.5*\x)}); 
+  \draw[thick, ->] (0, 0) -- (4, 0) node[right] {$t$};
+  \draw[thick, ->] (0, 0) -- (0, 2.5) node[above] {$U$};
+ \end{tikzpicture}
+\end{minipage} 
+ 
+\vspace*{2\baselineskip} 
+\noindent Beim Entladeprozess gilt \newline 
+\begin{minipage}{0.5\linewidth}
+ \center
+ $I(t)=-I_0 \cdot e^{-kt}$
+ 
+ \begin{tikzpicture}
+  \draw[->, domain=0:4, blue] plot ({\x}, {-2.5*e^(-1.5*\x)}); 
+  \draw[thick, ->] (0, 0) -- (4, 0) node[right] {$t$};
+  \draw[thick, ->] (0, 0) -- (0, -2.5) node[below] {$I$};
+ \end{tikzpicture} 
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\linewidth}
+ \center
+ $U(t)=U_0 \cdot e^{-kt}$
+ 
+ \begin{tikzpicture}
+  \draw[->, domain=0:4, blue] plot ({\x}, {2.5*e^(-1.5*\x)}); 
+  \draw[thick, ->] (0, 0) -- (4, 0) node[right] {$t$};
+  \draw[thick, ->] (0, 0) -- (0, 2.5) node[above] {$U$};
+ \end{tikzpicture} 
+\end{minipage} 
+\end{document}
