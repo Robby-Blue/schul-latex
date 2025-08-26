@@ -1,0 +1,65 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Einheitenpräfixe}
+\rhead{August 2025}
+\newcommand{\fact}[1]{$10^{#1}$ \rule{0pt}{11pt}}
+\begin{document} 
+ 
+\section{Einheitenpräfixe}  
+\begin{minipage}[t]{\dimexpr\linewidth-7cm}
+ \vspace{0pt} 
+ Hier sind die relevantesten Prefixe aller Einheiten. Um von der einen Einheit in die andere Umzuwandeln muss Wert mit der Differenz zwischen Exponent der Faktors der ersten Größe und der zweiten Größe multipliziert werden. \newline
+Wird beispielsweise $5\,\text{km}$ in $\text{cm}$ umgewandelt, so folgt ${5 \cdot 10^{3-(-2)} = 500\,000 \,\text{cm}}$. Werden $5\,\text{cm}$ in $\text{km}$ umgewandelt, so folgt ${5 \cdot 10^{(-2)-3} = 0.00005 \,\text{km}}$.
+\end{minipage}
+\hfill
+\begin{minipage}[t]{7cm}
+ \vspace{0pt} 
+ \begin{center}
+ \begin{tabular}{ |c|c|c| }
+ \hline
+  \textbf{Name} & \textbf{Faktor} & \textbf{Abkürzung} \\
+ \hline
+  Giga & \fact{9} & G \\
+ \hline
+  Mega & \fact{6} & M \\
+ \hline
+  Kilo & \fact{3} & k \\
+ \hline
+  Dezi & \fact{-1} & d \\
+ \hline
+  Zenti & \fact{-2} & c \\
+ \hline
+  Milli & \fact{-3} & m \\
+ \hline
+  Mikro & \fact{-6} & $\mu$ \\
+ \hline
+  Nano & \fact{-9} & n \\
+ \hline
+ \end{tabular}
+ \end{center}
+\end{minipage}
+ 
+\section{Zehnerpotenzen} 
+Die relevantesten Zehnerpotenzen und deren Namen sind  
+\begin{center}
+\begin{tabular}{ |c|c|c| }
+\hline
+ \textbf{Name} & \textbf{Faktor} \\
+\hline
+ Tausend & \fact{3} \\
+\hline
+ Million & \fact{6} \\
+\hline 
+ Milliarden & \fact{9} \\
+\hline 
+ Billion & \fact{12} \\
+\hline 
+ Billiarden & \fact{15} \\
+\hline
+\end{tabular}
+\end{center}
+ 
+\end{document}
