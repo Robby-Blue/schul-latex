@@ -1,4 +1,5 @@
 \documentclass{article}
+\usepackage{amsmath}
 \usepackage{tikz}
 \usepackage{hyperref}
 \usepackage[a4paper]{geometry}
@@ -57,5 +58,11 @@ Beim Aufladeprozess gilt \newline
   \draw[thick, ->] (0, 0) -- (4, 0) node[right] {$t$};
   \draw[thick, ->] (0, 0) -- (0, 2.5) node[above] {$U$};
  \end{tikzpicture} 
-\end{minipage} 
+\end{minipage}  
+ 
+\subsection{Funktionen Bestimmen}
+Ein Funktion $I(t)$ oder $U(t)$ kann anhand gegebener Messdaten bestimmt werden, indem eine \hyperref[Umgang mit dem Taschenrechner in Physik]{Exponential-Regression} durchgeführt wird.
+ 
+\subsection{Halbwertzeit}
+Der Faktor $k$ der e-Funktionen kann auch als $\dfrac{1}{RC}$ aufgeschrieben werden. Aus weiteren Umformungen folgt dass für eine Funktion $f(t)$ des exponentiellen Zerfalls die Halbwertzeit bei $t = \ln{(2)} \cdot RC$ erreicht, so dass also $f(\ln{(2)} \cdot RC) = \dfrac{1}{2} f(0)$. 
 \end{document}
