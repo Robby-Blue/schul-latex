@@ -9,4 +9,18 @@
 Eine \emph{Zufallsgröße} $X$ ist eine Zuordnung, welche jedem Ergebnis eines zufälligen Ereignisses ein zugehöriges $x$ zuordnet, so dass die Ereignisse sozusagen durchnummeriert werden. Die dazugehörige \emph{Wahrscheinlichkeitsverteilung}, $P(X=x)$, ordnet nun jedem $x$ eine Wahrscheinlichkeit zu. \newline
 Eine Zufallsgröße als Balkendiagramm aufgezeichnet, mit $x_e$ auf der x-Achse und $P(X=x_e)$ auf der y-Achse, ist ein \emph{Histogramm}.
 % TODO: table für Zufallsgrößen und tikz mit Histogramm
+ 
+\subsection{Erwartungswert}
+Der \emph{Erwartungswert} einer Zufallsgröße, $E(X)$ oder $\mu$, ist das durchschnittliche Erwartete ergebnis. Um diesen zu berechnet werden alle möglichen Ergebnisse gewichtet ($x \cdot P(X=x)$) zusammen addiert. Es gilt also
+\[
+ \mu = E(X) = \sum_{i=1}^n x_i \cdot P(X=x_i) 
+\]  
+Ein Spiel ist fair, wenn niemand langzeitig Profitiert, wenn $\mu$ genau so groß ist wie der benötigt Einsatz, wie der Preis, des Spiels.
+ 
+\subsection{Standardabweichung}
+Eine \emph{Standardabweichung} $\sigma$ beschreibt die Streuung der Wahrscheinlichkeitsverteilung einer Zufallsgröße $X$ im vergleich zu $\mu$. Es gilt
+\[
+ \sigma = \sqrt{\sum_{i=1}^n (x_i - \mu)^2 \cdot P(X=x_i)}
+\]
+ 
 \end{document}
