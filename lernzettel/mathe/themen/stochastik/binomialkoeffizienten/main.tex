@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Binomialkoeffizienten}
+\rhead{September 2025}
+\begin{document}
+ 
+\newcommand{\bink}[2]{
+\begin{pmatrix}
+ #1 \\
+ #2 \\
+\end{pmatrix} 
+} 
+ 
+\section{Binomialkoeffizienten} 
+% TODO wann wird das genutzt
+ 
+Ein Binomialkoeffizient $n$ über $k$, aufgeschrieben als
+\[ 
+\bink{n}{k} 
+= \frac{n!}{k! \cdot (n-k)!} 
+\]
+kann genutzt werden, um zu bestimmen, wie viele Möglichkeiten es gibt, von insgesamt $n$ Element nur $k$ Elemente auszuwählen, wobei ihre Reihenfolge irrelevant ist.
+Als Tricks gilt immer
+\[
+\bink{n}{k} = \bink{n}{n-k}
+\quad \text{und} \quad
+\bink{n}{1} = n 
+\]
+ 
+\subsection{Fakultät}
+Die Fakultät einer natürlichen Zahl $n$, genannt $n$ Fakultät, aufgeschrieben als $n!$, ist immer $n \cdot (n-1) \cdot (n-2) \cdot \ldots \cdot 1$. Aus einfachem wegstreichen folgt dass
+\[
+ \frac{n!}{(n-1)!} = n
+\] 
+\end{document}
