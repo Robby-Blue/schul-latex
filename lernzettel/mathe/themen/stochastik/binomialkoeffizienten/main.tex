@@ -14,16 +14,17 @@
 \end{pmatrix} 
 } 
  
-\section{Binomialkoeffizienten} 
-% TODO wann wird das genutzt
- 
+\section{Binomialkoeffizienten}  
 Ein Binomialkoeffizient $n$ über $k$, aufgeschrieben als
 \[ 
 \bink{n}{k} 
 = \frac{n!}{k! \cdot (n-k)!} 
 \]
-kann genutzt werden, um zu bestimmen, wie viele Möglichkeiten es gibt, von insgesamt $n$ Element nur $k$ Elemente auszuwählen, wobei ihre Reihenfolge irrelevant ist.
-Als Tricks gilt immer
+kann genutzt werden, um zu bestimmen, wie viele Möglichkeiten es gibt, von insgesamt $n$ Element nur $k$ Elemente auszuwählen, wobei ihre Reihenfolge irrelevant ist. Die obige Fomel kann gekürzt werden zu,
+\[
+ \frac{n \cdot \ldots \cdot (n-k+1)}{k!}
+\]  
+Als weitere Tricks gelten immer
 \[
 \bink{n}{k} = \bink{n}{n-k}
 \quad \text{und} \quad
