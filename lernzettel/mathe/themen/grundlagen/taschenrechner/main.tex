@@ -1,11 +1,12 @@
 \documentclass{article}
+\usepackage{amssymb}
 \usepackage{hyperref}
 \usepackage[a4paper]{geometry}
 \usepackage{fancyhdr}
 \usepackage{tikz} 
 \pagestyle{fancy}
 \lhead{Umgang mit dem Taschenrechner}
-\rhead{Juli 2025}
+\rhead{Juli - September 2025}
 \begin{document}
   
 \newcommand{\return}[0]{\,%
@@ -50,7 +51,7 @@
  \item[Vektorenprodukt] Um das Vektorenprodukt $\vect{a} \times \vect{b}$ auszurechnen wird \calckey{crossp(a,b)} (\calckey{menu} \arrow \calckey{7} \arrow \calckey{C} \arrow \calckey{2}) genutzt. Der Name kommt vom anderen Namen des Vektorenproduktes, das \emph{Kreuzprodukt}, oder auch dem englischen \emph{cross product}, weil das Mal-Zeichen ein Kreuz ist.  
  \item[Betrag eines Vektors] Für den Betrag eines Vektors $\vect{v}$ wird \calckey{norm(v)} (\calckey{menu} \arrow \calckey{7} \arrow \calckey{7} \arrow \calckey{1}) genutzt. Der Betrag eines Vektors darf, obwohl wir beides als Beträge darstellen, nicht mit dem Betrag einer normalen Zahl verwechselt werden.
  \item[Betrag einer Zahl] Für den Betrag einer Zahl $n$ werden die Betragstriche in \symbols oder \calckey{abs(n)} genutzt. 
+ \item[Binomialkoeffizient] Ein \hyperref[Binomialkoeffizient]{Binomialkoeffizient} kann \texttt{nCr(n,k)}, beziehungsweise \calckey{menu} \arrow \calckey{5} \arrow \calckey{3}
+ \item[Bernoulli Ketten] Die Wahrscheinlichkeit, dass bei einer \hyperref[Bernoulli Ketten]{Bernoulli Kette} es zu genau $k$ Treffern kommt, kann im Taschenrechner durch \texttt{binomPdf(n,p,k)} beziehungsweise mit \calckey{menu} \arrow \calckey{6} \arrow \calckey{5} \arrow \calckey{A}. Dabei ist \texttt{k} optional; wird es weggelassen, wird $P(X=k)$ für alle $\{k \in \mathbb{N}_0 \mid 0 \leq k \leq n\}$ in einer Liste ausgegeben. Die Ausgabe ist als Dezimalzahl.
 \end{description} 
 \end{document}
- 
- 
