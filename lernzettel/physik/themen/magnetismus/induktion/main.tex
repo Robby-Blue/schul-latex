@@ -1,0 +1,24 @@
+\documentclass{article}
+\usepackage{hyperref}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Induktion}
+\rhead{September 2025}
+\begin{document}
+ 
+\newcommand{\derive}[2]{\frac{\mathrm{d}#1}{\mathrm{d}#2}} 
+ 
+\section{Induktion}  
+Solange sich ein Magnetfeld um einem Leiter verändert, wird in diesem Leiter eine Spannung, die \emph{Induktionsspannung}, \emph{induziert}. \newline
+Um diese Potenzialdifferenz auszugleichen fließt darauffolgend Strom, der \emph{Induktionsstrom}. Der Induktionsstrom ist immer so gerichtet, dass das  durch den Stromfluss entstehende Magnetfeld entgegen der Ursache der Induktion wirkt, besagt das Lenzsche Gesetz. 
+\[
+ U_{Ind} = -N \cdot \derive{\Phi}{t}
+\] 
+Mit der Definition vom \hyperref[Magnetischer Fluss]{Magnetischem Fluss} und der \hyperref[Ableitungsregeln]{Produktregel} lautet
+\[
+ \derive{\Phi}{t} = A \cdot \derive{B}{t} + B \cdot \derive{A}{t} 
+\] 
+Normalerweise wird aber zu jedem Zeitpunkt nur eine der beiden Größen verändert, sodass nur einer der beiden Summanden beachtet werden muss; der jeweils andere ist dann immer $0$.
+Den weiteren Ableitungsregeln nach, hat ein sich konstant veränderndes Magnetfeld eine konstante $U_{Ind}$ und ein Magnetfeld, dessen Größe einer Sinusfunktion folgt, eine Induktionsspannung, welche der gleichen Sinusfunktion, um eine halbe Periode versetzt, folgt. 
+\end{document}
