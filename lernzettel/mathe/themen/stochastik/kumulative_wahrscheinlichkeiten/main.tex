@@ -1,0 +1,38 @@
+\documentclass{article} 
+\usepackage{amsmath}
+\usepackage{csquotes}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Kumulative Wahrscheinlichkeiten}
+\rhead{September 2025}
+\begin{document}
+\section{Kumulative Wahrscheinlichkeiten}
+Eine kumulative Wahrscheinlichkeit ist die Wahrscheinlichkeit, dass es bei einer Wahrscheinlichkeitsverteilung zu einem $k$ mit $a \leq k \leq b$, also $k$ im Intervall $[a,b]$ ist, kommt.
+Aufgeschrieben wird dies als 
+\[
+ P(a \leq X \leq b) = P(X=a) + P(X=a+1) + \ldots + P(b)
+\]  
+Im Taschenrechner wird dabei eine \texttt{Cdf}-Funktion genutzt; die jeweilige \texttt{Pdf}-Funktion einer Wahrscheinlichkeitsverteilung, nur dass das \texttt{Pdf} durch ein \texttt{Cdf} ersetzt wird und anstelle des \texttt{k}s ein \texttt{a} und \texttt{b} angegeben werden müssen. Diese sind im \texttt{menu} jeweils eine Option weiter unten als desen \texttt{Pdf} Versionen.
+ 
+In den meisten Fällen ist es trivial aus einer wörtliche Formulierung eine kumulative Wahrscheinlichkeit zu bilden, es ist nur wichtig darauf zu achten, ob bei einer Formulierung die Grenze inkludiert oder exkludiert wird. 
+\begin{center}
+\begin{tabular}{ |c|c| }
+\hline
+ \textquote{mehr als $a$} & $k > a$ \\
+\hline
+ \textquote{mindestens $a$} & $k \geq a$ \\
+\hline
+ \textquote{zwischen $a$ und $b$} & $a < k < b$ \\
+\hline
+\end{tabular}
+\end{center} 
+Dabei ist, in diesem Fall, weil $a$ und $b$ immer ganze Zahlen sind
+\[
+ P(a < X) = P(a+1 \leq X)
+ \quad \text{und} \quad 
+ P(X > b) = P(X \leq b-1)
+\]
+ 
+ 
+\end{document}

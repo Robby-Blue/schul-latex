@@ -1,21 +1,35 @@
 \documentclass{article}
-\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{amsmath} 
+\usepackage{amssymb}
 \usepackage[a4paper]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\lhead{Binomialverteilung}
+\lhead{Binomialverteilungen}
 \rhead{September 2025}
 \begin{document}
-\section{Binomialverteilung}
-Eine Binomialverteilung ist eine Wahrscheinlichkeitsverteilung der Bernoulli-Ketten. 
+\section{Binomialverteilungen}
+Eine Binomialverteilung ist die Wahrscheinlichkeitsverteilung einer Bernoulli-Kette. Für eine Binomialverteilung gibt es eine Funktion $P(X=k)$, welche jeweils angibt, wie wahrscheinlich es ist, dass es bei einem Bernoulli Experiment mit $n$ Wiederholungen zu genau $k$ treffern kommt. Im Taschenrechner gilt 
 \[
- P(a \le X \le b) = \texttt{binomCdf(n,p,a,b)}
-\] 
-Dabei ist, in diesem Fall, weil $a$ und $b$ immer ganze Zaheln sind
-\[
- P(a < X) = P(a+1 \le X)
- \quad \text{und} \quad 
- P(X > b) = P(X \le b-1)
+ P(X=k)=\texttt{binomPdf(n,p,k)}
 \]
-% TODO fertigstellen, genauerer definition, nutzen von cdf erklären 
+Anstelle vom Ausschreiben von \texttt{binomPdf} kann auch \texttt{menu}, \texttt{5}, \texttt{5}, \texttt{A} genutzt werden. Dabei ist \texttt{k} optional; wird es weggelassen, wird $P(X=k)$ für alle rellen Zahlen $k$ mit $0 \leq k \leq$ in einer Liste ausgegeben.
+ 
+Soll eine \hyperref[Kumulative Wahrscheinlichkeiten]{kumulative Wahrscheinlichkeit} berechnet werden, wird im Taschenrechner \texttt{binomCdf(n,p,a,b)} genutzt, welches Menu unter \texttt{menu}, \texttt{5}, \texttt{5}, \texttt{B} verfügbar ist.
+ 
+\subsection{Bernoulli Ketten}
+Eine Bernoulli Kette beschreibt ein \emph{Bernoulli Experiment}, ein Experiment, welches
+\begin{enumerate}
+ \item Zwei mögliche Ergebnisse hat
+ \item Eine gleichbleichebende Wahrscheinlichkeit hat
+ \item In seinen Einzelexperimenten unabhängig ist
+ \item Eine feste Anzahl an Wiederholungen, $n$, hat 
+\end{enumerate} 
+Die Wahrscheinlichkeit einer Bernoulli-Kette ist
+\[
+ P(X=k) =
+ \begin{pmatrix} n \\ k \end{pmatrix} \cdot
+ p^k \cdot (1-p)^{n-k}
+\]
+Diese lässt sich so erklären, dass es $\begin{pmatrix} n \\ k \end{pmatrix}$ Möglichkeiten gibt, dass es zu genau $k$ Treffern kommt, wobei, wenn sich ein Baumdiagramm vorgestellt wird, jeder Weg zu treffen eine Wahrscheinlichkeit von $p^k \cdot (1-p)^{n-k}$ hat.
 \end{document}
