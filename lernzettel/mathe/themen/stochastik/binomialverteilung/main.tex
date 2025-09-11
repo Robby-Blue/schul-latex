@@ -1,0 +1,21 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Binomialverteilung}
+\rhead{September 2025}
+\begin{document}
+\section{Binomialverteilung}
+Eine Binomialverteilung ist eine Wahrscheinlichkeitsverteilung der Bernoulli-Ketten. 
+\[
+ P(a \le X \le b) = \texttt{binomCdf(n,p,a,b)}
+\] 
+Dabei ist, in diesem Fall, weil $a$ und $b$ immer ganze Zaheln sind
+\[
+ P(a < X) = P(a+1 \le X)
+ \quad \text{und} \quad 
+ P(X > b) = P(X \le b-1)
+\]
+% TODO fertigstellen, genauerer definition, nutzen von cdf erklären 
+\end{document}

@@ -52,7 +52,15 @@
  \item[Betrag eines Vektors] Für den Betrag eines Vektors $\vect{v}$ wird \calckey{norm(v)} (\calckey{menu} \arrow \calckey{7} \arrow \calckey{7} \arrow \calckey{1}) genutzt. Der Betrag eines Vektors darf, obwohl wir beides als Beträge darstellen, nicht mit dem Betrag einer normalen Zahl verwechselt werden.
  \item[Betrag einer Zahl] Für den Betrag einer Zahl $n$ werden die Betragstriche in \symbols oder \calckey{abs(n)} genutzt. 
  \item[Binomialkoeffizient] Ein \hyperref[Binomialkoeffizient]{Binomialkoeffizient} kann \texttt{nCr(n,k)}, beziehungsweise \calckey{menu} \arrow \calckey{5} \arrow \calckey{3}
- \item[Bernoulli Ketten] Die Wahrscheinlichkeit, dass bei einer \hyperref[Bernoulli Ketten]{Bernoulli Kette} es zu genau $k$ Treffern kommt, kann im Taschenrechner durch \texttt{binomPdf(n,p,k)} beziehungsweise mit \calckey{menu} \arrow \calckey{6} \arrow \calckey{5} \arrow \calckey{A}. Dabei ist \texttt{k} optional; wird es weggelassen, wird $P(X=k)$ für alle $\{k \in \mathbb{N}_0 \mid 0 \leq k \leq n\}$ in einer Liste ausgegeben. Die Ausgabe ist als Dezimalzahl.
- \item[Fakultät] Für das berechnen der Fakultät einer Zahl kann das Ausrufezeichen im Menu der \texttt{?!$\blacktriangleright$}-Taste oder das Ausrufezeichen von \texttt{menu}, \texttt{5}, \texttt{1} genutzt werden. 
+ \item[Binomialverteilung] Die Wahrscheinlichkeit, dass bei einer \hyperref[Bernoulli Ketten]{Bernoulli Kette} es zu genau $k$ Treffern kommt, kann im Taschenrechner durch \texttt{binomPdf(n,p,k)} beziehungsweise mit \calckey{menu} \arrow \calckey{5} \arrow \calckey{5} \arrow \calckey{A}. Dabei ist \texttt{k} optional; wird es weggelassen, wird $P(X=k)$ für alle $\{k \in \mathbb{N}_0 \mid 0 \leq k \leq n\}$ in einer Liste ausgegeben. Die Ausgabe ist als Dezimalzahl. \texttt{binomPdf(n,p,a,b)} ist jeweils ein Buchstabe weiter. 
+ \item[Fakultät] Für das berechnen der Fakultät einer Zahl kann das Ausrufezeichen im Menu der \texttt{?!$\blacktriangleright$}-Taste oder das Ausrufezeichen von \texttt{menu}, \texttt{5}, \texttt{1} genutzt werden.  
 \end{description} 
+ 
+\subsection{Lists \& Spreadsheets}
+\begin{description}
+ \item[Variablen] Eine Variable kann definiert werden, indem, wie normalerweise auch, das \texttt{:=} Syntax in einem Kästchen genutzt wird. 
+ \item[Datensequenz] Eine Spalte kann mit einer Sequenz an Daten gefüllt werden, indem das Kästchen der Spaltenformel ausgewählt, aber nicht beschrieben, wird alle relevantes in \calckey{menu} \arrow \calckey{3} \arrow \calckey{1} eingetippt werden kann. Dabei können auch bereits definierte Variablen genutzt werden.
+ \item[Binomialverteilung] Die Binomialverteilung kann innerhalb einer Spreadsheet, so wie normalerweise auch, mit \texttt{binomPdf(n,p,k)} berechnet werden. Hier ist dies im Menu nur unter \calckey{menu} \arrow \calckey{4} \arrow \calckey{1} \arrow \calckey{A} zu erreichen.
+ \item[Histogramme] Ein Histogramm kann mit \calckey{menu} \arrow \calckey{3} \arrow \calckey{8} geöffnet werden.
+\end{description}  
 \end{document}
