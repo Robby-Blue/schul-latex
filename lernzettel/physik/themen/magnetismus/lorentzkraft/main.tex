@@ -1,4 +1,6 @@
-\documentclass{article}
+\documentclass{article} 
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
 \usepackage{xcolor}
 \usepackage[a4paper]{geometry}
 \usepackage{fancyhdr}
@@ -24,10 +26,37 @@ Die Richtung der Auswirkung eines Magnetfeldes kann mithilfe \emph{UVW}-Regel be
 \end{center}
 Sind zwei Richtungen bekannt, kann diese Regele angewand werden, um die dritte zu finden.
  
-\subsection{Quantitative Bestimmung}
-Die Lorentzkraft ist das Produkt von $B$, $I$ und der Länge der Leiters $l$ 
+\subsection{Quantitative Bestimmung} 
+\begin{minipage}{\dimexpr\linewidth-5cm} 
+Die Lorentzkraft, welche auf einen Leiter der Länge $l$ wirkt ist
 \[
- F_L = B \cdot I \cdot L 
-\] 
+ F_L = B \cdot I \cdot l
+\]
+Zum Messen kann \emph{eine Stromwaage} genutzt werden; ein Messgerät, welches mit einer Waage oder einem Kraftsensor die auf den Leiter wirkende Lorentzkraft misst. Somit kann auch mit der obigen Formel die magnetische Flussdichte bestimmt werden. \newline
+Mit den Messdaten können natürlich auch die Proportionalitäten, welche in der Formel aufgefunden werden, begründet werden.
+\end{minipage} 
+\hfill
+\begin{minipage}{5cm}
+ \center
+ \begin{tikzpicture}
+  \fill[red!50] (-1.5, -1.5) rectangle (1.5, -2.5);
+  \foreach \x in {-3,...,2} {
+   \foreach \y in {0,1} {
+    \draw (\x*0.5+0.25, \y*0.5-2.25) node{$\times$};
+   };
+  };
  
+  \draw (-0.2, 0) circle (0.1cm) node[above] {$-$};
+  \draw (0.2, 0) circle (0.1cm) node[above] {$+$};
+  \draw (-0.3, 0) -- (-1, 0);
+  \draw (0.3, 0) -- (1, 0);
+  \draw (-1, 0) -- (-1, -2);
+  \draw (1, 0) -- (1, -2);  
+  \draw (-1, -2) -- (1, -2);
+  \draw[->, thick] (0, -2) -- (0, -2.4); 
+ 
+  \draw [green!50!black, decorate,decoration={brace,amplitude=5pt,mirror}]
+  (-1,-2.7) -- (1,-2.7) node[midway,below,yshift=-4pt]{$l$};
+ \end{tikzpicture} 
+\end{minipage} 
 \end{document}
