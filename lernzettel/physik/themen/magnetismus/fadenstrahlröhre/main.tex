@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Die Fadenstrahlröhre}
+\rhead{September 2025}
+\begin{document}
+\section{Die Fadenstrahlröhre} 
+Die Fadenstrahlröhre ist ein Messgerät, welches genutzt werden kann, um die \emph{spezifische Ladung} von Elektronen (das Verhältniss zwischen der Ladung und der Masse, also $\frac{e}{m}$) zu bestimmen und daraus dann, mithilfe der durch Millikan bereits bekannten Elektronenladung $e$, die Masse der Elektronen zu berechnen.
+ 
+Mit einer typischen Elektronenkanone werden Elektronen in einem gasgefüllten Glaskolben, welcher in einem Magnetfeld, welches orthogonal zu den Elektronen, liegt, gefeuert. Aufgrund der \hyperref[Lorentzkraft]{Lorentzkraft}, welches auch mit der UVW-Regel bestimmt werden kann, wirkt auf die Elektronen zu jedem Zeitpunkt eine Kraft in einem $90^\circ$ Winkel zu ihrer Flugbahn, sodass sie letztendlich in einem Kreis fliegen. Diese kreisförmige Flugbahn wird durch das Gas im Kolben sichtbar.
+ 
+\subsection{Herleitung}%PROC Abiturrelevant
+Weil die Lorentzkraft dafür sorgt, dass die Elektronen in einem Kreis fliegen kann sie auch als eine Zenipetalkraft angesehen werden, also
+\[
+ F_L = e \cdot v \cdot B = F_Z = m \cdot \dfrac{v^2}{r}
+\]
+Wird dies nach der spezifischen Ladung umgeformt, gilt
+\[
+ \frac{e}{m} = \frac{v}{r \cdot B} 
+\]
+Die Elektronengeschwindigkeit ist dabei
+\[
+ v = \sqrt{\frac{2eU}{m}}
+ \quad \text{folgend aus} \quad
+ e \cdot U = \frac{1}{2} m \cdot v^2 
+\]
+Ineinander eingesetzt gilt nun
+\[
+ \frac{e}{m} = \frac{\sqrt{\frac{2eU}{m}}}{r \cdot B} = \frac{2 \cdot U}{r^2 \cdot B^2}
+\]
+Also
+\[
+ m = \frac{r^2 \cdot B^2}{2 \cdot U} \cdot e
+\] 
+\end{document}
