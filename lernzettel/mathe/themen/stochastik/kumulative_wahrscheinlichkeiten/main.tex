@@ -28,11 +28,11 @@ In den meisten Fällen ist es trivial aus einer wörtliche Formulierung eine kum
 \end{tabular}
 \end{center} 
 Dabei ist, in diesem Fall, weil $a$ und $b$ immer ganze Zahlen sind
-\[
- P(a < X) = P(a+1 \leq X)
+\begin{align*} 
+ &P(a < X) = P(a+1 \leq X)
  \quad \text{und} \quad 
- P(X > b) = P(X \leq b-1)
-\]
- 
- 
+ P(X < b) = P(X \leq b-1) \\
+ &\text{und} \quad
+ P(X > b) = P(X \geq b+1)
+\end{align*}
 \end{document}
