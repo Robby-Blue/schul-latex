@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Elektronenstrahlröhre}
+\rhead{September 2025}
+\begin{document}
+\section{Elektronenstrahlröhre}
+Eine \emph{Elektronenstrahlröhre}, oder auch \emph{Braun'sche Röhre}, ist eine Röhre, bei welcher zuerst mit einer Elektronenkanone (mit der Beschleunigungsspannung $U_B$) Elektronen in einen Ablenkkondensator (mit der Ablenksspannung $U_A$) beschleunigt werden, in welchem diese nach oben oder unten abgelenkt werden können.
+ 
+Die Elektronen verlassen die Elektronenkanone mit der Geschwindigkeit $v_x$, folgend aus
+\begin{align*}
+ W &= E_{kin} \\
+ e \cdot U_B &= \frac{1}{2} m \cdot v^2 \\
+ v_x &= \sqrt{\frac{2 eU_B}{m}}
+\end{align*}
+Nachdem es mit der Geschwindigkeit $v_x$ die Elektronenkanone verlassen hat, gelangt es in den Ablenkkondensator. Hat der Kondensator eine Länge $l$, so verbringen die Elektronen $t=l/v_x$ im Kondensator. In dieser Zeit beschleunigen sie sich mit, mit dem Grundgesetz der Mechanik, $F= m \cdot a$
+\begin{align*}
+ F_{el} &= m \cdot a \\ 
+ e \cdot \frac{U_A}{d} &= m \cdot a \\ 
+ a &= \frac{e \cdot U_A}{m \cdot d} 
+\end{align*}
+Die bewegte Höhe, $y$, ist eine zurückgelegte Strecke $s$, mit der Beschleunigung $a$. Aus $\displaystyle {s(t) = \int v(t)}$ folgt ${s = \dfrac{1}{2}at^2}$, also ist
+\begin{align*} 
+ y &= \frac{1}{2} \cdot \frac{e \cdot U_A}{m \cdot d} \cdot a \cdot \frac{l^2}{v^2} \\
+\intertext{Mit dem bekannten $v^2$ folgt dann vereinfacht} 
+ y &= \frac{U_A}{4 \cdot U_B \cdot d} \cdot l^2
+\end{align*}
+Dieses $y$ ist somit die Höhe, bei welcher die Elektronen aus dem Ablenkkondensator austreten. Im weiteren Bewegungsverlauf behalten die Elektronen $v_x$ und $v_y = a(t)$.
+ 
+ 
+\end{document}
