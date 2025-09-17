@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Selbstinduktion}
+\rhead{September 2025}
+\begin{document} 
+ 
+\newcommand{\derive}[2]{\frac{\mathrm{d}#1}{\mathrm{d}#2}} 
+ 
+\section{Selbstinduktion} 
+Wird einer geladenen Spule der Strom abgestellt, so nimmt das Magnetfeld um die Spule, welches zuerst durch den Stromfluss der Spule entsanden ist, ab. Weil nun das Magnetfeld um einen Leiter sich verändert, wird in diesem Leiter eine Spannung \hyperref[Induktion]{induziert}. Weil die Spannung im Leiter von dem Magnetfeld kam, welches letztendlich von der Spule selbst kam, wird diese Art der Induktion auch die \emph{Selbstinduktion} genannt.
+ 
+Gemäß dem Lenzschen Gesetz wirkt diese dabei entgegen seiner Ursache, heißt, weil die Ursache ist, dass der Stromfluss verringert wurde, sorgt die Selbstinduktion dafür, dass der Stromfluss in diesselbe Richtung kurzzeitig wieder erhöht wird.
+ 
+Wird die Selbstinduktion Quantitativ betrachtet, so folgt aus den bereits bekannten Definitionen und dem Fakt, dass $A$ konstant ist, offensichtlich
+\[
+ U_{ind} = -N \cdot A \cdot \derive{B}{t}
+\] 
+Mit $B = \mu_0 \cdot \mu_r \cdot \dfrac{N \cdot I}{l}$ und einer Umformung gilt dann
+\[
+ U_{ind} = -\mu_0 \cdot \mu_r \cdot \frac{N^2}{l} \cdot A \cdot \derive{I}{t} 
+\]
+ 
+Dies wird so Umformuliert, dass die Selbstinduktion von der Induktivität $L$ der Spule abhängig ist. Die Induktivität basiert auf der Permeabilität und den geometrischen Eigenschaften der Spule. So gilt
+\[
+ U_{ind} = -L \cdot \derive{I}{t}
+ \qquad \text{mit} \qquad
+ L = \mu_0 \cdot \mu_r \cdot \frac{N^2}{l} \cdot A  
+\]
+ 
+\subsection{Energiespeicher}
+Solange der Leiter stromdurchflossen ist und somit ein Magnetfeld anliegt, besitzt diese potenzielle Energie, welche durch die Selbstinduktion, sobald der Strom abgestellt wird, in Induktionsspannung umgewandelt wird. Diese liegt bei
+\[
+ E_{mag} = \frac{1}{2} L \cdot I^2 
+\]
+Dies kann als Analogie zu \hyperref[Kondensator]{Kondensatoren} gesehen werden, wessen $E_{el} = \dfrac{1}{2} C \cdot U^2$ 
+\end{document}
