@@ -10,7 +10,7 @@
 \section{Mechanische Schwingungen}
 Eine Schwingung ist eine zeitlich periodische Änderung einer physikalischen Größe, welche nach einer einmaligen Auslenkung aus der Ruhelage anfängt, verursacht durch rücktreibende Kräfte.
  
-Schwingungen werden durch ihre \emph{Periodendauer} $T$, ihre \emph{Frequenz} $f$ in $\text{Hz}$ mit $f=\dfrac{1}{T}$ und ihre \emph{Amplitude} $y_{max}$ beschrieben. Die zurzeitige Auslenkung, $y(t)$, wird die \emph{Elongation} genannt.
+Schwingungen werden durch ihre \emph{Periodendauer} $T$, ihre \emph{Frequenz} $f$ in $\text{Hz}$ mit $f=1/T$ ihre \emph{Winkelgeschwindigkeit} $\omega$ und ihre \emph{Amplitude} $y_{max}$ beschrieben. Die zurzeitige Auslenkung, $y(t)$, wird die \emph{Elongation} genannt.
 \begin{center}
  \begin{tikzpicture}     
   \draw[thick, domain=0:10, samples=100] 
@@ -39,7 +39,7 @@ Eine Schwingung ist eine \emph{harmonische Schwingung}, wenn sie
  \item durch eine Sinusfunktion beschrieben werden kann
  \item auf eine gleichförmige Kreisbewegung zurückgeführt werden kann
  \item eine zeitlich konstante Schwingungsdauer hat 
- \item auf einer rücktreibenden Kraft, welche zur Elongation proportional ist, basiert 
+ \item auf einer rücktreibenden Kraft, welche zur Elongation proportional ist, basiert. Es gilt $F_{r\ddot{u}ck} = -k \cdot y(t)$, das \emph{lineare Kraftgesetz}
 \end{enumerate} 
 Diese vier Bedingungen sind eigentlich equivalent zueinander, wenn eine erfüllt ist, dann sind alle erfüllt.
  
@@ -50,4 +50,6 @@ Die generelle Schwingungsgleichung $y(t)$ ist, in RAD
 \]
 Diese Formel kann so begründet werden, dass nach einer ganzen Periode, also wenn $t=T$, $y(T)=0$ sein sollte, wobei bei einer Sinusfunktion $\sin{(k \cdot 2\pi)} = 0$ für ein ganzzahliges $k$ ist. Somit muss innerhalb des Sinus mit $2\pi / T$ multipliziert werden, damit $2\pi \cdot t/T$ bei $t=T$ zu $2\pi$, der Periodenlänge einer Sinusfunktion in RAD, wegfällt. \newline
 Der Vorfaktor $y_{max}$ wird genutzt, damit der Wertebereich einer normalen Sinusfunktion von $[-1; 1]$ zu dem gewollten $[-y_{max}; y_{max}]$ multipliziert wird. 
+ 
+Die Winkelgeschwindigkeit $\omega$ ist der zurückgelegte Winkel, geteilt durch die dafür gebrauchte Zeit. Für eine ganze Periode gilt also $\omega = 2\pi /T$
 \end{document}
