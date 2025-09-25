@@ -1,0 +1,24 @@
+\documentclass{article}
+\usepackage{hyperref}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Der Michelson Interferometer}
+\rhead{September}
+\begin{document}
+\section{Der Michelson Interferometer} 
+Ein \emph{Michelson Interferometer} kann genutzt werden, um die Wellenlänge von Licht zu bestimmen.
+ 
+\subsection{Idee} 
+Es sollen zwei Lichtstrahlen gemessen und \hyperref[Interferenz]{interferiert} werden, wobei der Gangunterschied dieser Veränderbar sein soll. Aus der veränderung des Gangunterschiedes kann Wellenlänge bestimmt werden.
+ 
+\subsection{Aufbau} 
+Es wird eine Lichtquelle aufgestellt, welche auf einen halbdurchlässigen Spiegel, welcher in einem $45^\circ$ Winkel zur Quelle steht, zeigt. Trifft das Licht nun auf den halbdurchlässigen Spiegel wird, wie der Name sagt, die hälfte durchgelassen. Die andere hälfte wird reflektiert. An den beiden Positionen, zu welchen das Licht hinreflektiert wird, stehen jeweils ein normaler Spiegel. Diese Spiegel reflektieren jeweils das Licht zurück. Treffen die zurückreflektierten Strahlen erneut auf den mittigen halbdurchlässigen Spiegel, so geht jeweils ein irrelevanter Teil zurück zur Lichtquelle und einer wird zu einem Sensor reflektiert.
+ 
+Kommen nun die insgesamt zwei Lichtstrahlen, jeweils einen pro Spiegel, am Sensor an, so interferieren sie. Der Gangunterschied hängt dabei natürlich davon ab, eine wie lange Strecke diese jeweils zurückgelegt hatten, welches jeweils von der veränderbaren Distanz zu den Spiegeln abhängt. % TODO tikz
+ 
+\subsection{Quantitativ} 
+Wird einer der beiden Spiegel um eine Distanz $d$ verschoben, so, weil das Licht diese Distanz zwei mal durchquert; einmal beim Hin- und einmal beim Rückweg, verändert sich der Gangunterschied um $\Delta s = 2d$.
+ 
+Um die Wellenlänge zu berechnen muss der Spiegel um eine Distanz $d$ so weit verschoben werden, dass das gemessene Licht von einer maximal konstruktiven Infererenz zu einer maximal destruktiven Interferenz (oder andersherum, natürlich) wird. Wird sich die Interferenz anhand von zwei Sinuswellen vorgestellt, wird offensichtlich, dass so eine Verschiebung eine Verschiebung ein ehemaliger Berg zu einem Tal wird, es also um $\lambda / 2$ verschoben wurde. Somit ist hier dann $\lambda = 2 \Delta s = 4d$.  
+\end{document}
