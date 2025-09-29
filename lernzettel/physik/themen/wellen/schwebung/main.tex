@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{csquotes}
+\usepackage{tikz}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Schwebung}
+\rhead{September 2025}
+\begin{document}
+\section{Schwebung}
+\begin{minipage}{\dimexpr\linewidth-6.5cm} 
+Sind zwei Wellen gegeben, der Frequenzen $f_1$ und $f_2$ mit ${f_1 \ne f_2}$, so kommt es durch die Interferenz dazu, dass sich eine Welle einer neuen Frequenz bildet.
+ 
+Diese neue Frequenz kann auf zwei Art und Weisen bestimmt werden: einerseits die Einhüllungsfrequenz $f_R$, bei welcher sich die Frequenz der \textquote{Hülle} angesehen wird, und andererseits die Schwebungsfrequenz \par \vspace{2pt}
+ 
+\end{minipage}
+\hfill 
+\begin{minipage}{5.5cm}
+ \center
+ \begin{tikzpicture}
+  \draw[red, domain=0:4, samples=250] plot (\x,{0.25*sin(25*\x r)}) node[above right] {$f_1=25$};
+  \draw[blue, domain=0:4, samples=250] plot (\x,{0.25*sin(30*\x r)}) node[below right] {$f_2=30$};
+ 
+  \draw[green!50!black, domain=0:4, samples=250] plot (\x,{(0.25*sin(25*\x r-2)+0.25*sin(30*\x r-2))-1}); 
+  \draw[black, domain=0:4, samples=50] plot (\x,{(0.5*cos(2.5*\x r-2))-1}) node[right] {$f_S=2.5$};
+  \draw[black!50, domain=0:4, samples=50] plot (\x,{(0.25*cos(5*\x r-2))-0.75}) node[below right] {$f_R=5$}; 
+ \end{tikzpicture} 
+\end{minipage}
+ 
+\noindent $f_S$, welche die Frequenz von der Amplitude beschreibt, wie Häufig die Welle zwischen einem \textquote{Berg} und \textquote{Knoten} wechselt. 
+ 
+Dabei gilt
+\[
+ f_R = \vert f_1 - f_2 \vert
+ \quad \text{und} \quad
+ f_S = \frac{f_1 - f_2}{2} 
+\] 
+\end{document}
