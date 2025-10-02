@@ -1,4 +1,6 @@
 \documentclass{article}
+\usepackage{amsmath}
+\usepackage{hyperref}
 \usepackage{tikz}
 \usepackage[a4paper]{geometry}
 \usepackage{fancyhdr}
@@ -42,6 +44,18 @@ Um einen jeden Magneten existiert ein Magnetfeld, dargestellt durch geschlossene
 \end{minipage}
  
 \subsection{Der Ørsted Versuch}
-Beim \emph{Ørsted}, auch \emph{Oersted}, Versuch wird eine Kompassnadel auf einem geraden Leiter platziert, welches so ausgerichtet ist, dass die Kompassnadel zu diesem Parallel ist. Wird bei diesem Leiter nun Spannung angelegt, so kann beobachtet werden, dass die Kompassnadel sich dreht, weil ein Magnetfeld anliegt. Je größer dabei die Stromstärke ist, desto weiter dreht sich die Kompassnadel. 
+Beim \emph{Ørsted}, auch \emph{Oersted}, Versuch wird eine Kompassnadel auf einem geraden Leiter platziert, welches so ausgerichtet ist, dass die Kompassnadel zu diesem Parallel ist. Wird bei diesem Leiter nun Spannung angelegt, so kann beobachtet werden, dass die Kompassnadel sich dreht, weil ein Magnetfeld anliegt. Je größer dabei die Stromstärke ist, desto weiter dreht sich die Kompassnadel.
  
+\subsection{Parallele Leiter}
+Sind zwei stromdurchflossene Leiter parallel zueinander, haben beide ein Magnetfeld, wie oben abgebildet. Wird sich die obige Abbildung zwei mal nebeneinander vorgestellt, als Darstellung von zwei stromdurchflossenen Leitern, dessen Strom in die gleiche Richtung fließt, so fällt auf, dass sich die magnetischen Feldlinien beider Leiter in der Mitte treffen. Dabei zeigen sie aber in entgegengesetzte Richtung. Entgegengesetzte Feldlinien, werden sich zwei Dauermagneten vorgestellt, symbolisieren, dass sich die Magneten anziehen. Aus gleicher Logik folgt, dass wenn der Strom der beiden Leiter in eine sich entgegengesetzte Richtung fließt, diese sich somit abstoßen.
+ 
+Quantitativ gilt
+\begin{align*}
+ &\hyperref[Magnetische Flussdichten]{
+  F_1 = B_2 \cdot I_1 \cdot l
+  \qquad \text{und} \qquad
+  B_2 = \mu_0 \cdot \frac{I_2}{2 \pi d}
+ } \\
+ &\implies F = \mu_0 \cdot \frac{I_1 \cdot I_2}{2 \pi d} \cdot l
+\end{align*}  
 \end{document}
