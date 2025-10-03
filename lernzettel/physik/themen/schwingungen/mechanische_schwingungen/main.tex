@@ -46,10 +46,11 @@ Diese vier Bedingungen sind eigentlich equivalent zueinander, wenn eine erfüllt
 \subsection{Quantitativ}
 Die generelle Schwingungsgleichung $y(t)$ ist, in RAD
 \[
- y(t) = y_{max} \cdot \sin{\left(\frac{2\pi}{T} \cdot t\right)}
+ y(t) = y_{max} \cdot \sin{(\omega \cdot t)} 
+ \quad \text{mit} \quad
+ \omega = \frac{2\pi}{T} 
 \]
-Diese Formel kann so begründet werden, dass nach einer ganzen Periode, also wenn $t=T$, $y(T)=0$ sein sollte, wobei bei einer Sinusfunktion $\sin{(k \cdot 2\pi)} = 0$ für ein ganzzahliges $k$ ist. Somit muss innerhalb des Sinus mit $2\pi / T$ multipliziert werden, damit $2\pi \cdot t/T$ bei $t=T$ zu $2\pi$, der Periodenlänge einer Sinusfunktion in RAD, wegfällt. \newline
-Der Vorfaktor $y_{max}$ wird genutzt, damit der Wertebereich einer normalen Sinusfunktion von $[-1; 1]$ zu dem gewollten $[-y_{max}; y_{max}]$ multipliziert wird. 
+Diese Formel kann so begründet werden, dass eine Schwingung auf eine gleichförmige Kreisbewegung zurückgeführt werden und durch eine Sinusfunktion beschrieben werden kann. Diese soll aber als Maxima und Minima die Amplitude haben, nicht $1$ und $-1$, wie eine normale Sinusfunktion. Deshalb wird mir $y_{max}$ multipliziert. Der Winkel zum Zeitpunkt $t$ ist offensichtlich die vergangene Zeit $t$ mit dem pro Zeiteinheit zurückgelegtem Winkel $\omega$ multipliziert.
  
-Die Winkelgeschwindigkeit $\omega$ ist der zurückgelegte Winkel, geteilt durch die dafür gebrauchte Zeit. Für eine ganze Periode gilt also $\omega = 2\pi /T$
+Wird sich die Schwingung als Kreisbewegung vorgestellt, ist in RAD eine Periode immer $2\pi$, welche in der Schwingungsdauer $T$ zurückgelegt wird. Offenslichtlich folgt daraus $\omega = \dfrac{2\pi}{T}$ 
 \end{document}
