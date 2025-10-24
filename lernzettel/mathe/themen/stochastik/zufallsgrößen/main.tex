@@ -3,7 +3,7 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \lhead{Zufallsgrößen}
-\rhead{August 2025}
+\rhead{August - Oktober 2025}
 \begin{document}
 \section{Zufallsgrößen} 
 Eine \emph{Zufallsgröße} $X$ ist eine Zuordnung, welche jedem Ergebnis eines zufälligen Ereignisses ein zugehöriges $x$ zuordnet, so dass die Ereignisse sozusagen durchnummeriert werden. Die dazugehörige \emph{Wahrscheinlichkeitsverteilung}, $P(X=x)$, ordnet nun jedem $x$ eine Wahrscheinlichkeit zu. \newline
@@ -22,10 +22,43 @@ Eine \emph{Standardabweichung} $\sigma$ beschreibt die Streuung der Wahrscheinli
 \[
  \sigma = \sqrt{\sum_{i=1}^n (x_i - \mu)^2 \cdot P(X=x_i)}
 \]
-Später kann die Intervallwahrscheinlichkeit der Standardabweichung als kumulative Wahrscheinlichkeit berechnet werden
-\[
- P(\mu-\lfloor\sigma\rfloor < X <\mu+\lfloor\sigma\rfloor) 
+Neben der Standardabweichung gibt es noch die Varianz $V$, mit
+\[ 
+ V = \sigma^2 
 \]
-Damit das Intervall tatsächlich im Intervall bleibt, wird das Sigma vorher abgerundet. 
  
+\subsection{Wahrscheinlichkeitsintervalle} 
+\begin{minipage}{\dimexpr\linewidth-6cm}
+Später kann berechnet werden, wie Wahrscheinlich es ist, dass das ein Messergebniss in einem bestimmten Radius um $\mu$ liegt. Dieser Radius wird als ein vielfaches von $\sigma$ angegeben.
+\[
+ P(\mu-\sigma \cdot k \le X \le \mu+\sigma \cdot k) 
+\]
+Bei diskreten Verteilungen, wie der Binomialverteilung, muss das $\sigma \cdot k$ abgerundet werden, weil die Intervallenden von disrekten Verteilungen ganze Zahlen sein müssen. 
+\end{minipage}
+\hfill 
+\begin{minipage}{6cm}
+\begin{center}
+\begin{tabular}{ |c|c| }
+\hline
+ $\mathbf{k}$ & \textbf{Wahrscheinlichkeit} \\
+\hline
+ 1 & 0.68 \\
+\hline
+ 1.64 & 0.9 \\
+\hline
+ 1.96 & 0.95 \\
+\hline
+ 2 & 0.955 \\
+\hline
+ 2.58 & 0.99 \\
+\hline
+ 3 & 0.997 \\
+\hline
+\end{tabular}
+\end{center}
+\end{minipage} 
+ 
+\vspace*{0.3em} 
+\noindent Hier gilt die $\sigma$-Regel: die Wahrscheinlichkeit, dass das Ergebnis in diesem Intervall liegt hängt von dem gegebenen $k$ ab. Bei Normalverteilten Verteilungen gilt ungefähr
+Ist ein Messergebniss außerhalb des $95\%$ Intervalls, ist es \emph{signifikant}. Außerhalb des $99\%$ Intervalls ist es \emph{hochsignifikant}.
 \end{document}
