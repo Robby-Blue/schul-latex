@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Prognosen}
+\rhead{Oktober 2025}
+\begin{document}
+ 
+\section{Prognosen} 
+\begin{minipage}{\dimexpr\linewidth-6cm}
+Wurde ein $\mu$ und ein $\sigma$ gefunden, so können Prognosen darüber aufgestellt werden, wie wahrscheinlich es ist, dass eine Stichprobe in einem bestimmten Prognoseintervall, in einem bestimmten Radius um $\mu$, liegt. Dieser Radius wird als ein vielfaches von $\sigma$ angegeben.
+\[
+ P(\mu-\sigma \cdot k \le X \le \mu+\sigma \cdot k) 
+\]
+Bei diskreten Verteilungen, wie der Binomialverteilung, muss das $\sigma \cdot k$ abgerundet werden, weil die Intervallenden von disrekten Verteilungen ganze Zahlen sein müssen. 
+\end{minipage}
+\hfill 
+\begin{minipage}{6cm}
+\begin{center}
+\begin{tabular}{ |c|c| }
+\hline
+ $\mathbf{k}$ & \textbf{Wahrscheinlichkeit} \\
+\hline
+ 1 & 0.68 \\
+\hline
+ 1.64 & 0.9 \\
+\hline
+ 1.96 & 0.95 \\
+\hline
+ 2 & 0.955 \\
+\hline
+ 2.58 & 0.99 \\
+\hline
+ 3 & 0.997 \\
+\hline
+\end{tabular}
+\end{center}
+\end{minipage} 
+ 
+\vspace*{0.3em} 
+\noindent Hier gilt die $\sigma$-Regel: die Wahrscheinlichkeit, dass das Ergebnis in diesem Intervall liegt hängt von dem gegebenen $k$ ab. Bei Normalverteilten Verteilungen gelt ungefähr die Werte der obigen Tabelle, falls $\sigma > 3$.
+ 
+\subsection{Verträglichkeit} 
+Eine Stichprobe ist mit einem $p$ Verträglich, wenn die Stichprobe dann im $95\%$-Prognoseintervall liegt. Liegt sie außerhalb von diesem, liegt eine \emph{signifikante} Abweichunge vor. Liegt eine Stichprobe sogar außerhalb des $99\%$-Intervalls, ist diese eine \emph{hochsignifikante} Abweichung.
+ 
+\end{document}
