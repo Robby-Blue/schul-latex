@@ -1,0 +1,21 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Konfidenzintervalle}
+\rhead{Oktober 2025}
+\begin{document}
+\section{Konfidenzintervalle}
+Ist das $p$ eines Gesamten nicht bekannt, so kann mit der relativen Häufigkeit $h$ einer Stichprobe ein \emph{Konfidenzintervall} aufgestellt werden, in welches mit einer Wahrscheinlichkeit von $95\%$ (oder einem anderen \emph{Sicherheitsfaktor}) das $p$ des Gesamten einhält.
+ 
+\subsection{Algebraisch}
+Wird ein \hyperref[Prognosen]{$95\%$-Prognoseintervall} aufgestellt und durch $n$ geteilt, folgt 
+\[
+ h = p \pm 1,96 \sqrt{\frac{p \cdot (1-p)}{n}}
+\]
+Das $h$ folgt aus $\dfrac{k}{n}$, beschreibt also die relative Häufigkeit. Aus einer Stichprobe kann nun ein $h$ gefunden werden, welches in der obigen Gleichung nach $p$ aufgelöst werden kann, welche als Grenzen des Intervalls dienen.
+ 
+Zu einer Wahrscheinlichkeit von $95\%$ kann nun gesagt werden, dass dieses Intervall das echte $p$ beinhaltet.
+\end{document}
