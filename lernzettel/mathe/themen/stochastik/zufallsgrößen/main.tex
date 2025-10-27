@@ -1,4 +1,6 @@
 \documentclass{article}
+\usepackage{hyperref}
+\usepackage{amssymb}
 \usepackage[a4paper]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -10,20 +12,21 @@ Eine \emph{Zufallsgröße} $X$ ist eine Zuordnung, welche jedem Ergebnis eines z
 Eine Zufallsgröße als Balkendiagramm aufgezeichnet, mit $x_e$ auf der x-Achse und $P(X=x_e)$ auf der y-Achse, ist ein \emph{Histogramm}.
 % TODO: table für Zufallsgrößen und tikz mit Histogramm
  
-\subsection{Erwartungswert}
-Der \emph{Erwartungswert} einer Zufallsgröße, $E(X)$ oder $\mu$, ist das durchschnittliche Erwartete ergebnis. Um diesen zu berechnet werden alle möglichen Ergebnisse gewichtet ($x \cdot P(X=x)$) zusammen addiert. Es gilt also
-\[
- \mu = E(X) = \sum_{i=1}^n x_i \cdot P(X=x_i) 
-\]  
-Ein Spiel ist fair, wenn niemand langzeitig Profitiert, wenn $\mu$ genau so groß ist wie der benötigt Einsatz, wie der Preis, des Spiels.
+\subsection{Diskret und Stetig} 
+Zufallsgrößen können entweder \emph{diskret} oder \emph{stetig} sein.
  
-\subsection{Standardabweichung}
-Eine \emph{Standardabweichung} $\sigma$ beschreibt die Streuung der Wahrscheinlichkeitsverteilung einer Zufallsgröße $X$ im vergleich zu $\mu$. Es gilt
-\[
- \sigma = \sqrt{\sum_{i=1}^n (x_i - \mu)^2 \cdot P(X=x_i)}
-\]
+Eine \hyperref[Diskrete Zufallsgröße]{diskrete Zufallsgröße} wird dadurch definiert, dass sie nur für $x \in \mathbb{N}$ gilt, also nur für ganze Zahlen. Sie kann durch eine \hyperref[Binomialverteilungen]{Binomialverteilung} beschrieben. 
+ 
+Eine \hyperref[Stetige Zufallsgröße]{stetige Zufallsgröße} wird dadurch definiert, dass sie für $x \in \mathbb{R}$ gilt, also für alle reelen Zahlen. Sie kann durch eine \hyperref[Normalverteilungen]{Normalverteilung} beschrieben werden.
+ 
+\subsection{Kenngrößen}
+Der \emph{Erwartungswert} einer Zufallsgröße, $E(X)$ oder $\mu$, ist das durchschnittliche erwartete Ergebnis. Ein Spiel ist fair, wenn niemand langzeitig Profitiert, wenn $\mu$ genau so groß ist wie der benötigt Einsatz, wie der Preis, des Spiels.
+ 
+Eine \emph{Standardabweichung} $\sigma$ beschreibt die Streuung der Wahrscheinlichkeitsverteilung einer Zufallsgröße $X$ im vergleich zu $\mu$.
 Neben der Standardabweichung gibt es noch die Varianz $V$, mit
 \[ 
  V = \sigma^2 
-\] 
+\]
+ 
+Wie diese beiden Kenngrößen berechnet werden, hängt davon ab, ob die vorliegende Zufallsgröße disrekt oder stetig ist. 
 \end{document}

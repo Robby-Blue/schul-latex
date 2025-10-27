@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Diskrete Zufallsgröße}
+\rhead{Oktober 2025}
+\begin{document}
+ 
+\section{Diskrete Zufallsgröße}
+\subsection{Erwartungswert}
+Um den Erwartungswert einer diskreten Zufallsgröße zu berechnen werden alle möglichen Ergebnisse gewichtet ($x \cdot P(X=x)$) zusammen addiert. Es gilt also
+\[
+ \mu = E(X) = \sum_{i=1}^n x_i \cdot P(X=x_i) 
+\]
+ 
+\subsection{Standardabweichung}
+Für die Standardabweichung einer diskreten Zufallsgröße gilt immer
+\[
+ \sigma = \sqrt{\sum_{i=1}^n (x_i - \mu)^2 \cdot P(X=x_i)}
+\]
+Also folgt die Varianz
+\[ 
+ V = \sigma^2 = \sum_{i=1}^n (x_i - \mu)^2 \cdot P(X=x_i)
+\]  
+ 
+\end{document}
