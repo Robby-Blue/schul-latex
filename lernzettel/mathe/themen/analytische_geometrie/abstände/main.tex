@@ -92,7 +92,7 @@ genutzt werden. Dies folgt aus
  
 \allowdisplaybreaks 
 \begin{align*} 
- cos(\alpha) &= \frac{d(\mathrm{A}, \mathrm{E})}{\norm{\vectp{PA}}}
+ \cos(\alpha) &= \frac{d(\mathrm{A}, \mathrm{E})}{\norm{\vectp{PA}}}
  && \vert\, \text{Nach Distanz Umformen} \\
  d(\mathrm{A}, \mathrm{E}) &= \cos(\alpha) \cdot \norm{\vectp{PA}} 
  && \vert\, \text{\hyperref[Winkel]{$\cos(\alpha)$ durch das Skalarprodukt ausdrücken}} \\
@@ -109,4 +109,48 @@ Offensichtlich ist ein jeder Punkt $\vect{x}$, welcher keinen Abstand zur Ebene 
 \[
  \frac{1}{|\vect{n}|} (\vect{n} \cdot \vect{x} - \vect{n} \cdot \vectp{OP}) = 0 
 \] 
+ 
+\subsection{Abstände zwischen Punkten und Geraden}
+\begin{minipage}[t]{\dimexpr\textwidth-5cm}  
+Der Abstand zwischen einem Punkt P und einer Gerade $g$, $d(\text{P}, g)$, kann berechnet werden, indem der Punkt F der Gerade gefunden wird, welcher den geringsten Abstand zu P hat und der Abstand zwischen den Punkten P und F berechnet wird.
+Dabei ist Auffällig, dass zwischen dem Verbindungsvektor $\vectp{PF}$ und der Gerade $g$ (beziehungsweise dessen Richtungsvektor $\vect{u}$) ein rechter Winkel liegt, heißt, sie sind kollinear. Es gilt
+\[
+ d(\text{P}, g) = \norm{\vectp{PF}} \quad \text{mit} \quad \vectp{PF} \cdot \vect{v} = 0
+\]
+Dabei ist der Punkt F natürlich ein Punkt der Gerade $g$, liegt also in der generellen Geradengleichung, ist also einer der Punkte $\vectp{OX}_r$ mit
+\end{minipage}
+\hfill
+\begin{minipage}[t]{5cm}
+ \centering 
+ \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \coordinate (start) at (0.5,1.75);
+  
+  \draw (0.5, 3) -- (3.5, 3) node[pos=0.75, above]{$g$};  
+  \draw[blue] (1.5, 0.75) -- (0.75, 3) node{$\times$};
+  \draw[blue] (1.5, 0.75) -- (2.5, 3) node{$\times$};
+  \draw[blue] (1.5, 0.75) -- (3.25, 3) node{$\times$}; 
+  \draw[red] (1.5, 0.75) -- (1.5, 3) node[pos=0]{$\times$} node[pos=0, below]{P} node[pos=1]{$\times$} node[pos=1, above]{F};
+  \draw[red] (1.25, 3) -- (1.25, 2.75);
+  \draw[red] (1.25, 2.75) -- (1.5, 2.75);
+  \draw[red] (1.5 - 0.125, 3 - 0.125) node{$\cdot $};  
+ 
+  \draw[->] (0, 0) -- (4, 0); 
+  \draw[->] (0, 0) -- (0, 4);
+ \end{tikzpicture}    
+\end{minipage} 
+\[
+ \vectp{OX}_r = \vectp{OA} + r \cdot \vect{u} 
+\]
+Wird hier $\vectp{OP}$ abgezogen gilt nach $\vectp{AX}_r = \vectp{OX} - \vectp{OP}$ für ein jedes $r$ der Verbindungsvektor zum Punkt P
+\[
+ \vectp{PX}_r = \vectp{OA} + r \cdot \vect{u} - \vectp{OP}
+\]
+Nun muss nach dem $r$ aufgeläst werden, für welches die obige Kollinearität gegeben ist, weil dieses $r$ auch dasselbe $r$ des Punktes F ist. 
+\[
+ (\vectp{OA} + r \cdot \vect{u} - \vectp{OP}) \cdot \vect{v} = 0
+\]
+Das gefundene $r$ kann in die obigen Formeln eingesetzt werden um den Punkt F und die Distanz $\norm{\vectp{PF}}$ zu finden.
+ 
+\subsection{Abstände zwischen zwei Geraden}
+ 
 \end{document}
