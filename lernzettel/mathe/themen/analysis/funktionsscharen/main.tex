@@ -15,10 +15,11 @@
  \[
   f_a(x) = \textellipsis
  \]
- Im Taschenrechner wird eine Funktionsschar als 
+ Im Taschenrechner kann dies als 
  \[
-  \texttt{f(x,a) = \textellipsis} 
+  \texttt{f(x,a) := \textellipsis} 
  \] 
+ aufgeschrieben werden. 
  
 \subsection{Berechnen}
  Funktionsscharen können, genau so wie normale Funktionen auch, mit anderen Werten gleichgesetzt werden um den Wert bestimmter Variablen oder Parameter zu bestimmen.
@@ -51,7 +52,7 @@ Die Kurve, welche durch alle besondere Punkte, wie z.B. alle Nullstellen, Extrem
 \begin{minipage}[t]{\dimexpr\textwidth-5cm}
  \begin{enumerate} 
  \item[2.] Bestimmen der dazugehörigen $y$-Koordinate. Dafür muss der $y$-Wert der Funktionsschar bei der besonderen Stelle gefunden werden, heißt dass das bestimmte $p_x$ als $x$ in die Funktionsschar einsetzen werden muss. Somit ist jeder Punkt von $(p_x \,|\, f_a(p_x))$ auf der Ortskurve. Weil das $x$ durch das $p_x$ ersetzt wurde, welches in Abhängigkeit von $a$ steht, ist $f_a(p_x)$ nun ausschließlich von $a$ abhängig.
- \item[3.] Finden der Ortskurvenfunktion $t(x)$. Es gilt bereits $t(p_x) = f_a(p_x)$ mit $p_x \sim a$, die Ortskurvenfunktion $t(x)$ soll aber nur von $x$ abhängen. Dies kann erreicht werden,
+ \item[3.] Finden der Ortskurvenfunktion $t(x)$. Es gilt bereits $t(p_x) = f_a(p_x)$ mit $p_x$ in Abhängigkeit von $a$, die Ortskurvenfunktion $t(x)$ soll aber nur von $x$ abhängen. Dies kann erreicht werden, indem ein $a$ in Abhängigkeit von $x$
  \end{enumerate}
  \end{minipage}
 \hfill
@@ -79,7 +80,7 @@ Die Kurve, welche durch alle besondere Punkte, wie z.B. alle Nullstellen, Extrem
 \end{minipage}
 \begin{enumerate}
  \vspace{-0.7em} 
- \item[] indem ein $a \sim x$ gefunden und eingesetzt wird. Gefunden werden kann dieses, indem $x = p_x$ nach $a$ aufgelöst wird. Dieses $a$ kann in das bereits bestimmte $t(p_x) = f_a(p_x)$ eingesetzt werden, sodass eine von $x$ abhängige Funktion, welche die Ortskurve beschreibt rauskommt. Diese kann als $t(x)$ genutzt werden.
+ \item[] gefunden und eingesetzt wird. Gefunden werden kann dieses, indem $x = p_x$ nach $a$ aufgelöst wird. Dieses $a$ kann in das bereits bestimmte $t(p_x) = f_a(p_x)$ eingesetzt werden, sodass eine von $x$ abhängige Funktion, welche die Ortskurve beschreibt rauskommt. Diese kann als $t(x)$ genutzt werden.
 \end{enumerate}
  
 \subsection{Beispiel}
@@ -94,7 +95,7 @@ Gegeben ist die Funktionsschar $f(x)=x^2+a \cdot x$, zu welcher es gilt die Orts
  \item[3.] $x = -0.5a \implies a = -2x$, welches in den Punkt eingesetzt $\left(x \,\middle|\, x^2+x \cdot \left(-2x\right)\right)$. Dies kann als Funktion $t(x)=x^2+x \cdot (-2x)$ oder vereinfacht $t(x)=-x^2$ angesehen werden, welche die Ortskurve korrekt beschreibt.
  \end{enumerate}
  Somit verbindet nun $t(x)$ alle Minima der gegebenen Funktion $f(x)$. \newline
- Das auflösen von $p_x \sim a$ gefolgt von $a \sim x$ mag wie ein unnötiger Schritt, welcher übersprungen werden kann, scheinen, ist dies aber nicht. Bei komplexeren Funktionen sind oftmals nach naivem auflösen die $x$-Werte beide Funktionen und des Punktes auf unterschiedlichen skalen.
+ Das auflösen von $p_x$ in Abhängigkeit von  $a$ gefolgt von $a$ in Abhängigkeit von $x$ mag wie ein unnötiger Schritt, welcher übersprungen werden kann, scheinen, ist dies aber nicht. Bei komplexeren Funktionen sind oftmals nach naivem auflösen die $x$-Werte beide Funktionen und des Punktes auf unterschiedlichen skalen.
 \end{minipage} 
 \hfill 
 \begin{minipage}[t]{5cm} 
