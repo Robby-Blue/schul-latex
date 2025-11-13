@@ -152,5 +152,19 @@ Nun muss nach dem $r$ aufgeläst werden, für welches die obige Kollinearität g
 Das gefundene $r$ kann in die obigen Formeln eingesetzt werden um den Punkt F und die Distanz $\norm{\vectp{PF}}$ zu finden.
  
 \subsection{Abstände zwischen zwei Geraden}
+Sind zwei Geraden identisch, schneiden sich oder sich echt parallel, ist der Abstand $d(g_1, g_2)$ trivial. 
+ 
+Der Abstand von zwei windschiefen Geraden ist die Länge des kürzesten Verbindungsvektors von zwei Punkten der Geraden. Es ist verständlich, dass der Verbindungsvektor, wie auch oben, zu beiden Geraden orthogonal sein muss.
+\[
+ \vect{c} = \vectp{X}_s - \vectp{X}_r 
+\]  
+Es wird der Verbindungsvektor gebildet, indem die Punkte der Geraden in Abhängigkeit von dem jeweiligen Parameter gefunden und subtrahiert wird. Es folgt eine Formel für den Verbindungsvektor, welche von zwei Parametern abhängig ist. Es wird jeweils das Skalarprodukt von diesem Verbindungsvektor und den Richtungsvektoren gleich null gesetzt.
+\[
+ \vect{c} \cdot \vect{v} = 0
+ \quad \text{und} \quad
+ \vect{c} \cdot \vect{u} = 0
+\] 
+Diese beiden Gleichungen können nach den Parametern der Geraden, welche die beiden nähesten Punkte angeben, aufgelöst werden. Anhand der gefundenen Parameter können diese Punkte (wenn nötig) berechnet werden, der Verbindungsvektor kann gefunden werden, die Länge des Verbindungsvektors, welche auch die zu findene Distanz ist, kann bestimmt werden.
+ 
  
 \end{document}
