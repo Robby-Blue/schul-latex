@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Nullstellen von Quadratische Gleichung finden}
+\rhead{November 2025}
+\begin{document}
+\section{Nullstellen von Quadratische Gleichung finden}
+Die Nullstellen von einer quadratischen Gleichung (eine Gleichung der Form ${ax^2 + bx + c = 0}$ oder $x^2 + px + q = 0$) zu finden ist ohne einem Taschenrechner oftmals nicht einfach möglich. Folgend sind eine Vielzahl an Algorithmen und Formeln um diese zu bestimmen.
+ 
+\subsection{Quadratische Ergänzung}
+Die Gleichung wird umgeformt, in die Form
+\[
+ x^2 + px = -q 
+\]
+Auf beiden Seiten wird $(p \cdot 0.5)^2$ addiert und zusammengefasst. Nun kann auf beiden Seiten die Wurzel genommen und nach einem $x$ umgeformt werden.
+ 
+\subsection{$pq$-Formel}
+Ist $a=1$, oder wird die Gleichung nach $a=1$ umgestellt, so kann die $pq$-Formel genutzt werden. So gilt
+\[
+ x = - \frac{p}{2} \pm \sqrt{\left(\frac{p}{2}\right)^2 - q}  
+\] 
+\subsection{Satz von Vieta}
+Für jede Nullstelle gilt 
+\[
+ x_1 + x_2 = -p
+ \qquad \text{und} \qquad
+ x_1 \cdot x_2 = q 
+\]
+Alle Zahlenpaare, welche zu $q$ multiplizieren werden gefunden bevor untersucht wird, welche davon zu $-p$ addieren.
+ 
+\subsection{Mitternachtsformel} 
+Es gilt die Formel
+\[
+ x = \frac{-b \pm \sqrt{b^2-4ac}}{2a} 
+\]
+Beim Nachdenken wird offensichtlich, dass mithilfe von $\sqrt{b^2-4ac}$ bestimmt werden kann, wie viele Nullstellen es gibt. Ist es $<0$, so gibt es keine, ist es $=0$ gibt es eine, ist es $>0$ gibt es zwei. 
+ 
+\end{document}
