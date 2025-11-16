@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Projektionen}
+\rhead{November 2025}
+\begin{document}
+ 
+\newcommand{\vect}[1]{\overrightarrow{#1}}  
+\newcommand{\vectp}[1]{\overrightarrow{\text{#1}}} 
+ 
+\section{Projektionen in die Ebene}
+Bei einer \emph{Projektion} wird jeweils ein Punkt P mithilfe eines \emph{Projektionsvektors} $\vect{v}$ in eine Ebene E projeziert, so dass ein neuer Punkt P$'$ entsteht.
+ 
+Dies kann sich wie ein Schatten vorgestellt werden, scheint die Sonne mit der Ausbreitungsrichtung $\vect{v}$ auf einen Objekt am Punkt P im Raum, so landet der Schatten auf der Ebene des Bodens an Punkt P$'$. 
+ 
+\subsection{Berechnung} 
+Dieser Schatten, welcher an Punkt P anfängt ist eine Gerade, mit dem Stützvektor $\vectp{OP}$ und dem Richtungsvektor $\vect{v}$. Der Punkt P$'$ ist der Schnittpunkt von dieser Gerade und der Ebene.
+ 
+Ansonsten kann Eine Projektion auch mithilfe von einer Matrix beschrieben werden. Das Produkt aus dieser Matrix und einem Punkt P gibt den Punkt P$'$ an.
+ 
+\subsection{Matrizen für Projektionen in Koordinatenebenen}
+Für die drei Koordinatenebenen gelten die folgenden Matrizen%
+{% 
+\[%
+\begin{array}{c @{\qquad} c @{\qquad} c}
+ x_1x_2\text{-Ebene} & x_1x_3\text{-Ebene} & x_2x_3\text{-Ebene} \\ \renewcommand{\arraystretch}{2}
+\begin{bmatrix}
+ 1 & 0 & \displaystyle -\frac{v_1}{v_3} \\
+ 0 & 1 & \displaystyle -\frac{v_2}{v_3} \\
+\end{bmatrix} 
+&
+\renewcommand{\arraystretch}{2}
+\begin{bmatrix}
+ 1 & \displaystyle -\frac{v_1}{v_2} & 0 \\
+ 0 & \displaystyle -\frac{v_3}{v_2} & 1 \\
+\end{bmatrix} 
+&
+\renewcommand{\arraystretch}{2}
+\begin{bmatrix}
+ \displaystyle -\frac{v_2}{v_1} & 1 & 0 \\
+ \displaystyle -\frac{v_3}{v_1} & 0 & 1 \\
+\end{bmatrix} 
+\end{array}
+\]%
+}%
+Diese können gebildet werden, ohne sie sich auswendig zu merken, indem die Spalten sich der Reihe nach als zu den Koordinaten zugehörig vorgestellt werden und die Brüche in diejenige Spalte geschrieben werden, wessen Koordinaten für die Ebene immer gleich $0$ sein muss. Beide Brüche sind negativ und haben die Koordinate des Projektionsvektors, welche für die Ebene null sein muss in Nenner. Die anderen beiden Koordinaten kommen in den Zähler, von klein nach groß. \newline
+Die beiden anderen Spalten werden mit $\begin{bmatrix} 1 \\ 0 \end{bmatrix}$ und $\begin{bmatrix} 0 \\ 1 \end{bmatrix}$ gefüllt.
+ 
+\subsection{Schrägbilder} % TODO: tikz
+Wird ein dreidimensionales Koordinatensystem gezeichnet, wobei die dritte Achse die $x_1$-Achse ist, so ist dies ein Schrägbild. Dieses hat die Kenngrößen von $\alpha$, dem Winkel zur dritten Achse, und $k$, der Länge einer Einheit diese Achse als Vielfaches der anderen Achsen.
+ 
+Um damit weiter zu Rechnen wird ein $a$ und ein $b$ berechnet. Diese sind so definiert, dass für P$(1 \vert 0 \vert 0)$ die Projektion P$'(0 \vert a \vert b)$ folgt. Es gelten
+\[
+ a = -k \cos{\alpha}
+ \qquad \text{und} \qquad
+ b = -k \sin{\alpha} 
+\]
+Und 
+\[
+ k = \sqrt{a^2 + b^2}
+ \qquad \text{und} \qquad
+ \tan{\alpha} = \frac{\vert b \vert}{\vert a \vert} 
+\]
+Aus diesen Variablen folgen
+\[
+ \vect{v} = \begin{bmatrix} -1 \\ a \\ b \end{bmatrix}
+ \quad \text{und die Matrix} \quad 
+\begin{bmatrix}
+ a & 1 & 0 \\
+ b & 0 & 1 \\
+\end{bmatrix} 
+\] 
+\end{document}
