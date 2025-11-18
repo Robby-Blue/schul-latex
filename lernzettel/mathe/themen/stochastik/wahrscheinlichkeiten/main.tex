@@ -1,4 +1,5 @@
 \documentclass{article} 
+\usepackage{csquotes}
 \usepackage{hyperref}
 \usepackage[a4paper]{geometry}
 \usepackage{fancyhdr}
@@ -17,6 +18,8 @@ als Dezimalzahl zwischen $0$ und $1$ oder $0\%$ und $100\%$. Dabei kann das $E$ 
  E : \texttt{Beschreibung des Ereigniss} 
 \]
 Die Wahrscheinlichkeit, dass entweder $E_1$ oder $E_2$ geschieht, ist $P(E_1) + P(E_2)$. Dass zwei einander bedingte Ereignisse hintereinander passieren wird durch ein $\cap$ veranschaulicht. Es gilt $P(E_1 \cap E_2) = P(E_1) \cdot P(E_2)$, solange beide Ereignisse voneinander \hyperref[Unabhängigkeiten]{Unabhängig} din.
+ 
+Die Wahrscheinlichkeit, dass \textquote{entweder $E_1$ oder $E_2$} passiert ist die Wahrscheinlichkeit, dass $E_1$ oder $E_2$ aber nicht $E_1$ und $E_2$ gleichzeitig passieren. Das ist $P(E_1) + P(E_2) - 2 \cdot P(E_1 \cap E_2)$.
  
 \subsection{Gegenwahrscheinlichkeit}
 Die Wahrscheinlichkeit, dass $E$ nicht eintritt ist immer
