@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage[a4paper]{geometry}
+\usetikzlibrary{positioning, arrows}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{A Midsummer Night's Dream}
+\rhead{November 2025}
+\begin{document}
+\newcommand{\relline}[4]{  
+ \rellinep{#1}{#2}{#3}{#4}{0}{0}
+}
+ 
+\newcommand{\rellinep}[6]{  
+ (#1) edge [#4] node[fill=none, draw=none, xshift=#5ex, yshift=#6ex] {#3} (#2)
+}  
+\section{A Midsummer Night's Dream}
+% TODO: book summary 
+ 
+\subsection{Characters}  
+% TODO: introduce chars
+ 
+\subsection{Act I Scene I}
+\begin{center} 
+\begin{tikzpicture}[
+    node distance=2cm and 3cm,
+    every node/.style={draw, rectangle, align=center, minimum width=0.5cm},
+    every edge/.style={draw, thick, ->, shorten >=5pt, shorten <=5pt}
+]
+\node (hermia) {Hermia};
+\node (demetrius) [left=of hermia] {Demetrius};
+\node (egeus) [above=of demetrius] {Egeus};
+\node (theseus) [above=of hermia] {Theseus};
+\node (lysander) [right=of hermia] {Lysander};
+\node (helena) [below=of demetrius] {Helena};
+ 
+\path
+ \rellinep{egeus}{hermia}{father of}{left}{-2}{0}
+ \relline{egeus}{theseus}{asks for help}{above}
+ \relline{theseus}{hermia}{forces}{right}
+ \relline{hermia}{lysander}{love each other}{above}
+ \relline{lysander}{hermia}{}{above}
+ \relline{helena}{demetrius}{loves}{right}
+ \relline{demetrius}{hermia}{wants to marry}{above}
+ \relline{egeus}{demetrius}{wants daughter\\to marry}{left}
+ ; 
+\end{tikzpicture}
+\end{center}  
+\end{document}
