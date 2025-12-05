@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Der Frank-Hertz-Versuch}
+\rhead{Dezember 2025}
+ 
+\newcommand{\uv}[0]{\,\text{V}}  
+\newcommand{\esec}[2]{$#1 \uv \leq U_B \leq #1\uv$} 
+ 
+\begin{document} 
+\section{Der Frank-Hertz-Versuch}
+Eine Kathode, Gitter und Anode werden in eine evakuierte Glasröhre eingebaut, mit einer Gegenspannung von $U_G=2 \uv$ zwischen des Gitters und der Anode. Diese ist mit Hg-Dampf gefüllt. Die Beschleunigungsspannung $U_B$ wird von $0$ und auf $\approx 40\uv$ erhöht. 
+ 
+Die Beschleunigungsspannung ist über die gesamte Röhre verteilt; die Elektronen werden nicht schlagartig am Anfang auf ihre maximale Geschwindigkeit beschleunigt sondern werden in ihrer gesamten Flugbahn immer weiter beschleunigt. Dies ist auch weshalb Elektronen weitere male $4,9\uv$ erreichen können nachdem sie ihre Energie verloren hatten..
+ 
+\subsection{Beobachtung}
+In einem $U_B$-$I$-Diagramm, in welchem die Stromstärke der Anode gemessen wird, welche entsteht nachdem ankommende Elektronen diese aufladen, liegt eine periodische Änderung, aber keine \hyperref{Mechanische Schwingungen}[harmonische Schwingung] vor. Jedes neue Maximum und Minimum liegt über dem letzten.
+\begin{description} 
+ \item \esec{0}{2} Die Elektronen können die $U_G = 2\uv$ nicht überqueren. Die Anodenstromstärke bleibt null.
+ \item \esec{2}{4,9} Die Stromstärke steigt kontinuierlich bis zu einem Maximum an, weil mehr Elektronen pro Zeiteinheit ankommen können. 
+ \item \esec{4,9}{6} Die Anodenstromstärke sinkt auf ein Minimum (nicht $0$) ab, weil einige Elektronen bei $E_{kin}=4,9\uv$ auf ein Hg-Atom treffen und ihre Energie abgeben und an Geschwindigkeit verlieren. Elektronen, welche bei $E_{kin}=4,9\uv$ auf kein Hg-Atom treffen, fliegen weiter zur Anode
+ \item Bei größeren Beschleunigungsspannungen müssen die Elektronen die Elektronen mehrfach bei $E_{kin}=4,9\uv$ auf eine Hg-Atom treffen, um abgebremst zu werden. Deshalb treten alle $4,9\uv$ weitere Maxima auf.
+\end{description} 
+ 
+\subsection{Folge} 
+Atome können nur bestimmte Energien aufnehmen. Bei Hg-Atomen sind das $4,9\uv$.
+ 
+ 
+\end{document}
