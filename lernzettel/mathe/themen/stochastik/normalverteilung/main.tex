@@ -1,4 +1,5 @@
 \documentclass{article}
+\usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage[a4paper]{geometry}
 \usepackage{fancyhdr}
@@ -9,7 +10,22 @@
 \section{Normalverteilung} 
 Eine Normalverteilung ist eine Dichtefunktion. Sie folgt der Form
 \[
- f(x) = \frac{1}{\sigma \sqrt{2\pi}} \cdot \text{e}^{-\dfrac{(x-\mu)^2}{2\sigma^2}}
+ \varphi(x) = \frac{1}{\sigma \sqrt{2\pi}} \cdot \text{e}^{-\dfrac{(x-\mu)^2}{2\sigma^2}}
 \]
-Somit ist sie zur Vertikalen $x=\mu$ Symmetrisch.
+Somit ist sie zur Vertikalen $x=\mu$ Symmetrisch. Bei $x=\mu \pm \sigma$ sind Wendestellen.
+ 
+\subsection{Verteilungsfunktion einer Normalverteilung} 
+Die Verteilungsfunktion gibt die kumulative Wahrscheinlichkeit einer Normalfunktion von $-\infty$ bis $x$ an, so dass
+\[
+ \Phi(x) = P(X \leq x) = \int_{-\infty}^x \varphi(t) \,\text{d}t 
+\] 
+ 
+\subsection{Inverse Normalfunktion}
+Die Inverse Normalfunktion agiert als das Gegenteil einer Verteilungsfunktion. Sie kann genutzt werden, um die Stelle zu finden, an welcher die kumulative Wahrscheinlichkeit einen bestimmeten Wert erreicht. 
+\[
+ \Phi(x) = A
+ \Longleftrightarrow 
+ \texttt{invNorm(A, $\mu$, $\sigma$)} = x
+\] 
+\texttt{invNorm} ist unter \texttt{menu}, \texttt{5}, \texttt{5}, \texttt{3} auffindbar.
 \end{document}
