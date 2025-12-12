@@ -1,0 +1,137 @@
+\documentclass{article} 
+\usepackage{csquotes}
+\usepackage{tikz} 
+\usetikzlibrary{positioning, arrows}
+\usepackage[a4paper]{geometry}
+\begin{document}
+ 
+\newcommand{\relline}[4]{  
+ \rellinep{#1}{#2}{#3}{#4}{0}{0}
+}
+ 
+\newcommand{\rellinep}[6]{  
+ (#1) edge [#4] node[fill=none, draw=none, xshift=#5ex, yshift=#6ex] {#3} (#2)
+} 
+ 
+ 
+% Project A: Lifelines
+% Visualise the relationships within the Edwardses and the Jonga family.
+% Use a digital pinboard such as TaskCards or Canva to create a visual lifeline.
+% Document their journey, conflicts, lows and highs chapter by chapter. Briefly outline what happens in each chapter.
+  
+\section*{Relationships}
+\begin{center} 
+\begin{tikzpicture}[
+    node distance=2cm and 3cm,
+    every node/.style={draw, rectangle, align=center, minimum width=0.5cm},
+    every edge/.style={draw, thick, ->, shorten >=5pt, shorten <=5pt}
+]
+\node (jende) {Jende Jonga};
+\node (neni) [right=of jende] {Neni}; 
+\node (liomi) [below=of jende] {Liomi}; 
+\node (winston) [left=of jende] {Winston}; 
+\node (bubakar) [above=of winston] {Bubakar}; 
+\node (edwards) [above=of jende] {Clark \\ Edwards}; 
+\node (cindy) [right=of edwards] {Cindy \\ Edwards};
+\node (vince) [above=of edwards] {Vince};
+\node (jrother) [below left=of jende] {Brother}; 
+ 
+\path
+ \relline{jende}{neni}{wife}{above}
+ \relline{jende}{liomi}{son}{left}
+ \relline{neni}{liomi}{son, puts \\ under high \\ pressure}{below right} 
+ \relline{jende}{winston}{cousin}{above} 
+ \relline{winston}{bubakar}{recommends}{left} 
+ \rellinep{bubakar}{jende}{helps, \\ immigration \\ lawyer}{below left}{-1}{4}
+ \relline{edwards}{jende}{employs, \\ helps}{right}
+ \relline{edwards}{cindy}{wife}{above}
+ \relline{cindy}{neni}{employs, \\ helps}{left}
+ \relline{edwards}{vince}{son}{left}
+ \relline{jende}{jrother}{helps}{left}
+ ; 
+\end{tikzpicture}
+\end{center} 
+ 
+\section*{Lifeline}
+\begin{center} 
+\begin{tikzpicture}
+ \draw[thick, -] (0,0) -- (12,0);
+ \foreach \x/\year in {0/2004, 3/2005, 6/2006, 9/2007} {
+  \draw[thick] (\x,0.2) -- (\x,-0.2);
+  \node[below] at (\x, -0.3) {\year};
+ }
+ \draw[thick] (12,0.2) -- (12,-0.2);
+ 
+ \node[above, align=center] at (0.5 * 3, 0.2) {Jende comes to US, \\ talks to Bubakar to \\ open asylum case, \\ get work permit};
+ \node[above, align=center] at (1.5 * 3, -2) {Neni arrives in US, \\ they marry};
+ \node[above, align=center] at (2.5 * 3, 0.2) {Neni gets student visa};
+ \node[above, align=center] at (3.5 * 3, -2) {Jende's interview, \\ asylum denied};
+\end{tikzpicture}
+\end{center} 
+ 
+\section*{Outlines} 
+\begin{description}
+ \item[Chapter 1] It's 2007. Jende, who is in America with his wife Neni and their son Liomi, has a job interview.
+ \item[Chapter 2] Neni and Fatou talk a bit while shopping in Chinatown.
+ \item[Chapter 3] Jende gets hired as Mr. Edward's chauffeur, which everyone is happy about. His cousin, Winston, recommends an immigration lawyer, Bubakar, to him to help him fight for his asylum.
+ \item[Chapter 4] Jende is exhausted but happy after his first day at his new job, Neni's school is going well and she's making plans of becoming a pharmacist. They're both hopeful for the future, planning for a better life in a bigger apartment.
+ \item[Chapter 5] While Jende is driving, Vince Edward says that he won't come to Aspen, leading to a conflict between Clark and Cindy.
+ \item[Chapter 6] Jende talks exclusively positively about his hometown, Limbe, but also explains that he moved to America to live the American Dream.
+ \item[Chapter 7] Jende talks to Leah, Clark's secretary, for the first time. She's nice to Jende but at the same time also kinda talks down on him. They discuss work, Leah says that its not going too well for the company. 
+ \item[Chapter 8] Neni has to work hard, do lots of chores, help Liomi, learn for school, e.\,t.\,c. 
+ \item[Chapter 9] Terrible events unfold, like that one time Jende's father was deadly sick with malaria: Bubakar calls him to say that his Asylum case was denied, but that they'll continue fighting for it. He and Neni can't cope with it at all.
+ \item[Chapter 10] Neni notices signs of pregnancy, but has to go to teachers conference quickly. Liomi's teacher explains that he's doing pretty well at school, just that he gets distracted by the class clown Billy sometimes. Neni scolds Liomi for this and puts a lot of pressure on him, saying that he has to be good at school and get a high paying job. She herself gets a B- in her Precalculus class, which she isn't happy with.
+ \item[Chapter 11] Jende takes a ride on the metro while on a call with Bubakar. Bubakar tells him that the situation isn't as bad as it might seem, he'll surely get to stay in America for many more years.
+ \item[Chapter 12] Neni studies maths with Jerry
+ \item[Chapter 13] Jende keeps thinking about moving to Texas because of the weather. Mr. Edwards gives him 500\$ to pay for his brothers' kids' school.
+ \item[Chapter 14] Jende and Neni go to Winston's birthday party, Neni is uncomfortable
+ \item[Chapter 15] Clark and Tom get into a big argument about their company while Jende is driving Clark. Clark believes that it's not gonna go well the way long term it's going right now
+ \item[Chapter 16] Jende is driving Vince, who complains about the system and the American Dream. Jende wants to believe in it though
+ \item[Chapter 17] Neni applies for a job working for Cindy and talks about her family being rich in the past
+ \item[Chapter 18] Neni does a good job working for Cindy and finds her asleep weirdly, seemingly having taken drugs
+ \item[Chapter 19] Cindy tells Neni about her problems: keeping the family together is hard and she came from nothing. 
+ \item[Chapter 20] Jende is angry at Neni because Liomi overheard Neni say that they might be deported
+ \item[Chapter 21] Neni listens to Cindy and Clark right, with Cindy suggesting that Clark goes to therapy, but refuses. Later, when Nani tries to comfort Cindy, Cindy opens up to thinking that everyone mistreats her, to her mother being raped and to her not wanting Vince to move to India
+ \item[Chapter 22] Cindy gifts Nani lots of clothes Later Nani and Betty talk, figuring out that the drugs from Chapter 18 were probably Vicodin
+ \item[Chapter 23] Jende and Leah discuss the terrible state of the company, Jende and Clark talk about Clarks feelings towards the company, nature, Vince and a poems.
+ \item[Chapter 24] Nani kind of misses Cameroonian food, but also likes the expensive American food. Anna warns her of Cindy's alcoholism
+ \item[Chapter 25] Neni and Jende prepare a farewell dinner for Vince, who also brings Mighty. Mighty had never been in harlem.
+ \item[Chapter 26] Lehman Brothers collapses, Cindy assures Jende that his job is safe though
+ \item[Chapter 27] Clark is emotionally drained, his marriage declines. Jende worries for his future, scared of financial problems.
+ \item[Chapter 28] Jende repeatedly drives Clark to a hotel after the Lehman Brothers' fall, suspecting him to be seeing a prostitute. Instead of philosophises about the disappearance of Clarks tie and Cindy's reaction to this.
+ \item[Chapter 29] Cindy, not trusting Clark anymore, asks Jende to write down the locations he drives Clark to and the people he sees Clark with. Jende doesn't really want to. 
+ \item[Chapter 30] Jende, Neni and Winston talk about Winstons highschool girlfriend and the current situation with the Edwards. Winston and Neni agree that Jende should blackmail Cindy with her drugs usage.
+ \item[Chapter 31] While Jende drives Clark he brings up Cindy's wish. Clark allows him to oblige, as long as he doesn't mention the prostitudes.
+ \item[Chapter 32] Jende pretends to fulfill Cindy's wish, just always replacing Clark seeing prostitutes with something else, like him the going to the gym. Cindy seems to be getting better.
+ \item[Chapter 33] Leah tells Jende about a news story breaking about a prostitute having Clark as a client. Later, when Jende takes Cindy on a 45-minute car-ride, she's silent for the entire time.
+ \item[Chapter 34] Mighty cries on his way to school because he heard his parents fight. Jende tries to comfort him.
+ \item[Chapter 35] The Jonga's second child, Timba, is born. Jende gets a letter from the feds about being deported and calls Bubakar. Later Winston starts to lose trust in Bubakar. Neni goes to a church and quite enjoys it. Afterwards Jende starts an argument with her about whether or not churches are useful and a good way to hide from the feds.
+ \item[Chapter 36] Neni goes to church and meets pastor Natasha. She tells Natasha her immigration story, which Jende is upsert about. While he keeps insulting her, Neni is afraid that he might hit her.
+ \item[Chapter 37] Its Christmas and Liomi doesn't get any presents. Mighty is sure that his parents will divorce and mentions Cindy wanting Edwards to \textquote{get rid of him}. Jende thinks this \textquote{him} might be him. Clark wants to meet him in the office.
+ \item[Chapter 38] Clark fires Jende without giving a reason. Jende is really angry.
+ \item[Chapter 39] Jende feels really bad and talks with Neni about being fired. He's still hopeful though.
+ \item[Chapter 40] Jende fails to get a job as a cab driver. He gets two jobs as a dishwasher instead. He's not home a lot and they're poor. Later he appears in front of the immigration court and gets a new court date, around half a year later.
+ \item[Chapter 41] Neni goes to cindy's appartment to ask for help. When Cindy refuses, she blackmails hers with images of her taking drugs.
+ \item[Chapter 42] Jende is mad at Neni, then calms down. They decide to add those 10,000\,\$ to their savings.
+ \item[Chapter 43] Neni compares American supermarkets to Limbe's markets and thinks about their money problems. Anna calls Neni, wanting to know what Neni and Cindy last talked about. Neni refuses to answer.
+ \item[Chapter 44] Neni and Natasha talk about the papers situation.
+ \item[Chapter 45] Cindy died, most definitely related to her substance abuse.
+ \item[Chapter 46] Its Cindy's funeral.
+ \item[Chapter 47] Neni tries to get a scholarship but fails. The guy who would need to nominate her chooses not to and tells her that becoming a pharmacist is expensive and not really an achievable goal. Neni doesn't budge.
+ \item[Chapter 48] Jende's father died. Jende watches the funerial on a DVD. Afterwards Jendes health gets worse.
+ \item[Chapter 49] Jende wants to move back to Limbe. Neni still has hope for the future and wants to stay in America.
+ \item[Chapter 50] Betty and Neni talk about the situation, both agree that Neni should fight to stay. Neni thinks about divorcing Jende to marry a cousing who is a citizen to get a green card.
+ \item[Chapter 51] Neni suggests the idea above and Jende is \emph{really} angry.
+ \item[Chapter 52] Bubakar tells Jende that he should probably stay, for Liomi. Winston is the only one supporting Jende's idea.
+ \item[Chapter 53] Neni thinks about letting Jerry adopt Liomi such that he might be able to become a green card holder.
+ \item[Chapter 54] Jende starts a big fight, repeatedly hitting Neni. Nothing comes of it and she is forced to forgive him.
+ \item[Chapter 55] Vince calls Neni. They talk about family stuff and Vince mentions wanting Neni to work as Mighty's nanny. Neni doesn't really want to because it would make her feels bad and because she'll likely have to get out of the country anyway. She doesn't say anything.
+ \item[Chapter 56] Jende's request for Voluntary Departure is granted, so he promises Neni a nice life in Limbe. She's trying to be happy.
+ \item[Chapter 57] Jende prepares his arrival in Limbe. He wants to start his own business.
+ \item[Chapter 58] Monolouge thinking about the future in Limbe.
+ \item[Chapter 59] A farewell party is thrown. Neni and Jende attend church together for once.
+ \item[Chapter 60] Jende talks to Clark one last time. They talk about Vince's plan to start a business in India, Jende's departure, Leah, etc. Clark gives him an envelope.
+ \item[Chapter 61] They prepare for the departure, giving away or selling everything they have.
+ \item[Chapter 62] They leave America. They arrive in Limbe.
+\end{description}
+\end{document}
