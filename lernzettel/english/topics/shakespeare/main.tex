@@ -8,6 +8,36 @@
 \lhead{A Midsummer Night's Dream}
 \rhead{November 2025}
 \begin{document}
+ 
+\newcommand{\constellation}[1]{
+\begin{center} 
+\begin{tikzpicture}[
+    node distance=2cm and 3cm,
+    every node/.style={draw, rectangle, align=center, minimum width=0.5cm},
+    every edge/.style={draw, thick, ->, shorten >=5pt, shorten <=5pt}
+]
+#1 
+\end{tikzpicture}
+\end{center}   
+}
+  
+\newcommand{\bchar}[3]{\node (#2) [#3] {#1}} 
+ 
+\newcommand{\hermia}[1]{\bchar{Hermia}{hermia}{#1}}    
+\newcommand{\egeus}[1]{\bchar{Egeus}{egeus}{#1}}    
+\newcommand{\theseus}[1]{\bchar{Theseus}{theseus}{#1}} 
+\newcommand{\demetrius}[1]{\bchar{Demetrius}{demetrius}{#1}}       
+\newcommand{\helena}[1]{\bchar{Helena}{helena}{#1}} 
+\newcommand{\lysander}[1]{\bchar{Lysander}{lysander}{#1}}
+   
+\newcommand{\quince}[1]{\bchar{Peter Quince}{quince}{#1}}
+\newcommand{\nick}[1]{\bchar{Nick Bottom}{nick}{#1}}
+ 
+\newcommand{\titania}[1]{\bchar{Titania}{titania}{#1}}
+\newcommand{\oberon}[1]{\bchar{Oberon}{oberon}{#1}}
+\newcommand{\puck}[1]{\bchar{Puck}{puck}{#1}}  
+\newcommand{\changeling}[1]{\bchar{Changeling Boy}{changeling}{#1}}  
+ 
 \newcommand{\relline}[4]{  
  \rellinep{#1}{#2}{#3}{#4}{0}{0}
 }
@@ -51,18 +81,13 @@ Theseus orders Philostrate to organise entertainment for his wedding to Hippolyt
 Egeus wants Hermia to marry Demetrius. She loves Lysander instead. Egeus asks Theseus for help, who gives Hermia three options: marrying Demetrius, being a nun or being put to death. Lysander accuses Demetrius of having promised to marry Helena.
  
 Hermia and Lysander plan to run away at night to marry. When Helena is told of this, she tells Demetrius. 
-\begin{center} 
-\begin{tikzpicture}[
-    node distance=2cm and 3cm,
-    every node/.style={draw, rectangle, align=center, minimum width=0.5cm},
-    every edge/.style={draw, thick, ->, shorten >=5pt, shorten <=5pt}
-]
-\node (hermia) {Hermia};
-\node (demetrius) [left=of hermia] {Demetrius};
-\node (egeus) [above=of demetrius] {Egeus};
-\node (theseus) [above=of hermia] {Theseus};
-\node (lysander) [right=of hermia] {Lysander};
-\node (helena) [below=of demetrius] {Helena};
+\constellation{
+ \hermia{};
+ \demetrius{left=of hermia};
+ \egeus{above=of demetrius};
+ \theseus{above=of hermia};
+ \lysander{right=of hermia};
+ \helena{below=of demetrius};
  
 \path
  \rellinep{egeus}{hermia}{father of}{left}{-2}{0}
@@ -72,18 +97,44 @@ Hermia and Lysander plan to run away at night to marry. When Helena is told of t
  \relline{lysander}{hermia}{}{above}
  \relline{helena}{demetrius}{loves}{right}
  \relline{demetrius}{hermia}{wants to marry}{above}
- \relline{egeus}{demetrius}{wants daughter\\to marry}{left} 
- \rellinep{hermia}{helena}{best friend}{above}{-2}{0}
- ; 
-\end{tikzpicture}
-\end{center}  
+ \relline{egeus}{demetrius}{wants daughter\\to marry}{left}
+ \rellinep{hermia}{helena}{best friend}{below}{2}{0} 
+ ;
+}  
  
 \subsection{Act I Scene II}
 The Mechanicals, planning to perform a play at Theseus' wedding, meet to assign their roles to each other. Nick Bottom wants to play every role but is rejected from doing so. 
+\constellation{
+ \quince{};
+ \nick{below right=of quince};
+ \bchar{Others}{others}{below=of demetrius}; 
+ 
+\path 
+ \rellinep{quince}{others}{gives roles}{left}{-1}{0}
+ \rellinep{nick}{quince}{wants all roles}{right}{2}{0}
+ ;
+} 
  
 \subsection{Act II Scene I}
 Titania and Oberon meet in the woods. They argue about the custody of the changeling boy. Oberon wants him, Titania wants to raise him, as per his mother wish. Oberon wants to get \textquote{revenge} on her by getting his goblin Puck to fetch a magical flower whose juice will make anyone fall in love with the first thing they see. He intends to use this flowers juice on Titania.
  
-Demetrius appears, looking for Hermia and Lysander. Helena follows him, begging him for his love. After Oberon sees Demetrius reject her, he commands puck to drip the flowers juice on Demetrius eyes.
+Demetrius appears, looking for Hermia and Lysander. Helena follows him, begging him for his love. After Oberon sees Demetrius reject her, he commands puck to drip the flowers juice on Demetrius eyes. 
+\constellation{
+ \titania{};
+ \oberon{left=of titania};
+ \changeling{below=of titania}; 
+ \puck{above=of titania};
+ \demetrius{right=of titania}; 
+ 
+\path 
+ \relline{titania}{oberon}{together}{above}
+ \relline{oberon}{titania}{fight}{below}
+ \rellinep{oberon}{changeling}{wants}{left}{-1}{0}
+ \relline{titania}{changeling}{takes care of}{right}
+ \relline{oberon}{puck}{sends \\ to get \\ flower}{above left}
+ \relline{puck}{titania}{uses \\ flower \\ on}{left}
+ \rellinep{puck}{demetrius}{plans to use \\ flower \\ on}{right}{0}{2}
+ ;
+} 
  
 \end{document}
