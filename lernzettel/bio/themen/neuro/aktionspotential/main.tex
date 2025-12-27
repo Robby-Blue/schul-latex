@@ -1,4 +1,5 @@
 \documentclass{article}
+\usepackage{tikz}
 \usepackage{mhchem}
 \usepackage{amsmath}
 \usepackage[a4paper]{geometry}
@@ -20,7 +21,50 @@ Unter dem Strich werden einfach nur, wenn der Schwellenwert erreicht wird, \ce{N
  \item[Hyperpolarisation] Das Potential erreicht einen Wert negativer als das Ruhepotential.
  \item[Ruhepotential] Alle spannungsgesteuerten Ionenkanäle schließen sich wieder, das Ruhepotential kann sich erneut bilden. 
 \end{description} 
-% TODO color coded graph 
+\begin{center}
+\begin{tikzpicture}
+ \newcommand{\y}[1]{
+  ({#1}+100)/(150/8)
+ }
+ \newcommand{\marker}[1]{
+  \draw[thick] (-0.1, {\y{#1}}) -- (0.1, {\y{#1}});
+  \node at (-0.3, {\y{#1}}) {#1};
+ }  
+ 
+ \newcommand{\culine}[7]{
+  \pgfmathsetmacro{\xzero}{#1}
+  \pgfmathsetmacro{\yzero}{\y{#2}}
+  \pgfmathsetmacro{\xone}{#3}
+  \pgfmathsetmacro{\yone}{\y{#4}}
+  \pgfmathsetmacro{\dyzero}{#5}
+  \pgfmathsetmacro{\dyone}{#6}
+  \pgfmathsetmacro{\dx}{\xone-\xzero}
+  \draw[draw=#7,domain=\xzero:\xone,smooth,samples=100,thick] plot (\x,{
+    (2*((\x-\xzero)/\dx)^3 - 3*((\x-\xzero)/\dx)^2 + 1)*\yzero
+    + (((\x-\xzero)/\dx)^3 - 2*((\x-\xzero)/\dx)^2 + (\x-\xzero)/\dx)*\dx*\dyzero
+    + (-2*((\x-\xzero)/\dx)^3 + 3*((\x-\xzero)/\dx)^2)*\yone
+    + (((\x-\xzero)/\dx)^3 - ((\x-\xzero)/\dx)^2)*\dx*\dyone
+  });
+} 
+ 
+ \draw[->] (0, 0) -- (12, 0) node[above]{$t$ in ms};
+ \draw[->] (0, 0) -- (0, 8) node[above]{$U$ in mV};
+ 
+ \marker{-70} 
+ \marker{-50}
+ \marker{0}
+ \marker{40}
+ 
+ \draw[green!50!black] (0, {\y{-70}}) -- (2.5, {\y{-70}});
+ \culine{2.5}{-70}{4}{-50}{0}{2}{orange}; 
+ \culine{4}{-50}{6}{20}{2}{0}{red};
+ \culine{6}{20}{8}{-70}{0}{-4}{cyan};
+ \culine{8}{-70}{8.75}{-95}{-4}{0}{blue};
+ \culine{8.75}{-95}{9.5}{-70}{0}{0}{blue};  
+ \draw[green!50!black] (9.5, {\y{-70}}) -- (12, {\y{-70}});
+ 
+\end{tikzpicture} 
+\end{center} 
  
 \subsection{Alles-oder-nichts-Prinzip} 
 Wird der Schwellenwert von $-50\,\text{mV}$ nicht erreicht, so entsteht kein Aktionspotential. Es folgt das \emph{Alles-oder-nichts-Prinzip}.
