@@ -1,4 +1,5 @@
 \documentclass{article}
+\usepackage{hyperref}
 \usepackage{mhchem}
 \usepackage[a4paper]{geometry}
 \usepackage{fancyhdr}
@@ -8,6 +9,12 @@
 \begin{document}
 \section{Der Ablauf der Fotosynthese} 
 Die Fotosynthese kann in zwei Reaktionen aufgeteilt werden.
+ 
+Dabei reagiert bei der \emph{Primärreaktion}
+\[
+ \ce{H2O + NADP+ + ADP + P ->[Licht] O2 + NADPH + ATP} 
+\] 
+ 
 \subsection{Primärreaktion}
 Die Primärreaktion findet zwischen dem Stroma und dem Thylakoidinnenraum statt.
  
@@ -27,7 +34,12 @@ Von diesem Elektronenakzeptor werden Elektronen über das \emph{Ferredoxin} an \
  
 Strömen die in den Thylakoidinnenraum transportierten Protonen durch die ATP-Synthese, so wird ATP synthetisiert.
  
-% TODO wie Mitochondrien 
+Damit ist die Primärreaktion der \hyperref[Die Atmungskette]{Atmungskette} sehr Ähnlich, darin dass über den Elektronentransport ein Protonengradient aufgebaut werden kann, dessen chemiosmotische Energie genutzt werden kann um ATP zu synthetisieren. Die Unterschiede liegen in der Quelle der Energie (Licht und chemisch gespeichert) und den Edukten außerhalb des ATPs. 
 \subsection{Sekundärreaktion} 
-% TODO 
+Die Sekundarreaktion, der \emph{Calvin-Zyklus}, kann in drei Schritte unterteilt werden, welche sich konstant wiederholen.
+\begin{description}
+ \item[Fixierungsphase] Das \ce{CO2} der Umgebung wird fixiert indem es mithilfe des Enzyms \emph{RuBisCo} an ein Stoffwechselmolekül, \emph{Ribulose-1,5-biphosphat}, gebunden wird. Daraus folgen zwei Moleküle \emph{3-Phosphoglyzerinsäure}.
+ \item[Reduktionsphase] Ein Molekül 3-Phosphoglyzerinsäure wird unter Zufuhr an Energie, gewonnen durch \ce{ATP -> ADP + P} und \ce{NADPH -> NADP}, zu \emph{Glyzerinaldehyd-3-phosphat} reduziert. Dabei entsteht ein \ce{H2O}.
+ \item[Regenerationsphase] Der \ce{CO2}-Akzeptor Ribulose-1,5-biphosphat wird regeneriert. Dies können die übrigen Glyzerinaldehyd-3-phosphat Moleküle unter \ce{6 ATP -> 6 ADP + P} machen.
+\end{description} 
 \end{document}
