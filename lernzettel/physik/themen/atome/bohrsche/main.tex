@@ -1,0 +1,64 @@
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Das Bohrsche Atommodell}
+\rhead{Januar 2026}
+\begin{document}
+\section{Das Bohrsche Atommodell}
+Basierend auf dem \hyperref[Der Frank-Hertz-Versuch]{Frak-Hertz-Versuch} und der \hyperref[Das Linienspektrum von Wasserstoffatomen]{Serienformel des H-Atoms} wurde das Bohrsche Atommodell erfunden.
+ 
+\subsection{Annahmen}
+Das Modell teilt zwei Annahmen 
+\begin{enumerate}
+ \item Elektronen bewegen sich auf diskreten, strahlungsfreien Bahnen. Dabei ist der Bahndrehimpuls $L=rmv$ hier
+\[
+ L = n \cdot \frac{h}{2 \pi}
+ \qquad \text{mit} \quad
+ n \in \mathbb{N},\,n \ge 1 
+\] 
+ \item Geht ein Elektron aus einer energiereicheren Bahn in eine energieärmere Bahn über, wird die Energiedifferenz als Photom emittiert. Dabei ist
+\[
+ h \cdot f = E_n - E_m 
+\]  
+\end{enumerate} 
+ 
+\subsection{Bahnradius im H-Atom}
+Um den Radius des Bahn des Elektrons um den Proton eines H-Atoms zu bestimmen, wird angemerkt dass $n=1$, so dass
+\[
+ \frac{h}{2\pi} = r \cdot m \cdot v
+ \Longrightarrow r = \frac{h}{2\pi \cdot m \cdot r} 
+\]
+Dieses $r$ wird in die Gleichung, welche die Coloumbkraft und die Zentripetalkraft gleichsetzt eingesetzt, so folgt
+\[
+ r = \frac{h^2 \cdot \epsilon_0}{e^2 \cdot \pi \cdot m} = 5,3 \cdot 10^{-11}\,\text{m} 
+\] 
+\subsection{Lichtfrequenzen bei Bahnübergängen}
+Die Gesamtenergie eines Elektrons auf der $n$ten Bahn ist natürlich
+\[
+ E_n = E_{kin} + E_{pot} 
+\] 
+Dabei ist $E_{pot}$ ein $E=W=f \cdot s$, wobei dieses $f=F_{\text{coloumb}}(r)$. Somit
+\[
+ E_{pot} = \int F_{\text{coloumb}}\,\text{d}r 
+\]
+In die nun gefundene Formel für $E_n$ können $r_n$ und $v_n$, gefunden beim berechnen des Bahnradius, eingesetzt werden. Nach dem kürzen folgt
+\[
+ E_n = -\frac{1}{8} \cdot \frac{m \cdot e^4}{\epsilon_0^2 \cdot h^2} \cdot \frac{1}{n^2} 
+\] 
+\subsection{Leistungen und Grenzen}
+Das Bohrsche Atommodell konnte
+\begin{itemize}
+ \item genaue quantitative Ergebnisse für Elektronengrößen liefern
+ \item die Vorgänge des H-Atoms sehr gut beschreiben
+ \item die Wasserstoff Linienspektren erklären
+ \item das Streuexperiment erklären.
+\end{itemize} 
+ 
+Dabei stand des aber im Wiederspruch: die Kreisbewegung der Elektronen ist eine beschleunigte Bewegung, welche e-m-Strahlung verursacht; es kann eine strahlungsfreie Bahn geben.
+ 
+Darüberhinaus ist es nocht ohne weitere Probleme auf andere Atome übertragbar, hat probleme mit der Quantenphysik und geht davon aus, dass Atome flach seien. 
+\end{document}
