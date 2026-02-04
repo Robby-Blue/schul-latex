@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{csquotes}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Der Potentialtopf}
+\rhead{Januar 2026}
+  
+\newcommand{\ekin}[0]{E_{\text{kin}}} 
+\newcommand{\epot}[0]{E_{\text{pot}}} 
+ 
+\begin{document} 
+\section{Der Potentialtopf}
+Der \emph{Potentialtopf}, oder vereinfacht der \emph{lineare Potentialtopf}, veranschaulicht die Verteilung der Elektronen als Quantenobjekte in einem Atom.
+ 
+\subsection{Aufbau} 
+Elektronen haben dem Atomkern gegenüber eine $\epot$. Diese sinkt mit sinkender Distanz zum Atomkern.
+ 
+So bildet sie einer Achse entlang einen \textquote{Topf} an $\epot$, aus welcher ein Elektron nicht rauskommen kann. Dieser als Graph aufgezeichnet werden, auf der $x$-Achse die Position von $0$ bis zu Länge des Topfes $L$, weshalb der Atomkern in der Mitte, bei $P_0$ liegt, und der $\epot$ auf der $y$-Achse. Weiter vereinfacht, mit unendlich hohen Wänden, gilt
+\[ 
+ \epot =  
+ \begin{cases} 
+  0, & 0 \le x \le L \\
+  \infty, & \text{sonst}
+ \end{cases}
+\] 
+ 
+\subsection{Als Welle}
+Die Elektronen, welche auch als Welle angesehen werden können, liegen im Potentialtopf als stehende Welle vor. Dabei liegt der Grundzustand bei $n=1$. Somit folgt
+\[
+ L = n \cdot \frac{\lambda}{2} 
+\]
+ 
+Dem Pauli-Prinzip nach kann jedes $n$ von maximal zwei Elektronen besetzt werden.
+ 
+\subsection{Wellenfunktion} 
+Es folgt die Wellenfunktion $\psi(x,t)$. $\vert \psi \vert^2$ gibt die Auftreffwahrscheinlichkeit eines Elektrons an.
+ 
+\subsection{Energie} 
+Wird $\ekin$ genommen und in mit der Definition des Impulses in Abhängigkeit von $p$ gesetzt, so folgt
+\[
+ \ekin = \frac{1}{2m} p^2
+\]
+Nun kann das $p$ der \hyperref[Die de-Broglie-Wellenlänge]{de-Broglie-Wellenlänge} nach mit $lambda = h/p$ ersetzt werden, so dass nur noch ein $\lambda$ als Unbekannte vorliegt. Auch diese kann ersetzt werden, mit
+\[
+ \lambda = 2 \cdot \frac{L}{n} 
+\]
+Somit folgt
+\[
+ E = \frac{h^2}{8mL^2} \cdot n^2
+\] 
+\end{document}
