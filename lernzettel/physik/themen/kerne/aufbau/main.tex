@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Atomekerne} 
+\rhead{Januar 2026}
+\newcommand{\safecenter}[1]{\makebox[3cm][c]{#1}} 
+\newcommand{\s}[3]{\safecenter{$\displaystyle ^{#1}_{#2}#3$}} 
+\begin{document} 
+\section{Atomekerne} 
+Atomkerne, \emph{Nuklide}, bestehen aus positiven Protonen und neutralen Neutronen. Beides sind Nukleonen. Somit kann jedes Nuklid durch den Namen des Elementes und drei Zahlen beschrieben werden:
+\begin{enumerate}
+ \item Die Anzahl der Protonen $Z$
+ \item Die Anzahl der Neutronen $N$
+ \item Die Anzahl der Nukleonen $A$ 
+\end{enumerate} 
+Es gilt hier $A = N + Z$. Isotope sind Atomkerne des gleichen Elementes, mit einer unterschiedlichen Nukleonenzahl.
+ 
+\subsection{Schreibweise}
+Nuklide können auf drei Art und Weisen aufgeschrieben werden: 
+\[
+ ^A_Z\text{Element}
+ \qquad \text{und} \qquad
+ \text{Element-}A
+ \qquad \text{und} \qquad
+ \text{Element}_A
+\] 
+So können auch Protonen, Neutronen, Elektronen und Positronen angegeben werden.
+\begin{center}
+ \begin{tabular}{p{3cm} p{3cm} p{3cm} p{3cm}}
+  \safecenter{Protonen} & \safecenter{Neutronen} & \safecenter{Elektronen} & \safecenter{Positronen} \\ 
+  \s{1}{1}{p} & \s{1}{0}{n} & \s{0}{-1}{e} & \s{0}{1}{e} 
+ \end{tabular} 
+\end{center} 
+  
+\subsection{Masse}
+Die Masse wird in der atomaten Masseneinheit $u$ angegeben,
+\[
+ 1\,u = \frac{1}{12} m_{\text{c-}12} 
+\] 
+ 
+\subsection{Mol} 
+Ein Mol ist eine Mengeneinheit an Teilchen. Ein Mol sind immer, unabhängig des Elements, $6,022 \cdot 10^{23}$ Elemente. Dies ist die \emph{Avogadro}-Konstante 
+ 
+\end{document}
