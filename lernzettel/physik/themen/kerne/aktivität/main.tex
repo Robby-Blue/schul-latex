@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Aktivität}
+\rhead{Januar 2026}
+\begin{document}
+\newcommand{\dd}{\text{d}} 
+\section{Aktivität}
+Die \emph{Aktivität} einer radioaktiven Substanz gibt die Anzahl der Kernumwandlungen pro Sekunde an. Gibt es $N$ Kerne, so ist
+\[
+ A = -\frac{\Delta N}{\Delta t}
+ \qquad \text{in Bq (Becquerel)} 
+\] 
+Die Aktivität ist vom Element selbst als auch von der Menge der insgesamt vorliegenden Kernen abhängig. Für diese Abhängigkeit wird die Zerfallskonstante $\lambda$ genutzt.
+\[
+ A = \lambda \cdot A 
+\]
+Somit gibt die Zerfallskonstante den prozentualen Anteil an Kernen, welche innerhalb einer Sekunde zerfallen an.
+ 
+\subsection{Das Zerfallsgesetz}
+Werden die beiden obigen Definition gleichgesetzt, so folgt 
+\[
+ \frac{\dd N}{\dd t} = -\lambda \cdot A 
+\]
+Wird auf beiden Seiten mit $\dd t$ multipliziert, durch $N$ dividiert und das Integral genommen, so folgt
+\begin{align*} 
+ \int \frac{\dd N}{N} &= \int -\lambda \cdot dt \\ 
+ \ln{N} &= -\lambda \cdot t + c \\
+ N &= e^{-\lambda \cdot t} \cdot e^c
+\end{align*}
+Wird dies nun bei $t=0$ betrachtet, so ist $e^{-\lambda \cdot 0} = 1$, so dass $e^c=N_0$, die Anzahl der unzerfallenen Kernen am Anfang, sein muss.
+ 
+Daraus folgt die Formel für $N(t)$, welches die Anzahl der noch vorhandenen, unzerfallenen, Kerne zum Zeitpunkt $t$ angibt.
+\[
+ N(t) = N_0 \cdot e^{-\lambda \cdot t} 
+\]
+Wird beides durch $t$ dividiert folgt das gleiche 
+\[
+ A(t) = A_0 \cdot e^{-\lambda \cdot t} 
+\]
+\end{document}
