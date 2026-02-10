@@ -1,4 +1,5 @@
 \documentclass{article}
+\usepackage{amsmath}
 \usepackage[a4paper]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -6,15 +7,19 @@
 \rhead{Januar 2026}
 \begin{document}
 \section{Der Massendefekt}
-Wird die Masse der einzelnen Teilchen eines Atoms zusammenaddiert, also
+Wird die Masse der einzelnen Teilchen eines Atomkerns zusammenaddiert, also die Anzahl der Protonen des Atoms mal die Masse eines Protonen plus die Anzahl der Neutronen des Atoms mal die Masse eines Neutronen so fällt auf, dass alle diese zusammen mehr wiegen als der Atomkern (Atommasse minus Masse der Elektronen) selbst. Dies ist der \emph{Massendefekt}.
  
-die Anzahl der Elektronen des Atoms mal die Masse eines Elektrons plus
+\subsection{Berechnung} 
+Somit ist die tabellarische Kernmasse $(m_{\text{atom}} - m_e)$ und die Masse aller Teilchen des Kerns $(m_p + m_n)$. Somit folgt die Differenz
+\[ 
+ \Delta m = (m_{\text{atom}} - n_e \cdot m_e) - (n_p \cdot m_p + n_n \cdot m_n)
+\]
+Müssen beide einzelnen Werte nicht angegeben werden kann einfach
+\[ 
+ \Delta m = m_{\text{atom}} - n_e \cdot m_e - n_p \cdot m_p - n_n \cdot m_n
+\]
+Hier sind $n_e$, $n_p$ und $n_n$ jeweils die Anzahlen der Elektronen, Protonen und Neutronen und $m_e$, $n_p$ und $m_n$ sind die Massen der drei Teilchenarten. Diese sind auch im Taschenrechner als \texttt{\_Me}, \texttt{\_Mp} und \texttt{\_Mn} vorgespeichert. 
  
-die Anzahl der Protonen des Atoms mal die Masse eines Protonen plus
-  
-die Anzahl der Neutronen des Atoms mal die Masse eines Neutronen \newline
-so fällt auf, dass alle diese zusammen mehr wiegen als das Atom selbst. Dies ist der \emph{Massendefekt}.
- 
-\subsection{Kernbindungsenerien}  
-Die Differenz zwischen der selbst ausgerechneten Masse der Teilchen und der Atommasse $\Delta m$ kann $E=mc^2$ nach in eine Energie umgewandelt werden. Geteilt durch die Anzahl an Teilchen folgt die \emph{Kernbindungsenergie}, die auf jedes Nukleon wirkt.
+\subsection{Kernbindungsenergien}  
+Die $\Delta m$ kann mit $E=mc^2$ in eine Energie umgewandelt werden. Geteilt durch die Nukleonenzahl ($n_p + n_n$) folgt die \emph{Kernbindungsenergie}, die auf jedes Nukleon wirkt.
 \end{document}
