@@ -1,0 +1,143 @@
+\documentclass{article}
+\usepackage{enumerate}
+\usepackage[ngerman]{babel} 
+\usepackage{amsmath}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins} 
+\usepackage{tikz}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Mathe Präsentation \textit{Lösung}}
+\rhead{zum 25. Februar 2026}
+ 
+\newcommand{\task}[2]{%
+\begin{center} 
+ \begin{tcolorbox}[width=0.95\linewidth,
+  enhanced,
+  title=\textbf{#1)}, 
+  attach boxed title to top left={
+   xshift=0.75cm,
+   yshift=-\tcboxedtitleheight/2,
+   yshifttext=-\tcboxedtitleheight/2,
+  }, 
+  boxed title style={
+    sharp corners,
+    colback=white,
+    colframe=black
+  },
+  coltitle=black, 
+  colframe=black, colback=white,
+  drop shadow=black!50!white,
+  sharp corners, 
+  boxrule=1pt, boxsep=8pt,
+  left=0pt,right=0pt,top=0pt,bottom=0pt]
+  #2
+ \end{tcolorbox}
+\end{center} 
+} 
+ 
+\begin{document}
+\noindent \texttt{Jahr 2025, eA, Aufgaben 1B und 2A} 
+\section*{Aufgabe 1B}
+\[
+ f(x) = 0,025x^4-0,3x^2+0,9 
+\]
+\task{a}{
+\begin{center}
+ \begin{tikzpicture}
+  \draw[->] (0, 0) -- (0, 1.5) node[below right] {$y$};
+  \draw[->] (-2.8, 0) -- (2.8, 0) node[above left] {$x$};
+  \draw[blue, domain=-2.55:2.55, samples=20] plot (\x, {0.025*(\x)^4-0.3*(\x)^2+0.9});
+  \node at (-2.55, 0) {$\times$}; 
+  \node at (2.55, 0) {$\times$};
+ 
+  \draw[red] (-1, 0) -- (-1, 0.625); 
+  \draw[red] (-1, 0.625) -- (1, 0.625); 
+  \draw[red] (1, 0) -- (1, 0.625);  
+ 
+  \draw[<->, red] (-1, -0.5) -- (1, -0.5);   
+  \node at (0, -0.5) [below] {$2\,m$};  
+  \node at (-1, 0) [below] {$-1$}; 
+  \node at (0, 0) [below] {$0$};
+  \node at (1, 0) [below] {$1$};
+ \end{tikzpicture} 
+\end{center}
+Die maximale Höhe ist die Höhe des niedrigsten Punktes, bei $-1$ und $1$. 
+\[
+ f(1) = 0,625 
+\]} 
+ 
+\task{b}{
+Damit ist gemeint, dass die Fledermausgaube mindestens $5$ mal und höchstens $8$ mal so lang sein soll wie sie hoch ist. Hat sie eine Breite $b$ und eine Höhe $h$ so muss
+\[
+ 5 < \frac{b}{h} < 8 
+\]
+Die Breite ist die Länge der einen Nullstelle zur anderen.
+\begin{align*} 
+ f(x) &= 0 \\
+ &\Rightarrow x_{1,2} = \pm 2,45 \\
+ &\Rightarrow b = 2 \cdot 2,45 
+\end{align*} 
+Die Höhe der Fledermausgaube ist die Höhe am Höhepunkt bei $x=0$
+\[
+ h = f(0) = 0,9 
+\]
+Somit liegt das Verhältnis nun bei
+\[
+ \frac{2 \cdot 2,45}{0,9} \approx 5.44 
+\]
+Weil $5 < 5.44 < 8$ wird die Vorgabe eingehalten. 
+}
+\task{c}{Wird nach der maximalen Steigung gesucht ist die entweder offensichtlich (das Maximum, also die Ableitung gleich null, von $f'(x)$= oder bei der Wendestelle, also bei
+\[
+ f''(x) = 0 \Rightarrow x_{1,2} \approx \pm 1,4142 
+\]
+Nun ist dessen Steigung
+\begin{align*} 
+ f'(-1,4142) &= 0,56 \\
+ &\Rightarrow \tan^{-1}(0,4) = 29,5^\circ 
+\end{align*} 
+}
+\task{d}{
+Vertikal werden insgesamt $20\,cm$, $0,2$, entfernt. Also endet das Fenster auch sobald
+\begin{align*} 
+ f(x) - 0,2 &= 0 \\
+ &\Rightarrow x_{1,2} \pm 1,78
+ \quad \text{und} \quad
+ x_{3,4} \pm 2,97  
+\end{align*}
+Mit dem $10\,cm$ horizontalen Steg, auf beiden Seiten auf jeweils $5\,cm$ aufgeteilt, liegt das Fenster nun im Intervall $[0,05;1,78]$.
+ 
+Der Flächeninhalt ist also
+\[ 
+ 2 \cdot \int_{0,05}^{1,78} f(x)-0,2\,\text{d}x = 1,473
+\] 
+}
+\task{e}{
+Weil manche Teile des Gaube schneller sinken als eine gerade Linie von $(0\,\vert\,0,9)$ zu $(2,45\,\vert\,0)$ würde, wären Teile des Fensters außerhalb der Gaube.
+ 
+Damit es geradeso passt musst das Dreieck eine Tangente zur Kante der Gaube sein. Es muss eine Gerade gefunden werden, welche durch $(0\,\vert\,0,9)$ geht und eine Tangente an einem $(x\,\vert\,f(x))$ hat.
+\begin{align*}
+ f'(x) \cdot x + 0,9 &= f(x) \\
+ &\Rightarrow x_1 = 0
+ \quad \text{und} \quad
+ x_{2,3} = \pm 2 
+\end{align*} 
+Die Tangente muss bei $x=2$ liegen. Wird diese Steigung genutzt, so endet das Fenster bei der Nullstelle
+\[
+ f'(2) \cdot x + 0,9 = f(x) \Rightarrow x = 2,25
+\]
+Mit $A = 1/2 \cdot b \cdot h$ und zwei Fensterhälften ist der Flächeninhalt $2,025$. 
+}
+\task{f}{
+\begin{enumerate}[I]
+ \item Eine Funktion $d$ wird gebildet, welche die Differenz zwischen $f$ und $g$ darstellt.
+ \item Die Extremstellen der Funktion $d$, also der Differenz von $f$ und $g$ werden in der Linken hälfte gefunden.
+ \item Es wird überprüft, ob die Extremstellen Hochpunkte oder Tiefpunkte sind.
+ \item Die Differenzen an den Extremstellen werden berechnet. 
+\end{enumerate}
+$x_2$ wurde als Hochpunkt bestimmt, heißt es stellt die größte Differenz zwischen $f$ und $g$ dar. Dort gibt es eine Differenz der beiden von $0,06\,m$, also $6\,cm$.} 
+\newpage 
+\section*{Aufgabe 2A} 
+\end{document}
