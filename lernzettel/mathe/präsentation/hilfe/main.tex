@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins} 
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Mathe Präsentation \textit{Hilfen}}
+\rhead{zum 25. Februar 2026}
+ 
+\newcommand{\task}[2]{% 
+\begin{center} 
+ \begin{tcolorbox}[width=0.95\linewidth,
+  enhanced,
+  title=\textbf{#1)}, 
+  attach boxed title to top left={
+   xshift=0.75cm,
+   yshift=-\tcboxedtitleheight/2,
+   yshifttext=-\tcboxedtitleheight/2,
+  }, 
+  boxed title style={
+    sharp corners,
+    colback=white,
+    colframe=black
+  },
+  coltitle=black, 
+  colframe=black, colback=white,
+  drop shadow=black!50!white,
+  sharp corners, 
+  boxrule=1pt, boxsep=8pt,
+  left=0pt,right=0pt,top=0pt,bottom=0pt]
+  #2
+ \end{tcolorbox}
+\end{center}  
+} 
+ 
+\begin{document}
+\noindent \texttt{Jahr 2025, eA, Aufgaben 1B und 2A} 
+\section*{Aufgabe 1B}
+\task{a}{Wo wären die Enden des Fensters? Was ist die Höhe dort?}
+\task{b}{Was ist ein Längenverhältnis? Was ist dessen Formel?}
+\task{c}{Wo ist die höchste Steigung? Was ist die Steigung (als Winkel) dort?}
+\task{d}{Wie hoch ist der Bereich dann? In welchem Intervall existiert dieser?}
+\task{e}{Was ist eine Tangente, welcher Form folgt sie? Welche Bedingungen hat sie hier? Was muss ihre Steigung sein?}
+\task{f}{Wofür stehen die einzelnen Variablen und Funktionen?} 
+\newpage 
+\section*{Aufgabe 2A} 
+\task{a}{Was ist bereits gegeben? Was folgt daraus?}
+\task{b}{Was sind die jeweiligen einzelnen Wahrscheinlichkeiten? Was heißt \textit{entweder oder}?}
+\task{c}{Wie wird so ein Intervall berechnet? Was sind die Variablen hier?}
+\task{d}{
+\subsubsection*{Lösungsweg I}
+Was ist die normale Form der Normalverteilung? Was ist hier demnacht $\mu$ und $\sigma$? Wie werden die Intervallswahrscheinlichkeiten berechnet? 
+\subsubsection*{Lösungsweg II}
+Wie sind Intervallswahrscheinlichkeiten eigentlich definiert? 
+}
+\task{e}{Was muss erfüllt sein, damit Bedingung II erfüllt ist? Ist dann Bedingung III auch automatisch erfüllt?} 
+\end{document}

@@ -97,7 +97,7 @@ Weil $5 < 5.44 < 8$ wird die Vorgabe eingehalten.
 Nun ist dessen Steigung
 \begin{align*} 
  f'(-1,4142) &= 0,56 \\
- &\Rightarrow \tan^{-1}(0,4) = 29,5^\circ 
+ &\Rightarrow \tan^{-1}(0,56) = 29,5^\circ 
 \end{align*} 
 }
 \task{d}{
@@ -161,7 +161,7 @@ Großstadt und über 50: $0,21$
  
 Entweder Großstadt (und jünger) oder nicht jünger als 50 (und nicht Großstadt): $0,54 + 0,07 = 0,61$
  
-$0,21 \cdot 2 \ll 0,61$ 
+\[0,21 \cdot 2 \ll 0,61\]
 } 
 \task{c}{
 Hier ist $n=160$, $p_G=0,75$. \textquote{[W]eniger als drei Viertel} sind $< \frac{3}{4} \cdot 160$ also $\le 119$.
@@ -182,15 +182,16 @@ So ist offensichtlich $\sigma=2$ und $\mu=250$.
  \item Ja. $\mu=250$, welches dort aufgedruckt ist.
  \item Ja. Eine Minusabweichung ($4.5g$) wären $250-4,5=245,5$. Der CAS zeigt mit 5, 5, 2 \texttt{normCdf(-$\infty$,245.5,250,2)=0.012}. $1,2\%$ Wahrscheinlichkeit, also unter $6\%$. 
  \item Ja. Zwei Minusabweichung ($4.5g \cdot 2$) wären $250-4,5 \cdot 2=241$. Der CAS zeigt mit 5, 5, 2 \texttt{normCdf(-$\infty$,241,250,2)=0.000003}. $0,0003\%$ Wahrscheinlichkeit, also unter $0,2\%$.
-\end{enumerate} 
+\end{enumerate}
+Es kann auch im Intervall $[a, b]$ das Integral der gegebenen Funktion genommen werden um die Wahrscheinlichkeit dieses Intervalls zu bekommen. Dann müssen $\sigma$ und $\mu$ nicht abgelesen werden.
 }
 \task{e}{
-Damit Bedingung I erfüllt ist, muss
+Damit Bedingung II erfüllt ist, muss
 \[
  \texttt{solve(normCdf(-$\infty$,250-a,250,2)=0.06,a))}
  \Rightarrow a = 3,11 
 \]
-Wird dieses genutzt für Bedingung II 
+Wird dieses genutzt für Bedingung III
 \[
  \texttt{normCdf(-$\infty$,250-2*3.11,250,2))} = 0,00093 
 \]
