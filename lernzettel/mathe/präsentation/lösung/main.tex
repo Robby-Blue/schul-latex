@@ -145,13 +145,13 @@ $x_2$ wurde als Hochpunkt bestimmt, heißt es stellt die größte Differenz zwis
 \begin{center}
 \begin{tabular}{ |c|c|c|c| }
 \hline
-  & $J$ & $\overline{J}$ & $\sigma$\\
+  & $J$ & $\overline{J}$ & $\Sigma$\\
 \hline
  $G$ & $0,54$ & $0,21$ & $0,75$ \\
 \hline
  $\overline{G}$ & $0,18$ & $0,07$ & $0,25$ \\
 \hline
- $\sigma$ & $0,72$ & $0,28$ & $1$ \\
+ $\Sigma$ & $0,72$ & $0,28$ & $1$ \\
 \hline
 \end{tabular}
 \end{center}
@@ -188,14 +188,14 @@ Es kann auch im Intervall $[a, b]$ das Integral der gegebenen Funktion genommen 
 \task{e}{
 Damit Bedingung II erfüllt ist, muss
 \[
- \texttt{solve(normCdf(-$\infty$,250-a,250,2)=0.06,a))}
- \Rightarrow a = 3,11 
+ \texttt{normCdf(-$\infty$,245.5,250,$\sigma$)<0.06)}
+ \Rightarrow \sigma < 3
 \]
 Wird dieses genutzt für Bedingung III
 \[
- \texttt{normCdf(-$\infty$,250-2*3.11,250,2))} = 0,00093 
+ \texttt{normCdf(-$\infty$,241,250,2)} = 0,000003 
 \]
-Nun ist immer $0,00093 < 0,002$. Es kann auch, wie die Lösung will, durch ausprobieren anstelle der genaueren $3,11$ eine $3$ gefunden werden. Dann sind folgend die Wahrscheinlichkeiten leicht anders. 
-} 
+Nun ist immer $0,000003 < 0,002$.
+}
  
 \end{document}
