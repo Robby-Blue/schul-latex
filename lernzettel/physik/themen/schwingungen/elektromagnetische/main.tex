@@ -1,4 +1,6 @@
 \documentclass{article}
+\usepackage{amsmath}
+\usepackage{hyperref}
 \usepackage{tabularx}
 \usepackage{tikz}
 \usepackage[a4paper]{geometry}
@@ -25,7 +27,7 @@ So schwingen sowohl das elektrische Feld des Kondensators und das Magnetfeld der
   \node at (3, 0) [above] {II}; 
   \draw (5, 0) -- (5, -0.5);  
   \begin{scope}
-   \clip (3,0) rectangle (5,-5);
+   \clip (3,0) rectangle (5,-2);
    \draw (5,-0.6) circle(0.1);
    \draw (5,-0.8) circle(0.1);
    \draw (5,-1.0) circle(0.1);
@@ -59,7 +61,22 @@ So schwingen sowohl das elektrische Feld des Kondensators und das Magnetfeld der
   \draw (0, -1.75) -- (0, -3);
  \end{tikzpicture}
 \end{minipage} 
-\subsection{Vergleich zum Feder-Masse-Pendel}
+ 
+\subsection{Energieumwandlungen}
+Hier schwingt die elektrischen Energie und die Energie des Magnetfeldes miteinander. Die elektrische Energie wird in in ein Magnetfeld umgewandelt; dessen Energie wird genutzt um neue elektrische Energie zu induzieren.
+ 
+Dies steht in Analogie zu den Energieumwandlungen eines \hyperref[Das Fadenpendel]{Feder-Masse-Pendels} bei welchem die $E_\text{kin}$ und $E_\text{spann}$ einander aufbauen und zusammen schwingen.
+ 
 \subsection{Die Resonanzkurve}
+Wird in der obigen Schaltskizze der Schalter durch eine Wechselstromquelle mit einstellbarer Frequenz ersetzt und mit einem Widerstand hinter der Spule parallel ein Voltmeter geschalten, so kann die Stromquelle eine erzwungene Schwingung verursachen. Bei dieser können für unterschiedliche Werte von $f$ ein $U$ gemessen werden; diese Kurve stellt die Resonanzkurve dar.
+ 
+Das System würde ohne der erzwungenen Schwingung eigentlich in der Eigenfrequenz schwingen. Dem Prinzip der Resonanz nach ist hier also die $U$ bei der $f_\text{eigen}$ am höchsten. So kann die Eigenfrequenz der Systems gefunden werden.
+ 
+Wird dieser Versuch wiederholt, mit unterschiedlichen Spulen und Kondensatoren, so kann ein Zusammenhang zwischen dessen Eigenschaften und der $f_\text{eigen}$ gefunden werden.
+ 
 \subsection{Die thomsonsche Schwingungsgleichung} 
+In Abhängigkeit von der Induktivität der Spule $L$ und der Kapazität des Kondensators $C$ kann der \emph{thomsonschen Schwingungsgleichung} nach die Schwingungsdauer $T$ bestimmt werden.
+\[
+ T = 2\pi \cdot \sqrt{L \cdot C} 
+\] 
 \end{document}
