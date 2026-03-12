@@ -1,4 +1,5 @@
 \documentclass{article}
+\usepackage{amsmath}
 \usepackage{tikz} 
 \usepackage{hyperref}
 \usepackage[a4paper]{geometry}
@@ -7,9 +8,8 @@
 \lhead{Energieniveauschemata}
 \rhead{Dezember 2025}
 \begin{document}
- 
-% TODO beispiel zeichnen 
-\section{Energieniveauschemata}
+  
+\section{Energieniveaus}
 Ein Energieniveauschema stellt die Energieniveaus eines Atoms dar.
  
 \subsection{Aufbau} 
@@ -32,8 +32,17 @@ Die Differenz zwischen zwei Energieniveaus kann um einiges einfacher abgelesen w
   \draw[->] (0, 5) -- (4, 5) node [pos=0, left] {$E_B(2)$} node[above left]{$n=2$};
   \draw[->] (0, 4) -- (4, 4) node [pos=0, left] {$E_B(3)$} node[above left]{$n=3$};
  
-  \draw[->, red] (0.5, 0.1) -- (1.5, 5.4);
-  \draw[->, red] (2.1, 5.4) -- ({2.1+(1.3/5.3)}, 4.1); 
+  \draw[->, red] (0.5, 0.1) -- (1.5, 5.4) node [pos=0.5, right, align=center] {absorbiert \\ Photon};
+  \draw[->, red] (2.1, 5.4) -- ({2.1+(1.3/5.3)}, 4.1) node [pos=0.6, right, align=center] {emittiert \\ Photon}; 
  \end{tikzpicture}
-\end{minipage} 
+\end{minipage}
+  
+\subsection{Als Licht}
+Nur die Differenzen der Energieniveaus können als Photom emittiert werden; dessen Energie ist dann gleich der Differenz der biden Niveaus. Mit diesem $E$ und mit
+\[
+ E = h \cdot f
+ \qquad \text{und} \qquad
+ c = \lambda \cdot f 
+\]
+kann nun die Wellenlänge des Photons bestimmt werden. Andersherum, ist $\lambda$ gegeben, so kann das $E$ bestimmt und die beiden Energieniveaus gefunden werden.
 \end{document}
