@@ -1,4 +1,5 @@
 \documentclass{article}
+\usepackage{tikz}
 \usepackage{hyperref}
 \usepackage{mhchem}
 \usepackage[a4paper]{geometry}
@@ -17,4 +18,35 @@ Glucose ist dabei \ce{C6H12O6}.
  
 \subsection{Ablauf}
 Die Zellatmung ist in \hyperref[Die vier Teilschritte der Zellatmung]{vier Teilschritte} aufgeteilt, um in die Elektronen der Glucose auf \hyperref[Elektronenshuttle]{Elektronenshuttle} zu übertragen, welche in der \hyperref[Die Atmungskette]{Atmungsektte} genutzt werden kann, um ein \ce{H+}-Ionenkonzentrationsgradienten zwischen dem Intermembranraum und der Matrix aufrecht zu erhalten, welche die \hyperref[Die ATP-Synthase]{ATP-Synthase} nutzen kann um \hyperref[ATP]{ATP} zu synthetisieren.
+ 
+Diese Schritte sind miteinander gekoppelt, eine \textcolor{red}{exergonische} Reaktion folgt immer eine \textcolor{blue}{endergonische Reaktion}
+\begin{center}
+\begin{tikzpicture}
+ \newcommand{\kopplung}[2]{
+  \draw[red, ->] (#1,0) arc (-90:90:0.5 and 1); 
+  \draw[blue, ->] (#1+1,0) arc (-90:-270:0.5 and 1);
+  
+  \draw (#1+0.5, 1) node[align=center]{#2};
+ } 
+ 
+ \draw (0, 0) node{Glucose};
+ \draw (0, 2) node{\ce{6CO2}};
+ 
+ \kopplung{1.5}{Glykolyse \\ ox. Decarb. \\ Citratzyklus}
+ 
+ \draw (4, 0) node[align=center]{\ce{1/2 O2} \\ \ce{NADH + H+} \\ \ce{FADH2}};
+ \draw (4, 2) node[align=center]{\ce{H2O} \\ \ce{NADH+} \\ \ce{FAD}}; 
+ 
+ \kopplung{5.5}{Atmungskette}
+ 
+ \draw (8, 0) node[align=center]{hoher \\ \ce{H+}-Gradient}; 
+ \draw (8, 2) node[align=center]{geringerer \\ \ce{H+}-Gradient}; 
+ 
+ \kopplung{9.5}{chemiosmotische \\ Kopplung}
+ 
+ \draw (12, 0) node{\ce{ADP + P}}; 
+ \draw (12, 2) node{\ce{ATP}};
+\end{tikzpicture}
+\end{center} 
+ 
 \end{document}
