@@ -1,4 +1,6 @@
 \documentclass{article}
+\usepackage{amsmath}
+\usepackage{hyperref}
 \usepackage[a4paper]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -9,4 +11,9 @@
 Zerfällt ein radioaktiver Mutterstoff in einen Tochterstoff, welcher auch radioaktiv ist, so ist dies der \emph{Mutter-Tochter-Zerfall}. Der Tocherstoff kann in ein stabilen Stoff zerfallen.
  
 Die Aktivität des Tocherstoffs kann dabei schneller ansteigen als die Aktivität des Mutterstoffs sinkt. 
+ 
+\subsection{Als Tabellenkalkulation}
+Dem Prinzip Tabellenkalkulation der \hyperref[Aktivität]{Aktivität} nach, nur mit mehr Spalten, kann auch der Verlauf der Stoffmengen, der Aktivitäten der Stoffe und der Gesamtaktivität des Mutter-Tocher-Zerfalls berechnet werden.
+ 
+Die $N$ und $A$ Spalten werden jeweils in zwei geteilt, eine für die Mutter, eine für die Tochter. Zudem ist ab nun $N_t(i) = N_t(i-1) - A_t(i-1) + A_m(i-1)$
 \end{document}

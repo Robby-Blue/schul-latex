@@ -1,4 +1,5 @@
 \documentclass{article}
+\usepackage{booktabs}
 \usepackage{amsmath}
 \usepackage[a4paper]{geometry}
 \usepackage{fancyhdr}
@@ -6,7 +7,6 @@
 \lhead{Aktivität}
 \rhead{Januar 2026}
 \begin{document}
-\newcommand{\dd}{\text{d}} 
 \section{Aktivität}
 Die \emph{Aktivität} einer radioaktiven Substanz gibt die Anzahl der Kernumwandlungen pro Sekunde an. Gibt es $N$ Kerne, so ist
 \[
@@ -19,25 +19,21 @@ Die Aktivität ist vom Element selbst als auch von der Menge der insgesamt vorli
 \]
 Somit gibt die Zerfallskonstante den prozentualen Anteil an Kernen, welche innerhalb einer Sekunde zerfallen an.
  
-\subsection{Das Zerfallsgesetz}
-Werden die beiden obigen Definition gleichgesetzt, so folgt 
-\[
- \frac{\dd N}{\dd t} = -\lambda \cdot N 
-\]
-Wird auf beiden Seiten durch $N$ dividiert und ein Integral genommen, so folgt
-\begin{align*} 
- \int \frac{\dd N}{N} &= \int -\lambda \cdot dt \\ 
- \ln{N} &= -\lambda \cdot t + c \\
- N &= e^{-\lambda \cdot t} \cdot e^c
-\end{align*}
-Wird dies nun bei $t=0$ betrachtet, so ist $e^{-\lambda \cdot 0} = 1$, so dass $e^c=N_0$, die Anzahl der unzerfallenen Kernen am Anfang, sein muss.
+\subsection{Als Tabellenkalkulation}
+Der Verlauf der Aktivität eines Stoffes kann mithilfe einer Tabellenkalkulation berechnet werden. Zuerst wird bei $t=0$ der Wert $N_0$ eingetragen.
  
-Daraus folgt die Formel für $N(t)$, welches die Anzahl der noch vorhandenen, unzerfallenen, Kerne zum Zeitpunkt $t$ angibt.
-\[
- N(t) = N_0 \cdot e^{-\lambda \cdot t} 
-\]
-Wird beides durch $t$ dividiert folgt das gleiche 
-\[
- A(t) = A_0 \cdot e^{-\lambda \cdot t} 
-\]
+Folgend kann ein der gleichen Zeile $A = \lambda \cdot N$ eingetragen werden. Das neue $N$, der nächsten Zeile, ist das alte $N$, minus die Aktivität. Dies wird wiederholt. 
+ 
+Ist beispielsweise $N_0=100$ und $\lambda=0.1$, so
+\begin{center}
+ \begin{tabular}{ccc}
+  $t$ & $N$ & $A$ \\
+  \toprule
+  0\,s & 100 & 10 \\
+  1\,s & 90 & 9 \\
+  2\,s & 81 & 8,1 \\
+  $\cdots$ & $\cdots$ & $\cdots$ \\
+  \bottomrule
+ \end{tabular}
+\end{center}  
 \end{document}

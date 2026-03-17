@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Das Zerfallsgesetz}
+\rhead{März 2026} 
+\newcommand{\dd}{\text{d}} 
+\begin{document} 
+\section{Das Zerfallsgesetz}
+Ist ein Anfangsbestand an Kernen $N_0$ oder die Anfangsaktivität $A_0$ und die Zerfallskonstante $\lambda$ bekannt, so kann mit dem Zerfallsgesetz die Kernenzahl beziehungsweise die Aktivität in der Zukunft, oder wenn es sachkontextlich Sinn ergibt, auch in der Vergangenheit, bestimmt werden. Es gelten
+\[
+ N(t) = N_0 \cdot e^{-\lambda \cdot t} 
+ \qquad \text{und}
+ A(t) = A_0 \cdot e^{-\lambda \cdot t}  
+\] 
+\subsection{Herleitung} 
+Werden die beiden Definition der Aktivität gleichgesetzt, so folgt 
+\[
+ \frac{\dd N}{\dd t} = -\lambda \cdot N 
+\]
+Wird auf beiden Seiten durch $N$ dividiert und ein Integral genommen, so folgt
+\begin{align*} 
+ \int \frac{\dd N}{N} &= \int -\lambda \cdot dt \\ 
+ \ln{N} &= -\lambda \cdot t + c \\
+ N &= e^{-\lambda \cdot t} \cdot e^c
+\end{align*}
+Wird dies nun bei $t=0$ betrachtet, so ist $e^{-\lambda \cdot 0} = 1$, so dass $e^c=N_0$, die Anzahl der unzerfallenen Kernen am Anfang, sein muss.
+ 
+Daraus folgt die Formel für $N(t)$, welches die Anzahl der noch vorhandenen, unzerfallenen, Kerne zum Zeitpunkt $t$ angibt.
+\[
+ N(t) = N_0 \cdot e^{-\lambda \cdot t} 
+\]
+Wird beides durch $t$ dividiert folgt das gleiche 
+\[
+ A(t) = A_0 \cdot e^{-\lambda \cdot t} 
+\]
+ 
+\subsection{Grenzen} 
+Es muss angemerkt werden, dass das Zerfallsgesetz nur einen stochastischen Prozess darstellt. Dem \emph{Gesetz der großen Zahlen} und der riesigen Menge an Kernen in auch geringen Mengen an Stoff ist der Zerfallsgesetz sehr akkurat.
+ 
+Ist in einem Beispiel der Anfangsbestant aber gewollt klein angegeben, so verliert das Zerfallsgesetz an genauigkeit.  
+\end{document}
