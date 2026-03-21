@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Die Bragg-Kurve in der Strahlentherapie}
+\rhead{März 2026}
+\begin{document}
+\section{Die Bragg-Kurve in der Strahlentherapie} 
+Wird organisches Gewebe mit $^{12}_{\ 6}C$-Kernen beschossen, so fällt auf, dass ab einer bestimmten kritischen Geschwindigkeit die Wirkung steigt bevor sie erneut abfällt. Dies ist der Bragg-Peak in der Bragg-Kurve.
+\begin{center} 
+\begin{tikzpicture}
+ \draw (0, 0) -- (10, 0) node[above, align=center] {Ionen-\\geschwindigkeit};
+ \draw (0, 0) -- (0, 5) node[above] {Wirkung}; 
+ 
+ \draw[thick, blue]
+  (0, 0.5)
+  .. controls (1.5, 0.5) and (2.5, 0.55) .. (3, 0.6)
+  .. controls (3.5, 0.65) and (3.8, 0.85) .. (4, 1)
+  .. controls (4.3, 1.4) and (4.7, 4.0) .. (5, 4)
+  .. controls (5.3, 4.0) and (5.5, 2.8) .. (6, 2)
+  .. controls (6.8, 0.8) and (7.5, 0.1) .. (8, 0);
+\end{tikzpicture}
+\end{center}
+Dieser Peak kommt zustande, weil die Kerne bei dieser Geschwindigkeit lange genug in der Nähe der umliegenden Atome bleiben um dessen Elektronen zu entreißen. 
+ 
+Dies ist in der Strahlentherapie hilfreich; die Strahlung kann so eingestellt werden, dass die kritische Geschwindigkeit, somit die größte Wirkung, in der Nähe der zu bekämpfenden Tumoren auftritt, während der Rest des Körpers nur geringfügig betroffen ist.
+ 
+\end{document}
