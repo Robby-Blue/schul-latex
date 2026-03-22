@@ -88,5 +88,27 @@ Weiterhin folgt darauf
  \item[Geraden] Zwei Geraden verlaufen zueinander, wenn ihre jeweiligen Richtungsvektoren zueinander orthogonal sind. Sie müssen sich nicht zwangsweise schneiden.
  \item[Gerade und Ebene] Eine Gerade verläuft zu einer Ebene orthogonal, wenn der Richtungsvektor der Gerade zu beiden Richtungsvektoren der Ebene orthogonal ist. Genau dies macht, per definition, der Normalvektor einer Ebene. Somit ist eine Gerade auch orthogonal zu einer Ebene, wenn der Richtungsvektor der Gerade zum Normalvektor der Ebene kollinear ist, welches, falls der Normalvektor bereits gegeben ist, schneller zu berechnen sein kann. 
 \end{description} 
-\end{document}  
  
+\subsection{Als Projektion}
+\begin{minipage}{\dimexpr\linewidth-3cm}
+Das Skalarprodukt kann aber auch als Projektion angesehen werden. Dabei wird der eine Vektor von oben auf den anderen projiziert. Diese Länge wird dann mit der Länge des anderen Vektors multipliziert.
+\[
+ \vect{a} \cdot \vect{b} = \norm{\vect{a}} \cdot \norm{\vect{b}} \cdot \cos(\alpha) 
+\] 
+\end{minipage}
+\hfill
+\begin{minipage}{3cm} 
+\centering 
+\begin{tikzpicture}
+ \draw[->,thick,blue] (0,0) -- ++(2, 0) node [above left] {$\vect{a}$};
+ \draw[->,thick,red] (0,0) -- ++({2*sin(45)},{2*cos(45)}) node [below right] {$\vect{b}$};
+ \draw (1, 0) arc[start angle=0,end angle=45,radius=1];
+ \draw ({0.6*sin(67.5)},{0.6*cos(67.5)}) node {$\alpha$};
+ \draw[thick, dashed] ({2*sin(45)},0) -- ({2*sin(45)},{2*cos(45)});
+ 
+ \draw[thick,green!50!black] (0,-0.2) -- ({2*sin(45)}, -0.2) node[below, pos=0.5] {$\norm{\vect{b}} \cdot \cos(\alpha)$};
+ \draw[thick,green!50!black] (0,-0.1) -- (0, -0.3);
+ \draw[thick,green!50!black] ({2*sin(45)},-0.1) -- ({2*sin(45)}, -0.3);
+\end{tikzpicture}  
+\end{minipage} 
+\end{document}
