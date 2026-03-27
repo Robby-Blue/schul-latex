@@ -12,11 +12,11 @@ Eine gedämpfte Schwingungen ist eine Schwingung, welche mit der Zeit gedämpft 
 In der Realität ist jede Schwingung, bei welcher nicht konstant Energie von außen hinzugeführt wird, eine gedämpfte Schwingung. Die Amplitude jeder Schwingung sinkt dauerhaft, weil Energie verloren geht. Sei es auch nur die Reibung.
 \begin{center}
  \begin{tikzpicture}     
-  \draw[thick, domain=0:10, samples=500]  
+  \draw[thick, blue, domain=0:10, samples=500]  
             plot (\x, {2^(-0.25*\x) * 2*sin(\x*360 / 2 + 90)});
-  \draw[blue, domain=0:10, samples=100]  
+  \draw[red, domain=0:10, samples=100]  
             plot (\x, {2 * 2^(-0.25*\x)});
-  \draw[blue, domain=0:10, samples=100]  
+  \draw[red, domain=0:10, samples=100]  
             plot (\x, {-2 * 2^(-0.25*\x)});
      
   \draw[->] (0, 0) -- (10, 0) node[right] {t};
