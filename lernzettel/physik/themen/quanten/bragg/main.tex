@@ -10,20 +10,24 @@
 \rhead{Oktober 2025}
 \begin{document}
 \section{BRAGG-Reflexion}
-Die Ionen eines LiF-Kristalls sind regelmäßig angeordnet, die einzelnen Gitterebenen haben einen Abstand von $201\,\hyperref[Einheitenpräfixe]{\text{pm}}$.
+Die Ionen eines Kristalls sind regelmäßig angeordnet, die einzelnen Gitterebenen haben einen Abstand von $d$.
  
-\noindent \begin{minipage}{\dimexpr\linewidth-4.5cm}
- Im Dreieck $\Delta \text{ABC}$ gilt
+Es wird nun danach gesucht, wann es zu einer konstruktiven Interferenz kommt.
+ 
+\noindent \begin{minipage}{\dimexpr\linewidth-5cm} 
+Dies passiert bekannterweise wenn für den Gangunterschied $\Delta$ folgende Bedingung gilt
 \[
- \Delta = d \cdot \sin{\alpha}
+ k \cdot \lambda = \Delta
 \]
-Bei maximaler konstruktiver Interferenz, also mit ${k \cdot \lambda = 2 \Delta}$ gilt dann
+Der Gangunderschied ist nun, dem Dreieck $\Delta \text{ABC}$ nach
 \[
- k \cdot \lambda = 2d \cdot \sin{\alpha} 
-\] 
+ \Delta = 2 \cdot d \cdot \sin{\alpha}
+\]
+Zusammen gilt dann also 
 \end{minipage}
 \hfill
-\begin{minipage}{4.5cm} 
+\begin{minipage}{5cm} 
+ \vfill
  \center
  \begin{tikzpicture} 
   \coordinate (mid) at (0,0);  
@@ -63,7 +67,19 @@ Bei maximaler konstruktiver Interferenz, also mit ${k \cdot \lambda = 2 \Delta}$
   } 
   \draw[<->] (1.3, 0) -- (1.3, 1) node[midway, right] {$d$};
  \end{tikzpicture}
+ \vfill
 \end{minipage} 
+\[
+ k \cdot \lambda = 2d \cdot \sin{\alpha} 
+\] 
  
-Somit ist bei jedem Einfallswinkel $\alpha$ die Interferenzbedingung nur für alle die $\lambda$ erfüllt, für welche die obige Gleichung gilt. Mit der Drehkristallmethode wird der Kristall und der dazugehörige Sensor mit der Zeit gedreht um die Reflexion aller $\lambda$ zu messen.
+Somit ist bei jedem Einfallswinkel $\alpha$ die Interferenzbedingung nur für alle die $\lambda$ erfüllt, für welche die obige Gleichung gilt. 
+ 
+\subsection{Die Drehkristallmethode}
+Bei der Drehkristallmethode wird der Kristall mit Röntgenstrahlungen beschossen und die Intensität mit einem Sensor gemessen. Der Versuch ist so aufgebaut, dass der Kristall gedreht werden kann um den Winkel $\alpha$ zu verändern. Gleichzeitig muss der Sensor in einem Kreis mitbewegt werden, so dass er weiterhin auf der Flugbahn der reflektierten Strahlung liegt.
+ 
+So kann jedem Winkel $\alpha$ eine Intensität der Reflektion zugeordnet werden, z.\,B. um $d$ zu bestimmen.
+ 
+\subsection{Röntgenspektren} 
+Andersherum, ist das $d$ bereits bekannt, so kann mit der Drehkristallmethode die Intensität der Röntgenstrahlung einer bestimmten Wellenlänge bestimmt werden beziehungsweise, wird dies für jede Wellenlänge wiederholt, ein \emph{Röntgenspektrum} aufgestellt werden, welches jeder Wellenlänge eine Intensität zuordnet.
 \end{document}
