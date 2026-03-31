@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage[inline]{enumitem} 
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Die Funktionsweise eines Lasers}
+\rhead{März 2026}
+\begin{document}
+\section{Die Funktionsweise eines He-Ne-Lasers}
+Laser werden in der Medizin genutzt, bei der Datenübertragung durch Glasfaser genutzt, genutzt um Metall und Holz zu bearbeiten, etc.
+ 
+\subsection{Aufbau} 
+Zwischen einem Spiegel auf der einen Seite und einen halbdürchlässigen Spiegel auf der anderen Seite sind \begin{enumerate*}[label=\textbf{\alph*)}] \item eine Anode und eine Kathode, under hochspannung und \item Helium- und Neon-Atome. \end{enumerate*}
+ 
+\subsection{Funktionsweise} 
+Durch die Hochspannung werden He-Atome energetisch angehoben. Stoßen diese mit Ne zusammen, so kommt es zu einer Stoßübertragung, die Ne-Atome werden in einen metastabilen Zustand angehoben. Trifft nun ein Photon auf das Ne, so kommt es zu \emph{stimulierter Emission}; das Ne-Atom wird abgeregt und emittiert ein Photon, welches dem ersten in der Richtung, der Wellenlänge und der Phase identisch ist. 
+ 
+\subsection{Besetzungsinversion}
+Damit der Laser funktioniere kann muss eine \emph{Besetzungsinversion} vorliegen; es müss immer mehr Atome im angeregten Zustand als im nicht angeregten Zustand vorhanden sein, damit es genug Photonen gibt. 
+ 
+\subsection{Die Spiegel als Resonatoren}
+Die Spiegel der beiden Seiten sind notwendig, damit Photonen meherer möglichkeiten haben auf Ne-Atome zu treffen. Darüberhinaus, ist der Abstand der Spiegel $d=n \cdot \lambda / 2, n \in \mathbb{N}$, so kommt es zu konstruktiver Interferenz, welche das Licht verstärkt.
+ 
+\subsection{Energieniveuas}
+Es werden drei Energieniveaus benötigt.
+\begin{description}
+ \item[Grundzustand] Nur aus dem Grundzustand können He-Atome angeregt werden
+ \item[angeregter Zustand] Der direkte Übergang zwischen dem Grundzustand und dem metastabilen Zustand liegt nicht im Bereich der sichtbaren Wellenlängen.
+ \item[metastabiler Zustand] Nur der metastabile Zustand liegt lang genug vor, dass er häufig genug von Photonen getroffen werden kann. 
+\end{description}
+\end{document}
