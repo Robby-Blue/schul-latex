@@ -40,9 +40,17 @@ Die Wahrscheinlichkeit, dass $E$ nicht eintritt ist immer
 \] 
  
 \subsection{Bedingte Wahrscheinlichkeiten}
-Eine \emph{bedingte Wahrscheinlichkeit} beschreibt die Wahrscheinlichkeit eines Ereignisses unter der Bedingung, dass ein anderes Eregniss bereits eingetroffen ist. Diese kann als $P(A|B)$, oder wie im Schulbuch als $P_B(A)$, aufgeschrieben werden. Dann gilt die Wahrscheinlichkeit 
+Eine \emph{bedingte Wahrscheinlichkeit} beschreibt die Wahrscheinlichkeit eines Ereignisses unter der Bedingung, dass ein anderes Ereignis bereits eingetroffen ist. Diese kann als $P(A|B)$, oder wie im Schulbuch als $P_B(A)$, aufgeschrieben werden. Dann gilt die Wahrscheinlichkeit 
 \[ 
  P_B(A) = P(A|B) = \frac{P(A \cap B)}{P(B)}
 \] 
 Zwei Ereignisse $A$ und $B$ sind voneinander Stochastisch unabhängig, wenn $P_B(A)=P(A)$ oder $P(A \cap B) = P(A) \cdot P(B)$, die \emph{Multiplikationsregel}, gilt. Bei Vierfeldertafeln ist die Multiplikationsregel um einiges einfacher anzuwenden. 
+ 
+\subsection{Kausale und stochastische Unabhängigkeit}
+Es muss zwischen \emph{kausaler} und \emph{stochastischer} Unabhängigkeit unterschieden werden. Die stochastische Unabhängigkeit ist bereits oben beschrieben; dass die Wahrscheinlichkeit zweier Ereignisse nicht voneinander abhängt.
+ 
+Dies sagt aber per se nichts über die \emph{kausale} (Un)abhängigkeit aus, diese befasst sich damit, ob das eintreten des einen Ereignisses das andere direkt beeinflusst.
+ 
+Zwei Ereignisse können kausal komplett unabhängig sein und trotzdem stochastisch abhängig sein; einfach weil sie eine gemeinsame Ursache haben.
+Als Beispiel hierfür kann die Größe einer Person und das ob sie ein Abiturabschluss hat öder ähnliches genannt werden. Das Abitur wird nicht erteilt, \emph{weil} eine bestimmte Körpergröße vorliegt, und eine bestimmte Körpergröße wird nicht erreicht, \emph{weil} das Abitur bestanden wurde, aber trotzdem haben größere Personen mit einer höheren Wahrscheinlichkeit das Abitur als kleinere Personen. Dies liegt daran, dass Kinder in der Regel kleiner sind und kein Abitur haben.
 \end{document}
