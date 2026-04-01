@@ -11,17 +11,23 @@
 Mit dem Taschenrechner und anderen Programmen kann ein Zufallsexperiment \emph{simuliert} werden.
  
 \subsection{Werte Erstellen} 
-Hierfür bietet der CAS zwei Funktionen:
+Hierfür bietet der CAS mehrere Funktionen:
 \begin{center}
- \begin{tabular}{llll}
-  Art & Funktion & Ergebnis & Menu \\
+ \begin{tabular}{lllll}
+  & Art & Funktion &  Menu \\
   \toprule
-  binomial & \texttt{rand(a,b)} & Zahl $r \in [0;1] \in \mathbb{R}$ & 5, 4, 2\\
-  normal & \texttt{rand()} & Zahl $r \in [a;b] \in \mathbb{N}$ 5, 4, 1 \\
+  gleichverteilt & reell & \texttt{rand()} & 5, 4, 1\\
+  & natürlich & \texttt{randInt(a,b)} & 5, 4, 2 \\
+  ungleichverteilt & binomial & \texttt{randBin(n,p)} & 5, 4, 3 \\
+  & normal & \texttt{randNorm($\mu$, $\sigma$)} & 5, 4, 4 \\
+  \midrule
+  beliebig & listenbasiert & \texttt{randSamp(liste,n,z)} & 5, 4, 5 \\
   \bottomrule
  \end{tabular}
 \end{center} 
-Beide dieser Funktionen kann um ein Paramter $n$ erweitert werden, wird dieser genutzt, so gibt \texttt{rand(n)} beziehungsweise \texttt{randInt(a,b,n)} jeweils $n$ dieser zufälligen Zahlen an.
+Beide den erten vier Funktionen kann um ein Paramter $i$ erweitert werden. Mit diesem werden jeweils $i$ dieser zufälligen Zahlen ausgegeben.
+ 
+\texttt{randSamp} funktioniert fundamental anders. Es nimmt eine Liste an, dessen Inhalt kann alles sein. \texttt{randSamp} gibt nun eine Möglichkeit an, was gezogen werden kann, wenn $n$ dieser Elemente gezogen. Wird $z$ weggelassen oder ist $z=0$, so wird zurückgelegt. Ist $z=1$, so wird nicht zurückgelegt.
  
 \subsection{Werte verarbeiten}
 Mit \texttt{sum(list)} kann die Summe der Werte eine Liste gefunden werden.
