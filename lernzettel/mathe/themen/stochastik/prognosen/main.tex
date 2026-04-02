@@ -1,4 +1,5 @@
 \documentclass{article}
+\usepackage{booktabs} 
 \usepackage[a4paper]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -17,30 +18,31 @@ Bei diskreten Verteilungen, wie der Binomialverteilung, muss das $\sigma \cdot k
 \hfill 
 \begin{minipage}{6cm}
 \begin{center}
-\begin{tabular}{ |c|c| }
-\hline
- $\mathbf{k}$ & \textbf{Wahrscheinlichkeit} \\
-\hline
+\begin{tabular}{ cc }
+ $\mathbf{k}$ & $\textbf{Wahrscheinlichkeit}$ \\
+\midrule
  1 & 0.68 \\
-\hline
  1.64 & 0.9 \\
-\hline
  1.96 & 0.95 \\
-\hline
  2 & 0.955 \\
-\hline
  2.58 & 0.99 \\
-\hline
  3 & 0.997 \\
-\hline
 \end{tabular}
 \end{center}
 \end{minipage} 
  
 \vspace*{0.3em} 
-\noindent Hier gilt die $\sigma$-Regel: die Wahrscheinlichkeit, dass das Ergebnis in diesem Intervall liegt hängt von dem gegebenen $k$ ab. Bei Normalverteilten Verteilungen gelt ungefähr die Werte der obigen Tabelle, falls $\sigma > 3$.
+\noindent Hier gilt die $\sigma$-Regel: die Wahrscheinlichkeit, dass das Ergebnis in diesem Intervall liegt hängt von dem gegebenen $k$ ab. Bei Normalverteilungen gelten die Werte der obigen Tabelle genau. Bei Binomialverteilungen gelten die obigen Werte als Approximation, falls $\sigma > 3$.
  
 \subsection{Verträglichkeit} 
 Eine Stichprobe ist mit einem $p$ Verträglich, wenn die Stichprobe dann im $95\%$-Prognoseintervall liegt. Liegt sie außerhalb von diesem, liegt eine \emph{signifikante} Abweichunge vor. Liegt eine Stichprobe sogar außerhalb des $99\%$-Intervalls, ist diese eine \emph{hochsignifikante} Abweichung.
+ 
+\subsection{Anteile}
+Die Formel der \hyperref[Konfidenzintervalle]{Konfidenzintervalle} kann auch umgedreht werden; werden $p$ und $h$ getauscht, kann stattdessen nach einem Intervall für das $h$ aufgelöst werden.
+\[
+ h = p \pm 1,96 \sqrt{\frac{p \cdot (1-p)}{n}}
+\]
+Werden $n$ Ergebnisse, jeweils mit einer Trefferwahrscheinlichkeit von $p$, betrachtet, so liefern beide $h$ hier die jeweils Unter- und Obergrenze des echten $h$, also des Anteils an Ergebnisse, die Treffer sind. 
+ 
  
 \end{document}
