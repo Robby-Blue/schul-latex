@@ -9,7 +9,9 @@
 \rhead{September 2025}
 \begin{document}
 \section{Binomialverteilungen}
-Wird ein Experiment durchgeführt, bei welchem gezählt wird, wie Häufig bestimmte Trefferzahlen bei einer Bernoulli-Kette vorkommen, so ist dies eine \emph{Häufigkeitsverteilung}. Diese kann durch eine Binomialverteilung beschrieben werden.
+Wird ein Experiment durchgeführt, bei welchem gezählt wird, wie häufig bestimmte Trefferzahlen bei einer Bernoulli-Kette \emph{oder} einer ähnlichen Situation (Ziehen ohne Zurücklegen mit $k \ll n$), vorkommen, so ist dies eine \emph{Häufigkeitsverteilung}. Diese kann durch eine Binomialverteilung modelliert werden.
+ 
+Je nach dem wie gut die Situation des Sachkontext den vier Bedingungen der Bernoulli-Kette passt kann beurteilt werden, wie gut die Binomialverteilung als Modell passt. 
  
 Für eine Binomialverteilung gibt es eine Funktion $P(X=k)$, welche jeweils angibt, wie wahrscheinlich es ist, dass es bei einem Bernoulli Experiment mit $n$ Wiederholungen zu genau $k$ treffern kommt. Im Taschenrechner gilt 
 \[
@@ -43,4 +45,11 @@ Bei einer Binomialverteilung gilt
  \sigma = \sqrt{n \cdot p \cdot (1-p)} 
 \]
 Ist ein Histogramm gegeben, ist $\mu$ immer in der Nähe des längsten Balkens. Ist gegeben, dass $\mu$ ganzzahlig ist, sind diese gleich.
+ 
+\subsection{Approximation durch die Normalverteilung}
+Die anderswo genannten Formeln der \hyperref[Prognoseintervalle]{Prognoseintervalle} oder der \hyperref[Konfidenzintervalle]{Konfidenzintervalle} sind eigentlich auf Normalverteilungen ausgelegt, können aber auch für Binomialverteilung genutzt werden, solange es angemessen ist, die eine durch die andere zu approximieren.
+ 
+An sich haben beide die gleiche Glockenform, nur dass die Binomialverteilung bei $p \ne 0,5$, insbersondere je mehr $p \approx 0$ oder $p \approx 1$, asymetrisch ist. Zudem, ist $n$ zu klein, ist der relative Fehler größer.
+ 
+Insgesamt gilt eine Approximation als angemessen, wenn $\sigma > 3$. 
 \end{document}

@@ -1,4 +1,6 @@
 \documentclass{article}
+\usepackage{amsmath}
+\usepackage{hyperref}
 \usepackage{booktabs} 
 \usepackage[a4paper]{geometry}
 \usepackage{fancyhdr}
@@ -7,9 +9,12 @@
 \rhead{Oktober 2025}
 \begin{document}
  
-\section{Prognosen} 
+\section{Prognoseintervalle}
+Ein Prognoseintervall ist ein Intervall um $\mu$, zu welcher mit einer bestimmten Wahrscheinlichkeit, dem \emph{Sicherheitsfaktor}, das Ergebnis landen wird.
+ 
+\subsection{Mit der $\sigma$-Regel} 
 \begin{minipage}{\dimexpr\linewidth-6cm}
-Wurde ein $\mu$ und ein $\sigma$ gefunden, so können Prognosen darüber aufgestellt werden, wie wahrscheinlich es ist, dass eine Stichprobe in einem bestimmten Prognoseintervall, in einem bestimmten Radius um $\mu$, liegt. Dieser Radius wird als ein vielfaches von $\sigma$ angegeben.
+Die Prognoseintervalle mancher Sicherheitsfaktoren können mit der $\sigma$-Regel gefunden werden; sie stellen dem Sicherheitsfaktor entsprechend ein Vielfaches vom $\sigma$ dar.
 \[
  P(\mu-\sigma \cdot k \le X \le \mu+\sigma \cdot k) 
 \]
@@ -19,7 +24,7 @@ Bei diskreten Verteilungen, wie der Binomialverteilung, muss das $\sigma \cdot k
 \begin{minipage}{6cm}
 \begin{center}
 \begin{tabular}{ cc }
- $\mathbf{k}$ & $\textbf{Wahrscheinlichkeit}$ \\
+ $\mathbf{k}$ & $\textbf{Sicherheitsfaktor}$ \\
 \midrule
  1 & 0.68 \\
  1.64 & 0.9 \\
@@ -34,6 +39,19 @@ Bei diskreten Verteilungen, wie der Binomialverteilung, muss das $\sigma \cdot k
 \vspace*{0.3em} 
 \noindent Hier gilt die $\sigma$-Regel: die Wahrscheinlichkeit, dass das Ergebnis in diesem Intervall liegt hängt von dem gegebenen $k$ ab. Bei Normalverteilungen gelten die Werte der obigen Tabelle genau. Bei Binomialverteilungen gelten die obigen Werte als Approximation, falls $\sigma > 3$.
  
+\subsection{Mit Tabellen und Graphen}
+Wird ein anderer Sicherheitsfaktor gewählt, welcher nicht durch die $\sigma$-Regel beschrieben werden kann, so stattdessen eine Tabelle oder ein Graph genutzt werden.
+ 
+Betrachtet wird das Intervall
+\[
+ [\mu-k;\mu+k]
+ \qquad \text{und dessen Wahrscheinlichkeit} \qquad
+ P(\mu- k \le X \le \mu+ k)
+\]
+$k$ wird so bestimmt, dass $P(\ldots) \ge s$, wenn $s$ der gewünschte Sicherheitsfaktor ist.
+ 
+Siehe \hyperref[Umgang mit dem Taschenrechner]{Umgang mit dem Taschenrechner}. 
+ 
 \subsection{Verträglichkeit} 
 Eine Stichprobe ist mit einem $p$ Verträglich, wenn die Stichprobe dann im $95\%$-Prognoseintervall liegt. Liegt sie außerhalb von diesem, liegt eine \emph{signifikante} Abweichunge vor. Liegt eine Stichprobe sogar außerhalb des $99\%$-Intervalls, ist diese eine \emph{hochsignifikante} Abweichung.
  
@@ -43,6 +61,4 @@ Die Formel der \hyperref[Konfidenzintervalle]{Konfidenzintervalle} kann auch umg
  h = p \pm 1,96 \sqrt{\frac{p \cdot (1-p)}{n}}
 \]
 Werden $n$ Ergebnisse, jeweils mit einer Trefferwahrscheinlichkeit von $p$, betrachtet, so liefern beide $h$ hier die jeweils Unter- und Obergrenze des echten $h$, also des Anteils an Ergebnisse, die Treffer sind. 
- 
- 
 \end{document}

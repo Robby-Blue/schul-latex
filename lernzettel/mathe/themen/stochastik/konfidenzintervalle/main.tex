@@ -8,17 +8,25 @@
 \rhead{Oktober 2025}
 \begin{document}
 \section{Konfidenzintervalle}
-Ist das $p$ eines Gesamten nicht bekannt, so kann mit der relativen Häufigkeit $h$ einer Stichprobe ein \emph{Konfidenzintervall} aufgestellt werden, in welches mit einer Wahrscheinlichkeit von $95\%$ (oder einem anderen \emph{Sicherheitsfaktor}) das $p$ des Gesamten einhält.
+Ist das $p$ eines Gesamten nicht bekannt, so kann mit der relativen Häufigkeit $h$ einer Stichprobe ein \emph{Konfidenzintervall} aufgestellt werden, welches mit einer bestimmten Mindestkonfidenz (dem \emph{Sicherheitsfaktor}) ein Intervall darstellt, welches $p$ beinhaltet.
+ 
+Weil das Verfahren von $h$ abhängt, welches je nach Stichprobe zufällig anders ist, sind die Grenzen dementsprechend auch zufällig. Das Verfahren liefert für $95\%$ (oder einem anderen \emph{Sicherheitsfaktor}) aller Stichproben ein Intervall, welches das $p$ des Gesamten enthält. Auch dieses Verfahren ist eigentlich auf die Normalverteilung ausgelegt, kann aber bei $\sigma > 3$ genutzt werden, um die Binomialverteilung zu approximieren.
  
 \subsection{Algebraisch}
 Wird ein \hyperref[Prognosen]{$95\%$-Prognoseintervall} aufgestellt und durch $n$ geteilt, folgt 
 \[
  h = p \pm 1,96 \sqrt{\frac{p \cdot (1-p)}{n}}
+ \qquad \text{und} \qquad
+ h = \frac{k}{n} 
 \]
-Das $h$ folgt aus $\tfrac{k}{n}$, beschreibt also die relative Häufigkeit. Aus einer Stichprobe kann nun ein $h$ gefunden werden, welches in der obigen Gleichung nach $p$ aufgelöst werden kann, welche als Grenzen des Intervalls dienen.
+Aus einer Stichprobe kann nun das $h$, sie relative Häufigkeit, gefunden werden, welches in der obigen Gleichung nach $p$ aufgelöst werden kann, welche als Grenzen des Intervalls dienen.
  
 Zu einer Wahrscheinlichkeit von $95\%$ kann nun gesagt werden, dass dieses Intervall das echte $p$ beinhaltet. 
  
 \subsection{Der Sicherheitsfaktor} 
 Die oben genutzte $1,96$ kommt von einem Sicherheitsfaktor von $95\%$, gemäß der Sigma-Regel. Andere Faktoren, für andere Intervalle, können auch genutzt werden. Diese Werte, muss man anmerken, sind, genau wie bei dem Prognoseintervall, genau für Normalverteilungen und gute Approximationen für Binomialverteilungen.
+ 
+\subsection{Graphisch}
+Die obige Funktion kann auch Graphisch dargestellt werden. Dann wird sich die Stelle mit dem bekannten $h$ angeguckt und die dazugehörigen $p$s als Grenzwerte genommen.
+ 
 \end{document}
