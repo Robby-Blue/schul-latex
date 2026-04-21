@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr} 
+\usepackage{xspace}
+\pagestyle{fancy}
+\usepackage{tabularray}
+\UseTblrLibrary{booktabs}
+\lhead{Overview}
+\newcommand{\book}[1]{\textit{#1}\xspace} 
+ 
+\newcommand{\hour}{\book{The Story of an Hour}} 
+\newcommand{\wallpaper}{\book{The Yellow Wallpaper}} 
+\newcommand{\weekend}{\book{Weekend}}
+\newcommand{\feminists}{\book{The First Feminists}}
+\newcommand{\kylie}{\book{seven methods of killing kylie jenner}} 
+\newcommand{\dreamers}{\book{Behold the Dreamers}} 
+\newcommand{\dream}{\book{A Midsummer Night's Dream}} 
+\begin{document}
+Looking at the various books' and plays' topics, one can make a small lookup table of common or relevant topics and the fitting text examples
+\begin{table}[htbp]
+\begin{tblr}{
+    colspec = {lX}
+  }
+\toprule
+ Topic & Book \\
+\midrule
+ womens independence & \hour, \wallpaper (Narrator is fully dependent), \dreamers (Neni can't independently stay in NYC) and \dream (Egeus decides who Hermia marries) \\ 
+ abusive relationships & \dream (Oberon) and \dreamers (Jende hits Neni) & \\ 
+ marriage & \hour and \dream (Egeus decides who Hermia marries) \\
+ womens mental health & \wallpaper \\ 
+ womens unpaid labour & \weekend \\ 
+ history & \feminists \\ 
+ american dream & \dreamers \\
+ immigration & \dreamers \\
+ social media & \kylie (doxxed) \\
+ beauty standards & \kylie \\
+ racism & \kylie \\
+ love & \dream \\
+\bottomrule
+\end{tblr}
+\end{table}
+\end{document}
